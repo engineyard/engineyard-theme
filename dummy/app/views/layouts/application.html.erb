@@ -1,5 +1,9 @@
-<%= pugita_header %>
+<%= pugita_header do %>
+  I'm extra in the header
+<%- end -%>
 
 <%= yield %>
 
-<%= pugita_footer %>
+<%= pugita_footer do %>
+  I'm extra in the footer
+<%- end -%>

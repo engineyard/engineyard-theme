@@ -8,3 +8,5 @@ Feature: Pugita Header
     Then I should see "866-518-YARD"
       And I should see "Hello"
       And I should see "All rights reserved"
+      And the html should contain "I'm extra in the header"
+      And the html should contain "I'm extra in the footer"

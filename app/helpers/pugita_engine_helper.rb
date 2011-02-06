@@ -1,9 +1,15 @@
 module PugitaEngineHelper
   def pugita_header
-    render :partial => 'pugita/header'
+    additional_header = block_given? ? yield : ''
+    render :partial => 'pugita/header', :locals => {
+      :additional_header => additional_header
+    }
   end
   
   def pugita_footer
-    render :partial => 'pugita/footer'
+    additional_footer = block_given? ? yield : ''
+    render :partial => 'pugita/footer', :locals => {
+      :additional_footer => additional_footer
+    }
   end
 end
