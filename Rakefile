@@ -9,20 +9,25 @@ rescue Bundler::BundlerError => e
 end
 require 'rake'
 
+PKG_FILES = FileList[
+  '[a-zA-Z]*',
+  'app/**/*',
+  'dummy/public/pugita_header/**/*',
+  'lib/**/*'
+]
+
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name = "pugita_header"
   gem.homepage = "http://github.com/paulca/pugita_header"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{A gem providing helper methods and assets to make any site look like engineyard.com}
+  gem.description = %Q{a 'pugita_header' and 'pugita_footer' method, along with an assets generator to make any site look like engineyard.com}
   gem.email = "paul@rslw.com"
   gem.authors = ["Paul Campbell"]
-  # Include your dependencies below. Runtime dependencies are required when using your gem,
-  # and development dependencies are only needed for development (ie running rake tasks, tests, etc)
-  #  gem.add_runtime_dependency 'jabber4r', '> 0.1'
-  #  gem.add_development_dependency 'rspec', '> 1.2.3'
+  gem.files = PKG_FILES.to_a
+  gem.add_runtime_dependency 'rails', '~> 3'
 end
 Jeweler::RubygemsDotOrgTasks.new
 
