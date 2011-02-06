@@ -8,8 +8,6 @@ group :development do
   gem "jeweler", "~> 1.5.2"
 end
 
-
-
 group :test do
   gem 'capybara', '0.3.9'
   gem 'cucumber'
