@@ -1,0 +1,10 @@
+<div class="block">
+  <h4 class="webcast">Recorded Webinars</h4>
+  <ul class="video catalog list">
+    <% Event.past_webinars_with_recordings.each do |event| %>
+      <li>
+        <h5 class="p"><%= link_to event.title, event.url, :class=>'trackWebinar' %></h5>
+      </li>
+    <% end %> 
+  </ul>
+</div>

@@ -1,0 +1,78 @@
+// Use // instead of /* */ to hide from production
+
+// --------------------------------------------------
+
+// GLOBAL VARIABLES
+// - Rounded Corners
+// - Convenience
+
+// --------------------------------------------------
+
+
+
+// --------------------------------------------------
+// Rounded Corners
+// --------------------------------------------------
+
+$radius             = 6px
+$pill-radius        = 12px
+$big-chunky-radius  = 24px
+
+@mixin rounded-box
+  -webkit-border-radius: $radius
+  -moz-border-radius: $radius
+  border-radius: $radius
+
+@mixin rounded-box-top
+  -webkit-border-top-left-radius: $radius
+  -webkit-border-top-right-radius: $radius
+  -moz-border-radius-topleft: $radius
+  -moz-border-radius-topright: $radius
+  border-top-left-radius: $radius
+  border-top-right-radius: $radius
+
+@mixin big-chunky-rounded-box
+  -webkit-border-radius: $big-chunky-radius
+  -moz-border-radius: $big-chunky-radius
+  border-radius: $big-chunky-radius
+
+@mixin remove-rounded-box
+  -webkit-border-radius: 0
+  -moz-border-radius: 0
+  border-radius: 0
+
+
+
+// --------------------------------------------------
+// Convenience
+// --------------------------------------------------
+
+@mixin reset
+  margin: 0
+  padding: 0
+  vertical-align: baseline
+
+@mixin hidden
+  // hide from both screen and screen readers
+  display: none
+  visibility: hidden
+
+@mixin visuallyhidden
+  // Hide from screen but keep visible to screenreaders
+  position: absolute !important
+  top: 0
+  left: -9999em
+  overflow: hidden
+  clip: rect(1px 1px 1px 1px)
+  clip: rect(1px, 1px, 1px, 1px)
+
+@mixin invisible
+  // Keep the element's space on the page, but just hide it visibly from screen
+  visibility: hidden
+
+@mixin clearfix
+  // clearing child floating elements
+  content: "\0020"
+  display: block
+  height: 0
+  visibility: hidden

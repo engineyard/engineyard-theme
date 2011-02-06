@@ -1,0 +1,468 @@
+body
+  font: 80% "proxima-nova-1","proxima-nova-2", Arial, Verdana, sans-serif
+  color: #333
+  margin: 0
+  background: #FDFDFD 
+
+.container 
+  font-size: 1em
+  line-height: 1.4em 
+  min-width: 960px
+a
+  color: #369
+  &:hover
+    text-decoration: underline
+
+header, section, footer, nav 
+  display: block 
+
+header
+  background: #810A13
+  background: -webkit-gradient(linear, left top, left bottom, from(#C00), to(#900))
+  background: -moz-linear-gradient(top,  #C00,  #900)
+  border-bottom: 2px solid #FFF
+  padding: 1px 20px
+  height: 40px
+  h1
+    font-weight: normal
+    font-size: 1.5em
+    color: #FFF
+    float: left
+    margin-bottom: 0
+  small
+    font-size: 1em
+    display: inline-block
+    margin-top: 15px
+    margin-left: 1em
+    a
+      color: #FFF
+      text-decoration: none
+  nav
+    float: right
+    padding: 10px 0
+    border: none
+    text-align: right
+    color: #FFF
+    width: auto
+    ul
+      margin: 0
+      padding: 0
+    li
+      display: inline-block
+      padding: 0 0 0 1em
+      margin: 5px 0 0 1em
+      border-left: 1px solid #EEE
+      &:first-child
+        border-left: none
+    a
+      color: #FFF
+      &:hover
+        color: #FFF
+        background: none
+        text-decoration: underline
+
+nav
+  border-right: 1px solid #CCC
+  width: 120px
+  padding: 20px
+  float: left
+  ul
+    padding: 0
+  li
+    list-style: none
+    margin: 0 0 1em
+    ul
+      margin: 0
+    li
+      margin: 0 0 0 0.5em
+      font-size: 0.9em
+  a
+    display: block
+    text-decoration: none
+    color: #666
+    padding: 0 10px
+    margin: 0 -10px
+  a:hover, li.active a
+    color: #000
+    background: #EEE
+    text-decoration: none
+  .block
+    border-top: 1px solid #EEE
+    h3
+      font-weight: normal
+      color: #CCC
+      margin-bottom: 0.5em
+    li
+      font-size: 1em
+      margin-left: 0
+      margin-bottom: 0.5em
+
+ul.actions
+  float: right
+  margin-top: -2.5em
+  margin-bottom: 3em
+  li
+    list-style: none
+    display: inline-block
+    margin-left: 1em
+    &:first-child
+      border-left: none
+    a
+      margin-right: 0
+  &.preview
+    margin: 0
+    padding: 0 0 16px
+    float: none
+    text-align: center
+    border-bottom: 1px dashed #DDD
+    li
+      margin: 0
+      padding: 0px 1em
+.page
+  width: auto
+  margin-left: 160px
+  padding: 20px 30px
+  border-left: 1px solid #CCC
+  section
+    float: left
+    width: 100%
+  a:hover
+    background: #369
+    color: #FFF
+    text-decoration: none
+table
+  width: 100%
+  border-collapse: collapse
+  font-size: 0.9em
+th, td
+  text-align: left
+  padding: 5px
+  &.actions
+    text-align: right
+    white-space: nowrap
+    a
+      margin-left: 1em
+  img
+    margin: -7px 0 -10px
+    max-width: 26px
+    max-height: 26px
+thead th
+  text-transform: uppercase
+  border-bottom: 1px solid #CCC
+  a.sortable
+    color: #333
+    padding-right: 12px
+    text-decoration: none
+    &.active, &:hover
+      color: #000
+      background: none
+    &.asc
+      background: transparent url(/images/icn-asc.png) no-repeat right 3px
+    &.desc
+      background: url(/images/icn-dsc.png) no-repeat right 3px
+
+tbody
+  td
+    border-bottom: 1px dotted #CCC
+    padding: 5px 5px
+    vertical-align: top
+  tr
+    &:nth-child(even)
+      background: #F6F6F6
+    
+    &.pending
+      background: #FFFFE5
+    &.draft
+      color: #666  
+
+table.layout
+  tr, td, th
+    border: none
+    background: none
+    padding: 0
+    margin: 0
+  width: auto
+table.textile
+  font-size: 1em
+  position: absolute
+  margin-top: 6px
+  margin-left: 540px
+  *
+    margin: 0
+    padding: 0
+  th
+    padding: 5px
+  td
+    font-size: 80%
+    padding: 5px
+    border-top: 1px dashed #DDD
+  ul, ol
+    margin-left: 1.5em
+  ul li
+    list-style: square
+  ol li
+    list-style: decimal
+  em
+    color: #333
+
+form
+  em
+    display: block
+    color: #999
+  ul
+    padding: 0
+    margin: 10px 0
+    &.inline
+      li
+        display: inline-block
+        vertical-align: top
+        margin-right: 1.5em
+        margin-bottom: 0.5em
+        width: 120px
+  li
+    clear: both
+    list-style: none
+    margin-bottom: 0.5em
+    input, label
+      display: inline
+    input
+      margin: 1px 5px 5px 0
+      float: left
+label
+  display: block
+  margin: 15px 5px 0 0
+  color: #999
+  &.optional:after
+    content: ' (optional)'
+input[type="text"], input[type="url"], input[type="email"], input[type="password"], select
+  font-size: 1.2em
+  font-family: "proxima-nova-1","proxima-nova-2", Arial, Verdana, sans-serif
+  margin: 6px 5px 0 0
+  color: #333
+  &.title
+    font-size: 1.75em
+  &.title, &.long 
+    width: 500px
+  &[id="cloud_api_url"]
+    width: 600px
+select
+  font-size: 1em
+fieldset
+  margin-bottom: 20px
+  border: none
+  border-bottom: 1px solid #DDD
+  padding: 0 0 20px
+legend
+  padding-top: 30px
+input[type="submit"], a.button
+  color: #333
+  text-decoration: none
+  text-shadow: 0 1px 0px #FFF
+  border: 1px solid #DC0
+  padding: 5px 20px
+  margin-right: 1em
+  -moz-box-shadow: 1px 1px 3px rgba(0,0,0,0.2), inset 1px 1px 1px rgba(255,255,255,0.75), inset -1px -1px 1px rgba(0,0,0,0.25)
+  -webkit-box-shadow: 1px 1px 3px rgba(0,0,0,0.2), inset 1px 1px 1px rgba(255,255,255,0.75), inset -1px -1px 1px rgba(0,0,0,0.25)
+  -moz-border-radius: 4px
+  -webkit-border-radius: 4px
+  background: #EEE
+  background: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#FC0))
+  background: -moz-linear-gradient(top,  #FFF,  #FC0)
+  cursor: pointer
+  &:hover
+    color: #000
+    background: -webkit-gradient(linear, left top, left bottom, from(#FFF), color-stop(60%, #FC0))
+    background: -moz-linear-gradient(top,  #FFF, #FC0 60%)
+textarea
+  width: 520px
+  height: 500px
+  font: 1em/1.4em "proxima-nova-1","proxima-nova-2", Arial, Verdana, sans-serif
+  &.summary
+    height: 240px
+.categories
+  list-style: none
+  padding: 0
+  li
+    background: -webkit-gradient(linear, left top, left bottom, from(#999), to(#C9C9C9))
+    background: -moz-linear-gradient(top, #999, #C9C9C9)
+    padding: 10px 5px 6px
+    margin-bottom: 10px
+    border: 1px solid #999
+    -moz-border-radius: 3px
+    -webkit-border-radius: 3px
+    li
+      background: none
+      border: none
+      padding: 0
+      margin: 0
+  h3
+    color: #FFF
+    padding: 10px 0 5px 7px
+    margin: -10px -5px -5px
+    small
+      margin-left: 5px
+    &:hover
+      cursor: move
+      background-image: url(/images/bg-dragbar.png)
+      background: -webkit-gradient(linear, left top, left bottom, from(rgba(60,60,60,0.75)), to(rgba(60,60,60,0)))
+      background: -moz-linear-gradient(top,  rgba(60,60,60,0.75), rgba(60,60,60,0))
+  ul.actions
+    margin: -1.7em 10px 0
+    li
+      padding: 0
+      margin: 0
+      border: none
+      background: none
+  ul.actions, small
+    font-size: 11px
+    font-weight: normal
+  h3, .reverse
+    a
+      color: #FFF
+      &:hover
+        background: #FFF
+        color: #333
+  &.ui-sortable
+    padding: 10px
+    margin: -10px
+  .components li, .placeholder
+    padding: 10px
+    margin: 0 0 5px
+    border: 1px solid #DDD
+    background: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#EFEFEF))
+    background: -moz-linear-gradient(top,  #FFF, #EFEFEF)
+    p
+      margin: 5px 0
+    &:last-child
+      margin-bottom: 0
+  .placeholder
+    margin: 5px 0
+    -moz-border-radius: 3px
+    -webkit-border-radius: 3px
+  .components
+    padding: 0
+    margin: 0
+    list-style: none
+    ul.actions
+      margin-right: 0
+    h4
+      margin: -10px -10px -5px
+      padding: 10px 10px 5px
+      cursor: move
+      &:hover
+        background: url(/images/bg-dragbar.png) repeat-x
+    .versions
+      border-top: 2px solid #CCC
+      margin-top: 5px
+      tbody
+        tr, td
+          background: none
+        tr:hover
+          td
+            background: #F3FBFD
+        td:first-child
+          width: 140px
+      .full, .beta, .experimental, .unsupported
+        text-transform: capitalize
+      .full
+        color: #690
+      .beta
+        color: #C90
+      .experimental
+        color: #900
+      .unsupported
+        color: #999
+.heading, .versions tr
+  a
+    visibility: hidden
+  &:hover
+    a
+      visibility: visible
+.floating
+  -moz-box-shadow: 3px 3px 8px rgba(0,0,0,0.5)
+  -webkit-box-shadow: 3px 3px 8px rgba(0,0,0,0.5)
+.note
+  color: #999
+  font-size: 0.9em
+  line-height: 1.4em
+  a
+    color: #999
+    &:hover
+      color: #666
+      background: none
+      text-decoration: underline
+hr
+  border: none
+  border-top: 1px solid #DDD
+  margin: 1.5em 0
+.action
+  display: inline-block
+  background: #EEE
+  padding: 3px 10px
+  cursor: pointer
+  -moz-border-radius: 3px
+  -webkit-border-radius: 3px
+  border: 1px solid #EEE
+  text-shadow: 0 -1px 0 #FFF
+  &:hover
+    color: #000
+    background: #DDD
+    background: -webkit-gradient(linear, left top, left bottom, from(#FDFDFD), to(#DDD))
+    background: -moz-linear-gradient(top,  #FDFDFD, #DDD)
+    border: 1px solid #CCC
+    -moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.1)
+    -webkit-box-shadow: 1px 2px 1px rgba(0,0,0,0.1)
+.collapsable
+  background: url(/images/icon-open.png) no-repeat left center
+  padding-left: 15px
+  cursor: pointer
+  &.closed
+    background: url(/images/icon-closed.png) no-repeat left center
+.avatar
+  label
+    margin-top: 0
+.halfColumn
+  width: 280px
+  display: inline-block
+  vertical-align: top
+.pagination
+  text-align: center
+  border-top: 1px solid #DDD
+  padding: 20px 0
+.clear
+  display: block
+  width: 100%
+  clear: both
+div, span, p
+  &.error, &.errorExplanation, &#error_explanation, &#notice
+    -moz-box-shadow: 2px 2px 6px rgba(0,0,0,0.1)
+    -webkit-box-shadow: 2px 2px 6px rgba(0,0,0,0.1)
+  &#notice
+    padding: 10px
+    margin-bottom: 30px
+    background: #FFC
+    -moz-box-shadow: 2px 2px 6px rgba(0,0,0,0.1)
+    -webkit-box-shadow: 2px 2px 6px rgba(0,0,0,0.1)
+  &.error, &.errorExplanation, &#error_explanation
+    padding: 1px 15px
+    background: #FEE
+    color: #900
+    h2
+      font-size: 1.1em
+.field_with_errors
+  display: inline
+  label
+    color: #900
+    font-weight: 700
+.left
+  float: left
+  margin-right: 15px 
+.right
+  float: right
+  margin-left: 15px
+.alignRight
+  text-align: right
+.center
+  text-align: center
+.hidden
+  display: none

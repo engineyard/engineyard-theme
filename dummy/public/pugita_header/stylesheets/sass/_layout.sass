@@ -1,0 +1,2222 @@
+// Use // instead of /* */ to hide from production
+
+// --------------------------------------------------
+
+/* LAYOUT
+// - Foundation
+// - Header
+// - Structure
+// - Messaging
+// - Quick Start
+// - Quick Start Pages
+// - Add Application to Environment
+// - Gems Selection
+// - Iconography
+// - Environments (Dashboard)
+// - Convenience Classes
+// - Miscellaneous
+
+// --------------------------------------------------
+
+
+
+// --------------------------------------------------
+// Foundation
+// --------------------------------------------------
+
+html, body
+  @include reset
+  background: $color-background url(/images/layout/bg-f7noise.gif) repeat
+
+html
+  overflow-y: scroll
+  overflow-x: hidden
+
+body
+  min-width: 960px
+
+
+
+// --------------------------------------------------
+// Header
+// --------------------------------------------------
+
+@import _header.sass
+
+
+
+// --------------------------------------------------
+// Structure
+// --------------------------------------------------
+
+#content.page
+  background: url(/images/layout/bg-vertical-rule.png) 159px 0 repeat-y
+
+#content-primary
+  position: relative
+  padding: 18px 0px 120px
+  min-height: 310px
+
+  // do we use this?
+  ul.accounts
+    list-style: none
+    margin: 10px 0 0 14px
+    padding: 0
+
+    li
+      margin: 0 0 15px 0
+      padding: 0
+
+  // do we use this?
+  h4.account-name
+    font-size: 15px
+    margin: 0
+    a
+      color: #666
+      text-decoration: none
+    a:hover
+      color: #000
+
+#content-secondary, #menu-styleguide
+  padding-top: 36px
+  padding-bottom: 72px
+  h3
+    padding-top: 0
+    padding-bottom: 6px
+    @include font-bold
+    font-size: $font-size-h4
+    line-height: 18px
+    color: $color-text-alt
+  ul
+    list-style: none
+    margin-left: 0
+    zoom: 1
+    li
+      float: left
+      width: 100%
+      clear: both
+      a
+        display: block
+        margin: 0 0 3px -12px
+        padding: 4px 12px
+        @include big-chunky-rounded-box
+        span
+          position: relative
+          display: block
+          margin-right: -2px
+          padding-right: 8px
+          background: url(/images/bg_sidebar_chevron.png) 100% 5px no-repeat
+          line-height: 1.25
+        &:link, &:visited
+          @include font-bold
+          color: $color-text
+    li a:active, li a.current
+      background-color: darken($color-background, 5%)
+      color: darken($color-text, 10%)
+    li a:focus, li a:hover, li a.current:hover
+      background-color: darken($color-background, 10%)
+      color: darken($color-text, 20%)
+
+    &:before, &:after
+      @include clearfix
+    &:after
+      clear: both
+
+  // not using this yet
+  //.support-level
+    position: relative
+    margin: 12px -12px
+    padding: 0 12px
+    @include rounded-box
+    background: $color-background-alt
+    h3
+      color: $color-text
+      strong
+        font-size: $font-size-h4
+        text-transform: none
+    a.button
+      position: relative
+      float: left
+      @include btn-general
+      @include btn-attention
+      &:hover
+        @include btn-general-hover
+        @include btn-attention-hover
+    span.upgrade-to
+      clear: both
+      display: block
+      padding-top: 3px
+      font-size: $font-size-small
+    ul, p
+      margin: 0
+      padding: 6px 0
+      border-top: 1px solid darken($color-background-alt, 6.25%)
+    ul li a:hover, ul li a:focus, ul li a:active, ul li a.current:hover
+      position: relative
+      @include remove-rounded-box
+      background-color: darken($color-background-alt, 5%)
+    p
+      padding: 12px 0
+
+#content-main
+  margin-left: 10px
+
+.left, .right
+  display: inline
+  width: 370px
+
+.left
+  float: left
+  margin-right: 10px
+
+.right
+  float: right
+  margin-left: 10px
+
+
+
+// ---------------------------------------------------
+// Messaging
+// ---------------------------------------------------
+
+// need to specify div to avoid clash of styles on other error classes
+div.error
+  position: relative
+  margin: -5px -12px 24px
+  padding: 12px
+  @include rounded-box
+  color: #fff
+  background: $color-text-alert
+  text-shadow: 0 -1px 2px darken($color-text-alert, 10%)
+
+  h2
+    padding: 0
+    font-size: $font-size-main
+
+  ul
+    padding: 6px 0 0
+
+
+
+// --------------------------------------------------
+// Common UI Elements
+// ---------------------------------------------------
+
+#main
+  position: relative
+
+div.add
+  position: absolute
+  top: 8px
+  right: 0
+  z-index: 2
+  a.button
+    z-index: 5
+    span
+      position: relative
+      margin-left: -6px
+      padding-left: 18px
+      background: url(/images/icon_create.png) 0 50% no-repeat
+
+a.add
+  padding-left: 18px
+  width: auto
+  height: auto
+  text-indent: 0
+  color: $color-text
+  &.inactive
+    background-color: transparent
+    color: $color-text-alt
+
+p#new_app
+  zoom: 1
+  &:before, &:after
+    @include clearfix
+  &:after
+    clear: both
+
+td a.add
+  float: left
+  display: inline
+  margin: 3px 0 1px
+
+.account_selector
+  ul
+    list-style: none
+  a
+    float: left
+    display: inline
+
+.account_selector a, a.add
+
+
+
+// --------------------------------------------------
+// QuickStart Guide
+// --------------------------------------------------
+
+$quickstart-box-shadow-value  = 0 1px 3px darken($color-background, 25%) inset
+$quickstart-number-size       = 24px
+#quickstart-guide
+  position: relative
+  margin-top: -1px
+  border-bottom: 1px solid lighten($color-background-alt, 25%)
+  background: $color-background-alt
+  background: -moz-linear-gradient(top, $color-background-alt, darken($color-background-alt, 20%))
+  background: -webkit-gradient(linear, left top, left bottom, from($color-background-alt), to(darken($color-background-alt, 20%)))
+  -moz-box-shadow: $quickstart-box-shadow-value
+  -webkit-box-shadow: $quickstart-box-shadow-value
+  box-shadow: $quickstart-box-shadow-value
+  text-shadow: 0 1px 2px $color-background-alt
+  ol
+    margin-left: auto
+    margin-right: auto
+    padding: 0
+    width: 962px
+    background: url(/images/layout/quickstart-rules.png) 50% 0 repeat-y
+    overflow: hidden
+    list-style: none
+  li
+    float: left
+    display: inline
+    margin-left: 10px
+    margin-right: 10px
+    padding: 6px 0 12px
+    width: 220px
+    //background: url(/images/layout/bg-black-trans.png)
+    .number
+      float: left
+      display: inline
+      margin-top: 3px
+      border-radius: $quickstart-number-size
+      -webkit-border-radius: $quickstart-number-size
+      -moz-border-radius: $quickstart-number-size
+      width: $quickstart-number-size
+      height: $quickstart-number-size
+      background: lighten($color-background-alt, 5%)
+      -moz-box-shadow: 0 1px 3px darken($color-background-alt, 10%)
+      -webkit-box-shadow: 0 1px 3px darken($color-background-alt, 10%)
+      box-shadow: 0 1px 3px darken($color-background-alt, 10%)
+      @include font-bold
+      font-size: $font-size-h2
+      line-height: $quickstart-number-size
+      text-align: center
+      color: darken($color-background-alt, 10%)
+      text-shadow: 0 1px 2px #fff
+    &.first
+      margin-left: 11px
+      background: none
+    .content
+      margin-left: 34px
+    &.active_step
+      color: $color-text-callout
+      .number
+        background: #fff
+        color: $color-text-callout
+
+  h3
+    padding: 6px 0 3px
+    font-size: $font-size-h4
+    font-weight: bold
+  p
+    padding: 0
+    font-size: $font-size-small
+    line-height: 1.25
+
+
+
+// --------------------------------------------------
+// Quick Start Pages
+// ---------------------------------------------------
+
+#quickstart
+  h1
+    @include visuallyhidden
+  h2
+    padding-bottom: 12px
+    padding-top: 6px
+    font-weight: normal
+    font-size: $font-size-h1
+    font-family: $font-face-main
+  h3
+    padding-top: 0
+    padding-bottom: 12px
+    @include font-bold
+
+
+
+// --------------------------------------------------
+// Environments (Dashboard)
+// --------------------------------------------------
+
+.environment
+  clear: both
+  margin: 0 0 18px
+
+$module-box-shadow-value  = 0 1px 3px darken($color-background, 25%)
+$tabs-box-shadow-value    = 0 1px 3px darken($color-background, 20%)
+$env-gradient-top         = lighten($color-background-alt, 7.5%)
+$env-gradient-bottom      = darken($color-background-alt, 15%)
+$env-top-highlight        = lighten($color-background-alt, 25%)
+.envTitle
+  position: relative
+  margin: 0 -10px
+  padding: 0 10px 18px
+  border-top: 1px solid $env-top-highlight
+  @include rounded-box-top
+  background: $env-gradient-bottom
+  background: -moz-linear-gradient(top, $env-gradient-top, $env-gradient-bottom)
+  background: -webkit-gradient(linear, left top, left bottom, from($env-gradient-top), to($env-gradient-bottom))
+  -moz-box-shadow: $module-box-shadow-value
+  -webkit-box-shadow: $module-box-shadow-value
+  box-shadow: $module-box-shadow-value
+  text-shadow: 0 1px 2px lighten($color-background-alt, 7.5%)
+  h3
+    padding: 12px 0 23px
+    // avoid overlap with options
+    width: 420px
+    font-size: $font-size-h4
+    a
+      position: relative
+      display: inline-block
+      min-width: 60px
+      &:link, &:visited
+        color: darken($color-text, 10%)
+      &:focus, &:active
+        color: darken($color-text, 15%)
+      &:hover
+        color: darken($color-text, 20%)
+    .account_name
+      color: $color-text
+      font-weight: bold
+    .env-region
+      font-size: 11px
+      font-weight: normal
+      clear: both
+      display: block
+    strong.env-state
+      margin-left: 10px
+      padding: 3px 10px 5px
+      border: 1px solid rgba(0,0,0,.125)
+        top-color: rgba(0,0,0,.25)
+        bottom-color: rgba(255,255,255,.125)
+      @include rounded-box
+      -moz-box-shadow: 0 1px 2px rgba(0,0,0,.125) inset
+      -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.125) inset
+      box-shadow: 0 1px 2px rgba(0,0,0,.125) inset
+      font-size: $font-size-small
+      color: $color-text-callout
+  &.production strong.env-state
+    background: rgba(255,255,255,.75)
+  &.staging strong.env-state
+    background: rgba(255,255,255,.25)
+    color: $color-text
+  &.development strong.env-state
+    background: rgba(255,255,255,.125)
+    color: lighten($color-text, 10%)
+  //&.production
+    border-color: darken($env-top-highlight, 20%)
+    background: darken($env-gradient-bottom, 20%)
+    background: -moz-linear-gradient(top, darken($env-gradient-top, 20%) darken($env-gradient-bottom, 20%))
+    background: -webkit-gradient(linear, left top, left bottom, from(darken($env-gradient-top, 20%)), to(darken($env-gradient-bottom, 20%)))
+    text-shadow: 0 -1px 1px darken($env-gradient-top, 35%)
+    h3
+      color: darken(#fff, 10%)
+      a, strong
+        color: #fff
+  //&.development
+    border-color: lighten($color-border, 25%)
+    background: darken($color-border, 10%)
+    background: -moz-linear-gradient(top, lighten($color-border, 10%) darken($color-border, 10%))
+    background: -webkit-gradient(linear, left top, left bottom, from(lighten($color-border, 10%)), to(darken($color-border, 10%)))
+    text-shadow: 0 1px 2px lighten($color-border, 10%)
+  ul
+    @include reset
+    position: absolute
+    float: left
+    white-space: nowrap
+    list-style: none
+    z-index: 1
+    li
+      float: left
+      display: inline
+
+    &.options
+      top: 10px
+      right: 10px
+      li
+        margin-left: 6px
+        &.attention
+          padding: 0
+          background: none
+
+      // do we use this?
+      .delete
+        font-size: 1em
+
+    &.tabs
+      bottom: 0
+      left: 0
+      zoom: 1
+      li
+        &:first-child a
+          -moz-border-radius-topleft: $radius
+          -webkit-border-top-left-radius: $radius
+        &:last-child a
+          border-right: 1px solid darken($color-border, 5%)
+          -moz-border-radius-topright: $radius
+          -webkit-border-top-right-radius: $radius
+        &.attention
+          padding: 2px
+          margin-left: 100px
+          height: 100%
+      a
+        position: relative
+        float: left
+        display: inline
+        padding: 4px 10px
+        border: 1px solid lighten($color-border, 5%)
+          width: 1px 0 0 1px
+        background: $color-border
+        background: -moz-linear-gradient(top, lighten($color-border, 20%), $color-border)
+        background: -webkit-gradient(linear, left top, left bottom, from(lighten($color-border, 20%)), to($color-border))
+        line-height: 18px
+        color: $color-text
+        text-shadow: 0 1px 2px lighten($color-border, 20%)
+        z-index: 2
+        &:active
+          border-color: $color-border
+          background: darken($color-border, 2.5%)
+          background: -moz-linear-gradient(top, lighten($color-border, 15%), darken($color-border, 2.5%))
+          background: -webkit-gradient(linear, left top, left bottom, from(lighten($color-border, 15%)), to(darken($color-border, 2.5%)))
+          color: darken($color-text, 2.5%)
+        &:focus, &:hover
+          border-color: lighten($color-border, 7.5%)
+          background: darken($color-border, 5%)
+          background: -moz-linear-gradient(top, lighten($color-border, 20%), darken($color-border, 5%))
+          background: -webkit-gradient(linear, left top, left bottom, from(lighten($color-border, 20%)), to(darken($color-border, 5%)))
+          color: darken($color-text, 5%)
+        &.active
+          position: relative
+          margin-bottom: -1px
+          margin-right: -1px
+          border: 1px solid lighten($color-background-alt, 5%)
+            top-color: lighten($color-border, 25%)
+            right-color: darken($color-border, 5%)
+            left-color: lighten($color-border, 25%)
+          background: lighten($color-background-alt, 5%)
+          background: -moz-linear-gradient(top, lighten($color-border, 25%), lighten($color-background-alt, 5%))
+          background: -webkit-gradient(linear, left top, left bottom, from(lighten($color-border, 25%)), to(lighten($color-background-alt, 5%)))
+          cursor: default
+      li:first-child a.active
+        border-left-color: lighten($color-border, 5%)
+      &:before, &:after
+        @include clearfix
+      &:after
+        clear: both
+
+// need to define "div" because of a clashing class name used on the instances tab
+div.instances
+  position: relative
+  margin: 0 -10px
+  padding: 2px 2px 2px 3px
+  border: 1px solid lighten($color-border, 5%)
+    bottom-color: darken($color-border, 5%)
+    top-color: #fff
+  background: lighten($color-background-alt, 5%)
+  -moz-box-shadow: $module-box-shadow-value
+  -webkit-box-shadow: $module-box-shadow-value
+  box-shadow: $module-box-shadow-value
+  table
+    margin-bottom: 0
+  .prettyDate
+    white-space: nowrap
+
+
+
+// --------------------------------------------------
+// Add Application to Environment
+// --------------------------------------------------
+$apps-box-shadow  = 0 1px 3px darken($color-background, 20%) inset
+#link-apps-to-environment
+  position: relative
+  float: left
+  display: inline
+  margin-right: 50px
+  width: 310px
+  h1
+    padding-bottom: 12px
+    font-size: $font-size-h2
+    line-height: 1
+    strong
+      @include font-normal
+      font-size: $font-size-h1
+      line-height: 1.5
+
+  div.add
+    position: static
+    padding-bottom: 18px
+
+  .app
+    position: relative
+    margin: 0 0 12px -10px
+    border: 1px solid $color-border
+      top-color: $color-border
+      bottom-color: lighten($color-background-alt, 25%)
+    @include rounded-box
+    padding: 10px 10px 12px
+    background: lighten($color-border, 10%)
+    background: -moz-linear-gradient(top, lighten($color-border, 20%), lighten($color-border, 10%))
+    background: -webkit-gradient(linear, left top, left bottom, from(lighten($color-border, 20%)), to(lighten($color-border, 10%)))
+    -moz-box-shadow: $apps-box-shadow
+    -webkit-box-shadow: $apps-box-shadow
+    box-shadow: $apps-box-shadow
+    text-shadow: 0 1px 2px lighten($color-border, 20%)
+    zoom: 1
+
+    div.add
+      padding: 0
+      float: right
+      display: inline
+
+    h2.name
+      padding: 0 0 3px
+    p.repo
+      padding-bottom: 12px
+      font-size: $font-size-small
+    p.app_linked
+      float: right
+      display: inline
+      padding: 0
+      span
+        float: left
+        display: inline
+        max-width: 270px
+        text-overflow: ellipsis
+        @include button
+        background: lighten($color-background, 5%)
+        border-color: lighten($color-border, 5%)
+        cursor: text
+        -mox-box-shadow: none
+        -webkit-box-shadow: none
+        box-shadow: none
+    &:before, &:after
+      @include clearfix
+    &:after
+      clear: both
+
+#multi-app-warning
+  position: relative
+  float: left
+  display: inline
+  width: 400px
+  h3
+    padding-top: 24px
+
+
+
+// --------------------------------------------------
+// Gems Selection
+// --------------------------------------------------
+
+//#selection
+  .search, .add-custom
+    input
+      float: left
+      display: inline
+      &[type="submit"]
+        @include btn-general
+        @include btn-attention
+        position: relative
+        top: 2px
+        margin-left: 6px
+        width: auto
+        z-index: 1000
+  .search
+    float: left
+    display: inline
+    width: 240px
+    input
+      width: 149px
+      &[type="submit"]
+        width: auto
+  .full
+    float: none
+    display: block
+    width: auto
+  .add-custom
+    margin-left: 288px
+  .search, .add-custom
+  .field
+    overflow: hidden
+  .field-left, .field-right
+    float: left
+    display: inline
+  .field-left
+    width: 320px
+    margin-right: 6px
+  .field-right
+    width: 130px
+    input
+      width: 96px
+      &[type="submit"]
+        top: 38px
+        width: auto
+  &:after
+    visibility: hidden
+    display: block
+    font-size: 0
+    content: " "
+    clear: both
+    height: 0
+
+//.fields
+  overflow: hidden
+  h2
+    font-size: $font-size-h4
+  h4
+    padding: 6px 12px
+    border-bottom: solid 1px lighten($color-border, 6.25%)
+    @include rounded-box-top
+    background: darken($color-background, 6.25%)
+    text-shadow: 0 1px 2px $color-background
+    font-size: $font-size-h3
+    font-weight: normal
+  .left, .right
+    float: left
+    display: inline
+    width: 50%
+    margin-bottom: 0
+    input.submit
+      clear: none
+      float: none
+      @include btn-general
+      @include btn-attention
+    ul
+      margin: 0
+      list-style: none
+    li
+      clear: both
+      display: block
+      padding: 3px 0 3px 12px
+      border-bottom: solid 1px lighten($color-border, 6.25%)
+      overflow-x: hidden
+      &:after
+        visibility: hidden
+        display: block
+        font-size: 0
+        content: " "
+        clear: both
+        height: 0
+      .name, .options
+        float: left
+        display: inline
+        padding: 3px 0
+      .name
+        width: auto
+        white-space: nowrap
+        font-size: 14px
+        line-height: 1.8
+      .options
+        float: right
+        width: auto
+        padding-left: 12px
+        border-left: solid 1px lighten($color-border, 6.25%)
+        input.submit
+          margin: 2px 0 2px 0
+          padding: 1px 8px
+          /*border: 0
+          position: static
+          /*background: none
+          /*-moz-box-shadow: none
+          /*-webkit-box-shadow: none
+          /*box-shadow: none
+          /*font-size: $font-size-small
+          /*text-decoration: none
+
+          &:hover
+            cursor: pointer
+            color: #000
+            background: none
+        select
+          position: relative
+          top: 2px
+          margin-bottom: 2px
+          margin-right: 10px
+
+  #available
+    h4, ul
+      margin-right: 12px
+  #selected
+    float: right
+    h4, ul
+      margin-left: 12px
+
+* html .fields
+  #available, #selected
+    li
+      zoom: 1
+
+#selection
+  clear: both
+  zoom: 1
+  .search
+    width: 290px
+    form
+      margin-right: 10px
+  .add-custom
+    form
+      margin-left: 10px
+
+  .field
+    width: auto
+    input.text
+      width: 268px
+      &#gem_source
+        margin-right: 5px
+        width: 288px
+    p.control
+      padding-top: 6px
+
+  .field-left
+    margin-right: 0
+    input.text
+      width: 288px
+  .field-right
+    input.text
+      width: 128px
+  hr
+    margin-top: 0
+    margin-bottom: 12px
+    clear: both
+  .fields
+    padding-bottom: 24px
+    zoom: 1
+    .grid_5
+      &#available, &#ebuilds
+        margin-left: -10px
+      &#selected
+        margin-left: 20px
+        margin-right: -10px
+
+    h3
+      position: relative
+      padding: 5px 10px
+      border: 1px solid $color-border
+        top-color: lighten($color-background-alt, 25%)
+        bottom-color: darken($color-border, 5%)
+      @include rounded-box-top
+      background: $color-border
+      background: -moz-linear-gradient(top, lighten($color-border, 20%), $color-border)
+      background: -webkit-gradient(linear, left top, left bottom, from(lighten($color-border, 20%)), to($color-border))
+      -moz-box-shadow: $tabs-box-shadow-value
+      -webkit-box-shadow: $tabs-box-shadow-value
+      box-shadow: $tabs-box-shadow-value
+      text-shadow: 0 1px 2px lighten($color-border, 20%)
+
+    // do we use this?
+    ul
+      margin: 0 0 0 2em
+      padding: 0
+
+    ul.gems, ul.ebuilds
+      margin: 0
+      min-height: 34px
+      list-style: none
+      border: 1px solid $color-border
+        top-color: lighten($color-background-alt, 25%)
+        bottom-color: darken($color-border, 5%)
+      background: lighten($color-border, 20%)
+      -moz-box-shadow: $tabs-box-shadow-value
+      -webkit-box-shadow: $tabs-box-shadow-value
+      box-shadow: $tabs-box-shadow-value
+    .empty
+      padding: 10px
+      @include font-italic
+      text-align: center
+
+    li
+      display: block
+      padding: 3px 10px
+      border-bottom: solid 1px lighten($color-border, 5%)
+      zoom: 1
+      .name, .options
+        display: inline
+      .name
+        float: left
+        padding: 3px 0
+        white-space: nowrap
+        font-size: $font-size-h4
+        line-height: 1.5
+      .options
+        float: right
+        padding-left: 10px
+        border-left: solid 1px lighten($color-border, 6.25%)
+        button
+          margin-top: 2px
+          margin-bottom: 2px
+          padding: 1px 8px
+        select
+          margin-right: 5px
+      &:before, &:after
+        @include clearfix
+      &:after
+        clear: both
+    p.note
+      padding-top: 6px
+      font-size: $font-size-small
+      color: $color-text-alt
+    dl
+      &.left
+        width: 296px
+        margin-right: 24px
+        &#available_gems
+          width: 452px
+          overflow: visible
+      &.right
+        width: 58.25%
+
+    dt
+
+      &.inline_with_header label
+        display: inline-block
+        padding: 0 1em 0 0
+        font-size: 0.9em
+
+        &:first-child
+          display: block
+          padding: 0 0 0.25em
+          font-size: 1em
+
+      &.error input
+        border-color: #F33
+
+      &.disabled label
+        color: #999
+
+
+    dd
+
+      &.error
+        color: #F33
+
+      &.disabled label
+        color: #999
+
+    dd.hr
+      margin-bottom: 12px
+      padding-bottom: 0
+      border-top: 1px solid lighten($color-border, 5%)
+    dl
+
+      input.radio
+        margin-right: .68em
+        margin-left: 0
+
+      select#environment_legacy_stack_version
+        float: left
+        margin: -0.75em 1em 1em 4em
+        width: 120px
+
+      dd.stack_version_choice
+        margin-bottom: 1.2em
+
+        p
+          margin: 0 5px 10px 20px
+
+      dt.ruby_heading
+        padding-top: 28px
+
+    &:before, &:after
+      @include clearfix
+    &:after
+      clear: both
+  &:before, &:after
+    @include clearfix
+  &:after
+    clear: both
+
+#unix-packages .search
+  width: auto
+
+
+
+// --------------------------------------------------
+// Convenience Classes
+// --------------------------------------------------
+
+.hidden
+  @include hidden
+
+.visuallyhidden
+  @include visuallyhidden
+
+.invisible
+  @include invisible
+
+.ir
+  // Image replacement
+  display: block
+  overflow: hidden
+  background-repeat: no-repeat
+  text-indent: -9999em
+
+.clearfix
+  zoom: 1
+  &:before, &:after
+    @include clearfix
+  &:after
+    clear: both
+
+
+
+// --------------------------------------------------
+// Miscellaneous
+// --------------------------------------------------
+
+.updated
+  font-weight: bold
+  font-family: $font-face-alt
+  font-size: $font-size-small
+  line-height: $line-height
+  text-transform: uppercase
+  color: $color-text-callout
+
+.inactive
+  background: $color-background-alt
+  color: $color-text-alt
+
+.relativeDate
+  font-size: $font-size-small
+  color: $color-text-alt
+
+ul.themed
+  ul.name
+    color: $color-text-alt
+    li:first-child
+      color: $color-text
+
+.wrap
+  margin: 0 auto
+  width: 960px
+
+.wrap
+  zoom: 1
+  &:before, &:after
+    @include clearfix
+  &:after
+    clear: both
+
+.environment
+  h4
+    clear: both
+    margin: 0
+    padding: 8px 0
+
+#impersonating
+  width: 100%
+  margin: 0
+  padding: 12px 0
+  background: #c70000
+  border-bottom: 1px solid #000
+  line-height: 1.9
+  .impersonate-controls
+    color: #fff
+    font-weight: normal
+    font-size: $font-size-h4
+    .impersonate-info
+      margin-bottom: 6px
+      padding-bottom: 2px
+      border-bottom: 1px solid #d00
+    form
+      display: inline
+      margin-right: 16px
+    .revert-form
+      margin-left: 16px
+    select
+      background: #fff
+    //.submit
+      @include btn-general
+      @include btn-attention
+      &:hover
+        @include btn-general-hover
+        @include btn-attention-hover
+      &:active
+        @include btn-general-active
+        @include btn-attention-active
+    .admin_name, .user_name, .user_id, .account_id
+      font-weight: bold
+    a
+      text-decoration: underline
+      color: #fff
+
+#btm
+  padding: 20px
+
+.totals
+  color: #333
+  font-weight: bold
+
+ul.themed
+  .error
+    font-size: 0.9em
+    font-weight: bold
+    padding: 0
+    background: none
+    border: none
+
+  .body
+    color: #666
+    background: #FFFFE5
+    padding: 10px 0
+
+    li
+      list-style-type: square
+      padding: 0
+      margin: 4px 0
+      border: 0
+      min-height: 0
+
+    .volumes
+      display: block
+      clear: both
+
+.twocol
+  &:after
+    content: " "
+    clear: both
+    display: block
+    padding-top: 20px
+    border-bottom: 1px solid #DEDEDE
+
+  .col1
+    width: 240px
+
+
+
+
+.twocol
+  .col1
+    float: left
+
+  .col2
+    float: right
+
+  label
+    padding-top: 0
+    font-weight: bold
+
+
+#recipes
+  ul
+    list-style: none
+    margin-top: 5px
+    padding: 0
+    width: 600px
+
+  li
+    display: inline-block
+    width: 140px
+    margin-right: 20px
+    padding: 5px 0
+
+  ul
+    input, label
+      width: auto
+      text-align: left
+      display: inline
+      clear: none
+      margin: 0
+      padding: 0
+
+
+#gems, #selected_gems, #selected_ebuilds
+  float: left
+  margin-right: 2%
+  width: 48%
+  padding-bottom: 48px
+
+
+#selected_gems, #selected_ebuilds
+  float: right
+  margin-right: 0
+  margin-left: 2%
+
+.ebuilds, .gems
+  .name
+
+    .error
+      background: none
+      border: none
+      margin-bottom: 5px
+.ebuilds
+  .name
+    float: left
+    width: 75%
+    padding: 3px 0
+
+    .error
+      background: none
+      border: none
+      margin-bottom: 5px
+#available_gems .name
+  width: 61%
+
+
+.customize
+  overflow: hidden
+  h3, h4
+    padding: 6px 12px
+    border-bottom: solid 1px lighten($color-border, 6.25%)
+    @include rounded-box-top
+    background: darken($color-background, 6.25%)
+    text-shadow: 0 1px 2px $color-background
+    font-size: $font-size-h3
+    font-weight: normal
+
+  ul
+    margin-left: 0
+
+  li
+    clear: both
+    display: block
+    padding: 3px 12px
+    white-space: nowrap
+    border-bottom: solid 1px lighten($color-border, 6.25%)
+
+  input.submit
+    clear: none
+    display: inline
+    margin: 0 0 0 8px
+    padding: 6px 0 6px 12px
+    border: 0
+    border-left: solid 1px lighten($color-border, 6.25%)
+    @include remove-rounded-box
+    background: none
+    -moz-box-shadow: none
+    -webkit-box-shadow: none
+    box-shadow: none
+    font-size: $font-size-small
+    line-height: 1
+    text-decoration: underline
+
+    &:hover
+      cursor: pointer
+      color: #000
+      background: none
+
+  select
+    display: inline
+    clear: none
+    width: 80px
+
+
+.status
+  width: auto
+
+
+#gems .options
+  padding-left: 12px
+  border-left: solid 1px #CCC
+
+
+form
+
+  label
+
+    &.loud
+      font-weight: bold
+
+  .disabled_text
+    font-size: 1.1em
+    padding: 4px
+
+    &.longField
+      width: 100%
+
+form
+  .more input.text
+    width: auto
+
+//a.submit
+  @include btn-general
+  @include btn-attention
+  @include btn-form-submit
+
+  &:hover
+    @include btn-general-hover
+    @include btn-attention-hover
+
+  &:active
+    @include btn-attention-active
+
+
+fieldset
+  &#advanced
+    h3
+      a
+        font-size: smaller
+
+  .field
+    h4
+      padding-top: 18px
+    a.thickbox
+      font-weight: bold
+
+
+
+
+
+#city
+  width: 127px
+
+
+#state
+  width: 40px
+
+
+#zip
+  width: 80px
+
+
+#ccnumber
+  width: 147px
+
+
+#cvv
+  width: 40px
+
+
+#ccexp
+  width: 60px
+
+.inline-notice
+  color: $color-text-alert
+  margin-left: 12px
+
+input.error
+  border: 1px solid #930
+  border-left: 6px solid #930
+
+
+ul.notices
+  list-style: none
+  margin-left: 0
+
+  li
+    position: relative
+    margin: 0 0 10px
+    padding: 10px
+    border: 1px solid $color-border
+    @include rounded-box
+    background: -moz-linear-gradient(top, #FFFFE5, #FFFFF5)
+    background: -webkit-gradient(linear, left top, left bottom, from(#FFFFE5), to(#FFFFF5))
+    .field
+      padding-bottom: 12px
+
+    &.hiddenz
+      border-color: #CCC
+      background: -moz-linear-gradient(top, #E5E5E5, #F5F5F5)
+      background: -webkit-gradient(linear, left top, left bottom, from(#E5E5E5), to(#F5F5F5))
+
+    .subtext
+      margin-top: 5px
+      display: block
+      color: #999
+      font-size: 0.7em
+
+    .hide
+      position: absolute
+      right: 1em
+      top: 1em
+
+    form
+      margin: 0
+
+      //input[type=submit]
+        @include btn-general
+        @include btn-attention
+        margin: 0 0 0 25px
+        display: inline
+
+        &:hover
+          @include btn-attention-hover
+
+        &:active
+          @include btn-attention-active
+
+      input[type=text]
+        width: 726px
+
+#main #btm.bug
+  width: 100%
+  padding: 5px 0 10px
+  border-top: 1px solid #CCC
+  bottom: 0
+
+  a
+    color: #333
+    padding: 10px 20px
+
+    &:hover
+      color: #000
+
+
+.pageError
+  background: url(http://assets.engineyard.com/images/icon_notice.png) no-repeat left 2px
+
+  h1
+    margin-left: 46px
+
+  h2
+    margin-top: 20px
+    margin-bottom: 0
+
+    + p
+      margin-top: 0
+
+
+.block
+  padding-top: 12px
+  &.twocol
+    padding: 0
+    overflow: hidden
+    .col2
+      float: none
+      display: block
+      margin-left: 288px
+
+  h3
+    padding-bottom: 6px
+    border-bottom: 1px solid lighten($color-border, 6.25%)
+
+    #cron_toggle
+      font-size: 13px
+      margin-left: 16px
+      padding-left: 16px
+      border-left: 1px solid #DEDEDE
+      color: #666
+      text-decoration: underline
+
+form.inline
+  display: inline
+
+button.link
+  font-size: 1em
+  padding: 0
+  border: none
+  background: transparent
+  text-decoration: underline
+  cursor: pointer
+  color: #444
+  -webkit-box-shadow: none
+  &:hover
+    color: #000
+
+.error
+  button.link
+    color: #fff
+
+#stats-graphs
+  position: relative
+  margin-right: -20px
+
+ul.graphs
+  padding: 0
+  margin: 0
+  list-style: none
+
+  li
+    margin-bottom: 24px
+
+
+.codeblock
+  font: 1em Monaco, Courier, mono-space
+  max-height: 200px
+  white-space: pre-wrap
+  background: #EEE
+  border: 1px solid #E6E6E6
+  padding: 10px
+
+
+.log
+  width: 98%
+  max-height: 560px
+  overflow: auto
+  white-space: pre-wrap
+  border: 1px solid #999
+  background: #333
+  color: #FFF
+  font-size: 1em
+  padding: 10px
+
+
+.download
+  list-style: url(/images/icon_doc_sm.png)
+
+
+h2 form.oneLine
+  display: inline
+  margin-left: 0.5em
+
+
+ul.selection
+  padding: 0
+  margin: 0
+
+  li
+    list-style: none
+    padding: 6px 5px
+    margin: 0 0 -1px
+    border-top: 1px solid #EDEDED
+    border-bottom: 1px solid #EDEDED
+
+    &:hover
+      background: #F3F3F3
+
+form#new_cluster_configuration
+
+  h3
+    border-bottom: 1px solid #DEDEDE
+    margin-bottom: 10px
+    padding-bottom: 5px
+
+
+.option
+  font-size: 0.7em
+
+
+dl.notes.fields
+  margin-bottom: 0
+
+  dt
+    color: #333
+
+
+#admin_account
+  position: relative
+  h3
+    clear: none
+    padding: 0 0 5px
+  #info
+    padding-bottom: 20px
+    border-bottom: 1px solid $color-border
+    margin-bottom: 20px
+    zoom: 1
+    &:before, &:after
+      @include clearfix
+    &:after
+      clear: both
+  #emergency_contact
+    padding: 5px 10px
+    background: darken($color-background, 6%)
+    width: 380px
+    margin: 5px 0 5px -10px
+    @include rounded-box
+  #settings
+    #support_plan, #type
+      margin: 0 5px 18px 5px
+      font-size: $font-size-h2
+
+  #limits
+    width: 200px
+    margin-left: 425px
+    margin-bottom: 30px
+  #members
+    clear: left
+    float: left
+    margin-bottom: 30px
+  #notes
+    fieldset
+      padding: 15px 0 0
+
+
+#admin_user
+  position: relative
+  margin: 0 -10px 10px
+  padding: 10px
+  border: 1px solid $color-border
+  @include rounded-box
+  zoom: 1
+  #administrate
+    float: left
+    width: 208px
+    padding-right: 10px
+    border-right: 1px solid $color-border
+  .vcard
+    margin-left: 219px
+    .photo
+      float: left
+      padding: 0 20px
+    h1.name,  h3.org, p.email
+      padding: 0
+    p.email
+      padding-bottom: 12px
+    &:before, &:after
+      @include clearfix
+    &:after
+      clear: both
+  &:before, &:after
+    @include clearfix
+  &:after
+    clear: both
+
+.admin_alerts_cluster
+  dt, dd
+    height: 1.5em
+
+  dt
+    float: left
+    font-weight: bold
+    padding-right: 5px
+
+
+.yesterday-events
+  float: left
+  width: 200px
+
+
+.statchart
+  width: 750px
+  height: 150px
+  background-color: #EEE
+
+
+#update_cluster_notice
+  float: left
+  margin-left: 3em
+  margin-top: 16px
+  width: 450px
+
+.pane
+  position: relative
+  float: left
+  margin: 12px 12px 12px 0
+  padding: 12px 12px 48px
+  border: 1px solid lighten($color-border, 6.25%)
+  width: 28.8%
+  height: 260px
+  &#premium_support
+    margin-right: 0
+  h3
+    padding-top: 0
+
+  p
+    font-size: $font-size-small
+
+  ul
+    margin-bottom: 25px
+    list-style: disc
+    font-size: $font-size-small
+
+  li
+    margin-bottom: 6px
+
+  strong
+    position: absolute
+    left: 0
+    bottom: 12px
+    display: block
+    width: 100%
+    padding-top: 6px
+    font-size: 1.2em
+    text-align: center
+
+#support_policies
+  clear: both
+  padding-top: 24px
+  font-size: $font-size-small
+  text-align: center
+
+#members
+  ul
+    @include reset
+    list-style: none
+    margin-right: -20px
+    overflow: hidden
+    li
+      float: left
+      display: inline
+      margin-right: 20px
+      border-top: 1px solid $color-border
+      width: 240px
+      height: 42px
+      position: relative
+      padding: 10px 0
+      .gravatar
+        float: left
+        width: 32px
+        height: 32px
+        margin-right: 10px
+        vertical-align: middle
+      .title
+        line-height: 1.5
+      .subtitle
+        display: block
+        color: $color-text-alt
+        font-size: $font-size-small
+        line-height: 1.25
+      .remove, .creator
+        font-size: smaller
+        position: absolute
+        top: 0
+        right: 0
+        margin: 10px 0 0 0
+        line-height: 1.25
+      .creator
+        background: $color-text-callout
+        padding: 1px 10px 2px
+        @include rounded-box
+        color: #fff
+
+$plan-box-shadow-value  = 0 1px 3px darken($color-background, 15%) inset
+#account
+  .section
+    margin-bottom: 24px
+    padding-top: 6px
+    border-top: 1px solid lighten($color-border, 6.25%)
+  #support_plan .plan-description, #services .service
+    position: relative
+    margin: 0 12px 0 0
+    padding: 12px
+    border: 1px solid lighten($color-border, 5%)
+      bottom: 1px solid lighten($color-background, 10%)
+    @include rounded-box
+    width: 294px
+    background: $color-background
+    background: -moz-linear-gradient(top, lighten($color-background, 10%), darken($color-background, 5%))
+    background: -webkit-gradient(linear, left top, left bottom, from(lighten($color-background, 10%)), to(darken($color-background, 5%)))
+    -moz-box-shadow: $plan-box-shadow-value
+    -webkit-box-shadow: $plan-box-shadow-value
+    box-shadow: $plan-box-shadow-value
+    font-size: $font-size-small
+    text-shadow: 0 1px 2px lighten($color-background, 5%)
+    h3
+      padding-top: 0
+    li
+      padding-bottom: 6px
+  #members
+    ul
+      li
+        .remove
+          form
+            width: auto
+            border: none
+            margin: 0
+            padding: 0
+      &#pending_invitations
+        li
+          .title
+            color: #888
+  #services
+    zoom: 1
+    .service
+      float: left
+      display: inline
+      margin-bottom: 12px
+      width: 150px
+      min-height: 68px
+      text-align: center
+      background: #fff
+    img
+      display: block
+      margin: 0 auto 6px
+      vertical-align: middle
+    span.caption
+      display: block
+    &:before, &:after
+      @include clearfix
+    &:after
+      clear: both
+  #cancel
+    padding-right: 400px
+    font-size: $font-size-small
+
+
+#collab_accept_page
+  margin: 20px auto 0
+  text-align: center
+  h1
+    padding-bottom: 20px
+
+#collab_accept
+  background-color: #fff
+  border: 1px solid #888
+  display: table
+  height: 300px
+  margin: 0 auto
+  padding: 0
+  border-radius: 8px
+  -moz-border-radius: 8px
+  width: 650px
+
+  h2
+    margin-top: 15px
+    color: #000
+    margin: 25px 0
+    font-weight: normal
+    line-height: 24px
+
+  p.invite
+    margin: 0 0 6px 26px
+    font-size: 24px
+
+  .invite_box
+    display: inline-block
+    width: 200px
+    border: 1px solid #f3f3f3
+    margin: 0 28px
+    padding: 20px 15px 30px 15px
+    background-color: #f8f8f8
+    border-radius: 8px
+    -moz-border-radius: 8px
+    text-align: center
+
+    img
+      display: table
+      margin: 0 auto
+      padding: 0
+      border: none
+
+    p
+      margin: 0 0 8px 0
+      padding: 0
+      text-align: center
+      font-weight: bold
+      font-size: 14px
+      overflow: hidden
+
+  .invite_arrow
+    display: inline-block
+    position: relative
+    top: 100px
+    margin: 0
+    font-weight: bold
+
+  form
+    padding-top: 20px
+    text-align: center
+
+
+  p.accept_once_notice
+    font-size: larger
+    margin: 15px 0 0 0
+    text-align: center
+    font-weight: normal
+
+  p.accept_once_notice, p.ignore
+    a:hover
+      text-decoration: underline
+
+p.invite
+  margin: 0 0 6px 26px
+  font-size: 24px
+
+.invite_box
+  display: inline-block
+  margin: 0 30px
+  padding: 10px 25px 30px 25px
+  background-color: #fff
+
+.invite_box img
+  display: table
+  margin: 0 auto
+  padding: 0
+  border: none
+
+.invite_box p
+  margin: 0 0 8px 0
+  padding: 0
+  font-weight: bold
+  font-size: 14px
+
+.invite_arrow
+  display: inline-block
+  position: relative
+  top: 110px
+  margin: 0
+  font-weight: bold
+
+.invite_arrow p
+  margin: 0
+  color: #999
+  font-size: 150px
+
+
+.right_actions
+  clear: both
+  text-align: right
+  input.submit
+    margin-top: 0
+    margin-right: 6px
+  a
+    font-weight: bold
+
+
+
+.actions.gems a.submit
+  display: inline-block
+
+$configurator-box-shadow-value  = 0 1px 3px darken($color-background, 15%) inset
+.configurator
+  position: relative
+  margin: 0 -12px 0
+  padding: 12px 12px 0
+  background-color: lighten($color-background-alt, 5%)
+  @include rounded-box
+  border-bottom: 1px solid lighten($color-background-alt, 25%)
+  background: lighten($color-background-alt, 10%)
+  background: -moz-linear-gradient(top, lighten($color-background-alt, 10%), darken($color-background-alt, 10%))
+  background: -webkit-gradient(linear, left top, left bottom, from(lighten($color-background-alt, 10%)), to(darken($color-background-alt, 10%)))
+  -moz-box-shadow: $configurator-box-shadow-value
+  -webkit-box-shadow: $configurator-box-shadow-value
+  box-shadow: $configurator-box-shadow-value
+  text-shadow: 0 1px 2px lighten($color-background-alt, 5%)
+  h1
+    padding: 0 0 9px
+    font-size: $font-size-h2
+  .selections
+    .choices
+      float: left
+      display: inline
+      margin-right: 48px
+      width: 322px
+      li
+        label
+          position: relative
+          padding: 0 0 0 24px
+          font-size: $font-size-small
+          input
+            position: absolute
+            top: 3px
+            left: 0
+            float: left
+            display: inline
+          strong
+            display: block
+            font-size: $font-size-main
+    dt
+      margin-top: 18px
+    dt:first-child
+      margin-top: 0
+    .summary, .cost
+      float: left
+      display: inline
+      width: 163px
+    .summary
+      margin-right: 48px
+      padding-bottom: 18px
+      .summary
+        float: none
+        display: block
+        padding: 0
+        margin-right: 0
+        width: auto
+      dd
+        font-size: $font-size-small
+        ul
+          margin: 0
+          padding: 0
+          list-style: none
+          li
+            padding-top: 6px
+    .cost
+      position: relative
+      margin-top: -6px
+      .cost
+        position: static
+        margin: 0
+        display: block
+        float: none
+        width: auto
+      dt
+        font-weight: normal
+        font-size: $font-size-h1
+        line-height: 1
+      dd
+        padding-top: 6px
+        font-size: $font-size-small
+    &:after
+      visibility: hidden
+      display: block
+      font-size: 0
+      content: " "
+      clear: both
+      height: 0
+  ul.choice-list
+    li
+      padding-bottom: 12px
+      label
+  dd
+    color: $color-text
+    &.line
+      padding-bottom: 24px
+      margin-bottom: 0
+
+    dl.choices
+      float: left
+      margin-right: 24px
+      width: 45%
+  dd dt
+    padding-bottom: 0
+    strong
+      font-size: $font-size-h4
+  dd dd
+    padding-bottom: 12px
+  dd.hr
+    margin-bottom: 0
+    padding-bottom: 12px
+    border-top: 1px solid darken($color-background-alt, 5%)
+  dd.line:after
+    visibility: hidden
+    display: block
+    font-size: 0
+    content: " "
+    clear: both
+    height: 0
+  dd dl.summary
+    float: left
+    margin-right: 24px
+    width: 184px
+    dt
+      padding-bottom: 6px
+      font-size: $font-size-h4
+    dd
+      li
+        padding-bottom: 6px
+  dd dl
+  &.choices
+    dt
+      padding-left: 18px
+      position: relative
+    dd
+      padding-left: 18px
+
+    input
+      position: absolute
+      left: 0
+      top: 3px
+
+  &.summary dd.single ul
+    padding-bottom: 1.6em
+
+  &.cost
+    float: right
+    overflow: auto
+    width: 160px
+
+    dt strong
+      display: block
+      padding-bottom: 6px
+      font-size: $font-size-h1
+      white-space: nowrap
+
+* html .configurator
+  dd.line
+    zoom: 1
+
+*:first-child+html .configurator
+  dd.line
+    zoom: 1
+
+.keypair .environments ul
+  margin: 0
+
+.monitor_url_box
+  padding: 24px
+  font-size: $font-size-h2
+
+  input
+    margin-bottom: 12px
+
+  span
+    display: block
+    padding-bottom: 8px
+
+  span.url_limit
+    font-size: 0.7em
+
+.inline
+  &#db_selector
+    position: relative
+    padding-left: 18px
+    input.checkbox
+      position: absolute
+      top: 0
+      left: 0
+
+#ssh_key_pair
+  width: 640px
+  padding-top: 12px
+  margin-bottom: 42px
+  dt
+    font-size: 16px
+    color: $color-text-callout
+  dt.inline_with_header
+    margin-top: 18px
+    color: $color-text
+    font-weight: normal
+
+#utility
+  input
+    width: 80%
+  .more
+    input
+      width: auto
+
+#footer
+  clear: both
+  border-top: 1px solid lighten($color-border, 10%)
+  min-height: 1px
+
+#footer-content
+  padding: 12px 0
+  border-top: 1px solid #fff
+  font-size: $font-size-small
+  line-height: 1.25
+  color: $color-text-alt
+
+  p#footer-logo
+    margin-top: 6px
+    height: 96px
+    background: url(/images/layout/logo_appcloud.png) no-repeat
+    text-indent: -9999em
+  h2
+    padding: 12px 0 6px
+    font-size: $font-size-main
+    @include font-bold
+  ul
+    list-style: none
+    margin: 0
+  li
+    margin-bottom: 6px
+  a
+    padding: 0
+    color: darken($color-text-alt, 25%)
+    background: none
+    &:hover
+      color: darken($color-text-alt, 50%)
+  p#copyright
+    padding-top: 12px
+
+#support_admin
+  p.edit
+    margin: 16px 0 0 0
+  p.edit +p.edit
+    margin: 0
+  //background: lighten($color-border, 10%)
+
+ol.plans
+  overflow: hidden
+  margin-right: -10px
+  margin-left: 0
+  padding-top: 12px
+  list-style: none
+  .plan
+    position: relative
+    width: 224px
+    min-height: 270px
+    float: left
+    margin: 0 10px 18px 0
+    padding: 10px
+    border: 1px solid lighten($color-border, 5%)
+      bottom-color: #fff
+    @include rounded-box
+    -moz-box-shadow: $plan-box-shadow-value
+    -webkit-box-shadow: $plan-box-shadow-value
+    box-shadow: $plan-box-shadow-value
+    background: $color-background
+    background: -moz-linear-gradient(top, lighten($color-background, 10%), darken($color-background, 5%))
+    background: -webkit-gradient(linear, left top, left bottom, from(lighten($color-background, 10%)), to(darken($color-background, 5%)))
+    text-shadow: 0 1px 2px lighten($color-background, 5%)
+    &.selected
+      background: $color-background-alt
+      background: -moz-linear-gradient(top, lighten($color-background-alt, 10%), darken($color-background-alt, 5%))
+      background: -webkit-gradient(linear, left top, left bottom, from(lighten($color-background-alt, 10%)), to(darken($color-background-alt, 5%)))
+      border: 1px solid darken($color-border, 1.25%)
+        bottom-color: #fff
+      text-shadow: 0 1px 1px #fff
+    .controls
+      input#submit, button
+        @include button-size-revert
+
+    h3
+      padding-top: 0
+      padding-bottom: 6px
+    ul
+      font-size: $font-size-small
+
+    .price
+      margin-top: 12px
+      padding-bottom: 12px
+      font-size: $font-size-h3
+      line-height: 1
+    ul
+      list-style: disc
+    .controls
+      position: absolute
+      bottom: 18px
+      left: 10px
+      width: 224px
+      margin: 0
+      padding: 0
+      border: 0
+      text-align: center
+      a.button
+        margin: 0 auto
+        @include button-revert
+        @include button-size-revert
+        &:active
+          @include button-active
+        &:focus, &:hover
+          @include button-hover
+
+.support
+  clear: both
+  color: #000
+  font-size: 1em
+
+#dashboard, #ssh-public-keys, #ssl-certificates
+  position: relative
+
+#ssh-public-keys
+  h2
+    margin-bottom: 12px
+    padding-bottom: 0
+  .omega
+    margin-right: -20px
+    .field
+      margin-left: 20px
+    .account-name
+      margin-top: 18px
+      margin-left: 0
+      margin-bottom: 9px
+      border-bottom: 1px solid $color-border
+  tr.keypair
+    ul
+      list-style: none
+
+
+.running .spinner, a.image .inner
+  display: none
+
+
+.instance
+  a.toggler
+    display: inline-block
+    vertical-align: center
+    width: 16px
+    height: 16px
+    background: url('/images/icon_hide.png') top left no-repeat
+
+  &.closed a.toggler
+    background: url('/images/icon_expand.png') top left no-repeat
+
+
+ul.list-environments
+  margin: 0
+  padding-bottom: 18px
+  list-style: none
+  li
+    display: inline
+    margin-right: 20px

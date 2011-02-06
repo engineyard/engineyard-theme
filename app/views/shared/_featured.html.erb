@@ -1,0 +1,78 @@
+<% @next_webinar = next_webinar %>
+<% if (@next_webinar && 4 == 2) %>
+  <div class="featured block">
+    <h3 class="webinar"><a href="<%= @next_webinar.url %>" class="trackWebinar"><%= @next_webinar.title %></a></h3>
+    <p><%= @next_webinar.description %></p>
+  </div>
+<% end %>
+
+<% if !params['path'] %>
+  <div class="featured block">      
+    <a href="http://www.eventbee.com/view/zero-to-rails-3" class="trackLink"><h3 class="ornament">Zero to Rails 3 Online Training<br /><small>January 24-27</small></h3></a>        
+    <p><strong>Special seasonal promotion:</strong> 4 days of intensive Ruby on Rails training delivered live to your desktop for $899!</p>
+  </div>
+<% end %>
+
+
+<% if params[:controller] == "static" && params['path'].include?('appcloud') %>
+  <div class="featured block">      
+    <a href="http://pages.engineyard.com/rails-in-the-cloud.html" class="trackCollateral"><h3 class="pdf">Rails in the Cloud Technical Paper</h3></a>
+    <p>Learn the 7 key business benefits of using a Platform-as-a-Service</p>
+  </div>
+<% end %>
+
+<% if params[:controller] == "static" && params['path'].include?('xcloud') %>
+  <div class="featured block">
+    <h3 class="pdf"><a href="/docs/EY_xCloud_Datasheet.pdf" class="trackCollateral">Engine Yard xCloud Datasheet</a></h3>
+    <p>Download the xCloud Datasheet</p>
+  </div>
+<% end %>
+
+
+<% unless params['path'] && params['path'].include?('appcloud/pricing') %>
+  <div class="featured block">  
+    <h3 class="newsletter">The Engine Yard Newsletter</h3>
+    <p>Get Ruby on Rails tips, and news.</p>  
+    <script type="text/javascript"> 
+    var profiling = {
+      isEnabled: false,
+      numberOfProfilingFields: 3,
+      alwaysShowFields: [ 'mktDummyEntry']
+    };
+    </script>
+    <script type="text/javascript">function mktoGetForm() {return document.getElementById('mktForm_1002'); }</script>
+
+    <form class="lpeRegForm formNotEmpty newsletter" method="post" enctype="application/x-www-form-urlencoded" action="http://na-f.marketo.com/index.php/leadCapture/save" id="mktForm_1002" name="mktForm_1002">
+      <fieldset>
+        <div class="mktFormReq mktField">
+          <input class='mktFormText mktFormEmail mktFReq' name="Email" id="Email" type='text' value="" maxlength='255' tabIndex='2' placeholder="Email Address" />
+          <div class='mktFormMsg'></div>
+        </div>
+        <div id="mktFrmButtons">
+          <input id='mktFrmSubmit' type='submit' class="cta button" value='Subscribe' name='submitButton' onclick='formSubmit(document.getElementById("mktForm_1002")); return false;' />
+        </div>
+        <input type="text" name="_marketo_comments" value="" class="hidden" />
+        <input type="hidden" name="lpId" value="1009" />
+        <input type="hidden" name="subId" value="121" />
+        <input type="hidden" name="kw" value="" />
+        <input type="hidden" name="cr" value="" />
+        <input type="hidden" name="searchstr" value="" />
+        <input type="hidden" name="lpurl" value="http://pages.engineyard.com/Blank-Newsletter.html?cr={creative}&kw={keyword}" />
+        <input type="hidden" name="formid" value="1002" />
+        <input type="hidden" name="returnURL" value="http://pages.engineyard.com/SubscribeThanks.html" />
+        <input type="hidden" name="retURL" value="http://pages.engineyard.com/SubscribeThanks.html" />
+        <input type="hidden" name="_mkt_disp" value="return" />
+        <input type="hidden" name="_mkt_trk" value="%MC0%" />
+      </fieldset>
+    </form>
+    <script type="text/javascript" src="http://na-f.marketo.com/js/mktFormSupport.js"></script>
+    <script type="text/javascript">
+    function formSubmit(elt) {
+      return Mkto.formSubmit(elt);
+    }
+    function formReset(elt) {
+      return Mkto.formReset(elt);
+    }
+    </script>
+  </div>
+<% end %>

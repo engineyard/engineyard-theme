@@ -1,0 +1,16 @@
+// Use // instead of /* */ to hide from production
+
+.running .spinner, a.image .inner
+  display: none
+
+
+.instance
+  a.toggler
+    display: inline-block
+    vertical-align: center
+    width: 16px
+    height: 16px
+    background: url('/images/icon_hide.png') top left no-repeat
+
+  &.closed a.toggler
+    background: url('/images/icon_expand.png') top left no-repeat

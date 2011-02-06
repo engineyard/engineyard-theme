@@ -1,0 +1,148 @@
+.two_column
+  .primary, .secondary
+    h3
+      font-size: 1.8em
+      margin-bottom: 1em
+.project, .three_column .profile
+  padding: 20px
+  border: 1px solid #DDD
+  margin-bottom: 10px
+  -moz-box-shadow: 2px 2px 4px rgba(0,0,0,0.05)
+  -webkit-box-shadow: 2px 2px 4px rgba(0,0,0,0.05)
+.project
+  h4, h5
+    font-family: "Helvetica Neue Light", HelveticaNeue-Light, Arial, sans-serif
+  h4
+    font-size: 2.6em 
+    margin: 0 0 10px
+    float: left
+  h5
+    font-size: 1.5em
+    text-transform: uppercase
+    color: #666
+    border-top: 1px solid #EEE
+    padding-top: 24px
+    margin-top: 0
+    margin-bottom: 20px
+  .header
+    margin-bottom: 24px
+  .logo
+    float: right
+    margin-bottom: -100px
+  .content
+    padding-bottom: 24px
+  ul
+    clear: both
+    padding: 0
+    margin: 0
+    list-style: none
+    overflow: hidden
+    width: 500px
+  p.center
+    margin-bottom: 0
+.profiles
+  li
+    vertical-align: top
+    display: inline-block
+    width: 247px
+    a
+      display: inline-block
+  img
+    float: left
+    margin: 1px 10px 30px 1px
+    border: 2px solid #FFF
+    -moz-box-shadow: 0px 0px 1px #000
+    -webkit-box-shadow: 0px 0px 1px #000
+  h6
+    font-size: 1.2em
+    font-weight: normal
+    float: left
+    margin: 0px 0 0
+    a
+      color: #666
+.secondary
+  ul.profiles
+    margin-bottom: 0
+    li
+      clear: both
+      width: 100%
+      border-bottom: 1px dotted #DDD
+      padding-bottom: 10px
+      ul
+        margin: 0 0 0 55px
+        line-height: 0
+      li
+        clear: none
+        margin: 0
+        font-size: 0.8em
+        line-height: 1.4em
+        border: none
+        padding-bottom: 0
+      img
+        margin-bottom: 0
+      h6
+        float: none
+.projectList
+  li
+    line-height: 1.4em
+    font-size: 0.9em
+    display: inline
+    margin: 0
+    &:after
+      content: ", "
+    &:last-child:after
+      content: ""
+.toggle
+  font-size: 1.1em
+  padding: 5px 0
+  margin: 0px -20px -20px
+  border-top: 1px solid #EEE
+  color: #999
+  cursor: pointer
+  background: #FCFCFC
+  &:hover
+    color: #666
+    background: #FFD
+
+.three_column
+  padding: 0
+  margin: 0 0 0 -10px
+  .profile
+    font-size: 0.9em
+    width: 224px
+    display: inline-block
+    vertical-align: top
+    margin-left: 10px
+    h6
+      margin: 0
+    img
+      margin: 0 10px 10px 0
+    ul
+      padding-left: 55px
+    dl
+      display: block
+      clear: both
+      font-size: 1em
+      margin-top: 10px
+    dt, dd
+      margin: 0
+    .projectList
+      margin-top: 0px
+      padding-left: 0
+ul.updates
+  margin-bottom: 30px
+  p
+    font-size: 0.95em
+    margin-top: 0.5em
+    margin-bottom: 1.5em
+
+.website, .repository, .twitter
+  padding-left: 24px
+  margin-bottom: 4px
+  display: block
+.website
+  background: url(/images/icon-web.png) no-repeat left center
+.repository
+  background: url(/images/icon-net.png) no-repeat left center
+.twitter
+  background: url(/images/icon-twitter.png) no-repeat left center

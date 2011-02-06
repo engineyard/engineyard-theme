@@ -1,0 +1,295 @@
+// Use // instead of /* */ to hide from production
+
+// --------------------------------------------------
+
+/* TYPOGRAPHY
+// - Variables
+// - General
+// - Headers
+
+// --------------------------------------------------
+
+
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+$font-face-main   = "Lucida Sans Unicode", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif
+$font-face-alt    = "Lucida Sans", "Lucida Sans Unicode", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif
+$font-face-code   = "Monaco", "Courier New", sans-serif
+
+$font-size-h1     = 24px
+$font-size-h2     = 18px
+$font-size-h3     = 18px
+$font-size-h4     = 14px
+$font-size-h5     = 14px
+$font-size-h6     = 12px
+$font-size-main   = 12px
+$font-size-small  = 11px
+
+$line-height      = 1.5
+$line-height-alt  = 1.25
+
+$font-style-code  = normal #{$font-size-small}/#{$line-height-alt} #{$font-face-code}
+
+@mixin font-bold
+  font-weight: bold
+  font-family: $font-face-alt
+
+@mixin font-italic
+  font-style: italic
+  font-family: $font-face-alt
+
+@mixin font-normal
+  font-style: normal
+  font-weight: normal
+  font-family: $font-face-main
+
+@mixin font-code
+  font: $font-style-code
+  color: darken($color-text-alt, 25%)
+  strong
+    font: $font-style-code
+    color: darken($color-text-callout, 25%)
+
+
+
+// --------------------------------------------------
+// General
+// --------------------------------------------------
+
+body, select, input, textarea, button
+  font: #{$font-size-main}/#{$line-height} #{$font-face-main}
+  text-rendering: optimizeLegibility
+  -webkit-font-smoothing: antialiased
+  color: $color-text
+
+pre, code, kbd, samp, var, tt, textarea
+  @include font-code
+
+
+
+// --------------------------------------------------
+// Headers
+// --------------------------------------------------
+
+@mixin hx
+  @include reset
+  padding: 18px 0 12px
+  font-weight: normal
+  line-height: 1.25
+
+h1
+  @include hx
+  padding-top: 9px
+  font-size: $font-size-h1
+
+h2
+  @include hx
+  padding-top: 12px
+  font-size: $font-size-h2
+  strong
+    color: darken($color-text, 10%)
+  @include font-bold
+
+h3
+  @include hx
+  font-size: $font-size-h3
+
+h4
+  @include hx
+  font-size: $font-size-h4
+  @include font-bold
+
+h5
+  @include hx
+  font-size: $font-size-h5
+
+h6
+  @include hx
+  font-size: $font-size-h6
+  @include font-bold
+
+
+
+// --------------------------------------------------
+// Block Text Elements
+// --------------------------------------------------
+
+address
+  @include reset
+  padding-bottom: 12px
+  @include font-normal
+
+p
+  @include reset
+  padding-bottom: 12px
+  &.disabled
+    color: $color-text-alt
+
+blockquote, pre
+  @include reset
+  padding: 10px
+
+blockquote, q
+  quotes: none
+
+blockquote:before, blockquote:after, q:before, q:after
+  content: ''
+  content: none
+
+pre
+  white-space: pre
+  white-space: pre-wrap
+  white-space: pre-line
+  word-wrap: break-word
+  background: $color-background-alt2
+
+
+
+// --------------------------------------------------
+// Inline Text Elements
+// --------------------------------------------------
+a
+  outline: none
+  text-decoration: none
+  &:link, &:visited
+    color: $color-text-callout
+    -webkit-tap-highlight-color: $color-text-callout
+  &:active
+    color: darken($color-text-callout, 10%)
+  &:focus, &:hover
+    color: darken($color-text-callout, 20%)
+
+abbr, del, dfn, ins, q, mark, s
+  border: 0
+  text-decoration: none
+
+abbr[title], dfn[title]
+  border-bottom: 1px dotted $color-background-alt
+
+ins, mark, s
+  background: $color-background-alt2
+  color: #000
+
+del, s
+  text-decoration: line-through
+
+em, i, cite
+  @include font-italic
+
+strong, b, th, mark
+  @include font-bold
+
+code, kbd, samp, var, tt
+  background: $color-background-alt2
+  padding: 6px 12px
+  line-height: 0
+
+sub
+  vertical-align: sub
+
+sup
+  vertical-align: super
+
+small, sub, sup
+  font-size: $font-size-small
+
+sub, sup
+  line-height: 0
+
+td
+  small, code, kbd, samp, var, tt
+    display: inline-block
+    margin-top: 1px
+    padding-top: 10px
+  small
+    padding-top: 4px
+
+
+
+// --------------------------------------------------
+// Lists
+// --------------------------------------------------
+
+@mixin list
+  @include reset
+  margin-left: 24px
+  padding-bottom: 12px
+
+ul
+  @include list
+  list-style: disc
+
+ol
+  @include list
+  list-style: decimal
+
+li
+  @include reset
+
+dl
+  @include reset
+  dt
+    @include reset
+    @include font-bold
+  dd
+    @include reset
+
+
+
+// --------------------------------------------------
+// Media
+// --------------------------------------------------
+
+object, iframe, audio, video, time, canvas, hr, img
+  @include reset
+
+hr
+  display: block
+  margin-top: 24px
+  margin-bottom: 24px
+  border: 0
+  height: 1px
+  background: $color-border
+  color: $color-border
+
+br
+  line-height: 0
+
+img
+  border: 0
+
+.ie7 img
+  -ms-interpolation-mode: bicubic
+
+
+
+// --------------------------------------------------
+// HTML5 Block Elements (Render if we use them)
+// --------------------------------------------------
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary
+  @include reset
+  display: block
+
+
+
+// --------------------------------------------------
+// Miscellaneous
+// --------------------------------------------------
+
+@mixin selection
+  background: $color-text-callout
+  color: #fff
+  text-shadow: none
+
+// these must be defined separately
+::-moz-selection
+  @include selection
+::selection
+  @include selection
+
+.callout
+  color: $color-text-callout

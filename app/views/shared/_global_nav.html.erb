@@ -1,0 +1,87 @@
+<nav>
+  <ul class="navigation">
+    <li <%= selected?(/^products/) %>>
+      <span>Cloud Products</span>
+      <ul>
+        <li>
+          <a href="/products/appcloud">Engine Yard AppCloud</a>
+          <ul>
+            <li><a href="/products/appcloud/features">Features</a></li>
+            <li><a href="/products/appcloud/pricing">Pricing</a></li>
+            <li><a href="/video/17825326">Video Tour</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="/products/xcloud">Engine Yard xCloud</a>
+          <ul>
+            <li><a href="/products/xcloud/features">Features</a></li>
+            <li><a href="/products/xcloud/pricing">Pricing</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="/products/technology">Engine Yard Platform</a>
+          <ul>
+            <li><a href="/products/technology/stack">Technology Stack</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    
+    <li<%= selected?(/^support/) %>>
+      <span>Support</span>
+      <ul>
+        <li><a href="http://support.cloud.engineyard.com/">Request Support</a></li>
+        <li><a href="http://docs.engineyard.com">Documentation</a></li>
+        <li><a href="http://community.engineyard.com">Community Forums</a></li>
+      </ul>
+    </li>
+  
+    <li<%= selected?(/^services/) %>>
+      <span>Services</span>
+      <ul>
+        <li><a href="/services">Professional Services</a></li>
+        <li><a href="/services/university">Engine Yard University</a></li>
+      </ul>
+    </li>
+    
+    <li> | </li>
+    
+    <li<%= selected?(/^developer/) %>>
+      <span>Resources</span>
+      <ul>
+        <li><a href="/videos">Videos</a></li>
+        <li><a href="/podcasts">Podcasts</a></li>
+        <li><a href="/developer/webinars">Webinars</a></li>
+        <li><a href="/developer/events">Events</a></li>
+        <li><a href="/partners">Development Partners</a></li>
+        <li><a href="/developer/groups">User Groups</a></li> 
+        <li><a href="http://jobs.engineyard.com">Jobs Board</a></li>
+      </ul>
+    </li>
+    
+    <li<%= selected?(/^projects/) %>>
+      <span>Open Source</span>
+      <ul>
+        <li><a href="/open-source">Projects</a></li>
+        <li><a href="/open-source/people">Contributors</a></li>
+      </ul>
+    </li>
+
+    <li<%= selected?(/^company/) %>>
+      <span>About</span>
+      <ul>
+        <li><a href="/company/">Overview</a></li>
+        <li><a href="/company/customers">Customers</a></li>
+        <li><a href="/company/team">Leadership Team</a></li>
+        <li><a href="/company/partners">Technology Partners</a></li>
+        <li><a href="/company/careers">Careers</a></li>
+        <li><a href="/company/news">News &amp; Press</a></li>
+        <li><a href="/company/contact">Contact Us</a></li>
+      </ul>
+    </li>
+
+    <li<%= selected?(/^blog/) %>>
+      <%= link_to '<span>Blog</span>'.html_safe, '/blog' %>
+    </li>
+  </ul>
+</nav>

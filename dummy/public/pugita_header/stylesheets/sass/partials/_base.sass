@@ -1,0 +1,621 @@
+body
+  margin: 0
+  padding: 0
+  font-size: 62.5%
+  background: #FFF
+  font-family: "Helvetica Neue Regular", "HelveticaNeue-Regular", Arial, Helvetica, sans-serif
+  color: #333
+  
+p
+  font-size: 1.2em
+  line-height: 1.5em
+  color: #363636
+
+  &.text
+    margin-bottom: 20px
+ul, ol
+  font-size: 1.2em
+  line-height: 1.5em
+ol
+  li
+    margin: 0 0 1.5em 0
+
+a
+  text-decoration: none
+  /*color: #004a80*/
+  color: #336699
+  img
+    border: none
+a:hover, *
+  a:hover 
+    text-decoration: underline
+h1, h2, h3, h4, h5, h6
+  color: #333
+  line-height: 1.4em
+h1, .h1
+h2, .h2
+  font-size: 2.25em
+h3, .h3, h4, .h4
+  font-weight: normal
+  margin: 1.5em 0 0.5em
+h3, .h3
+  font-size: 2em  
+h4, .h4
+  font-family: 'Helvetica Neue'
+  font-size: 1.6em
+  font-weight: 400
+  color: #000
+  /*color: #898989*/
+  margin: 0
+h5, .h5
+  font-size: 1.4em
+  margin-top: 0.5em
+h6, .h6
+  font-size: 1.2em
+
+dl
+  font-size: 1.2em
+dt, dd
+  margin: 0
+  padding: 0
+  display: block
+dt
+  font-weight: bold
+dd
+  margin-top: -1.2em
+  margin-left: 80px
+  margin-bottom: 0.5em
+
+address
+  font-size: 1.2em
+  font-style: normal
+  line-height: 1.4em
+  clear: both
+  margin: 1.5em 0
+
+blockquote
+  font-size: 1.3em
+  font-style: italic
+  margin: 1.5em 0 0.5em
+  p
+    color: #666
+    margin-bottom: 0
+cite
+  text-align: right
+  display: block
+  margin-bottom: 1em
+  font-style: normal
+  color: #666
+  font-size: 1.1em
+
+hr
+  border: none
+  border-top: 1px solid #DDD
+  margin: 1.5em 0
+  clear: both
+
+.wrapper
+  width: 827px
+  margin: 0 auto
+  padding: 0 20px
+.double
+  overflow: auto
+  clear: both
+  .half
+    float: left
+    width: 45%
+    margin: 0 2% 0 0
+    & + .half
+      margin-right: 0
+      float: right
+    form
+      input[type="text"]
+        width: 200px
+      textarea
+        width: 205px
+  .text_block
+    /*height: 215px*/
+    margin-bottom: 25px
+  h3
+    margin: 0
+    font-size: 2em
+    font-weight: normal
+  p.subtitle
+    color: #898989
+    font-size: 1.7em
+    font-family: "Helvetica Neue Light", "HelveticaNeue-Light", Arial, Helvetica, sans-serif
+  h4
+    color: #000
+    /*color: #363636/*
+    margin-bottom: .75em
+    font-size: 1.5em
+  p
+    margin-top: 0
+  ul
+    margin: 1em 0 2em
+    padding: 0
+    li
+      margin: 0 0 0 1.5em
+      padding: 0
+      line-height: 1.5
+
+
+.triple
+  overflow: auto
+  clear: both  
+  .third
+    width: 29%
+    float: left
+    margin: 0 2% 0 2%
+
+.quad
+  overflow: auto
+  clear: both
+  .quarter
+    float: left
+    margin: 0 2% 0 0
+    width: 23%
+    
+.full
+  width: 96%
+  margin: 2em 0
+  padding: 2em 2% 0
+  border-top: 1px solid #CCC
+
+/* #main
+   float: left
+   width: 68%
+   #sidebar
+     float: right
+     width: 30% */
+
+.tab_panel
+  h3
+    font-size: 2em
+    font-weight: normal
+    margin: 0
+  h4
+    margin: 0
+    font-size: 1.6em
+    font-family: "Helvetica Neue Light", "HelveticaNeue-Light", Arial, Helvetica, sans-serif
+    font-weight: normal
+    color: #898989
+
+.left
+  float: left
+.right
+  float: right
+img.left
+  margin-right: 15px
+  margin-bottom: 15px
+img.right
+  margin-left: 15px
+  margin-bottom: 15px
+.alignRight
+  text-align: right
+.center
+  text-align: center
+.wrap
+  margin: 0 40px 40px
+  &.right
+    margin-right: 0
+  &.left
+    margin-left: 0
+.nowrap
+  white-space: nowrap
+  
+.with_subtitle
+  margin-bottom: 0 !important
+
+.subtitle
+  margin-top: 0 !important
+    
+    
+#demo_box
+  border: 1px solid #bbd4e5
+  background: #edf8ff
+  border-radius: 5px
+  -moz-border-radius: 5px
+  -webkit-border-radius: 5px
+  text-align: center
+  width: 216px
+  padding: 1em .5%
+  h3
+    font-size: 1.5em
+    margin: 0 2em .75em
+  #countdown
+    display: block
+    font-size: 2em
+    margin: 0 1em .75em
+  p
+    font-size: 1.5em
+    margin: 0 0 .5em
+    a
+      color: #444
+
+table
+  font-size: 1.2em
+  border-collapse: collapse
+  margin: 1em 0
+  &.wide
+    width: 100%
+  thead
+    th
+      text-transform: uppercase
+      vertical-align: bottom
+      border-bottom: 3px solid #DDD
+      border-top: none
+  tbody tr:nth-child(even)
+    td
+      background: #F9F9F9
+  td, th
+    text-align: left
+    padding: 10px
+    vertical-align: top
+    border-top: 1px solid #DDD
+    border-bottom: 1px solid #DDD
+  &.layout
+    width: 100%
+    td, th
+      border: none
+      background: none
+    tbody tr:nth-child(even)
+      td
+        background: none
+  .rowHeaders
+    border-right: 1px solid #EEE
+
+.footnote
+  font-size: 95%
+  color: #666
+
+form
+  margin: 1.5em 0
+  font-size: 1.2em
+  label
+    display: block
+    float: left
+    width: 100px
+    margin: 11px 0
+    padding-right: 10px
+    text-align: right
+  input, textarea, select
+    margin: 5px 0
+    padding: 2px
+    font-size: 1em
+  input[type="text"]
+    width: 240px
+  textarea
+    width: 245px
+    height: 10em
+    font: 1em Lucida Grande, Verdana, sans-serif
+  input[type="submit"]
+    color: #333
+    margin-left: 110px
+    padding: 2px 20px
+    min-width: 120px
+    display: block
+    border: 1px solid #CCC
+    -moz-border-radius: 10px
+    -webkit-border-radius: 10px
+    background: #FDFDFD
+    background: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#EEE))
+    background: -moz-linear-gradient(top,  #FFF,  #EEE)
+    -moz-box-shadow: 2px 2px 3px rgba(0,0,0,0.1)
+    cursor: pointer
+    &:hover
+      background: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#F2F2F2))
+      background: -moz-linear-gradient(top,  #FFF,  #F2F2F2)
+  select
+    padding: 0
+    margin-top: 8px
+  br
+    display: block
+    height: 1px
+    clear: both
+    margin-top: -1px
+  p
+    margin-left: 110px
+    line-height: 1em
+  ul
+    padding: 0
+    margin: 0
+  li            
+    font-size: .85em
+    line-height: .85em
+    list-style: none
+    clear: both
+    span.mktFormMsg
+      font-size: 0.75em
+      display: block
+      color: red
+      margin-left: 110px
+#developer .feed
+  font-size: 1em
+  padding: 0
+  li
+    list-style: none
+    h3, p
+      margin-left: 0
+    ul
+      color: #666
+      line-height: 1em
+      padding: 0
+      margin: 6px 0 10px
+    li
+      text-transform: capitalize
+      display: inline-block
+      border-left: 1px solid #DDD
+      padding-left: 1em
+      margin-left: 1em
+      &:first-child
+        margin-left: 0
+        padding-left: 0
+        border-left: 0
+      a
+        text-decoration: none
+        text-transform: none
+        color: #666
+        &:hover
+          color: #333
+      
+.catalog
+  padding: 0
+  h3, h3 a
+    font-size: 1.2em
+    margin-bottom: 0.2em
+  li
+    list-style: none
+    padding: 10px
+    border-top: 1px dotted #DDD
+    &:first-child
+      border: none
+    ul
+      font-size: 1em
+      padding: 0
+      margin-top: 0.25em
+    li
+      border: none
+      padding: 0 10px
+      display: inline-block
+      &:first-child
+        padding-left: 0
+  a
+    display: inline-block
+    clear: both
+  .location
+    margin-bottom: 1.5em
+  &.press
+    li
+      background: url(/images/icn_press_release.png) no-repeat left 12px
+      padding: 10px 0 10px 35px
+      li
+        padding: 0
+        background: none
+      ul
+        margin: 0
+        padding: 0
+      h3
+        margin: 0
+        padding: 0
+        font-size: 1em
+  &.news
+    li
+      h3
+        margin: 0
+        padding: 0
+        font-size: 1em
+      li
+        border-left: 1px solid #DDD
+        line-height: 1em
+        &:first-child
+          border-left: none
+.gallery
+  padding: 0
+  li
+    list-style: none
+    padding: 20px
+    border-top: 1px dotted #DDD
+    clear: both
+    &:first-child
+      border-top: none
+    a
+      h3
+        text-decoration: none
+        border: none
+        color: #369
+        display: inline
+        &:hover
+          text-decoration: underline
+    &.video
+      padding: 20px 0 0
+      h3
+        margin-top: 0
+        font-size: 1.2em
+      p
+        margin-bottom: 0
+      &:first-child
+        padding-top: 0
+  img
+    float: left
+    margin-right: 20px
+    margin-bottom: 20px
+    display: block
+    border: 6px solid #FFF
+    -moz-box-shadow: 2px 2px 6px #DDD
+    -webkit-box-shadow: 2px 2px 6px #DDD
+  p
+    margin-left: 112px
+    font-size: 1em
+  h3
+    margin: 0 0 0.25em
+    & + p
+      margin-top: 0
+  h5
+    margin-bottom: 0
+  &.companies
+    li
+      padding: 20px 0
+      p, h3
+        margin-left: 140px
+    img
+      border: none
+      -webkit-box-shadow: none
+      -moz-box-shadow: none
+.pagination
+  text-align: center
+  font-size: 1.2em
+.notice
+  /* background: #FFD */
+  /* -moz-box-shadow: 2px 2px 2px rgba(0,0,0,0.05) */
+  border: 1px solid #c2c2c2
+  border-width: 1px 0
+  padding: 10px
+  margin: 2em 0
+p.notice
+  font-family: 'Helvetica Neue'
+  font-size: 1.5em
+  font-weight: 200
+  
+.pdf, .doc, .url, .webcast
+  display: inline-block
+  padding: 3px 0 5px 26px
+
+.pdf 
+  background: url(/images/img-icons.png?1.1.8) 0px -2800px no-repeat 
+
+.doc 
+  background: url(/images/img-icons.png?1.1.8) 0px -2900px no-repeat
+
+.url 
+  background: url(/images/img-icons.png?1.1.8) 2px -500px no-repeat
+  padding: 0 0 0 26px
+
+.webcast 
+  background: url(/images/img-icons.png?1.1.8) 0px -2411px no-repeat
+  padding: 0 0 0 36px
+  
+  
+.webcast + p 
+  margin-top: 0px
+  
+.webcast strong 
+  color: #333
+
+.subpages
+  margin-top: -25px
+  padding: 8px 0
+  text-align: center
+  border-bottom: 1px solid #EEE
+  li
+    list-style: none
+    display: inline-block
+    padding: 0 20px
+    a
+      color: #369
+    &.selected a, & a:hover
+      color: #333  
+#mktFrmButtons
+  margin-top: 5px      
+  color: #333
+#tooltip
+  position: absolute
+  font-size: 1em
+  background: #FFE
+  margin: -10px 0 0 -10px
+  padding: 8px
+  border: 1px solid #CCC
+  -webkit-box-shadow: 2px 2px 2px rgba(0,0,0,0.25)
+  -moz-box-shadow: 2px 2px 2px rgba(0,0,0,0.25)
+  h3
+    font-size: 1em
+    margin: 0
+
+/* Google Search */
+table.gsc-search-box
+  display: table !important
+  width: auto !important
+  margin: 0
+  td
+    padding: 0
+    border: none
+form input.gsc-input
+  width: 400px
+  border: 1px solid #999
+  -moz-box-shadow: inset 1px 1px 1px rgba(0,0,0,0.25)
+  -webkit-box-shadow: inset 1px 1px 1px rgba(0,0,0,0.25)
+form input.gsc-search-button
+  font-size: 0.9em
+  margin: 0
+  min-width: 1px
+  width: auto
+.gsc-tabsArea, .gsc-resultsHeader
+  display: none
+
+
+/* Migration Page */
+.two_column
+  &.migration
+    margin-top: 20px
+    .primary
+      div, .note
+        position: absolute
+        width: 440px
+      .note
+        color: #999
+        font-size: 1.5em
+        line-height: 1.4em
+        margin: 0
+      h3
+        font-size: 1.75em
+        margin: 0
+      ul
+        padding: 0 0 0 1.5em
+        margin-top: 10px
+      li
+        margin: 0
+      .warning
+        line-height: 1.3em
+      #agree
+        margin-top: 84px
+        h3
+          color: #666
+      #clone
+        margin-top: 227px
+        h3
+          color: #666
+      #test
+        margin-top: 379px
+        h3
+          color: #F90
+      #sync
+        margin-top: 569px
+        h3
+          color: #F90
+      #switch
+        margin-top: 779px
+        h3
+          color: #690
+      #shutdown
+        margin-top: 944px
+.sideBar
+  float: left
+  width: 160px
+  margin-right: 40px
+  margin-bottom: 60px
+  margin-left: 80px
+.warning
+  background: -webkit-gradient(linear, left top, left bottom, from(#FFF2BF), to(#FFF8DE))
+  background: -moz-linear-gradient(top,  #FFF2BF,  #FFF8DE)
+  margin: 0
+  padding: 10px
+  &.notice
+    margin-bottom: 30px
+.lightbox:hover
+  text-decoration: none
+.section
+  .nav
+    float: right
+    margin: -3.25em 0 0 0
+    padding: 0
+    list-style: none

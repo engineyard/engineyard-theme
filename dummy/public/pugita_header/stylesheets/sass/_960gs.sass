@@ -1,0 +1,228 @@
+// Use // instead of /* */ to hide from production
+
+// --------------------------------------------------
+
+// 960 Grid System ~ Core CSS.
+// Learn more ~ http://960.gs/
+// Licensed under GPL and MIT.
+
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Containers
+// --------------------------------------------------
+
+.page
+  margin-left: auto
+  margin-right: auto
+  width: 960px
+  zoom: 1
+  &:before, &:after
+    @include clearfix
+  &:after
+    clear: both
+
+
+
+// --------------------------------------------------
+// Grid
+// --------------------------------------------------
+
+@mixin column
+  float: left
+  display: inline
+  margin-left: 10px
+  margin-right: 10px
+
+.grid_1
+  @include column
+  width: 60px
+.grid_2
+  @include column
+  width: 140px
+.grid_3
+  @include column
+  width: 220px
+.grid_4
+  @include column
+  width: 300px
+.grid_5
+  @include column
+  width: 380px
+.grid_6
+  @include column
+  width: 460px
+.grid_7
+  @include column
+  width: 540px
+.grid_8
+  @include column
+  width: 620px
+.grid_9
+  @include column
+  width: 700px
+.grid_10
+  @include column
+  width: 780px
+.grid_11
+  @include column
+  width: 860px
+.grid_12
+  @include column
+  width: 940px
+
+// --------------------------------------------------
+// Grid >> Children (Alpha ~ First, Omega ~ Last)
+// --------------------------------------------------
+
+.alpha
+  margin-left: 0
+.omega
+  margin-right: 0
+
+
+
+// --------------------------------------------------
+// Sizing for column spacing
+// --------------------------------------------------
+$gs-size-1            =  80px
+$gs-size-1-negative   = -80px
+$gs-size-2            =  160px
+$gs-size-2-negative   = -160px
+$gs-size-3            =  240px
+$gs-size-3-negative   = -240px
+$gs-size-4            =  320px
+$gs-size-4-negative   = -320px
+$gs-size-5            =  400px
+$gs-size-5-negative   = -400px
+$gs-size-6            =  480px
+$gs-size-6-negative   = -480px
+$gs-size-7            =  560px
+$gs-size-7-negative   = -560px
+$gs-size-8            =  640px
+$gs-size-8-negative   = -640px
+$gs-size-9            =  720px
+$gs-size-9-negative   = -720px
+$gs-size-10           =  800px
+$gs-size-10-negative  = -800px
+$gs-size-11           =  880px
+$gs-size-11-negative  = -880px
+
+.push_1, .pull_1, .push_2, .pull_2, .push_3, .pull_3, .push_4, .pull_4, .push_5, .pull_5, .push_6, .pull_6, .push_7, .pull_7, .push_8, .pull_8, .push_9, .pull_9, .push_10, .pull_10, .push_11, .pull_11, .push_12, .pull_12, .push_13, .pull_13, .push_14, .pull_14, .push_15, .pull_15
+  position: relative
+
+
+
+// --------------------------------------------------
+// Prefix Extra Space
+// --------------------------------------------------
+
+.prefix_1
+  padding-left: $gs-size-1
+.prefix_2
+  padding-left: $gs-size-2
+.prefix_3
+  padding-left: $gs-size-3
+.prefix_4
+  padding-left: $gs-size-4
+.prefix_5
+  padding-left: $gs-size-5
+.prefix_6
+  padding-left: $gs-size-6
+.prefix_7
+  padding-left: $gs-size-7
+.prefix_8
+  padding-left: $gs-size-8
+.prefix_9
+  padding-left: $gs-size-9
+.prefix_10
+  padding-left: $gs-size-10
+.prefix_11
+  padding-left: $gs-size-11
+
+
+
+// --------------------------------------------------
+// Suffix Extra Space
+// --------------------------------------------------
+
+.suffix_1
+  padding-right: $gs-size-1
+.suffix_2
+  padding-right: $gs-size-2
+.suffix_3
+  padding-right: $gs-size-3
+.suffix_4
+  padding-right: $gs-size-4
+.suffix_5
+  padding-right: $gs-size-5
+.suffix_6
+  padding-right: $gs-size-6
+.suffix_7
+  padding-right: $gs-size-7
+.suffix_8
+  padding-right: $gs-size-8
+.suffix_9
+  padding-right: $gs-size-9
+.suffix_10
+  padding-right: $gs-size-10
+.suffix_11
+  padding-right: $gs-size-11
+
+
+
+// --------------------------------------------------
+// Push Space
+// --------------------------------------------------
+
+.push_1
+  left: $gs-size-1
+.push_2
+  left: $gs-size-2
+.push_3
+  left: $gs-size-3
+.push_4
+  left: $gs-size-4
+.push_5
+  left: $gs-size-5
+.push_6
+  left: $gs-size-6
+.push_7
+  left: $gs-size-7
+.push_8
+  left: $gs-size-8
+.push_9
+  left: $gs-size-9
+.push_10
+  left: $gs-size-10
+.push_11
+  left: $gs-size-11
+
+
+
+// --------------------------------------------------
+// Pull Space
+// --------------------------------------------------
+
+.pull_1
+  left: $gs-size-1-negative
+.pull_2
+  left: $gs-size-2-negative
+.pull_3
+  left: $gs-size-3-negative
+.pull_4
+  left: $gs-size-4-negative
+.pull_5
+  left: $gs-size-5-negative
+.pull_6
+  left: $gs-size-6-negative
+.pull_7
+  left: $gs-size-7-negative
+.pull_8
+  left: $gs-size-8-negative
+.pull_9
+  left: $gs-size-9-negative
+.pull_10
+  left: $gs-size-10-negative
+.pull_11
+  left: $gs-size-11-negative

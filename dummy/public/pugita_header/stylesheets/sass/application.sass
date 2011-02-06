@@ -1,0 +1,1678 @@
+// Use // instead of /* */ to hide from production
+
+// --------------------------------------------------
+
+// APPLICATION
+
+// --------------------------------------------------
+
+@import _color.sass
+//@import _globalvariables.sass
+@mixin reset
+  margin: 0
+  padding: 0
+  vertical-align: baseline
+// --------------------------------------------------
+// Rounded Corners
+// --------------------------------------------------
+
+$radius             = 6px
+$pill-radius        = 12px
+$big-chunky-radius  = 24px
+
+@mixin rounded-box
+  -webkit-border-radius: $radius
+  -moz-border-radius: $radius
+  border-radius: $radius
+
+@mixin rounded-box-top
+  -webkit-border-top-left-radius: $radius
+  -webkit-border-top-right-radius: $radius
+  -moz-border-radius-topleft: $radius
+  -moz-border-radius-topright: $radius
+  border-top-left-radius: $radius
+  border-top-right-radius: $radius
+
+@mixin big-chunky-rounded-box
+  -webkit-border-radius: $big-chunky-radius
+  -moz-border-radius: $big-chunky-radius
+  border-radius: $big-chunky-radius
+
+@mixin remove-rounded-box
+  -webkit-border-radius: 0
+  -moz-border-radius: 0
+  border-radius: 0  
+  
+//@import _type.sass
+$line-height      = 1.5
+$font-size-h1     = 24px
+$font-size-h2     = 18px
+$font-size-h3     = 18px
+$font-size-h4     = 14px
+$font-size-h5     = 14px
+$font-size-h6     = 12px
+$font-size-main   = 12px
+$font-size-small  = 11px
+
+//@import _icons.sass
+@import _buttons.sass
+//@import _forms.sass
+//@import _tables.sass
+//@import _960gs.sass
+//@import _layout.sass
+
+$plan-box-shadow-value  = 0 1px 3px darken($color-background, 15%) inset
+ol.plans
+  overflow: hidden
+  margin-right: -10px
+  margin-left: 0
+  padding: 12px 0 0 0
+  list-style: none
+  &.services
+    .plan
+      height: 500px
+  .plan
+    position: relative
+    width: 230px
+    min-height: 270px
+    float: left
+    margin: 0 0 18px 0
+    padding: 16px
+    border: 1px solid lighten($color-border, 5%)
+      bottom-color: #fff
+    @include rounded-box
+    -moz-box-shadow: $plan-box-shadow-value
+    -webkit-box-shadow: $plan-box-shadow-value
+    box-shadow: $plan-box-shadow-value
+    background: $color-background
+    background: -moz-linear-gradient(top, lighten($color-background, 10%), darken($color-background, 5%))
+    background: -webkit-gradient(linear, left top, left bottom, from(lighten($color-background, 10%)), to(darken($color-background, 5%)))
+    text-shadow: 0 1px 2px lighten($color-background, 5%)
+    .center img
+      border: 1px solid darken($color-background, 15%)   
+    &:nth-child(2)
+      margin: 0 15px 18px 15px
+    &.selected
+      background: $color-background-alt
+      background: -moz-linear-gradient(top, lighten($color-background-alt, 10%), darken($color-background-alt, 5%))
+      background: -webkit-gradient(linear, left top, left bottom, from(lighten($color-background-alt, 10%)), to(darken($color-background-alt, 5%)))
+      border: 1px solid darken($color-border, 1.25%)
+        bottom-color: #fff
+      text-shadow: 0 1px 1px #fff
+    .controls
+      input#submit, button
+        @include button-size-revert
+
+    h3
+      padding-top: 0
+      padding-bottom: 6px
+    ul
+      font-size: $font-size-small
+
+    .price
+      margin-top: 12px
+      padding-bottom: 12px
+      font-size: $font-size-h3
+      line-height: 1
+    ul
+      list-style: disc
+    .controls
+      position: absolute
+      bottom: 18px
+      left: 10px
+      width: 224px
+      margin: 0
+      padding: 0
+      border: 0
+      text-align: center
+      a.button
+        margin: 0 auto
+        @include button-revert
+        @include button-size-revert
+        &:active
+          @include button-active
+        &:focus, &:hover
+          @include button-hover
+
+
+//@import _messaging.sass
+//@import _jquery_ui.sass
+//@import _plugins.sass
+
+//@import _styleguide.sass
+
+////////////
+// Resets //
+////////////
+body
+  font-size: 83%
+  font-family: "proxima-nova-1","proxima-nova-2", Arial, "Liberation Sans", FreeSans, sans-serif
+  color: #333
+  text-rendering: optimizeLegibility
+  -webkit-font-smoothing: antialiased
+  margin: 0
+  background: #FFF
+header, footer, article, section, aside, nav
+  display: block
+.container
+  font-size: 1em
+  line-height: 1.5em
+hr
+  border: 0 #DDD solid
+  border-top-width: 1px
+  clear: both
+  height: 0
+  margin: 2em 0
+ol
+  list-style: decimal
+ul
+  list-style: disc
+  &.nav
+    margin: 1.95em 0 0
+    list-style: none
+    li
+      display: inline-block
+      line-height: 1em
+      margin-left: 1em
+      padding-left: 1em
+      border-left: 1px solid #DDD
+      &:first-child
+        border-left: none
+        padding-left: 0
+        margin-left: 0
+li
+  margin-left: 30px
+p,dl,hr,h1,h2,h3,h4,h5,h6,ol,ul,pre,table,address,fieldset,.halfColumn,small
+  margin: 0
+  
+//////////////
+// 820 Wide //
+//////////////
+.wrapper
+  width: 820px
+  margin: 0 auto
+
+///////////////////
+// Margin Resets //
+///////////////////
+p, ul, ol, dl, fieldset, .catalog, address, small
+  margin: 1em 0 1.5em
+
+///////////////////
+// HTML Elements //
+///////////////////
+h1, h2, h3, h4, h5, h6
+  font-weight: normal
+  line-height: 1.2em
+  margin: 1.2em 0 1em
+h1, .h1
+  font-weight: 100
+  font-size: 2.6em
+h2, .h2
+  font-size: 2.2em
+  font-weight: 300
+h3, .h3
+  font-size: 1.6em
+  color: #333
+h4, .h4
+  font-size: 1.2em
+  line-height: 1.5em
+  color: #333
+  margin-top: 1.5em
+h5, .h5
+  font-size: 1.2em
+  line-height: 1.5em
+  color: #666
+h6, .h6
+  font-size: 1em
+  line-height: 1.5em
+p, .p
+  font-size: 1em
+.caption
+  font-size: 1em
+  text-transform: none
+  color: #666
+  margin-top: 0
+.subtitle
+  margin-top: -1.25em
+ul, ol
+  padding-left: 1.6em
+li
+  margin: 0 0 0.5em
+dt
+  font-weight: 700
+dd
+  margin-left: 0
+  margin-bottom: 1.5em
+.inline
+  dt, dd
+    float: left
+    margin-bottom: 0.5em
+  dt
+    clear: left
+    width: 80px
+  &:after
+    content: ' '
+    display: block
+    clear: both
+  label, input
+    display: inline-block
+    clear: none
+strong
+  font-weight: 700
+.light
+  font-weight: 300
+  color: #999
+section
+  clear: both
+code
+  font: 12px Monaco, Courier New, mono
+  background: #F3F3F3
+  border: 1px dotted #DDD
+  padding: 0 3px
+  color: #636363
+blockquote
+  font: italic 1.1em Georgia, Times New Roman, sans-serif
+  line-height: 1.4em
+  margin: 0
+  color: #666
+  & + cite
+    margin-top: -1em
+cite
+  text-align: right
+  font-size: 1em
+  line-height: 1.2em
+  display: block
+  font-style: normal
+  margin-top: 0
+  margin-bottom: 2em
+  color: #666
+address
+  clear: both
+  font-style: normal
+
+///////////
+// Links //
+///////////
+a
+  &:link, &:visited
+  text-decoration: none
+  color: #369
+  img
+    border: none
+  &:visited
+    color: #596772
+  &:hover, &:active
+    text-decoration: underline
+    img
+      text-deocration: none
+  &:focus
+    outline: none
+  h3, h4, h5, h6
+    color: #369
+    &:hover
+      text-decoration: underline
+
+////////////
+// Tables //
+////////////
+table
+  width: 100%
+  border-collapse: collapse
+  border-bottom: 1px solid #999
+  p
+    margin: 0
+    & + p
+      margin-top: 1.5em
+  &.wide
+    margin-bottom: 1.5em
+caption
+  font-size: 1.2em
+  font-weight: 700
+  color: #333
+  padding-bottom: 0.5em
+  border-bottom: 2px solid #999
+td, th
+  text-align: left
+  border-top: 1px dotted #DDD
+  padding: 4px 5px
+  vertical-align: top
+  max-width: 410px
+tr
+  &.subhead th, &.subhead td, th.subhead, td.subhead
+    padding-top: 14px
+    border-bottom: 2px solid #EEE
+  &:nth-child(even)
+    td, th
+      background: #F9F9F9
+thead
+  th, td
+    border-top: none
+    border-bottom: 2px solid #999
+    vertical-align: bottom
+  .sortable
+    color: #333
+    padding-right: 13px
+    &:hover
+      text-decoration: none
+      color: #000
+  .active
+    color: #000
+  .asc
+    background: url(/images/icn-asc.png) no-repeat right 6px
+  .desc
+    background: url(/images/icn-dsc.png) no-repeat right 6px
+tbody
+  font-size: 95%
+#eystack
+  clear: both
+  tbody
+    th
+      border-top: 1px solid #EEE
+      border-bottom: 2px solid #DDD
+      background: none
+      padding-top: 20px
+    tr:last-child
+      th, td
+        border-bottom: 1px solid #EEE
+    td
+      font-size: 12px
+      &:first-child
+        min-width: 140px
+  ul, li
+    list-style: none
+    padding: 0
+    margin: 0
+  .beta, .experimental, .unsupported
+    cursor: help
+  .beta
+    color: #C90
+  .experimental
+    color: #900
+  .unsupported
+    color: #999
+table.layout
+  border: none
+  td, th, tr
+    background: none
+    border: none
+    padding: 0
+
+///////////
+// Forms //
+///////////
+form
+  ul
+    list-style: none
+    padding: 0
+    margin: 10px 0
+    label
+      margin-left: 5px
+      display: inline
+label
+  font-size: 0.9em
+  color: #666
+  display: block
+  clear: both
+  margin-top: 8px
+input[type="text"], input[type="password"]
+  font-size: 1em
+  font-family: "proxima-nova-1","proxima-nova-2", Arial, "Liberation Sans", FreeSans, sans-serif
+  width: 200px
+fieldset
+  border: none
+  padding: 0
+textarea
+  font-family: "proxima-nova-1","proxima-nova-2", Arial, "Liberation Sans", FreeSans, sans-serif
+  width: 380px
+  height: 100px
+
+/////////////////
+// Login Panel //
+/////////////////
+.loginPanel
+  width: 350px
+  margin: 30px auto 10px
+  padding: 30px
+  border: solid 10px #CCC
+  -moz-box-shadow: 3px 3px 6px rgba(0,0,0,0.1)
+  -webkit-box-shadow: 3px 3px 6px rgba(0,0,0,0.1)
+  -moz-border-radius: 20px
+  -webkit-border-radius: 20px
+  h2
+    margin: 0
+  form
+    margin-bottom: 20px
+    label
+      color: #999
+    ul label, ul input
+      margin-left: 0
+    input[type="text"], input[type="password"]
+      color: #666
+      font-size: 1.6em
+      padding: 5px 3px 3px
+      width: 340px
+
+/////////////////
+// Base Layout //
+/////////////////
+header, #content
+  padding: 0 30px
+header
+  display: block
+  background: url(/images/bg_header.png) repeat-x left top
+  min-height: 77px
+  color: #FFF
+  h1
+    margin: 0
+    overflow: hidden
+    background: url(/images/logo.png) no-repeat left top
+    height: 81px
+    width: 50px
+    position: absolute
+    top: 8px
+    text-indent: -10000px
+    a
+      display: block
+      float: right
+      overflow: hidden
+      text-indent: -10000px
+      height: 81px
+      width: 50px
+  a, a:visited, a:hover, a:active
+    color: #FFF
+    text-decoration: none
+  ul
+    margin: 0
+    float: right      
+    li
+      display: inline-block
+      margin-left: 10px
+  .utility
+    padding-top: 4px
+    a.login
+      display: block
+      padding: 5px 15px
+      margin-top: -5px
+      background: #9A020C
+      -moz-border-radius-bottomleft: 10px
+      -moz-border-radius-bottomright: 10px
+      -webkit-border-bottom-left-radius: 10px
+      -webkit-border-bottom-right-radius: 10px
+      &:hover
+        background: #800
+    input[type="submit"]
+      display: none
+    input
+      color: #666
+      border: 1px solid #900
+      -moz-border-radius: 1px
+      -webkit-border-radius: 1px
+      -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5) inset
+      -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5) inset
+      background: #FFF url(/images/icon_search.png) no-repeat 2px
+      opacity: 0.75
+      font-size: 1em
+      padding: 2px 3px 2px 18px
+      width: 100px
+      &:focus
+        opacity: 1
+  nav ul
+    clear: right
+    float: right
+    margin: 8px 0 0 7em
+    padding: 0
+    li
+      float: left
+      display: block
+      margin: 0 0 0 6px
+      padding: 0
+      list-style-type: none
+      span
+        padding: 6px 10px 6px
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.25)
+        font-size: 14px
+        font-weight: normal
+        margin: 1px
+      &.selected span, &:hover span, &:hover span.single
+        -webkit-border-radius: 4px
+        -moz-border-radius: 4px
+        border-radius: 4px
+        margin: 0
+        text-decoration: none
+      &.selected span, &:hover span.single
+        color: #FFF
+        background: #83020A
+        border: 1px solid #73090b
+      &:hover span
+        background: #FFF
+        border: 1px solid #CCC
+        border-bottom: none
+        color: #83020A
+        -moz-box-shadow: 2px 2px 2px rgba(0,0,0,0.1)
+        -webkit-box-shadow: 2px 2px 2px rgba(0,0,0,0.1)
+      &:hover span.single
+        -moz-box-shadow: none
+        -webkit-box-shadow: none
+      ul
+        float: none
+        display: none
+        font-size: 13px
+        z-index: 100
+        position: absolute
+        background: #FFF
+        background: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#F6F6F6))
+        background: -moz-linear-gradient(top,  #FFF,  #F6F6F6)
+        border: 1px solid #CCC
+        border-top: none
+        -moz-border-radius-topright: 4px
+        -moz-border-radius-bottomright: 4px
+        -moz-border-radius-bottomleft: 4px
+        -webkit-border-top-right-radius: 4px
+        -webkit-border-bottom-left-radius: 4px
+        -webkit-border-bottom-right-radius: 4px
+        min-width: 90px
+        padding: 0px 15px 10px
+        margin: 1px 0 0
+        -moz-box-shadow: 2px 2px 2px rgba(0,0,0,0.1)
+        -webkit-box-shadow: 2px 2px 2px rgba(0,0,0,0.1)
+        li
+          float: none
+          margin: 10px 0 0
+          clear: both
+          a
+            clear: both
+            display: block
+        ul
+          display: block
+          position: static
+          border: None
+          background: none
+          padding: 0
+          margin: 0
+          -moz-box-shadow: none
+          -webkit-box-shadow: none
+          li
+            margin-top: 0
+            a:link, a:visited
+              font-size: 12px
+              color: #999
+        a:link, a:visited, a:hover
+          font-size: 1em
+          color: #666
+          background: none
+          -moz-box-shadow: none
+          -webkit-box-shadow: none
+          text-shadow: none
+          border: none
+          padding: 0
+          margin: 0
+          &:hover
+            color: #000
+      &:hover
+        ul
+          display: block
+#content
+  background: #FFF url("/images/bg_clouds.png") repeat-x -8% top
+  padding-top: 60px 
+  
+$highlight-color-alt: #FF9F29   
+$highlight-color-alt2: #CC0000
+
+#heroes
+  #nav
+    float: right
+    width: 240px
+    margin: 15px 0 25px
+    padding: 15px 0
+    border-left: 1px solid #EEE
+    ul
+      list-style: none
+      padding: 0
+      margin: 0
+    li
+      display: block
+      margin: 4px 0 4px -1px
+      padding: 10px 0 10px 10px
+      border-top: 1px solid #FFF
+      border-bottom: 1px solid #FFF
+      border-left: 1px solid #EEE
+      color: #999
+      &:hover
+        color: #333
+        cursor: pointer
+      &.current
+        border-top: 1px solid #EEE
+        border-bottom: 1px solid #EEE
+        border-left: 1px solid #FFF
+        background: #FFF
+        position: relative
+        color: #369
+  #panels
+    position: relative
+    div
+      background: #FFF
+      width: 820px
+      height: 230px
+    img
+      float: left
+      margin-top: 10px
+      margin-right: 20px
+      &.appcloud
+        margin: 30px -11px 10px 0
+      &.jruby
+        margin-bottom: 100px
+        width: 180px
+  #hero_1 
+    text-align: center
+    img
+      float: right
+    div
+      width: 480px
+      float: left
+    h2
+      font-weight: bold
+      margin-top: 28px
+      font-size: 36px
+    h3
+      margin-top: 5px
+      font-size: 28px
+      padding-bottom: 5px
+      background: url('/images/swipe_blue.png') bottom center no-repeat
+    p
+      margin-bottom: 0
+    .button
+      font-size: 1.8em
+      &:hover
+        text-decoration: none
+      &.orange
+        color: #fff
+        background: $highlight-color-alt
+        background: -moz-linear-gradient(top, lighten($highlight-color-alt, 20%), $highlight-color-alt)
+        background: -webkit-gradient(linear, left top, left bottom, from(lighten($highlight-color-alt, 20%)), to($highlight-color-alt))
+        &:hover
+          border-color: darken($highlight-color-alt, 5%)
+          background: darken($highlight-color-alt, 5%)
+          background: -moz-linear-gradient(top, lighten($highlight-color-alt, 15%), darken($highlight-color-alt, 5%))
+          background: -webkit-gradient(linear, left top, left bottom, from(lighten($highlight-color-alt, 15%)), to(darken($highlight-color-alt, 5%)))
+      &.red
+        color: #fff
+        background: $highlight-color-alt2
+        background: -moz-linear-gradient(top, lighten($highlight-color-alt2, 20%), $highlight-color-alt2)
+        background: -webkit-gradient(linear, left top, left bottom, from(lighten($highlight-color-alt2, 20%)), to($highlight-color-alt2))
+        &:hover
+          border-color: darken($highlight-color-alt2, 5%)
+          background: darken($highlight-color-alt2, 5%)
+          background: -moz-linear-gradient(top, lighten($highlight-color-alt2, 15%), darken($highlight-color-alt2, 5%))
+          background: -webkit-gradient(linear, left top, left bottom, from(lighten($highlight-color-alt2, 15%)), to(darken($highlight-color-alt2, 5%)))
+  p
+    margin: 0.5em 0 1.5em
+  .intro
+    margin-bottom: 0
+    color: #666
+  h2
+    margin: 0
+    font-size: 2.2em
+    line-height: 1.2em
+  h3
+    margin: 0
+    line-height: 1em
+.block
+  margin: 20px 0
+  border-top: 1px solid #DDD    
+  &:first-child
+    border-top: none
+    margin-top: 23px
+  &.cta
+    text-align: center
+    margin-top: 0
+    padding-top: 30px
+    a
+      margin-bottom: 10px
+      display: inline-block    
+      width: 140px  
+  p
+    line-height: 1.4em
+  #countdown
+    float: right
+    margin-top: 1em
+  form.newsletter
+    .mktField, #mktFrmButtons
+      display: inline-block
+    input
+      max-width: 140px
+    input[type="submit"]
+      padding: 1px 10px
+      font-size: 0.95em
+    .mktFormMsg
+      position: absolute
+      left: auto !important
+      font-size: 0.9em
+      color: #C00
+      margin-top: -42px
+#countdown
+  padding: 2px 10px 5px
+  text-align: center
+  line-height: 1.2em
+  small
+    display: block
+    margin: 0
+  em
+    font-style: normal
+    font-size: 1.4em
+    line-height: 1em
+    color: #666
+    display: block
+    clear: both
+  #sessionTimer
+    color: #999
+
+///////////
+// Icons //
+///////////
+.rails, .jruby, .rubinius
+  padding: 8px 0 5px 30px
+.rails
+  background: url(/images/icn_rails_sm.png) no-repeat left top
+.jruby
+  background: url(/images/icn_jruby.png) no-repeat left top
+.rubinius
+  background: url(/images/icn_rubinius.png) no-repeat left top
+
+////////////////////
+// Featured Icons //
+////////////////////
+.featured
+  h3, & > h4
+    margin-top: 1.25em
+    font-size: 1.2em
+    &.liveDemo
+      padding: 5px 0 3px 60px
+      background: url(/images/icn_feature_summary_live_demo.png) no-repeat left top
+    &.rails
+      padding: 0px 0 3px 60px
+      background: url(/images/icn_feature_summary_rails3_webinar.png) no-repeat left top
+    &.newsletter
+      padding: 5px 0 3px 60px
+      background: url(/images/icn_feature_summary_newsletter.png) no-repeat left top
+    &.pdf
+      padding: 5px 0 4px 60px
+      background: url(/images/icn_feature_summary_pdf.png) no-repeat left top
+    &.cli
+      padding: 0px 0 3px 70px
+      background: url(/images/icn_cli.png) no-repeat left top
+    &.ornament
+      padding: 0px 0 3px 70px
+      background: url(/images/icn_ornament.png) no-repeat left top    
+    &.debug_ruby
+      padding: 0px 0 10px 70px
+      background: url(/images/icn_debug_ruby.jpg) no-repeat left top    
+    &.textmate
+      padding: 0px 0 7px 60px
+      background: url(/images/icn_feature_textmate.png) no-repeat left top
+.promos
+  border-top: 1px solid #DDD
+  .block:nth-child(1)
+    width: 500px
+    margin-right: 60px
+    float: left
+    font-size: 16px
+    h3
+      font-size: 20px
+      margin: 0
+  .block:nth-child(2)
+    border: none
+    width: 250px
+    float: left
+.features
+  &.nullborder
+    border: 0
+    margin-bottom: 65px
+    .customers 
+      margin-top: 15px
+      margin-bottom: 15px
+    h3
+      font-weight: bold
+      margin-top: 36px
+      margin-bottom: 18px
+    p
+      width: 720px
+      text-align: center
+      margin: 6px auto 25px auto
+      font-size: 18px
+      line-height: 20px
+      color: #333
+    &.newrelic
+      p
+        text-align: left
+        &.center
+          text-align: center
+      .customerscontainer
+        position: relative
+        float: right
+        margin-left: 25px
+        width: 310px
+        padding: 10px 10px 6px
+        background: #fff
+        border: 1px solid #CCC
+        -moz-box-shadow: 2px 2px 2px rgba(0,0,0,0.15)
+        .customers  
+          position: relative
+          height: 52px
+          width: 300px
+          overflow: hidden
+          li
+            position: absolute
+            display: inline
+            height: 52px
+            width: 1500px
+            left: 0
+            span        
+              position: absolute
+              display: block
+              width: 102px
+              left: 310px
+  padding-top: 0px
+  clear: both
+  border-top: 1px solid #DDD
+  .block
+    width: 240px
+    margin: 0 25px 0
+    border: none
+    float: left
+    &:first-child
+      margin-left: 0
+    &:last-child
+      margin-right: 0
+      float: right
+  h3
+    font-size: 32px
+    text-align: center
+    margin-bottom: 0
+  h4
+    font-size: 26px
+    text-align: center
+    margin: 0
+  &.video
+    p
+      text-align: left 
+      width: 100%
+  #video_container
+    position: relative
+    float: left
+    margin-right: 25px
+    width: 310px
+    height: 200px
+    #video_player 
+      position: absolute
+      top: 0 
+      right: 0
+      z-index: 2
+      margin-right: 0
+    .links
+      text-align: left
+      width: 220px
+      height: 205px
+      position: absolute
+      z-index: 0
+      top: 0
+      padding: 10px 10px 6px
+      background: #CCC
+      opacity: 0.95
+      color: #fff
+      -moz-box-shadow: 2px 2px 2px rgba(0,0,0,0.15)
+      ul
+        list-style-type: none
+        padding: 0
+.content
+  clear: both
+  & + .content
+    border: none
+.sidebar
+  clear: none
+  float: right
+  width: 240px
+  border-top: 0
+  padding-top: 0
+  .block
+    width: 240px
+  .section
+    margin-bottom: 0
+    padding: 0
+    list-style: none
+    border-bottom: 1px solid #DDD
+  ul.section
+    text-align: center
+  h4
+    margin-top: 1.5em
+    margin-bottom: 1.55em
+  .links
+    ul
+      margin-top: -1em
+    li
+      margin-top: -0.5em
+  .logo 
+    margin-top: 1.3em
+
+.main
+  float: left
+  width: 540px
+.heading
+  margin-bottom: 20px
+  text-align: center
+  h2
+    margin-top: 20px
+    margin-bottom: 0
+  p
+    font-size: 1.2em
+  & > div
+    &.center
+      margin: 0 auto
+  .hero
+    float: right
+    margin: -3em 30px -2.5em 2em
+.banner
+  text-align: left
+  img
+    float: right
+    margin-top: -4em
+.subnav, #subnav
+  text-align: center
+  clear: both
+  width: 100%
+  margin-bottom: 10px
+  border-bottom: 1px solid #DDD
+  height: 31px
+  overflow: hidden
+  ul
+    padding: 0
+    margin: 0 auto
+    list-style: none
+    float: left
+    position: relative
+    left: 50%
+    li
+      float: left
+      position: relative
+      right: 50%
+      margin-bottom: 0
+      a
+        color: #666
+        display: inline-block
+        padding: 5px 13px
+        background: #EEE
+        background: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#EEE))
+        background: -moz-linear-gradient(top,  #FFF,  #EEE)
+        border: 1px solid #DDD
+        height: 20px
+        margin-right: -1px
+        &:hover
+          color: #333
+          text-decoration: none
+      &:first-child a
+        -moz-border-radius-topleft: 5px
+        -webkit-border-top-left-radius: 5px
+      &:last-child a
+        -moz-border-radius-topright: 5px
+        -webkit-border-top-right-radius: 5px
+      &.selected
+        a
+          color: #333
+          background: #FFF
+          border-bottom: 1px solid #FFF
+
+/////////////////////////////
+// Reusable Block Elements //
+/////////////////////////////
+.subpages
+  text-align: center
+  list-style: none
+  padding: 0 0 6px
+  margin: 0
+  border-bottom: 1px solid #F6F6F6
+  li
+    display: inline-block
+    margin: 0 1em
+    a:link, a:visited
+      color: #369
+      &.button
+        color: #FFF
+        font-size: 1em
+        padding: 3px 10px
+        margin: -1.5em 0 0 0
+        -moz-box-shadow: 1px 1px 3px rgba(0,0,0,0.2)
+        -webkit-box-shadow: 1px 1px 3px rgba(0,0,0,0.2)
+    &.selected a
+      color: #333
+    &.callout
+      padding: 0
+      margin: 0 5px
+      line-height: 1em
+.customers
+  list-style: none
+  padding: 0
+  text-align: center
+  li
+    display: inline-block
+    height: 42px
+    margin: 0.6em 1.0em
+    img
+      vertical-align: middle
+.catalog, .meta
+  padding: 0.1em 0 0
+  list-style: none
+  line-height: 1.4em
+  li
+    margin-bottom: 0.5em
+  h4, .h4, h5, .h5
+    margin-top: 0
+  &.list
+    & > li
+      padding: 10px 0 0
+      border-top: 1px dashed #EEE
+      clear: both
+      &:first-child
+        margin-top: 0
+        padding-top: 0
+        border-top: none
+  &.events
+    h5
+      margin: 0
+  &.videos
+    img
+      float: left
+      margin: 0 0 15px
+    h4, p, ul
+      margin-left: 150px
+  &.podcasts
+    audio
+      float: right
+    .avatar
+      float: left
+      margin: 0 10px 10px 0
+  &.updates
+    margin-top: 0
+    li
+      padding-top: 0
+  &.presskit
+    img
+      margin-right: 30px
+    h3
+      margin: 0px
+      padding-top: 10px
+    h3, h4, p, .meta
+      margin-left: 440px
+.meta
+  line-height: 1em
+  color: #999
+  margin: -1em 0 1.2em
+  white-space: nowrap
+  li
+    font-size: 0.9em
+    line-height: 1em
+    display: inline-block
+    border-left: 1px solid #999
+    margin: 0 0 0 0.5em
+    padding-left: 1em
+    strong
+      color: #666
+    &:first-child
+      border-left: none
+      margin-left: 0
+      padding-left: 0
+.halfColumn
+  width: 380px
+  padding: 0 30px
+  margin: 0
+  float: left
+  &:first-child
+    padding-left: 0
+  &:last-child
+    float: right
+    padding-right: 0
+.main
+  .halfColumn
+    width: 240px
+.thirdBlock, .thirdColumn
+  width: 240px
+  margin-right: 50px
+  float: left
+  &.last
+    margin-right: 0
+  .p
+    a
+      p
+        margin-top: 0
+.product
+  margin-top: 30px
+  margin-bottom: 30px
+  padding-top: 20px
+  border-left: 1px solid #DDD
+  border-right: 1px solid #DDD
+  text-align: center
+  h3
+    margin: 0.25em 0
+  h4
+    margin: 0 0 1.5em
+  .description
+    text-align: left
+    min-height: 100px
+  &:first-child
+    border-left: none
+    margin-right: -1px
+  &:last-child
+    border: none
+  a:hover
+    text-decoration: none
+.note
+  font-size: 1.2em
+  line-height: 1.4em
+  color: #999
+  border-top: 1px solid #DDD
+  border-bottom: 1px solid #DDD
+  padding: 1em 0
+  margin: 2em 0
+.warning, .message
+  background: #FFF2BF
+  background: -webkit-gradient(linear, left top, left bottom, from(#FFF2BF), to(#FFF8DE))
+  background: -moz-linear-gradient(top,  #FFF2BF,  #FFF8DE)
+  border: 1px solid #EEE
+  border-left: none
+  border-right: none
+  font-size: 1.1em
+  padding: 10px
+.message
+  border: none
+  margin: 1.5em 0
+.errors
+  text-align: left
+  color: #900
+.footnote
+  display: block
+  line-height: 1.4em
+  font-size: 0.8em
+  color: #666
+.clearfix, .clear
+  clear: both
+  height: 1px
+  margin-top: -1px
+.hidden
+  display: none !important
+.center
+  text-align: center
+.right
+  float: right
+.left
+  float: left
+img, .wide img
+  &.right
+    float: right
+    margin-left: 15px
+  &.left
+    float: left
+    margin-top: 10px
+    margin-right: 15px
+    margin-bottom: 20px
+  &.gravatar
+    width: 40px
+    height: 40px
+  &.framed
+    background: #FFF
+    background: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#F9F9F9))
+    background: -moz-linear-gradient(top,  #FFF,  #F9F9F9)
+    padding: 6px
+    -moz-box-shadow: 2px 2px 6px rgba(0,0,0,0.15)
+    -webkit-box-shadow: 2px 2px 6px rgba(0,0,0,0.15)
+.thumbnail, .pagination
+  margin: 20px 0
+.thumbnail
+  display: inline-block
+  &:hover
+    text-decoration: none
+  &.lightbox
+    margin-bottom: 0
+.pagination
+  text-align: center
+  em
+    font-style: normal
+.lead
+  margin: 30px 0 20px
+  &.h4
+    margin-top: 25px   
+
+.video-text
+  div:nth-child(1)
+    width: 340px
+  div:nth-child(2)
+    text-align: center
+    width: 230px
+    margin-top: 10px 
+    .button
+      font-size: 1.8em
+      margin: 15px 0 5px 0
+      &.orange
+        color: #fff
+        background: $highlight-color-alt
+        background: -moz-linear-gradient(top, lighten($highlight-color-alt, 20%), $highlight-color-alt)
+        background: -webkit-gradient(linear, left top, left bottom, from(lighten($highlight-color-alt, 20%)), to($highlight-color-alt))
+        &:hover
+          border-color: darken($highlight-color-alt, 5%)
+          background: darken($highlight-color-alt, 5%)
+          background: -moz-linear-gradient(top, lighten($highlight-color-alt, 15%), darken($highlight-color-alt, 5%))
+          background: -webkit-gradient(linear, left top, left bottom, from(lighten($highlight-color-alt, 15%)), to(darken($highlight-color-alt, 5%)))
+      &.red
+        color: #fff
+        background: $highlight-color-alt2
+        background: -moz-linear-gradient(top, lighten($highlight-color-alt2, 20%), $highlight-color-alt2)
+        background: -webkit-gradient(linear, left top, left bottom, from(lighten($highlight-color-alt2, 20%)), to($highlight-color-alt2))
+        &:hover
+          border-color: darken($highlight-color-alt2, 5%)
+          background: darken($highlight-color-alt2, 5%)
+          background: -moz-linear-gradient(top, lighten($highlight-color-alt2, 15%), darken($highlight-color-alt2, 5%))
+          background: -webkit-gradient(linear, left top, left bottom, from(lighten($highlight-color-alt2, 15%)), to(darken($highlight-color-alt2, 5%)))
+  div
+    float: left
+  ul
+    list-style-type: none
+    font-size: 16px
+    line-height: 18px
+
+/////////////////////
+// Footer Elements //
+/////////////////////
+footer
+  background: #EEE
+  background: -webkit-gradient(linear, left top, left bottom, from(#DDD), to(#FFF))
+  background: -moz-linear-gradient(top,  #DDD,  #FFF)
+  clear: both
+  font-size: 0.95em
+  line-height: 1.4em
+  text-align: center
+  margin-top: 30px
+  overflow: hidden
+  ul
+    padding: 0
+  li
+    display: inline-block
+    margin: 0 1em
+  nav
+    li
+      line-height: 1em
+      margin: 0 0 0 1em
+      padding-left: 1em
+      border-left: 1px solid #DDD
+      &:first-child
+        padding-left: 0
+        margin-left: 0
+        border-left: none
+  p
+    color: #999
+    font-size: 0.9em
+  a, a:visited
+    color: #666
+    &:hover
+      color: #333
+      text-decoration: none
+  .footer-signup
+    width: 100%
+    background: #b2c5d8
+    background: -webkit-gradient(linear, left top, left bottom, from(#b2c5d8), to(#ffffff))
+    background: -moz-linear-gradient(top, #b2c5d8,  #ffffff)
+    border: solid #c5c5c5
+    border-width: 1px 0
+    h3
+      margin: 0 0 5px 0
+    .video-text
+      width: 770px
+      text-align: center
+      margin: 0 auto
+      ul
+        padding: 0
+        margin: 0
+        li
+          line-height: 18px
+          padding: 0
+          margin: 0
+      div:nth-child(1)
+        display: inline-block
+        float:none
+        width: 480px
+        text-align: left
+        padding: 20px 0
+      div:nth-child(2)
+        display: inline-block
+        float:none        
+  
+.connect
+  font-size: 0.95em
+  border-top: 1px solid #EEE
+  margin-bottom: 1.5em
+  padding: 10px
+  background: #F6F6F6
+  -moz-box-shadow: 0px 2px 2px rgba(0,0,0,0.1)
+  h4
+    font-size: 1em
+    display: inline
+    margin: 0
+  ul
+    display: inline-block
+    margin: 0
+.facebook, .twitter, .rss, .itunes, .linkedin
+  padding: 2px 0 2px 20px
+.facebook
+  background: url(/images/icn_facebook.png) no-repeat left center
+  &:hover
+    background: url(/images/icn_facebook_color.png) no-repeat left center
+.linkedin
+  background: url(/images/icn_linkedin.png) no-repeat left center
+  &:hover
+    background: url(/images/icn_linkedin_color.png) no-repeat left center
+.twitter
+  background: url(/images/icn_twitter.png) no-repeat left center
+  &:hover
+    background: url(/images/icn_twitter_color.png) no-repeat left center
+.rss
+  background: url(/images/icn_rss.png) no-repeat left center
+  &:hover
+    background: url(/images/icn_rss_color.png) no-repeat left center
+.itunes
+  background: url(/images/icn_itunes.png) no-repeat left center
+  &:hover
+    background: url(/images/icn_itunes_color.png) no-repeat left center
+///////////////////////////
+// Marketo Form Hackery //
+///////////////////////////
+.mktError
+  color: #900
+  .mktFormMsg
+    font-size: 0.9em
+  input[type="text"], textarea
+    background: #FEE
+.inline
+  div
+    display: inline-block
+  input[type="submit"]
+    padding: 2px 10px
+
+/////////////////////////////////////////
+// Open Source Project Specific Styles //
+/////////////////////////////////////////
+.project
+  border-top: 2px solid #DDD
+  padding: 20px 0px 0
+  h4, .h4
+    margin-top: 0
+    font-weight: 700
+  h5, .h5
+    margin: 0
+    padding-top: 1em
+    border-top: 1px solid #EEE
+  img
+    float: right
+    margin-left: 10px
+  .content
+    padding-top: 0
+    width: 540px !important
+    overflow: hidden
+    .contributors
+      float: left
+      width: 200px
+    .updates
+      float: right
+      width: 340px
+    time
+      font-size: 0.75em
+      color: #999
+    .contributors, .updates
+      ul
+        list-style: none
+        padding: 0
+      li
+        margin: 0
+  .links
+    list-style: none
+    padding-left: 0
+    margin-top: -1.5em
+    line-height: 1.25em
+    color: #999
+    font-size: 0.9em
+    li
+      margin: 0
+.profiles
+  line-height: 1.4em
+  list-style: none
+  padding: 0 0 10px
+  margin: 0
+  border-bottom: 1px dashed #DDD
+  h4, .h4
+    margin: 0
+  ul
+    list-style: none
+    padding-left: 0
+    margin: 0 0 0 57px
+  & > li
+    clear: both
+    margin-top: 10px
+    margin-bottom: 0
+    padding-top: 10px
+    border-top: 1px dashed #DDD
+    display: inline-block
+    vertical-align: top
+    width: 245px
+    &:first-child
+      margin-top: 0
+  li
+    margin-bottom: 0
+    h5
+      margin-top: 1.8em
+    h6
+      margin: 0
+  &.minimal
+    border: none
+    padding: 0
+    li
+      border: none
+      padding: 0
+      margin: 0
+  img
+    padding: 2px
+    border: 1px solid #DDD
+    float: left
+    margin: 4px 10px 5px 0
+    &.thumbnail
+      width: 40px
+      height: 40px
+  .projectList
+    margin-left: 57px
+    dt
+      font-weight: normal
+    dd, li
+      display: inline
+      &:after
+        content: ', '
+      &:last-child:after
+        content: ''
+  &.wide
+    border: none
+    margin: 1.5em 0 1.5em
+    & > li        
+      border: none
+      width: 100%
+      h3, p
+        margin-left: 120px
+      h3, h5
+        margin-top: 0
+      p:last-child
+        margin-bottom: 0
+      &:first-child
+        margin-top: 0
+  &.company
+    & > li
+      h3, h4, h5, p
+        margin-left: 140px
+      img
+        border: none
+.threeColumn
+  margin-right: -20px
+  border-bottom: none
+  .profile
+    width: 257px
+    margin-top: 0
+    margin-right: 20px
+    border: none
+    h3
+      margin: 0
+    dl
+      clear: both
+
+//////////////////////////////////
+// Support Page Specific Styles //
+//////////////////////////////////
+.panel
+  width: 480px
+  border: 10px solid #EBEBEB
+  background: #F6F6F6
+  padding: 0px 20px 20px
+  margin: 30px 0
+  .block
+    margin: 20px 0 0
+  .links
+    float: right
+    margin: 0
+.badges
+  li
+    display: inline-block
+    margin: 10px 7px 10px 0
+    vertical-align: top
+
+///////////////////////////////////
+// Customer Page Specific Styles //
+///////////////////////////////////
+.videoTestimonials
+  margin-bottom: 30px
+#video_player
+  padding: 10px 10px 6px
+  background: #FFF
+  background: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#EEE))
+  background: -moz-linear-gradient(top,  #FFF,  #EEE)
+  border: 1px solid #CCC
+  float: left
+  margin-right: 30px
+  margin-bottom: 30px
+  -moz-box-shadow: 2px 2px 2px rgba(0,0,0,0.15)
+.playlist
+  list-style: none
+  padding-left: 0
+  margin: 0 0 30px
+  .thumbnail
+    width: 100px
+    padding: 6px
+    background: #FFF
+    background: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#EEE))
+    background: -moz-linear-gradient(top,  #FFF,  #EEE)
+    border: 1px solid #CCC
+    margin: 0 4px
+  li
+    display: inline-block
+    text-align: center
+.tooltip
+  &:hover
+    cursor: help
+#tooltip
+  position: absolute
+  max-width: 300px
+  padding: 10px
+  margin: -10px
+  background: #FDFDFD
+  border: 1px solid #CCC
+  opacity: 0.9
+  -moz-box-shadow: 2px 2px 5px rgba(0,0,0,0.15)
+  -webkit-box-shadow: 2px 2px 5px rgba(0,0,0,0.15)
+  -moz-border-radius: 0 10px 10px 10px
+  -webkit-border-radius: 0 10px 10px 10px
+  h3
+    margin: 0
+    font-size: 1em
+#cse
+  table
+    td
+      border: none   
+.logoMatrix
+  span
+    display: inline-block
+    text-align: center
+    height: 75px
+    width: 182px
+    margin: 10px 
+    img
+      vertical-align: middle
+
+/////////////////////////////////////
+// Appcloud Signup Specific Styles //
+/////////////////////////////////////
+.appcloudSignup
+  form
+    display: block
+    background: #FFF
+    background: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#FFE))
+    background: -moz-linear-gradient(top,  #FFF,  #FFE)
+    padding: 20px
+    border: 1px solid #EEE
+    margin: 20px 100px
+    p
+      margin-top: 0
+      margin-bottom: 0.5em
+    div
+      display: inline-block
+  label
+    width: 380px
+    margin: 0 auto
+    text-align: left
+  input[type="text"], input[type="password"]
+    font-size: 1.45em
+    width: 380px
+  input[type="password"]
+    display: block
+    margin: 0 auto 1em
+  .quotes
+    margin: 2em 0
+  .errors
+    margin-top: -30px
+    li
+      margin-bottom: 0
+  .email
+    background: url(/images/icon-email.png) no-repeat left center
+    padding: 22px
+    margin: 0 150px
+
+//////////////////////////////
+// Homepage Specific Styles //
+//////////////////////////////
+#homepage
+  .content
+    border-top: 1px solid #DDD
+  #countdown        
+    margin: 0
+    padding: 0
+    text-align: left
+    line-height: .80em
+    font-size: .80em
+    .button
+      margin-right: 5px
+    em
+      font-style: normal
+      font-size: 1em
+      line-height: 1em
+      color: #666
+      display: block
+      clear: both   
+    small
+      display: inline
+      margin: 0
+
+@import partials/_colorbox
+@import partials/_overrides
+
+li.plan
+  h3
+    margin: 0

@@ -1,0 +1,72 @@
+// Use // instead of /* */ to hide from production
+
+// --------------------------------------------------
+
+/* ICONS
+
+// --------------------------------------------------
+
+@mixin icon
+  @include reset
+  float: left
+  display: inline
+  border: 0
+  width: 16px
+  height: 16px
+  background: none
+  -webkit-box-shadow: none
+  -moz-box-shadow: none
+  box-shadow: none
+  text-indent: -9999em
+  text-align: left
+
+.icon-add a
+  @include icon
+  background: transparent url(/images/layout/icons/add.png) no-repeat
+
+.icon-edit
+  a, button, a.button
+    &, &:link, &:visited, &:hover, &:focus, &:active
+      @include icon
+      background: transparent url(/images/layout/icons/edit.png) no-repeat
+
+.icon-detach, .icon-delete
+  a, button, a.button
+    &, &:link, &:visited, &:hover, &:focus, &:active
+      @include icon
+      background: transparent url(/images/layout/icons/delete.png) no-repeat
+
+.icon-gem-add a
+  @include icon
+  background: transparent url(/images/layout/icons/gem-add.png) no-repeat
+
+.icon-unix-add a
+  @include icon
+  background: transparent url(/images/layout/icons/unix-add.png) no-repeat
+
+
+
+small.icon-edit
+  position: relative
+  a
+    position: absolute
+    top: -6px
+    left: 0
+
+a
+  &[target="_blank"], &[target="tab"]
+    padding-right: 12px
+    background: url(/images/icon_external_link.png) no-repeat 100% 75%
+
+a.email, span.email
+  padding-left: 18px
+  background: url(/images/layout/icons/email.png) no-repeat 0 0
+
+#footer-content
+  a.blog, a.twitter, a.facebook
+    padding: 2px 0 2px 20px
+    background: url(/images/layout/icons/social/rss.png) 0 50% no-repeat
+  a.twitter
+    background-image: url(/images/layout/icons/social/twitter.png)
+  a.facebook
+    background-image: url(/images/layout/icons/social/facebook.png)

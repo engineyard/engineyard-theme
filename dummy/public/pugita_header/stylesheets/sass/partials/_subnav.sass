@@ -1,0 +1,44 @@
+#subnav
+  background: url(../../images/bg_stroke.png) repeat-x bottom
+  overflow: hidden
+  margin: 2em 0 3em
+  text-align: center
+  width: 100%
+  ul
+    float: left
+    margin: 0 auto
+    padding: 0
+    position: relative
+    left: 50%
+    list-style-type: none
+    li
+      float: left
+      margin: 0
+      padding: 0      
+      position: relative
+      right: 50%
+      a
+        color: #666
+        display: block
+        padding: .65em 1.4em
+        background: -moz-linear-gradient(top, #FFF, #E6E6E6)
+        background: -webkit-gradient(linear, center top, center bottom, from(#FFF), to(#E6E6E6))     
+        border-top: 1px solid #CCC
+        border-right: 1px solid #CCC
+        border-bottom: 1px solid #CCC
+      a:hover
+        color: #333
+        background: -moz-linear-gradient(top, #EEE, #CCC)
+        background: -webkit-gradient(linear, center top, center bottom, from(#EEE), to(#CCC))
+        text-decoration: none
+    li:first-child a
+      border-left: 1px solid #CCC
+      -moz-border-radius-topleft: 5px
+      -webkit-border-top-left-radius: 5px
+    li:last-child a
+      -moz-border-radius-topright: 5px
+      -webkit-border-top-right-radius: 5px
+    li.selected a
+      background: #FFF !important
+      border-bottom: 1px solid #FFF
+      color: #acacac

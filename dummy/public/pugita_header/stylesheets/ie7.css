@@ -1,0 +1,57 @@
+.button, input[type="submit"], a.button, button, .slider a, .block.cta a form.newsletter .mktField, .block.cta a form.newsletter #mktFrmButtons, #subnav ul li a, .subnav ul li a, .profiles > li, ul.nav li, header ul li, .subpages li, .customers li, .meta li, footer li, .badges li, .playlist li, .connect ul, .thumbnail, .inline div label, .inline div input, .appcloudSignup form div {
+  zoom: 1;
+  hasLayout: on;
+  display: inline;
+  height: 30px; }
+
+header {
+  position: relative;
+  z-index: 2; }
+
+#content {
+  margin-top: -8px; }
+
+.navigation {
+  margin-top: 0; }
+  .navigation ul {
+    display: none;
+    clear: both;
+    position: absolute;
+    background: #ffffdd;
+    visibility: hidden; }
+
+.meta li {
+  border: none; }
+
+.connect li {
+  margin-top: 12px;
+  margin-left: 40px; }
+
+.profiles .profile {
+  display: block;
+  clear: both;
+  width: 100%;
+  margin: 20px 0;
+  height: 200px; }
+
+footer {
+  margin-top: 40px;
+  margin-bottom: 0; }
+
+#pricingEstimator h4 {
+  height: 1.6em; }
+
+form.newsletter input[type="submit"] {
+  width: 80px;
+  height: 23px;
+  padding: 1px 0px;
+  float: right;
+  margin-top: -24px; }
+form.newsletter .mktFormMsg {
+  padding-top: 20px;
+  margin-bottom: 0;
+  margin-left: -150px; }
+
+.subnav a {
+  padding-bottom: 0 !important;
+  height: 25px !important; }
