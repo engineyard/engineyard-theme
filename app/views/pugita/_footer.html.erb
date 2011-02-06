@@ -48,7 +48,7 @@
     </div>
     
     <div class="hidden">
-      <%= javascript_include_tag '/pugita_header/javascripts/application.min' %>
+      <%= javascript_include_tag '/pugita_header/javascripts/application.min.js' %>
       <%= yield :additional_scripts %>
       <%- unless Rails.env == 'development' %>
         <%= render 'shared/tracking' %>    
