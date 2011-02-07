@@ -39,8 +39,8 @@ Inside this repo is a `dummy` folder, containing a Rails 3 app configured to loa
   
 ...within that folder to test the gem as though it was installed in a Rails app, so that you know it still works.
 
-== Copyright
+## Copyright ##
 
-Copyright (c) 2011 Paul Campbell. See LICENSE.txt for
+Copyright (c) 2011 Engine Yard Inc. See LICENSE.txt for
 further details.
 
