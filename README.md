@@ -1,33 +1,33 @@
-# Pugita Header #
+# Engine Yard Theme #
 
-A Rails gem / engine to make any Rails 3 app look like engineyard.com.
+A Rails gem / engine to make any Rails 3 app look like engineyard.com. Provides a generator for static assets and `header` and `footer` helper methods to dress your site in the shirt and pants of the Engine Yard theme.
 
 ## Installation ##
 
-Add `pugita_header` to your Gemfile
+Add `engineyard-theme` to your Gemfile
     
-    gem 'pugita_header'
+    gem 'engineyard-theme'
 
 ## Usage ##
 
-Get the latest assets so that you can test locally (you can add `public/pugita_header/*` to your .gitignore if you like):
+Get the latest assets so that you can test locally (you can add `public/engineyard-theme/*` to your .gitignore if you like):
 
-    bundle exec rails generate pugita_header:assets
+    bundle exec rails generate engineyard_theme:assets
 
 Wrap your application.html `yield` with the header and footer helpers:
 
     <% # application.html.erb %>
-    <%= pugita_header %>
+    <%= header %>
     <%= yield %>
-    <%= pugita_footer %>
+    <%= footer %>
 
 If you want to add anything within the `<head></head>` tags or just before the `</body>` tag, you can pass a block to the helpers:
 
-    <%= pugita_header do %>
+    <%= header do %>
       <%= stylesheet_link_tag 'additional_styles' %>
     <% end %>
     <%= yield %>
-    <%= pugita_footer do %>
+    <%= footer do %>
       <!--  this comment only appears on my sub-site -->
     <% end %>
 
