@@ -1,10 +1,9 @@
 source "http://rubygems.org"
 
 gem 'rails', '3.0.3'
-gem 'sqlite3'
-gem 'pugita_header', :path => '../'
 
 group :development do
+  gem 'sqlite3'
   gem "jeweler", "~> 1.5.2"
 end
 

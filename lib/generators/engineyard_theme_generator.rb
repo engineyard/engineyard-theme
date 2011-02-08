@@ -1,5 +1,5 @@
 require 'rails/generators'
-module PugitaHeader
+module EngineyardTheme
   class AssetsGenerator < Rails::Generators::Base
     desc "Generate the assets for engineyard.com to test your app"
   
@@ -8,7 +8,7 @@ module PugitaHeader
     end
   
     def copy_assets
-      directory 'pugita_header', 'public/pugita_header'
+      directory 'engineyard-theme', 'public/engineyard-theme'
     end
   
   end

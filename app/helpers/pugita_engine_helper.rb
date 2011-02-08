@@ -1,4 +1,4 @@
-module PugitaEngineHelper
+module EngineyardThemeHelper
   def header(&block)
     additional_header = block_given? ? capture(&block) : ''
     render :partial => 'pugita/header', :locals => {
