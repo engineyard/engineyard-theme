@@ -1,12 +1,12 @@
 module EngineyardTheme
   class Engine < Rails::Engine
-    initializer 'PugitaHeader.helper' do |app|
+    initializer 'EngineyardTheme.helper' do |app|
       ActionView::Base.send :include, EngineyardThemeHelper
       ActionView::Base.send :include, StaticHelper
     end
     
     generators do
-      require "generators/pugita_header_generator"
+      require "generators/engineyard_theme_generator"
     end
   end
 end

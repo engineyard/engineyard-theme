@@ -1,8 +1,3 @@
-PATH
-  remote: ../
-  specs:
-    pugita_header (0.1.0)
-
 GEM
   remote: http://rubygems.org/
   specs:
@@ -152,7 +147,6 @@ DEPENDENCIES
   fakeweb
   jeweler (~> 1.5.2)
   launchy
-  pugita_header!
   rails (= 3.0.3)
   rspec
   rspec-rails

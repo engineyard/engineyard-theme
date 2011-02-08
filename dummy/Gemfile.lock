@@ -1,7 +1,9 @@
 PATH
   remote: ../
   specs:
-    pugita_header (0.1.0)
+    engineyard-theme (0.1.0)
+      rails (= 3.0.3)
+      rails (~> 3)
 
 GEM
   remote: http://rubygems.org/
@@ -145,10 +147,10 @@ DEPENDENCIES
   cucumber-rails
   database_cleaner
   email_spec
+  engineyard-theme!
   factory_girl
   fakeweb
   launchy
-  pugita_header!
   rails (= 3.0.3)
   rspec
   rspec-rails
