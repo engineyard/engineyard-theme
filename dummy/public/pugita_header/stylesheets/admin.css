@@ -162,9 +162,9 @@ thead th {
       color: black;
       background: none; }
     thead th a.sortable.asc {
-      background: transparent url(/pugita_header/images/icn-asc.png) no-repeat right 3px; }
+      background: transparent url(/engineyard-theme/images/icn-asc.png) no-repeat right 3px; }
     thead th a.sortable.desc {
-      background: url(/pugita_header/images/icn-dsc.png) no-repeat right 3px; }
+      background: url(/engineyard-theme/images/icn-dsc.png) no-repeat right 3px; }
 
 tbody td {
   border-bottom: 1px dotted #cccccc;
@@ -312,7 +312,7 @@ textarea {
       margin-left: 5px; }
     .categories h3:hover {
       cursor: move;
-      background-image: url(/pugita_header/images/bg-dragbar.png);
+      background-image: url(/engineyard-theme/images/bg-dragbar.png);
       background: -webkit-gradient(linear, left top, left bottom, from(rgba(60, 60, 60, 0.75)), to(rgba(60, 60, 60, 0)));
       background: -moz-linear-gradient(top, rgba(60, 60, 60, 0.75), rgba(60, 60, 60, 0)); }
   .categories ul.actions {
@@ -358,7 +358,7 @@ textarea {
       padding: 10px 10px 5px;
       cursor: move; }
       .categories .components h4:hover {
-        background: url(/pugita_header/images/bg-dragbar.png) repeat-x; }
+        background: url(/engineyard-theme/images/bg-dragbar.png) repeat-x; }
     .categories .components .versions {
       border-top: 2px solid #cccccc;
       margin-top: 5px; }
@@ -423,11 +423,11 @@ hr {
     -webkit-box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.1); }
 
 .collapsable {
-  background: url(/pugita_header/images/icon-open.png) no-repeat left center;
+  background: url(/engineyard-theme/images/icon-open.png) no-repeat left center;
   padding-left: 15px;
   cursor: pointer; }
   .collapsable.closed {
-    background: url(/pugita_header/images/icon-closed.png) no-repeat left center; }
+    background: url(/engineyard-theme/images/icon-closed.png) no-repeat left center; }
 
 .avatar label {
   margin-top: 0; }

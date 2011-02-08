@@ -1,7 +1,7 @@
 Feature: Pugita Header
   In order to share headers among apps
   As a developer
-  I want to be able to install the pugita_header
+  I want to be able to install the Engine Yard Theme
   
   Scenario: Loading the header
     When I am on the homepage

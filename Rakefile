@@ -12,15 +12,15 @@ require 'rake'
 PKG_FILES = FileList[
   '[a-zA-Z]*',
   'app/**/*',
-  'dummy/public/pugita_header/**/*',
+  'dummy/public/engineyard-theme/**/*',
   'lib/**/*'
 ]
 
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
-  gem.name = "pugita_header"
-  gem.homepage = "http://github.com/paulca/pugita_header"
+  gem.name = "engineyard-theme"
+  gem.homepage = "http://github.com/engineyard/engineyard-theme"
   gem.license = "MIT"
   gem.summary = %Q{A gem providing helper methods and assets to make any site look like engineyard.com}
   gem.description = %Q{a 'pugita_header' and 'pugita_footer' method, along with an assets generator to make any site look like engineyard.com}
