@@ -33,9 +33,9 @@ If you want to add anything within the `<head></head>` tags or just before the `
 
 ## Modifying / Testing ##
 
-Inside this repo is a `dummy` folder, containing a Rails 3 app configured to load the gem. You can use this to add any changes in styles. You can also run:
+Inside this repo is a `example` folder, containing a Rails 3 app configured to load the gem. You can use this to add any changes in styles. You can also run:
 
-    `bundle exec cucumber features`
+    bundle exec cucumber features
   
 ...within that folder to test the gem as though it was installed in a Rails app, so that you know it still works.
 

@@ -4,7 +4,7 @@ module EngineyardTheme
     desc "Generate the assets for engineyard.com to test your app"
   
     def self.source_root
-      File.expand_path('../../dummy/public/', File.dirname(__FILE__))
+      File.expand_path('../../example/public/', File.dirname(__FILE__))
     end
   
     def copy_assets
