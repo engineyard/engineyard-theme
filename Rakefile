@@ -24,8 +24,8 @@ Jeweler::Tasks.new do |gem|
   gem.license = "MIT"
   gem.summary = %Q{A gem providing helper methods and assets to make any site look like engineyard.com}
   gem.description = %Q{a 'pugita_header' and 'pugita_footer' method, along with an assets generator to make any site look like engineyard.com}
-  gem.email = "paul@rslw.com"
-  gem.authors = ["Paul Campbell"]
+  gem.email = ["paul@rslw.com", "drnicwilliams@gmail.com"]
+  gem.authors = ["Paul Campbell", "Dr Nic Williams"]
   gem.files = PKG_FILES.to_a
   gem.add_runtime_dependency 'rails', '~> 3'
 end
