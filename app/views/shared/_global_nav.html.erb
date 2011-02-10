@@ -27,21 +27,18 @@
       </ul>
     </li>
     
-    <li<%= selected?(/^support/) %>>
+    <li<%= selected?(/^services/) %>>
       <span>Support</span>
       <ul>
+        <li><a href="/services">Professional Services</a></li>
         <li><a href="http://support.cloud.engineyard.com/">Request Support</a></li>
         <li><a href="http://docs.engineyard.com">Documentation</a></li>
         <li><a href="http://community.engineyard.com">Community Forums</a></li>
       </ul>
     </li>
   
-    <li<%= selected?(/^services/) %>>
-      <span>Services</span>
-      <ul>
-        <li><a href="/services">Professional Services</a></li>
-        <li><a href="/services/university">Engine Yard University</a></li>
-      </ul>
+    <li<%= selected?(/^university/) %>>
+      <%= link_to '<span>EY University</span>'.html_safe, '/university' %>
     </li>
     
     <li> | </li>
