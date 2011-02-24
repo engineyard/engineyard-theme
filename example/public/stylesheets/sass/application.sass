@@ -7,7 +7,7 @@
 // --------------------------------------------------
 
 @import _color.sass
-//@import _globalvariables.sass
+@import _globalvariables.sass
 @mixin reset
   margin: 0
   padding: 0
@@ -54,12 +54,48 @@ $font-size-h6     = 12px
 $font-size-main   = 12px
 $font-size-small  = 11px
 
-//@import _icons.sass
+@import _icons.sass
 @import _buttons.sass
 //@import _forms.sass
 //@import _tables.sass
-//@import _960gs.sass
+@import _960gs.sass
 //@import _layout.sass
+
+#footer
+  clear: both
+  border-top: 1px solid lighten($color-border, 10%)
+  min-height: 1px
+
+#footer-content
+  padding: 12px 0
+  border-top: 1px solid #fff
+  font-size: $font-size-small
+  line-height: 1.25
+  color: $color-text-alt
+
+  p#footer-logo
+    margin-top: 6px
+    height: 96px
+    background: url(/images/layout/logo_appcloud.png) no-repeat
+    text-indent: -9999em
+  h2
+    padding: 12px 0 6px
+    font-size: $font-size-main
+    font-weight: bold
+  ul
+    list-style: none
+    margin: 0
+    padding: 0
+  li
+    margin: 0 0 6px 0
+  a
+    padding: 0
+    color: darken($color-text-alt, 25%)
+    background: none
+    &:hover
+      color: darken($color-text-alt, 50%)
+  p#copyright
+    padding-top: 12px
 
 $plan-box-shadow-value  = 0 1px 3px darken($color-background, 15%) inset
 ol.plans
@@ -1085,7 +1121,7 @@ $highlight-color-alt2: #CC0000
     h4, p, ul
       margin-left: 150px
   &.podcasts
-    audio
+    audio, podcastLink
       float: right
     .avatar
       float: left
