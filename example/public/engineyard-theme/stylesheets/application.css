@@ -1685,7 +1685,7 @@ header {
     margin: 0 0 15px; }
   .catalog.videos h4, .catalog.videos p, .catalog.videos ul, .meta.videos h4, .meta.videos p, .meta.videos ul {
     margin-left: 150px; }
-  .catalog.podcasts audio, .catalog.podcasts podcastLink, .meta.podcasts audio, .meta.podcasts podcastLink {
+  .catalog.podcasts audio, .catalog.podcasts .podcastLink, .meta.podcasts audio, .meta.podcasts .podcastLink {
     float: right; }
   .catalog.podcasts .avatar, .meta.podcasts .avatar {
     float: left;
