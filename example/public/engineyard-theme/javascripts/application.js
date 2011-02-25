@@ -694,7 +694,7 @@ var eventTracking = function() {
 
 var loadAudioTag = function(target) { 
   obj = $(target);
-  $(target).replaceWith('<audio controls="true" autoplay><source src="'+ obj.attr('href') +'" /><source src="'+ obj.attr('href').replace(/mp3/g,'ogg') +'" />Your browser does not support native audio.</audio>');
+  $(target).replaceWith('<audio controls="true"><source src="'+ obj.attr('href') +'" /><source src="'+ obj.attr('href').replace(/mp3/g,'ogg') +'" />Your browser does not support native audio.</audio>');
   return false;
 }
 
