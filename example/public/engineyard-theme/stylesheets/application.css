@@ -14,7 +14,7 @@
   box-shadow: none;
   text-indent: -9999em;
   text-align: left;
-  background: transparent url(/images/layout/icons/add.png) no-repeat; }
+  background: transparent url(../images/layout/icons/add.png) no-repeat; }
 
 .icon-edit a, .icon-edit a:link, .icon-edit a:visited, .icon-edit a:hover, .icon-edit a:focus, .icon-edit a:active, .icon-edit button, .icon-edit button:link, .icon-edit button:visited, .icon-edit button:hover, .icon-edit button:focus, .icon-edit button:active, .icon-edit a.button, .icon-edit a.button:link, .icon-edit a.button:visited, .icon-edit a.button:hover, .icon-edit a.button:focus, .icon-edit a.button:active {
   margin: 0;
@@ -31,7 +31,7 @@
   box-shadow: none;
   text-indent: -9999em;
   text-align: left;
-  background: transparent url(/images/layout/icons/edit.png) no-repeat; }
+  background: transparent url(../images/layout/icons/edit.png) no-repeat; }
 
 .icon-detach a, .icon-detach a:link, .icon-detach a:visited, .icon-detach a:hover, .icon-detach a:focus, .icon-detach a:active, .icon-detach button, .icon-detach button:link, .icon-detach button:visited, .icon-detach button:hover, .icon-detach button:focus, .icon-detach button:active, .icon-detach a.button, .icon-detach a.button:link, .icon-detach a.button:visited, .icon-detach a.button:hover, .icon-detach a.button:focus, .icon-detach a.button:active, .icon-delete a, .icon-delete a:link, .icon-delete a:visited, .icon-delete a:hover, .icon-delete a:focus, .icon-delete a:active, .icon-delete button, .icon-delete button:link, .icon-delete button:visited, .icon-delete button:hover, .icon-delete button:focus, .icon-delete button:active, .icon-delete a.button, .icon-delete a.button:link, .icon-delete a.button:visited, .icon-delete a.button:hover, .icon-delete a.button:focus, .icon-delete a.button:active {
   margin: 0;
@@ -48,7 +48,7 @@
   box-shadow: none;
   text-indent: -9999em;
   text-align: left;
-  background: transparent url(/images/layout/icons/delete.png) no-repeat; }
+  background: transparent url(../images/layout/icons/delete.png) no-repeat; }
 
 .icon-gem-add a {
   margin: 0;
@@ -65,7 +65,7 @@
   box-shadow: none;
   text-indent: -9999em;
   text-align: left;
-  background: transparent url(/images/layout/icons/gem-add.png) no-repeat; }
+  background: transparent url(../images/layout/icons/gem-add.png) no-repeat; }
 
 .icon-unix-add a {
   margin: 0;
@@ -82,7 +82,7 @@
   box-shadow: none;
   text-indent: -9999em;
   text-align: left;
-  background: transparent url(/images/layout/icons/unix-add.png) no-repeat; }
+  background: transparent url(../images/layout/icons/unix-add.png) no-repeat; }
 
 small.icon-edit {
   position: relative; }
@@ -93,19 +93,19 @@ small.icon-edit {
 
 a[target="_blank"], a[target="tab"] {
   padding-right: 12px;
-  background: url(/images/icon_external_link.png) no-repeat 100% 75%; }
+  background: url(../images/icon_external_link.png) no-repeat 100% 75%; }
 
 a.email, span.email {
   padding-left: 18px;
-  background: url(/images/layout/icons/email.png) no-repeat 0 0; }
+  background: url(../images/layout/icons/email.png) no-repeat 0 0; }
 
 #footer-content a.blog, #footer-content a.twitter, #footer-content a.facebook {
   padding: 2px 0 2px 20px;
-  background: url(/images/layout/icons/social/rss.png) 0 50% no-repeat; }
+  background: url(../images/layout/icons/social/rss.png) 0 50% no-repeat; }
 #footer-content a.twitter {
-  background-image: url(/images/layout/icons/social/twitter.png); }
+  background-image: url(../images/layout/icons/social/twitter.png); }
 #footer-content a.facebook {
-  background-image: url(/images/layout/icons/social/facebook.png); }
+  background-image: url(../images/layout/icons/social/facebook.png); }
 
 /* BUTTONS */
 button {
@@ -221,7 +221,7 @@ button.action, a.action {
     margin: 0 0 0 -2px;
     display: block;
     padding: 0 0 0 24px;
-    background: url(/images/bg_alert-bang.png) 0 2px no-repeat; }
+    background: url(../images/bg_alert-bang.png) 0 2px no-repeat; }
 
 .controls button, .controls a.button {
   border: 1px solid #9fb7d1;
@@ -627,7 +627,7 @@ td button, td input[type="submit"] {
   #footer-content p#footer-logo {
     margin-top: 6px;
     height: 96px;
-    background: url(/images/layout/logo_appcloud.png) no-repeat;
+    background: url(../images/layout/logo_appcloud.png) no-repeat;
     text-indent: -9999em; }
   #footer-content h2 {
     padding: 12px 0 6px;
@@ -973,9 +973,9 @@ thead .sortable {
 thead .active {
   color: black; }
 thead .asc {
-  background: url(/images/icn-asc.png) no-repeat right 6px; }
+  background: url(../images/icn-asc.png) no-repeat right 6px; }
 thead .desc {
-  background: url(/images/icn-dsc.png) no-repeat right 6px; }
+  background: url(../images/icn-dsc.png) no-repeat right 6px; }
 
 tbody {
   font-size: 95%; }
@@ -1070,13 +1070,13 @@ header, #content {
 
 header {
   display: block;
-  background: url(/images/bg_header.png) repeat-x left top;
+  background: url(../images/bg_header.png) repeat-x left top;
   min-height: 77px;
   color: white; }
   header h1 {
     margin: 0;
     overflow: hidden;
-    background: url(/images/logo.png) no-repeat left top;
+    background: url(../images/logo.png) no-repeat left top;
     height: 81px;
     width: 50px;
     position: absolute;
@@ -1120,7 +1120,7 @@ header {
       -webkit-border-radius: 1px;
       -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5) inset;
       -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5) inset;
-      background: white url(/images/icon_search.png) no-repeat 2px;
+      background: white url(../images/icon_search.png) no-repeat 2px;
       opacity: 0.75;
       font-size: 1em;
       padding: 2px 3px 2px 18px;
@@ -1378,41 +1378,41 @@ header {
   padding: 8px 0 5px 30px; }
 
 .rails {
-  background: url(/images/icn_rails_sm.png) no-repeat left top; }
+  background: url(../images/icn_rails_sm.png) no-repeat left top; }
 
 .jruby {
-  background: url(/images/icn_jruby.png) no-repeat left top; }
+  background: url(../images/icn_jruby.png) no-repeat left top; }
 
 .rubinius {
-  background: url(/images/icn_rubinius.png) no-repeat left top; }
+  background: url(../images/icn_rubinius.png) no-repeat left top; }
 
 .featured h3, .featured > h4 {
   margin-top: 1.25em;
   font-size: 1.2em; }
   .featured h3.liveDemo, .featured > h4.liveDemo {
     padding: 5px 0 3px 60px;
-    background: url(/images/icn_feature_summary_live_demo.png) no-repeat left top; }
+    background: url(../images/icn_feature_summary_live_demo.png) no-repeat left top; }
   .featured h3.rails, .featured > h4.rails {
     padding: 0px 0 3px 60px;
-    background: url(/images/icn_feature_summary_rails3_webinar.png) no-repeat left top; }
+    background: url(../images/icn_feature_summary_rails3_webinar.png) no-repeat left top; }
   .featured h3.newsletter, .featured > h4.newsletter {
     padding: 5px 0 3px 60px;
-    background: url(/images/icn_feature_summary_newsletter.png) no-repeat left top; }
+    background: url(../images/icn_feature_summary_newsletter.png) no-repeat left top; }
   .featured h3.pdf, .featured > h4.pdf {
     padding: 5px 0 4px 60px;
-    background: url(/images/icn_feature_summary_pdf.png) no-repeat left top; }
+    background: url(../images/icn_feature_summary_pdf.png) no-repeat left top; }
   .featured h3.cli, .featured > h4.cli {
     padding: 0px 0 3px 70px;
-    background: url(/images/icn_cli.png) no-repeat left top; }
+    background: url(../images/icn_cli.png) no-repeat left top; }
   .featured h3.ornament, .featured > h4.ornament {
     padding: 0px 0 3px 70px;
-    background: url(/images/icn_ornament.png) no-repeat left top; }
+    background: url(../images/icn_ornament.png) no-repeat left top; }
   .featured h3.debug_ruby, .featured > h4.debug_ruby {
     padding: 0px 0 10px 70px;
-    background: url(/images/icn_debug_ruby.jpg) no-repeat left top; }
+    background: url(../images/icn_debug_ruby.jpg) no-repeat left top; }
   .featured h3.textmate, .featured > h4.textmate {
     padding: 0px 0 7px 60px;
-    background: url(/images/icn_feature_textmate.png) no-repeat left top; }
+    background: url(../images/icn_feature_textmate.png) no-repeat left top; }
 
 .promos {
   border-top: 1px solid #dddddd; }
@@ -1970,29 +1970,29 @@ footer {
   padding: 2px 0 2px 20px; }
 
 .facebook {
-  background: url(/images/icn_facebook.png) no-repeat left center; }
+  background: url(../images/icn_facebook.png) no-repeat left center; }
   .facebook:hover {
-    background: url(/images/icn_facebook_color.png) no-repeat left center; }
+    background: url(../images/icn_facebook_color.png) no-repeat left center; }
 
 .linkedin {
-  background: url(/images/icn_linkedin.png) no-repeat left center; }
+  background: url(../images/icn_linkedin.png) no-repeat left center; }
   .linkedin:hover {
-    background: url(/images/icn_linkedin_color.png) no-repeat left center; }
+    background: url(../images/icn_linkedin_color.png) no-repeat left center; }
 
 .twitter {
-  background: url(/images/icn_twitter.png) no-repeat left center; }
+  background: url(../images/icn_twitter.png) no-repeat left center; }
   .twitter:hover {
-    background: url(/images/icn_twitter_color.png) no-repeat left center; }
+    background: url(../images/icn_twitter_color.png) no-repeat left center; }
 
 .rss {
-  background: url(/images/icn_rss.png) no-repeat left center; }
+  background: url(../images/icn_rss.png) no-repeat left center; }
   .rss:hover {
-    background: url(/images/icn_rss_color.png) no-repeat left center; }
+    background: url(../images/icn_rss_color.png) no-repeat left center; }
 
 .itunes {
-  background: url(/images/icn_itunes.png) no-repeat left center; }
+  background: url(../images/icn_itunes.png) no-repeat left center; }
   .itunes:hover {
-    background: url(/images/icn_itunes_color.png) no-repeat left center; }
+    background: url(../images/icn_itunes_color.png) no-repeat left center; }
 
 .mktError {
   color: #990000; }
@@ -2241,7 +2241,7 @@ footer {
   .appcloudSignup .errors li {
     margin-bottom: 0; }
 .appcloudSignup .email {
-  background: url(/images/icon-email.png) no-repeat left center;
+  background: url(../images/icon-email.png) no-repeat left center;
   padding: 22px;
   margin: 0 150px; }
 
@@ -2307,43 +2307,43 @@ footer {
   cursor: pointer; }
 
 #cboxOverlay {
-  background: url(/images/overlay.png) 0 0 repeat; }
+  background: url(../images/overlay.png) 0 0 repeat; }
 
 #cboxTopLeft {
   width: 21px;
   height: 21px;
-  background: url(/images/controls.png) -100px 0 no-repeat; }
+  background: url(../images/controls.png) -100px 0 no-repeat; }
 
 #cboxTopRight {
   width: 21px;
   height: 21px;
-  background: url(/images/controls.png) -129px 0 no-repeat; }
+  background: url(../images/controls.png) -129px 0 no-repeat; }
 
 #cboxBottomLeft {
   width: 21px;
   height: 21px;
-  background: url(/images/controls.png) -100px -29px no-repeat; }
+  background: url(../images/controls.png) -100px -29px no-repeat; }
 
 #cboxBottomRight {
   width: 21px;
   height: 21px;
-  background: url(/images/controls.png) -129px -29px no-repeat; }
+  background: url(../images/controls.png) -129px -29px no-repeat; }
 
 #cboxMiddleLeft {
   width: 21px;
-  background: url(/images/controls.png) left top repeat-y; }
+  background: url(../images/controls.png) left top repeat-y; }
 
 #cboxMiddleRight {
   width: 21px;
-  background: url(/images/controls.png) right top repeat-y; }
+  background: url(../images/controls.png) right top repeat-y; }
 
 #cboxTopCenter {
   height: 21px;
-  background: url(/images/border.png) 0 0 repeat-x; }
+  background: url(../images/border.png) 0 0 repeat-x; }
 
 #cboxBottomCenter {
   height: 21px;
-  background: url(/images/border.png) 0 -29px repeat-x; }
+  background: url(../images/border.png) 0 -29px repeat-x; }
 
 #cboxContent {
   background: white; }
@@ -2375,7 +2375,7 @@ footer {
   position: absolute;
   bottom: 0;
   left: 0px;
-  background: url(/images/controls.png) -75px 0px no-repeat;
+  background: url(../images/controls.png) -75px 0px no-repeat;
   width: 25px;
   height: 25px;
   text-indent: -9999px; }
@@ -2387,7 +2387,7 @@ footer {
   position: absolute;
   bottom: 0;
   left: 27px;
-  background: url(/images/controls.png) -50px 0px no-repeat;
+  background: url(../images/controls.png) -50px 0px no-repeat;
   width: 25px;
   height: 25px;
   text-indent: -9999px; }
@@ -2396,16 +2396,16 @@ footer {
   background-position: -50px -25px; }
 
 #cboxLoadingOverlay {
-  background: url(/images/loading_background.png) center center no-repeat; }
+  background: url(../images/loading_background.png) center center no-repeat; }
 
 #cboxLoadingGraphic {
-  background: url(/images/loading.gif) center center no-repeat; }
+  background: url(../images/loading.gif) center center no-repeat; }
 
 #cboxClose {
   position: absolute;
   bottom: 0;
   right: 0;
-  background: url(/images/controls.png) -25px 0px no-repeat;
+  background: url(../images/controls.png) -25px 0px no-repeat;
   width: 25px;
   height: 25px;
   text-indent: -9999px; }
