@@ -1223,7 +1223,7 @@ header {
         display: block; }
 
 #content {
-  background: white url("/images/bg_clouds.png") repeat-x -8% top;
+  background: white url("../images/bg_clouds.png") repeat-x -8% top;
   padding-top: 60px; }
 
 #heroes #nav {
@@ -1284,7 +1284,7 @@ header {
     margin-top: 5px;
     font-size: 28px;
     padding-bottom: 5px;
-    background: url("/images/swipe_blue.png") bottom center no-repeat; }
+    background: url("../images/swipe_blue.png") bottom center no-repeat; }
   #heroes #hero_1 p {
     margin-bottom: 0; }
   #heroes #hero_1 .button {
