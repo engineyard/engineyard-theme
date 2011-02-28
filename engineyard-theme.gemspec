@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Paul Campbell", "Dr Nic Williams"]
-  s.date = %q{2011-02-27}
+  s.date = %q{2011-02-28}
   s.description = %q{View helpers 'header' and 'footer', along with an assets generator to make any site look like http://engineyard.com}
   s.email = ["paul@rslw.com", "drnicwilliams@gmail.com"]
   s.extra_rdoc_files = [
