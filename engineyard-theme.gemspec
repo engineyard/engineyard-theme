@@ -5,13 +5,13 @@
 
 Gem::Specification.new do |s|
   s.name = %q{engineyard-theme}
-  s.version = "0.1.0"
+  s.version = "1.0.5"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Paul Campbell"]
-  s.date = %q{2011-02-08}
-  s.description = %q{a 'pugita_header' and 'pugita_footer' method, along with an assets generator to make any site look like engineyard.com}
-  s.email = %q{paul@rslw.com}
+  s.authors = ["Paul Campbell", "Dr Nic Williams"]
+  s.date = %q{2011-02-28}
+  s.description = %q{View helpers 'header' and 'footer', along with an assets generator to make any site look like http://engineyard.com}
+  s.email = ["paul@rslw.com", "drnicwilliams@gmail.com"]
   s.extra_rdoc_files = [
     "LICENSE.txt",
     "README.md"
@@ -19,14 +19,15 @@ Gem::Specification.new do |s|
   s.files = [
     "Gemfile",
     "Gemfile.lock",
+    "History.md",
     "LICENSE.txt",
     "README.md",
     "Rakefile",
     "VERSION",
-    "app/helpers/pugita_engine_helper.rb",
+    "app/helpers/engineyard_theme_helper.rb",
     "app/helpers/static_helper.rb",
-    "app/views/pugita/_footer.html.erb",
-    "app/views/pugita/_header.html.erb",
+    "app/views/engineyard-theme/_footer.html.erb",
+    "app/views/engineyard-theme/_header.html.erb",
     "app/views/shared/_appcloud_signup_button.html.erb",
     "app/views/shared/_contact_sales_button.html.erb",
     "app/views/shared/_countdown.html.erb",
@@ -38,6 +39,7 @@ Gem::Specification.new do |s|
     "app/views/shared/_tracking.html.erb",
     "app/views/shared/_video.html.erb",
     "app/views/shared/forms/_regions.html.erb",
+    "engineyard-theme.gemspec",
     "example/public/engineyard-theme/images/award-bossie2010.png",
     "example/public/engineyard-theme/images/award-crn-2010.png",
     "example/public/engineyard-theme/images/award-ondemand100-2010.png",
@@ -201,6 +203,25 @@ Gem::Specification.new do |s|
     "example/public/engineyard-theme/images/img_worldmap.png",
     "example/public/engineyard-theme/images/img_xcloud.png",
     "example/public/engineyard-theme/images/john-screen.png",
+    "example/public/engineyard-theme/images/layout/bg-black-trans.png",
+    "example/public/engineyard-theme/images/layout/bg-f7noise.gif",
+    "example/public/engineyard-theme/images/layout/bg-header-shadow.png",
+    "example/public/engineyard-theme/images/layout/bg-header.gif",
+    "example/public/engineyard-theme/images/layout/bg-vertical-rule.png",
+    "example/public/engineyard-theme/images/layout/icons/add.png",
+    "example/public/engineyard-theme/images/layout/icons/delete.png",
+    "example/public/engineyard-theme/images/layout/icons/detach.png",
+    "example/public/engineyard-theme/images/layout/icons/down.png",
+    "example/public/engineyard-theme/images/layout/icons/edit.png",
+    "example/public/engineyard-theme/images/layout/icons/email.png",
+    "example/public/engineyard-theme/images/layout/icons/gem-add.png",
+    "example/public/engineyard-theme/images/layout/icons/right.png",
+    "example/public/engineyard-theme/images/layout/icons/social/facebook.png",
+    "example/public/engineyard-theme/images/layout/icons/social/rss.png",
+    "example/public/engineyard-theme/images/layout/icons/social/twitter.png",
+    "example/public/engineyard-theme/images/layout/icons/unix-add.png",
+    "example/public/engineyard-theme/images/layout/logo_appcloud.png",
+    "example/public/engineyard-theme/images/layout/quickstart-rules.png",
     "example/public/engineyard-theme/images/loading.gif",
     "example/public/engineyard-theme/images/loading_background.png",
     "example/public/engineyard-theme/images/logo-aptana.png",
@@ -355,7 +376,6 @@ Gem::Specification.new do |s|
     "example/public/engineyard-theme/stylesheets/sass/print.sass",
     "example/public/engineyard-theme/stylesheets/sass/screen.sass",
     "example/public/engineyard-theme/stylesheets/screen.css",
-    "engineyard-theme.gemspec",
     "lib/engineyard-theme.rb",
     "lib/generators/engineyard_theme_generator.rb"
   ]
@@ -363,28 +383,22 @@ Gem::Specification.new do |s|
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.5.0}
-  s.summary = %q{A gem providing helper methods and assets to make any site look like engineyard.com}
-  s.test_files = [
-    "spec/spec_helper.rb"
-  ]
+  s.summary = %q{A gem providing helper methods and assets to make any site look like http://engineyard.com}
 
   if s.respond_to? :specification_version then
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<rails>, ["= 3.0.3"])
-      s.add_development_dependency(%q<sqlite3>, [">= 0"])
+      s.add_runtime_dependency(%q<rails>, ["~> 3"])
       s.add_development_dependency(%q<jeweler>, ["~> 1.5.2"])
       s.add_runtime_dependency(%q<rails>, ["~> 3"])
     else
-      s.add_dependency(%q<rails>, ["= 3.0.3"])
-      s.add_dependency(%q<sqlite3>, [">= 0"])
+      s.add_dependency(%q<rails>, ["~> 3"])
       s.add_dependency(%q<jeweler>, ["~> 1.5.2"])
       s.add_dependency(%q<rails>, ["~> 3"])
     end
   else
-    s.add_dependency(%q<rails>, ["= 3.0.3"])
-    s.add_dependency(%q<sqlite3>, [">= 0"])
+    s.add_dependency(%q<rails>, ["~> 3"])
     s.add_dependency(%q<jeweler>, ["~> 1.5.2"])
     s.add_dependency(%q<rails>, ["~> 3"])
   end
