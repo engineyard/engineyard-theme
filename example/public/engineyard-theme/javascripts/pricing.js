@@ -22,7 +22,7 @@ var pricing = {
     additionalPremiumSupport: 725,
 
     // slider limits
-    maxPageviews: 1000000,
+    maxPageviews: 10000000,
     maxPagesize: 2000,
 
 
