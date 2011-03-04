@@ -1,8 +1,8 @@
 PATH
   remote: ../
   specs:
-    engineyard-theme (0.1.0)
-      rails (= 3.0.3)
+    engineyard-theme (1.0.5)
+      rails (~> 3)
       rails (~> 3)
 
 GEM
@@ -153,7 +153,7 @@ DEPENDENCIES
   fakeweb
   haml
   launchy
-  rails (= 3.0.3)
+  rails (~> 3)
   rspec
   rspec-rails
   ruby-debug

@@ -2,47 +2,68 @@
       </div>
 
 
-      <div class="clear"></div>
-      <footer>
-        <div class="footer-signup">
-          <div class="video-text">
-            <div>
-              <h3>Try Engine Yard Today&#8212;Risk Free</h3>
+      <div class="clear"></div> 
+      
+      <div id="footer">
+        <div id="footer-content">
+          <div class="page">
+            <div class="grid_4">
+              <p id="copyright">
+                <p>   
+                Running on Engine Yard: <%= link_to 'The Ruby Cloud', '/products/appcloud' %> and <%= link_to 'Rails 3', 'http://www.rubyonrails.org' %><br />
+                Ruby is the Language of the Cloud.<br />
+                Copyright &copy; Engine Yard, Inc. All rights reserved.
+              </p>
+            </div>
+            <div class="grid_2">
+              <h2>Ruby Products</h2>
               <ul>
-                <li>Deploy your Rails app in minutes.</li>
-                <li>Only pay for what you use&#8212;no setup or environment fees.</li>
-                <li>Enjoy worry-free scalability to 25 million users.</li>
+                <li><%= link_to('Engine Yard AppCloud','/products/appcloud') %></li>
+                <li><%= link_to('Engine Yard xCloud','/products/xcloud') %></li>
+                <li><%= link_to('Rails 3 Training','/university/scheduled_classes') %></li>
+                <li> <%= link_to('Professional Services','/services') %></li>
               </ul>
             </div>
-            <div class="controls">
-              <%= link_to 'Sign Up Now', 'https://cloud.engineyard.com/signup', :id => 'colorbox_signup_link', :class => 'button trackLink' %><br />
-              <%= link_to 'request a live demo', 'http://pages.engineyard.com/RequestLiveDemo.html', :class => 'trackLink' %>
+            <div class="grid_2">
+              <h2>Customer Service</h2>  
+              <ul>                       
+                <li><a href="http://support.cloud.engineyard.com/">Request Support</a></li> 
+                <li><a href="http://docs.engineyard.com">Documentation</a></li> 
+                <li><a href="http://community.engineyard.com">Community Forums</a></li> 
+                <li><a href="/products/support-policies">Support Policies</a></li>
+                <li><a href="/legal/privacy">Privacy Policy</a></li>
+              </ul>
+            </div>
+            <div class="grid_2">
+              <h2>Ruby Community</h2>
+              <ul>
+                <li><%= link_to('JRuby','http://www.jruby.org') %></li>
+                <li><%= link_to('Rubinius','http://rubini.us') %></li>
+                <li><%= link_to('Rails Installer','http://www.railsinstaller.com') %></li>
+                <li><%= link_to('Ruby Jobs','http://jobs.engineyard.com') %></li>
+                <li> <%= link_to('Rails Developers','http://www.railsdevelopment.com') %></li>
+              </ul>
+            </div>
+            <div class="grid_2">
+              <h2>Socialize With Us</h2>
+              <ul>
+                <li>
+                  <%= link_to('Blog', '/blog', :class => 'blog') %>
+                </li>
+                <li>
+                  <%= link_to('Twitter', 'http://twitter.com/engineyard', :class => 'twitter trackLink') %>
+                </li>
+                <li>                                                                             
+                  <%= link_to('Facebook', 'http://facebook.com/engineyard', :class => 'facebook trackLink') %>
+                </li>
+                <li>                                                                             
+                  <%= link_to('LinkedIn', 'http://www.linkedin.com/groups?gid=111752', :class => 'linkedin trackLink') %>
+                </li>
+              </ul>
             </div>
           </div>
-          <div class="clear"></div>
         </div>
-        <div class="connect">
-          <h4>Connect with Engine Yard</h4>
-          <ul>
-            <li><%= link_to 'Facebook', 'http://www.facebook.com/engineyard', :class=>'facebook trackLink' %></li>
-            <li><%= link_to 'Twitter', 'http://www.twitter.com/engineyard', :class=>'twitter trackLink' %></li>
-            <li><%= link_to 'LinkedIn', 'http://www.linkedin.com/groups?gid=111752', :class=>'linkedin trackLink' %></li>
-            <li><%= link_to 'RSS', 'http://feeds2.feedburner.com/engineyard', :class=>'rss trackLink' %></li>
-          </ul>
-        </div>
-        <nav>
-          <ul>
-            <li><a href="/legal/privacy">Privacy Policy</a></li>
-            <li><a href="/company/careers">Careers</a></li>
-            <li><a href="/company/contact">Contact Us</a></li>
-            <li><a href="/company/presskit">Press Kit</a></li>
-            <li><a href="/sitemap">Site Map</a></li>
-            <li><a href="http://jobs.engineyard.com">Ruby Jobs Board</a></li>
-          </ul>
-        </nav>
-        
-      </footer>
-     
+      </div>           
     </div>
     
     <div class="hidden">

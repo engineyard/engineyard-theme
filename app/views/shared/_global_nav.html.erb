@@ -1,7 +1,7 @@
 <nav>
   <ul class="navigation">
     <li <%= selected?(/^products/) %>>
-      <span>Cloud Products</span>
+      <a href="/products/appcloud"><span>Cloud Products</span></a>
       <ul>
         <li>
           <a href="/products/appcloud">Engine Yard AppCloud</a>
@@ -28,13 +28,10 @@
     </li>
     
     <li<%= selected?(/^services/) %>>
-      <span>Support</span>
+      <a href="/support-plans"><span>Support</span></a>
       <ul>
+        <li><a href="/support-plans">Support Plans</a></li>
         <li><a href="/services">Professional Services</a></li>
-        <li><a href="http://support.cloud.engineyard.com/">Request Support</a></li>
-        <li><a href="http://docs.engineyard.com">Documentation</a></li>
-        <li><a href="http://community.engineyard.com">Community Forums</a></li>
-        <li><a href="/products/support-policies">Support Policies</a></li>
       </ul>
     </li>
   
@@ -42,14 +39,11 @@
       <%= link_to '<span>EY University</span>'.html_safe, '/university' %>
     </li>
     
-    <li> | </li>
-    
     <li<%= selected?(/^developer/) %>>
-      <span>Resources</span>
+      <a href="/videos"><span>Resources</span></a>
       <ul>
         <li><a href="/videos">Videos</a></li>
         <li><a href="/podcasts">Podcasts</a></li>
-        <li><a href="/developer/webinars">Webinars</a></li>
         <li><a href="/developer/events">Events</a></li>
         <li><a href="/partners">Development Partners</a></li>
         <li><a href="/developer/groups">User Groups</a></li> 
@@ -58,7 +52,7 @@
     </li>
     
     <li<%= selected?(/^projects/) %>>
-      <span>Open Source</span>
+      <a href="/open-source"><span>Open Source</span></a>
       <ul>
         <li><a href="/open-source">Projects</a></li>
         <li><a href="/open-source/people">Contributors</a></li>
@@ -66,7 +60,7 @@
     </li>
 
     <li<%= selected?(/^company/) %>>
-      <span>About</span>
+      <a href="/company/"><span>About</span></a>
       <ul>
         <li><a href="/company/">Overview</a></li>
         <li><a href="/company/customers">Customers</a></li>

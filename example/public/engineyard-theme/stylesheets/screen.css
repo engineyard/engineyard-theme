@@ -397,7 +397,7 @@ form {
   .catalog .location {
     margin-bottom: 1.5em; }
   .catalog.press li {
-    background: url(/engineyard-theme/images/icn_press_release.png) no-repeat left 12px;
+    background: url(../images/icn_press_release.png) no-repeat left 12px;
     padding: 10px 0 10px 35px; }
     .catalog.press li li {
       padding: 0;
@@ -492,17 +492,17 @@ p.notice {
   padding: 3px 0 5px 26px; }
 
 .pdf {
-  background: url(/engineyard-theme/images/img-icons.png?1.1.8) 0px -2800px no-repeat; }
+  background: url(../images/img-icons.png?1.1.8) 0px -2800px no-repeat; }
 
 .doc {
-  background: url(/engineyard-theme/images/img-icons.png?1.1.8) 0px -2900px no-repeat; }
+  background: url(../images/img-icons.png?1.1.8) 0px -2900px no-repeat; }
 
 .url {
-  background: url(/engineyard-theme/images/img-icons.png?1.1.8) 2px -500px no-repeat;
+  background: url(../images/img-icons.png?1.1.8) 2px -500px no-repeat;
   padding: 0 0 0 26px; }
 
 .webcast {
-  background: url(/engineyard-theme/images/img-icons.png?1.1.8) 0px -2411px no-repeat;
+  background: url(../images/img-icons.png?1.1.8) 0px -2411px no-repeat;
   padding: 0 0 0 36px; }
 
 .webcast + p {
@@ -635,7 +635,7 @@ form input.gsc-search-button {
   list-style: none; }
 
 #header {
-  background: #b8010d url(../../engineyard-theme/images/bg_header.png) repeat-x bottom;
+  background: #b8010d url(../../images/bg_header.png) repeat-x bottom;
   padding: 0;
   min-height: 77px;
   position: relative; }
@@ -673,7 +673,7 @@ form input.gsc-search-button {
       overflow: hidden;
       width: 49px;
       height: 81px;
-      background: url(../../engineyard-theme/images/logo.png); }
+      background: url(../../images/logo.png); }
   #header ul.navigation {
     clear: right;
     float: right;
@@ -786,7 +786,7 @@ form input.gsc-search-button {
       margin: 0;
       font-size: 0.8em;
       width: 100px;
-      background: white url(/engineyard-theme/images/icon_search.png) no-repeat 3px center;
+      background: white url(../images/icon_search.png) no-repeat 3px center;
       border: 1px solid #73090b;
       -webkit-border-radius: 3px;
       -moz-border-radius: 3px;
@@ -947,7 +947,7 @@ form input.gsc-search-button {
   height: 210px; }
 
 #content {
-  background: white url(../engineyard-theme/images/bg_clouds.png) repeat-x -8% 0px;
+  background: white url(../images/bg_clouds.png) repeat-x -8% 0px;
   padding-top: 3em; }
 
 .banner {
@@ -961,7 +961,7 @@ form input.gsc-search-button {
     height: 230px;
     overflow: auto;
     position: relative;
-    background: url(../engineyard-theme/images/bg_hero_panel.png) no-repeat 560px 35px; }
+    background: url(../images/bg_hero_panel.png) no-repeat 560px 35px; }
     #heroes #panels div {
       display: none;
       width: 100%;
@@ -1010,7 +1010,7 @@ form input.gsc-search-button {
       list-style-type: none;
       width: 100%; }
     #heroes #nav ul {
-      background: url(../engineyard-theme/images/bg_hero_nav.png) 0 0 repeat-y;
+      background: url(../images/bg_hero_nav.png) 0 0 repeat-y;
       /*height: 150px */
       margin-top: 35px;
       padding: 0px 0; }
@@ -1022,7 +1022,7 @@ form input.gsc-search-button {
       display: block;
       line-height: 1em; }
     #heroes #nav a.current {
-      background: white url(../engineyard-theme/images/bg_hero_highlight.png) 0 0 no-repeat;
+      background: white url(../images/bg_hero_highlight.png) 0 0 no-repeat;
       color: #555555; }
 
 #feature_menu {
@@ -1033,7 +1033,7 @@ form input.gsc-search-button {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background: url(../engineyard-theme/images/bg_stroke.png) repeat-x 0 13px; }
+    background: url(../images/bg_stroke.png) repeat-x 0 13px; }
     #feature_menu ul li {
       float: left;
       width: 33.3%;
@@ -1042,7 +1042,7 @@ form input.gsc-search-button {
       text-align: center;
       list-style-type: none;
       font-size: 13px;
-      background: url(../engineyard-theme/images/bg_stroke.png) repeat-x 0 0; }
+      background: url(../images/bg_stroke.png) repeat-x 0 0; }
       #feature_menu ul li a {
         display: block;
         padding: 9px 0 7px;
@@ -1057,7 +1057,7 @@ form input.gsc-search-button {
         margin: 0;
         padding: 22px 0 0;
         color: #333333;
-        background: url(../engineyard-theme/images/bg_feature_menu.png) no-repeat 50% 0; }
+        background: url(../images/bg_feature_menu.png) no-repeat 50% 0; }
       #feature_menu ul li.selected a:hover {
         text-decoration: none; }
 
@@ -1129,7 +1129,7 @@ form input.gsc-search-button {
     text-shadow: 0px -1px 0px white; }
 
 #subnav {
-  background: url(../../engineyard-theme/images/bg_stroke.png) repeat-x bottom;
+  background: url(../../images/bg_stroke.png) repeat-x bottom;
   overflow: hidden;
   margin: 2em 0 3em;
   text-align: center;
@@ -1473,7 +1473,7 @@ p.alert {
   float: left;
   overflow: auto;
   width: 100%;
-  background: url(../../engineyard-theme/images/bg_stroke.png) repeat-y 70%;
+  background: url(../../images/bg_stroke.png) repeat-y 70%;
   margin: 0 0 2em; }
   #blog .section, #developer .section {
     border-bottom: 1px solid #cccccc;
@@ -1811,7 +1811,7 @@ ul.two_column li {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#ffffff'); }
 
 .popularity {
-  background: url(http://www.engineyard.com/blog/wp-content/themes/engineyard-v3/engineyard-theme/images/bg_share.png);
+  background: url(http://www.engineyard.com/blog/wp-content/themes/engineyard-v3/images/bg_share.png);
   border: 1px solid #e8e8e8;
   padding: 14px 20px;
   font-weight: bold;
@@ -1882,7 +1882,7 @@ ul.two_column li {
     font-size: 1.25em;
     margin: -20px -20px 20px;
     padding: 10px 20px;
-    background: url(/engineyard-theme/images/estimator-header.png) repeat-x left top;
+    background: url(../images/estimator-header.png) repeat-x left top;
     text-shadow: 1px 1px 1px white; }
   #pricingEstimator #total {
     font-size: 3em;
@@ -1966,7 +1966,7 @@ ul.two_column li {
     background: #eeeeee;
     height: 26px;
     margin: 15px 0px;
-    background: url(/engineyard-theme/images/estimator-widget.png) no-repeat left top;
+    background: url(../images/estimator-widget.png) no-repeat left top;
     -moz-box-shadow: inset 1px 1px 1px #999999;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px; }
@@ -2130,7 +2130,7 @@ body {
   background: -moz-linear-gradient(top, #ffffe5, white); }
   .email.notice p {
     font: 1.75em "Helvetica Neue Light", "HelveticaNeue-Light", Arial, sans-serif;
-    background: url(/engineyard-theme/images/icon-email.png) no-repeat 100px center;
+    background: url(../images/icon-email.png) no-repeat 100px center;
     padding: 30px 0;
     margin: 0; }
 
@@ -2285,13 +2285,13 @@ ul.updates {
   display: block; }
 
 .website {
-  background: url(/engineyard-theme/images/icon-web.png) no-repeat left center; }
+  background: url(../images/icon-web.png) no-repeat left center; }
 
 .repository {
-  background: url(/engineyard-theme/images/icon-net.png) no-repeat left center; }
+  background: url(../images/icon-net.png) no-repeat left center; }
 
 .twitter {
-  background: url(/engineyard-theme/images/icon-twitter.png) no-repeat left center; }
+  background: url(../images/icon-twitter.png) no-repeat left center; }
 
 #colorbox, #cboxOverlay, #cboxWrapper {
   position: absolute;
@@ -2334,43 +2334,43 @@ ul.updates {
   cursor: pointer; }
 
 #cboxOverlay {
-  background: url(/engineyard-theme/images/overlay.png) 0 0 repeat; }
+  background: url(../images/overlay.png) 0 0 repeat; }
 
 #cboxTopLeft {
   width: 21px;
   height: 21px;
-  background: url(/engineyard-theme/images/controls.png) -100px 0 no-repeat; }
+  background: url(../images/controls.png) -100px 0 no-repeat; }
 
 #cboxTopRight {
   width: 21px;
   height: 21px;
-  background: url(/engineyard-theme/images/controls.png) -129px 0 no-repeat; }
+  background: url(../images/controls.png) -129px 0 no-repeat; }
 
 #cboxBottomLeft {
   width: 21px;
   height: 21px;
-  background: url(/engineyard-theme/images/controls.png) -100px -29px no-repeat; }
+  background: url(../images/controls.png) -100px -29px no-repeat; }
 
 #cboxBottomRight {
   width: 21px;
   height: 21px;
-  background: url(/engineyard-theme/images/controls.png) -129px -29px no-repeat; }
+  background: url(../images/controls.png) -129px -29px no-repeat; }
 
 #cboxMiddleLeft {
   width: 21px;
-  background: url(/engineyard-theme/images/controls.png) left top repeat-y; }
+  background: url(../images/controls.png) left top repeat-y; }
 
 #cboxMiddleRight {
   width: 21px;
-  background: url(/engineyard-theme/images/controls.png) right top repeat-y; }
+  background: url(../images/controls.png) right top repeat-y; }
 
 #cboxTopCenter {
   height: 21px;
-  background: url(/engineyard-theme/images/border.png) 0 0 repeat-x; }
+  background: url(../images/border.png) 0 0 repeat-x; }
 
 #cboxBottomCenter {
   height: 21px;
-  background: url(/engineyard-theme/images/border.png) 0 -29px repeat-x; }
+  background: url(../images/border.png) 0 -29px repeat-x; }
 
 #cboxContent {
   background: white; }
@@ -2402,7 +2402,7 @@ ul.updates {
   position: absolute;
   bottom: 0;
   left: 0px;
-  background: url(/engineyard-theme/images/controls.png) -75px 0px no-repeat;
+  background: url(../images/controls.png) -75px 0px no-repeat;
   width: 25px;
   height: 25px;
   text-indent: -9999px; }
@@ -2414,7 +2414,7 @@ ul.updates {
   position: absolute;
   bottom: 0;
   left: 27px;
-  background: url(/engineyard-theme/images/controls.png) -50px 0px no-repeat;
+  background: url(../images/controls.png) -50px 0px no-repeat;
   width: 25px;
   height: 25px;
   text-indent: -9999px; }
@@ -2423,16 +2423,16 @@ ul.updates {
   background-position: -50px -25px; }
 
 #cboxLoadingOverlay {
-  background: url(/engineyard-theme/images/loading_background.png) center center no-repeat; }
+  background: url(../images/loading_background.png) center center no-repeat; }
 
 #cboxLoadingGraphic {
-  background: url(/engineyard-theme/images/loading.gif) center center no-repeat; }
+  background: url(../images/loading.gif) center center no-repeat; }
 
 #cboxClose {
   position: absolute;
   bottom: 0;
   right: 0;
-  background: url(/engineyard-theme/images/controls.png) -25px 0px no-repeat;
+  background: url(../images/controls.png) -25px 0px no-repeat;
   width: 25px;
   height: 25px;
   text-indent: -9999px; }

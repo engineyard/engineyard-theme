@@ -99,13 +99,15 @@ a.email, span.email {
   padding-left: 18px;
   background: url(../images/layout/icons/email.png) no-repeat 0 0; }
 
-#footer-content a.blog, #footer-content a.twitter, #footer-content a.facebook {
+#footer-content a.blog, #footer-content a.twitter, #footer-content a.facebook, #footer-content a.linkedin {
   padding: 2px 0 2px 20px;
   background: url(../images/layout/icons/social/rss.png) 0 50% no-repeat; }
 #footer-content a.twitter {
   background-image: url(../images/layout/icons/social/twitter.png); }
 #footer-content a.facebook {
   background-image: url(../images/layout/icons/social/facebook.png); }
+#footer-content a.linkedin {
+  background-image: url(../images/layout/icons/social/linkedin.png); }
 
 /* BUTTONS */
 button {
@@ -1284,7 +1286,7 @@ header {
     margin-top: 5px;
     font-size: 28px;
     padding-bottom: 5px;
-    background: url("../images/swipe_blue.png") bottom center no-repeat; }
+    background: url("/images/swipe_blue.png") bottom center no-repeat; }
   #heroes #hero_1 p {
     margin-bottom: 0; }
   #heroes #hero_1 .button {
