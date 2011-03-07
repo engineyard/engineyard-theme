@@ -22,7 +22,7 @@ var pricing = {
     additionalPremiumSupport: 725,
 
     // slider limits
-    maxPageviews: 10000000,
+    maxPageviews: 1000000,
     maxPagesize: 2000,
 
 
@@ -290,7 +290,7 @@ var estimator = {
   select_default: function() {
     units = 1;
     database = 0;        
-    $("#server_size input[name='server_size']:checked").val();
+    $("#server_size input[name='server_size']:checked").val(1);
     $('#dedicated_db').removeAttr('checked');
     estimator.update();
   },
