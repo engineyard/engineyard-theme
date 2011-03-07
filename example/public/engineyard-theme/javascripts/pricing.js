@@ -289,7 +289,8 @@ var estimator = {
 
   select_default: function() {
     units = 1;
-    database = 0;
+    database = 0;        
+    $("#server_size input[name='server_size']:checked").val();
     $('#dedicated_db').removeAttr('checked');
     estimator.update();
   },
