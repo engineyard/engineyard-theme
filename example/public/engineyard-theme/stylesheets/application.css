@@ -2423,3 +2423,36 @@ footer {
 
 li.plan h3 {
   margin: 0; }
+
+img.careers.hero {
+  float: none;
+  margin-top: 3px;
+  border: 15px white solid;
+  -moz-box-shadow: 1px 10px 5px #888888;
+  -webkit-box-shadow: 1px 10px 5px #888888;
+  box-shadow: 1px 10px 5px #888888;
+  -webkit-transform: rotate(0);
+  -moz-transform: rotate(0);
+  transform: rotate(0); }
+
+img.careers.hero:nth-of-type(1) {
+  float: none;
+  margin-top: 3px;
+  border: 15px white solid;
+  -moz-box-shadow: 1px 10px 5px #888888;
+  -webkit-box-shadow: 1px 10px 5px #888888;
+  box-shadow: 1px 10px 5px #888888;
+  -webkit-transform: rotate(-5deg);
+  -moz-transform: rotate(-5deg);
+  transform: rotate(-5deg); }
+
+img.careers.hero:nth-of-type(3) {
+  float: none;
+  margin-top: 3px;
+  border: 15px white solid;
+  -moz-box-shadow: 1px 10px 5px #888888;
+  -webkit-box-shadow: 1px 10px 5px #888888;
+  box-shadow: 1px 10px 5px #888888;
+  -webkit-transform: rotate(5deg);
+  -moz-transform: rotate(5deg);
+  transform: rotate(5deg); }
