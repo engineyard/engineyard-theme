@@ -31,6 +31,10 @@ If you want to add anything within the `<head></head>` tags or just before the `
       <!--  this comment only appears on my sub-site -->
     <% end %>
 
+Default navigation links and default web service javascript (Google Analytics, Optimizely, etc.) can be disabled by setting values to false:
+
+    header(add_navigation,add_js)
+
 ## Modifying / Testing ##
 
 Inside this repo is a `example` folder, containing a Rails 3 app configured to load the gem. You can use this to add any changes in styles. You can also run:

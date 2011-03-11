@@ -21,48 +21,45 @@
       <%= stylesheet_link_tag '/engineyard-theme/stylesheets/ie7' %>
     <![endif]-->
     
-    <%= additional_header if additional_header.present? %>
-    
     <script src="http://use.typekit.com/cra4agv.js"></script>
     <script>try{Typekit.load();}catch(e){}</script>
     
     <%= yield :head %>
     
-    <%- unless Rails.env == 'development' %>
+    <%- unless Rails.env == 'development' || add_js != 'true' %>
       <script type='text/javascript'>
         var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-764576-1'],['_setDomainName',".engineyard.com"],['_setAllowHash',false],['_setAllowAnchor',true],['_trackPageview']);(function() {var ga = document.createElement('script');ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';ga.setAttribute('async', 'true');document.documentElement.firstChild.appendChild(ga);})();    
       </script>
+      <script src="//cdn.optimizely.com/js/4180050.js"></script>
     <%- end -%>
-    <script src="//cdn.optimizely.com/js/4180050.js"></script>
+    
+    <%= additional_header if additional_header.present? %>
   </head>
   <body>
-    
-    <%= render 'shared/optimizer' %>
-    
     <div class="container">
       <header>
         <div class="wrapper">
-          <h1 class="branding">
-              <%= link_to content_for?(:branding) ? yield(:branding) : 'Engine Yard, Inc.', '/' %>
-          </h1>
-
-          <ul class="utility">
-            <li>866-518-YARD</li>
-            <li>
-              <form action="/search" method="get" class="search">
-                <input type="text" name="q" id="searchbox" placeholder="search" />
-                <input type="submit" value="Search" class="gsc-search-button" />
-              </form>
-            </li>
-            <li>
-              <%= link_to 'Create Account', 'https://login.engineyard.com/signup', :class=>'login' %>
-            </li>
-            <li>
-              <%= link_to 'Sign In', 'https://cloud.engineyard.com', :class=>'login' %>
-            </li>
-          </ul>
-
-          <%= render 'shared/global_nav' %>
+          <% if add_navigation == 'true' %>
+            <h1 class="branding">
+                <%= link_to content_for?(:branding) ? yield(:branding) : 'Engine Yard, Inc.', '/' %>
+            </h1>
+            <ul class="utility">
+              <li>866-518-YARD</li>
+              <li>
+                <form action="/search" method="get" class="search">
+                  <input type="text" name="q" id="searchbox" placeholder="search" />
+                  <input type="submit" value="Search" class="gsc-search-button" />
+                </form>
+              </li>
+              <li>
+                <%= link_to 'Create Account', 'https://login.engineyard.com/signup', :class=>'login' %>
+              </li>
+              <li>
+                <%= link_to 'Sign In', 'https://cloud.engineyard.com', :class=>'login' %>
+              </li>
+            </ul>
+            <%= render 'shared/global_nav' %>
+          <% end %>
         </div>
       </header>
 
