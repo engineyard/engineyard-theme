@@ -982,6 +982,15 @@ thead .desc {
 tbody {
   font-size: 95%; }
 
+#jvform {
+  font-size: 12px; }
+  #jvform p {
+    margin-top: 10px;
+    line-height: 14px; }
+  #jvform table, #jvform td, #jvform th, #jvform tr {
+    font-size: 12px;
+    border: none; }
+
 #eystack {
   clear: both; }
   #eystack tbody th {
