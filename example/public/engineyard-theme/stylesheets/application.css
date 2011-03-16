@@ -1800,6 +1800,20 @@ header {
   border: none;
   margin: 1.5em 0; }
 
+section.features.nullborder.message {
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  background: #d9d9d9;
+  background: -moz-linear-gradient(top, #e6e6e6, #d9d9d9);
+  background: -webkit-gradient(linear, left top, left bottom, from(#e6e6e6), to(#d9d9d9));
+  -moz-box-shadow: 0 1px 2px #999999;
+  -webkit-box-shadow: 0 1px 2px #999999;
+  box-shadow: 0 1px 2px #999999;
+  padding: 5px; }
+  section.features.nullborder.message h4 {
+    margin-top: 10px; }
+
 .errors {
   text-align: left;
   color: #990000; }

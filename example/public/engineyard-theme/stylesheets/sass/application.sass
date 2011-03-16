@@ -1227,7 +1227,18 @@ $highlight-color-alt2: #CC0000
   padding: 10px
 .message
   border: none
-  margin: 1.5em 0
+  margin: 1.5em 0 
+section.features.nullborder.message
+  @include rounded-box  
+  background: #d9d9d9
+  background: -moz-linear-gradient(top, #e6e6e6, #d9d9d9)
+  background: -webkit-gradient(linear, left top, left bottom, from(#e6e6e6), to(#d9d9d9))
+  -moz-box-shadow: $button-box-shadow-value
+  -webkit-box-shadow: $button-box-shadow-value
+  box-shadow: $button-box-shadow-value
+  padding: 5px
+  h4
+    margin-top: 10px  
 .errors
   text-align: left
   color: #900
