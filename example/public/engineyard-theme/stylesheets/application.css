@@ -990,6 +990,9 @@ tbody {
   #jvform table, #jvform td, #jvform th, #jvform tr {
     font-size: 12px;
     border: none; }
+  #jvform ul {
+    list-style: disc;
+    margin-left: 15px; }
 
 #eystack {
   clear: both; }
