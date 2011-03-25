@@ -1113,7 +1113,7 @@ header {
       display: inline-block;
       margin-left: 10px; }
   header .utility {
-    padding-top: 4px; }
+    padding-top: 1px; }
     header .utility a.login {
       display: block;
       padding: 5px 15px;
