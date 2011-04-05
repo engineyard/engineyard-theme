@@ -61,6 +61,11 @@ $font-size-small  = 11px
 @import _960gs.sass
 //@import _layout.sass
 
+@mixin fade-in-out
+  background: #fff
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f8f8f8), color-stop(0.05, #ffffff), color-stop(0.95, #ffffff), color-stop(1, #f8f8f8))
+  background: -moz-linear-gradient(center top, #f8f8f8 0, #ffffff 5%, #ffffff 95%, #f8f8f8 100%)
+
 #footer
   clear: both
   border-top: 1px solid lighten($color-border, 10%)
@@ -870,11 +875,12 @@ $highlight-color-alt2: #CC0000
     border: none
     width: 250px
     float: left
-.features
+.features         
   &.nullborder
     border: 0
     margin-bottom: 65px
     .customers 
+      @mixin fade-in-out
       margin-top: 15px
       margin-bottom: 15px
     h3
@@ -1655,9 +1661,7 @@ footer
     td
       border: none   
 .logoMatrix
-  background: #fff
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.76, rgb(255,255,255)), color-stop(0.92, rgb(248,248,248)))
-  background: -moz-linear-gradient(center bottom, rgb(255,255,255) 76%, rgb(248,248,248) 92%)
+  @include fade-in-out
   span
     display: inline-block
     text-align: center
