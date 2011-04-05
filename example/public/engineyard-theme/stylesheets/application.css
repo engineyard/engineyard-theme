@@ -2229,14 +2229,18 @@ footer {
 #cse table td {
   border: none; }
 
-.logoMatrix span {
-  display: inline-block;
-  text-align: center;
-  height: 75px;
-  width: 182px;
-  margin: 10px; }
-  .logoMatrix span img {
-    vertical-align: middle; }
+.logoMatrix {
+  background: white;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.76, white), color-stop(0.92, #f8f8f8));
+  background: -moz-linear-gradient(center bottom, white 76%, #f8f8f8 92%); }
+  .logoMatrix span {
+    display: inline-block;
+    text-align: center;
+    height: 75px;
+    width: 182px;
+    margin: 10px; }
+    .logoMatrix span img {
+      vertical-align: middle; }
 
 .appcloudSignup form {
   display: block;
