@@ -1450,6 +1450,9 @@ header {
     border: 0;
     margin-bottom: 65px; }
     .features.nullborder .customers {
+      background: white;
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f8f8f8), color-stop(0.05, white), color-stop(0.95, white), color-stop(1, #f8f8f8));
+      background: -moz-linear-gradient(center top, #f8f8f8 0, white 5%, white 95%, #f8f8f8 100%);
       margin-top: 15px;
       margin-bottom: 15px; }
     .features.nullborder h3 {
@@ -2231,8 +2234,8 @@ footer {
 
 .logoMatrix {
   background: white;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.76, white), color-stop(0.92, #f8f8f8));
-  background: -moz-linear-gradient(center bottom, white 76%, #f8f8f8 92%); }
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f8f8f8), color-stop(0.05, white), color-stop(0.95, white), color-stop(1, #f8f8f8));
+  background: -moz-linear-gradient(center top, #f8f8f8 0, white 5%, white 95%, #f8f8f8 100%); }
   .logoMatrix span {
     display: inline-block;
     text-align: center;
