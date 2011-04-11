@@ -109,12 +109,25 @@ ol.plans
   margin-left: 0
   padding: 12px 0 0 0
   list-style: none
+  &.partners
+    .plan
+      width: 190px
+      min-height: 150px
+      margin:0 10px
+      p.controls
+        width: 185px
+        position: absolute
+        left: auto
+    .plan:first-child
+      margin-left: 0
+    .plan:last-child
+      margin-right: 0      
   &.services
     .plan
       height: 500px
   .plan
     position: relative
-    width: 230px
+    width: 276px
     min-height: 270px
     float: left
     margin: 0 0 18px 0
@@ -230,7 +243,7 @@ p,dl,hr,h1,h2,h3,h4,h5,h6,ol,ul,pre,table,address,fieldset,.halfColumn,small
 // 820 Wide //
 //////////////
 .wrapper
-  width: 820px
+  width: 960px
   margin: 0 auto
 
 ///////////////////
@@ -1008,7 +1021,7 @@ $highlight-color-alt2: #CC0000
 
 .main
   float: left
-  width: 540px
+  width: 680px
 .heading
   margin-bottom: 20px
   text-align: center
@@ -1052,21 +1065,21 @@ $highlight-color-alt2: #CC0000
         color: #666
         display: inline-block
         padding: 5px 13px
-        background: #EEE
-        background: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#EEE))
-        background: -moz-linear-gradient(top,  #FFF,  #EEE)
-        border: 1px solid #DDD
+        background: #f8f8f8
+        background: -webkit-gradient(linear, left top, left bottom, from(#f8f8f8), to(#c5c5c5))
+        background: -moz-linear-gradient(top,  #f8f8f8,  #c5c5c5)
+        border: 1px solid #b8b8b8
         height: 20px
         margin-right: -1px
         &:hover
           color: #333
           text-decoration: none
       &:first-child a
-        -moz-border-radius-topleft: 5px
-        -webkit-border-top-left-radius: 5px
+        -moz-border-radius-topleft: 6px
+        -webkit-border-top-left-radius: 6px
       &:last-child a
-        -moz-border-radius-topright: 5px
-        -webkit-border-top-right-radius: 5px
+        -moz-border-radius-topright: 6px
+        -webkit-border-top-right-radius: 6px
       &.selected
         a
           color: #333
@@ -1570,6 +1583,8 @@ footer
       &:first-child
         margin-top: 0
   &.company
+    hr
+      margin-bottom: 10px
     & > li
       h3, h4, h5, p
         margin-left: 140px
