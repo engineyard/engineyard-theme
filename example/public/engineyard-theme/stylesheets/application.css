@@ -656,11 +656,23 @@ ol.plans {
   margin-left: 0;
   padding: 12px 0 0 0;
   list-style: none; }
+  ol.plans.partners .plan {
+    width: 190px;
+    min-height: 150px;
+    margin: 0 10px; }
+    ol.plans.partners .plan p.controls {
+      width: 185px;
+      position: absolute;
+      left: auto; }
+  ol.plans.partners .plan:first-child {
+    margin-left: 0; }
+  ol.plans.partners .plan:last-child {
+    margin-right: 0; }
   ol.plans.services .plan {
     height: 500px; }
   ol.plans .plan {
     position: relative;
-    width: 230px;
+    width: 276px;
     min-height: 270px;
     float: left;
     margin: 0 0 18px 0;
@@ -797,7 +809,7 @@ p, dl, hr, h1, h2, h3, h4, h5, h6, ol, ul, pre, table, address, fieldset, .halfC
   margin: 0; }
 
 .wrapper {
-  width: 820px;
+  width: 960px;
   margin: 0 auto; }
 
 p, ul, ol, dl, fieldset, .catalog, address, small {
@@ -1576,7 +1588,7 @@ header {
 
 .main {
   float: left;
-  width: 540px; }
+  width: 680px; }
 
 .heading {
   margin-bottom: 20px;
@@ -1622,21 +1634,21 @@ header {
         color: #666666;
         display: inline-block;
         padding: 5px 13px;
-        background: #eeeeee;
-        background: -webkit-gradient(linear, left top, left bottom, from(white), to(#eeeeee));
-        background: -moz-linear-gradient(top, white, #eeeeee);
-        border: 1px solid #dddddd;
+        background: #f8f8f8;
+        background: -webkit-gradient(linear, left top, left bottom, from(#f8f8f8), to(#c5c5c5));
+        background: -moz-linear-gradient(top, #f8f8f8, #c5c5c5);
+        border: 1px solid #b8b8b8;
         height: 20px;
         margin-right: -1px; }
         .subnav ul li a:hover, #subnav ul li a:hover {
           color: #333333;
           text-decoration: none; }
       .subnav ul li:first-child a, #subnav ul li:first-child a {
-        -moz-border-radius-topleft: 5px;
-        -webkit-border-top-left-radius: 5px; }
+        -moz-border-radius-topleft: 6px;
+        -webkit-border-top-left-radius: 6px; }
       .subnav ul li:last-child a, #subnav ul li:last-child a {
-        -moz-border-radius-topright: 5px;
-        -webkit-border-top-right-radius: 5px; }
+        -moz-border-radius-topright: 6px;
+        -webkit-border-top-right-radius: 6px; }
       .subnav ul li.selected a, #subnav ul li.selected a {
         color: #333333;
         background: white;
@@ -2145,6 +2157,8 @@ footer {
         margin-bottom: 0; }
       .profiles.wide > li:first-child {
         margin-top: 0; }
+  .profiles.company hr {
+    margin-bottom: 10px; }
   .profiles.company > li h3, .profiles.company > li h4, .profiles.company > li h5, .profiles.company > li p {
     margin-left: 140px; }
   .profiles.company > li img {
@@ -2488,3 +2502,6 @@ img.careers.hero:nth-of-type(3) {
   -webkit-transform: rotate(5deg);
   -moz-transform: rotate(5deg);
   transform: rotate(5deg); }
+
+iframe.partner_form {
+  margin-top: 10px; }
