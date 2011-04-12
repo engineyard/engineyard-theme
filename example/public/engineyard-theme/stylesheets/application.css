@@ -2258,6 +2258,16 @@ footer {
     margin: 10px; }
     .logoMatrix span img {
       vertical-align: middle; }
+  .logoMatrixpartners {
+    background: transparent;
+    height: 80px; }
+    .logoMatrixpartners span {
+      width: 190px;
+      margin: 0 25px; }
+      .logoMatrixpartners span:first-child {
+        margin-left: 0; }
+      .logoMatrixpartners span:last-child {
+        margin-right: 0; }
 
 .appcloudSignup form {
   display: block;
