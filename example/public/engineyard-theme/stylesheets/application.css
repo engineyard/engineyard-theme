@@ -91,10 +91,6 @@ small.icon-edit {
     top: -6px;
     left: 0; }
 
-a[target="_blank"], a[target="tab"] {
-  padding-right: 12px;
-  background: url(../images/icon_external_link.png) no-repeat 100% 75%; }
-
 a.email, span.email {
   padding-left: 18px;
   background: url(../images/layout/icons/email.png) no-repeat 0 0; }
