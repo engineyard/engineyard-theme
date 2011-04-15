@@ -685,45 +685,16 @@ $highlight-color-alt: #FF9F29
 $highlight-color-alt2: #CC0000
 
 #heroes
-  #nav
-    float: right
-    width: 240px
-    margin: 15px 0 25px
-    padding: 15px 0
-    border-left: 1px solid #EEE
-    ul
-      list-style: none
-      padding: 0
-      margin: 0
-    li
-      display: block
-      margin: 4px 0 4px -1px
-      padding: 10px 0 10px 10px
-      border-top: 1px solid #FFF
-      border-bottom: 1px solid #FFF
-      border-left: 1px solid #EEE
-      color: #999
-      &:hover
-        color: #333
-        cursor: pointer
-      &.current
-        border-top: 1px solid #EEE
-        border-bottom: 1px solid #EEE
-        border-left: 1px solid #FFF
-        background: #FFF
-        position: relative
-        color: #369
   #panels
     position: relative
     div
-      width: 820px
       height: 230px
     img
       float: left
       margin-top: 10px
       margin-right: 20px
       &.appcloud
-        margin: 30px -11px 10px 0
+        margin: 30px 50px 10px 0
       &.jruby
         margin-bottom: 100px
         width: 180px
@@ -733,6 +704,7 @@ $highlight-color-alt2: #CC0000
       float: right
     div
       width: 480px
+      margin-left: 50px
       float: left
     h2
       font-weight: bold
@@ -749,26 +721,6 @@ $highlight-color-alt2: #CC0000
       font-size: 1.8em
       &:hover
         text-decoration: none
-      &.orange
-        color: #fff
-        background: $highlight-color-alt
-        background: -moz-linear-gradient(top, lighten($highlight-color-alt, 20%), $highlight-color-alt)
-        background: -webkit-gradient(linear, left top, left bottom, from(lighten($highlight-color-alt, 20%)), to($highlight-color-alt))
-        &:hover
-          border-color: darken($highlight-color-alt, 5%)
-          background: darken($highlight-color-alt, 5%)
-          background: -moz-linear-gradient(top, lighten($highlight-color-alt, 15%), darken($highlight-color-alt, 5%))
-          background: -webkit-gradient(linear, left top, left bottom, from(lighten($highlight-color-alt, 15%)), to(darken($highlight-color-alt, 5%)))
-      &.red
-        color: #fff
-        background: $highlight-color-alt2
-        background: -moz-linear-gradient(top, lighten($highlight-color-alt2, 20%), $highlight-color-alt2)
-        background: -webkit-gradient(linear, left top, left bottom, from(lighten($highlight-color-alt2, 20%)), to($highlight-color-alt2))
-        &:hover
-          border-color: darken($highlight-color-alt2, 5%)
-          background: darken($highlight-color-alt2, 5%)
-          background: -moz-linear-gradient(top, lighten($highlight-color-alt2, 15%), darken($highlight-color-alt2, 5%))
-          background: -webkit-gradient(linear, left top, left bottom, from(lighten($highlight-color-alt2, 15%)), to(darken($highlight-color-alt2, 5%)))
   p
     margin: 0.5em 0 1.5em
   .intro
@@ -1199,7 +1151,7 @@ $highlight-color-alt2: #CC0000
   .halfColumn
     width: 240px
 .thirdBlock, .thirdColumn
-  width: 240px
+  width: 285px
   margin-right: 50px
   float: left
   &.last
