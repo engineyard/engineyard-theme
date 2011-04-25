@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-  
+
     <title><%= content_for?(:title) ? yield(:title) : 'Ruby Cloud | Ruby Support | Engine Yard' %></title>
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : 'Learn why Engine Yard\'s managed Rails hosting, Rails deployment &amp; 24/7/365 live service is the best' %>">
     <meta name="keywords" content="<%= content_for?(:keywords) ? yield(:keywords) : 'Ruby on Rails Fully-Managed Hosting, Scaling, Scaled, Cluster Slices, Cloud Computing, On-Demand Deployment, Merb, Rubinius, Open-Source Software' %>">
@@ -28,7 +28,7 @@
     
     <%- unless Rails.env == 'development' || add_js != 'true' %>
       <script type='text/javascript'>
-        var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-764576-21']);_gaq.push(['_trackPageview']);_gaq.push(['_setAccount', 'UA-764576-1'],['_setDomainName',".engineyard.com"],['_setAllowHash',false],['_setAllowAnchor',true],['_trackPageview']);(function() {var ga = document.createElement('script');ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';ga.setAttribute('async', 'true');document.documentElement.firstChild.appendChild(ga);})();    
+        var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-764576-22']);_gaq.push(['_trackPageview']);_gaq.push(['_setAccount', 'UA-764576-1'],['_setDomainName',".engineyard.com"],['_setAllowHash',false],['_setAllowAnchor',true],['_trackPageview']);(function() {var ga = document.createElement('script');ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';ga.setAttribute('async', 'true');document.documentElement.firstChild.appendChild(ga);})();    
       </script>
       <script src="//cdn.optimizely.com/js/4180050.js"></script>
     <%- end -%>
