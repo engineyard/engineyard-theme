@@ -1044,11 +1044,8 @@ form ul {
     display: inline; }
 
 label {
-  font-size: 0.9em;
-  color: #666666;
   display: block;
-  clear: both;
-  margin-top: 8px; }
+  clear: both; }
 
 input[type="text"], input[type="password"] {
   font-size: 1em;
@@ -1248,45 +1245,16 @@ header {
   background: url("../images/bg_clouds.png") repeat-x -8% top;
   padding-top: 60px; }
 
-#heroes #nav {
-  float: right;
-  width: 240px;
-  margin: 15px 0 25px;
-  padding: 15px 0;
-  border-left: 1px solid #eeeeee; }
-  #heroes #nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0; }
-  #heroes #nav li {
-    display: block;
-    margin: 4px 0 4px -1px;
-    padding: 10px 0 10px 10px;
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
-    border-left: 1px solid #eeeeee;
-    color: #999999; }
-    #heroes #nav li:hover {
-      color: #333333;
-      cursor: pointer; }
-    #heroes #nav li.current {
-      border-top: 1px solid #eeeeee;
-      border-bottom: 1px solid #eeeeee;
-      border-left: 1px solid white;
-      background: white;
-      position: relative;
-      color: #336699; }
 #heroes #panels {
   position: relative; }
   #heroes #panels div {
-    width: 820px;
     height: 230px; }
   #heroes #panels img {
     float: left;
     margin-top: 10px;
     margin-right: 20px; }
     #heroes #panels img.appcloud {
-      margin: 30px -11px 10px 0; }
+      margin: 30px 50px 10px 0; }
     #heroes #panels img.jruby {
       margin-bottom: 100px;
       width: 180px; }
@@ -1296,6 +1264,7 @@ header {
     float: right; }
   #heroes #hero_1 div {
     width: 480px;
+    margin-left: 50px;
     float: left; }
   #heroes #hero_1 h2 {
     font-weight: bold;
@@ -1312,26 +1281,6 @@ header {
     font-size: 1.8em; }
     #heroes #hero_1 .button:hover {
       text-decoration: none; }
-    #heroes #hero_1 .button.orange {
-      color: white;
-      background: #ff9f29;
-      background: -moz-linear-gradient(top, #ffcd8f, #ff9f29);
-      background: -webkit-gradient(linear, left top, left bottom, from(#ffcd8f), to(#ff9f29)); }
-      #heroes #hero_1 .button.orange:hover {
-        border-color: #ff9410;
-        background: #ff9410;
-        background: -moz-linear-gradient(top, #ffc176, #ff9410);
-        background: -webkit-gradient(linear, left top, left bottom, from(#ffc176), to(#ff9410)); }
-    #heroes #hero_1 .button.red {
-      color: white;
-      background: #cc0000;
-      background: -moz-linear-gradient(top, #ff3333, #cc0000);
-      background: -webkit-gradient(linear, left top, left bottom, from(#ff3333), to(#cc0000)); }
-      #heroes #hero_1 .button.red:hover {
-        border-color: #b30000;
-        background: #b30000;
-        background: -moz-linear-gradient(top, #ff1a1a, #b30000);
-        background: -webkit-gradient(linear, left top, left bottom, from(#ff1a1a), to(#b30000)); }
 #heroes p {
   margin: 0.5em 0 1.5em; }
 #heroes .intro {
@@ -1407,6 +1356,20 @@ header {
 .rubinius {
   background: url(../images/icn_rubinius.png) no-repeat left top; }
 
+.featured.block {
+  padding: 20px 0 20px 60px;
+  border: 1px solid #cccccc;
+  border-width: 1px 0 0 0; }
+  .featured.block h3 {
+    margin: 0 0 10px 0; }
+  .featured.block:first-child {
+    margin-top: 65px; }
+  .featured.block.pdf {
+    background: url(../images/icn_feature_summary_pdf.png) no-repeat left center; }
+  .featured.block.cli {
+    background: url(../images/icn_cli.png) no-repeat left center; }
+  .featured.block.newsletter {
+    background: url(../images/icn_feature_summary_newsletter.png) no-repeat left center; }
 .featured h3, .featured > h4 {
   margin-top: 1.25em;
   font-size: 1.2em; }
@@ -1560,11 +1523,9 @@ header {
 .sidebar {
   clear: none;
   float: right;
-  width: 240px;
+  width: 320px;
   border-top: 0;
   padding-top: 0; }
-  .sidebar .block {
-    width: 240px; }
   .sidebar .section {
     margin-bottom: 0;
     padding: 0;
@@ -1584,7 +1545,14 @@ header {
 
 .main {
   float: left;
-  width: 680px; }
+  width: 560px; }
+  .main .halfColumn {
+    width: 255px; }
+  .main .halfColumn:nth-of-type(odd) {
+    padding-left: 0;
+    padding-right: 50px; }
+  .main .halfColumn:nth-of-type(even) {
+    padding: 0; }
 
 .heading {
   margin-bottom: 20px;
@@ -1753,14 +1721,10 @@ header {
   .halfColumn:first-child {
     padding-left: 0; }
   .halfColumn:last-child {
-    float: right;
     padding-right: 0; }
 
-.main .halfColumn {
-  width: 240px; }
-
 .thirdBlock, .thirdColumn {
-  width: 240px;
+  width: 285px;
   margin-right: 50px;
   float: left; }
   .thirdBlock.last, .thirdColumn.last {
@@ -2511,3 +2475,32 @@ img.careers.hero:nth-of-type(3) {
 
 iframe.partner_form {
   margin-top: 10px; }
+
+#xcloud-contact {
+  border: 1px solid #cccccc;
+  background: #e6e6e6;
+  padding: 20px 25px; }
+  #xcloud-contact h4:first-child {
+    margin-top: 0; }
+  #xcloud-contact span.mktField {
+    display: block;
+    vertical-align: center;
+    margin-bottom: 2px;
+    clear: both; }
+    #xcloud-contact span.mktField label, #xcloud-contact span.mktField input[type=text] {
+      line-height: 26px;
+      height: 26px; }
+    #xcloud-contact span.mktField input[type=text] {
+      border: 1px solid #e6e6e6; }
+    #xcloud-contact span.mktField .mktFormMsg {
+      display: block; }
+    #xcloud-contact span.mktField textarea {
+      width: 265px;
+      height: 84px; }
+
+.callout {
+  border: solid #e6e6e6;
+  border-width: 2px 0;
+  color: #b3b3b3;
+  text-align: center;
+  padding: 20px 50px; }
