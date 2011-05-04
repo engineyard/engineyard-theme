@@ -102,7 +102,8 @@ $font-size-small  = 11px
   p#copyright
     padding-top: 12px
 
-$plan-box-shadow-value  = 0 1px 3px darken($color-background, 15%) inset
+$plan-box-shadow-value  = 0 1px 3px darken($color-background, 15%) inset   
+
 ol.plans
   overflow: hidden
   margin-right: -10px
@@ -239,9 +240,6 @@ li
 p,dl,hr,h1,h2,h3,h4,h5,h6,ol,ul,pre,table,address,fieldset,.halfColumn,small
   margin: 0
   
-//////////////
-// 820 Wide //
-//////////////
 .wrapper
   width: 960px
   margin: 0 auto
@@ -418,17 +416,6 @@ thead
     background: url(../images/icn-dsc.png) no-repeat right 6px
 tbody
   font-size: 95%
-#jvform
-  font-size: 12px  
-  p
-    margin-top: 10px
-    line-height: 14px
-  table, td, th, tr
-    font-size: 12px
-    border: none
-  ul   
-    list-style: disc
-    margin-left: 15px 
 #eystack
   clear: both
   tbody
@@ -763,22 +750,6 @@ $highlight-color-alt2: #CC0000
       font-size: 0.9em
       color: #C00
       margin-top: -42px
-#countdown
-  padding: 2px 10px 5px
-  text-align: center
-  line-height: 1.2em
-  small
-    display: block
-    margin: 0
-  em
-    font-style: normal
-    font-size: 1.4em
-    line-height: 1em
-    color: #666
-    display: block
-    clear: both
-  #sessionTimer
-    color: #999
 
 ///////////
 // Icons //
@@ -810,33 +781,6 @@ $highlight-color-alt2: #CC0000
       background: url(../images/icn_cli.png) no-repeat left center
     &.newsletter
       background: url(../images/icn_feature_summary_newsletter.png) no-repeat left center
-  h3, & > h4
-    margin-top: 1.25em
-    font-size: 1.2em
-    &.liveDemo
-      padding: 5px 0 3px 60px
-      background: url(../images/icn_feature_summary_live_demo.png) no-repeat left top
-    &.rails
-      padding: 0px 0 3px 60px
-      background: url(../images/icn_feature_summary_rails3_webinar.png) no-repeat left top
-    &.newsletter
-      padding: 5px 0 3px 60px
-      background: url(../images/icn_feature_summary_newsletter.png) no-repeat left top
-    &.pdf
-      padding: 5px 0 4px 60px
-      background: url(../images/icn_feature_summary_pdf.png) no-repeat left top
-    &.cli
-      padding: 0px 0 3px 70px
-      background: url(../images/icn_cli.png) no-repeat left top
-    &.ornament
-      padding: 0px 0 3px 70px
-      background: url(../images/icn_ornament.png) no-repeat left top    
-    &.debug_ruby
-      padding: 0px 0 10px 70px
-      background: url(../images/icn_debug_ruby.jpg) no-repeat left top    
-    &.textmate
-      padding: 0px 0 7px 60px
-      background: url(../images/icn_feature_textmate.png) no-repeat left top
 .promos
   border-top: 1px solid #DDD
   .block:nth-child(1)
@@ -1158,20 +1102,26 @@ $highlight-color-alt2: #CC0000
   padding: 0 30px
   margin: 0
   float: left
-  &:first-child
+  &:nth-child(odd)
     padding-left: 0
-  &:last-child
+  &:nth-child(even)
     padding-right: 0
 .thirdBlock, .thirdColumn
   width: 285px
   margin-right: 50px
   float: left
-  &.last
+  &:nth-child(3n+3)
     margin-right: 0
   .p
     a
       p
         margin-top: 0
+  &.profile
+    width: 257px
+    margin-top: 0
+    margin-right: 20px
+    border: none
+    clear: none
 .product
   margin-top: 30px
   margin-bottom: 30px
@@ -1419,6 +1369,7 @@ footer
   background: url(../images/icn_itunes.png) no-repeat left center
   &:hover
     background: url(../images/icn_itunes_color.png) no-repeat left center
+
 ///////////////////////////
 // Marketo Form Hackery //
 ///////////////////////////
@@ -1434,9 +1385,6 @@ footer
   input[type="submit"]
     padding: 2px 10px
 
-/////////////////////////////////////////
-// Open Source Project Specific Styles //
-/////////////////////////////////////////
 .project
   border-top: 2px solid #DDD
   padding: 20px 0px 0
@@ -1483,7 +1431,6 @@ footer
   list-style: none
   padding: 0 0 10px
   margin: 0
-  border-bottom: 1px dashed #DDD
   h4, .h4
     margin: 0
   ul
@@ -1533,7 +1480,6 @@ footer
       &:last-child:after
         content: ''
   &.wide
-    border: none
     margin: 1.5em 0 1.5em
     & > li        
       border: none
@@ -1620,25 +1566,11 @@ footer
 .tooltip
   &:hover
     cursor: help
-#tooltip
-  position: absolute
-  max-width: 300px
-  padding: 10px
-  margin: -10px
-  background: #FDFDFD
-  border: 1px solid #CCC
-  opacity: 0.9
-  -moz-box-shadow: 2px 2px 5px rgba(0,0,0,0.15)
-  -webkit-box-shadow: 2px 2px 5px rgba(0,0,0,0.15)
-  -moz-border-radius: 0 10px 10px 10px
-  -webkit-border-radius: 0 10px 10px 10px
-  h3
-    margin: 0
-    font-size: 1em
 #cse
   table
     td
-      border: none   
+      border: none  
+       
 .logoMatrix
   @include fade-in-out
   span
@@ -1659,44 +1591,6 @@ footer
         margin-left: 0
       &:last-child
         margin-right: 0
-          
-/////////////////////////////////////
-// Appcloud Signup Specific Styles //
-/////////////////////////////////////
-.appcloudSignup
-  form
-    display: block
-    background: #FFF
-    background: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#FFE))
-    background: -moz-linear-gradient(top,  #FFF,  #FFE)
-    padding: 20px
-    border: 1px solid #EEE
-    margin: 20px 100px
-    p
-      margin-top: 0
-      margin-bottom: 0.5em
-    div
-      display: inline-block
-  label
-    width: 380px
-    margin: 0 auto
-    text-align: left
-  input[type="text"], input[type="password"]
-    font-size: 1.45em
-    width: 380px
-  input[type="password"]
-    display: block
-    margin: 0 auto 1em
-  .quotes
-    margin: 2em 0
-  .errors
-    margin-top: -30px
-    li
-      margin-bottom: 0
-  .email
-    background: url(../images/icon-email.png) no-repeat left center
-    padding: 22px
-    margin: 0 150px
 
 //////////////////////////////
 // Homepage Specific Styles //
@@ -1704,24 +1598,6 @@ footer
 #homepage
   .content
     border-top: 1px solid #DDD
-  #countdown        
-    margin: 0
-    padding: 0
-    text-align: left
-    line-height: .80em
-    font-size: .80em
-    .button
-      margin-right: 5px
-    em
-      font-style: normal
-      font-size: 1em
-      line-height: 1em
-      color: #666
-      display: block
-      clear: both   
-    small
-      display: inline
-      margin: 0
 
 @import partials/_colorbox
 @import partials/_overrides
@@ -1772,8 +1648,8 @@ iframe.partner_form
       line-height: 28px
       height: 28px
       margin-bottom: 10px
-    input[type=text]
-      border: 1px solid lighten($color-border, 10%)
+    input[type=text], textarea
+      border: 1px solid $color-border
       width: 160px
     .mktFormMsg
       display: block
@@ -1781,10 +1657,3 @@ iframe.partner_form
     textarea
       width: 265px
       height: 84px 
-
-.callout      
-  border: solid lighten($color-border, 10%)
-  border-width: 2px 0
-  color: darken($color-border, 10%)
-  text-align: center
-  padding: 20px 50px

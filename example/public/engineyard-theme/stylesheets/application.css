@@ -990,18 +990,6 @@ thead .desc {
 tbody {
   font-size: 95%; }
 
-#jvform {
-  font-size: 12px; }
-  #jvform p {
-    margin-top: 10px;
-    line-height: 14px; }
-  #jvform table, #jvform td, #jvform th, #jvform tr {
-    font-size: 12px;
-    border: none; }
-  #jvform ul {
-    list-style: disc;
-    margin-left: 15px; }
-
 #eystack {
   clear: both; }
   #eystack tbody th {
@@ -1327,23 +1315,6 @@ header {
     color: #cc0000;
     margin-top: -42px; }
 
-#countdown {
-  padding: 2px 10px 5px;
-  text-align: center;
-  line-height: 1.2em; }
-  #countdown small {
-    display: block;
-    margin: 0; }
-  #countdown em {
-    font-style: normal;
-    font-size: 1.4em;
-    line-height: 1em;
-    color: #666666;
-    display: block;
-    clear: both; }
-  #countdown #sessionTimer {
-    color: #999999; }
-
 .rails, .jruby, .rubinius {
   padding: 8px 0 5px 30px; }
 
@@ -1370,33 +1341,6 @@ header {
     background: url(../images/icn_cli.png) no-repeat left center; }
   .featured.block.newsletter {
     background: url(../images/icn_feature_summary_newsletter.png) no-repeat left center; }
-.featured h3, .featured > h4 {
-  margin-top: 1.25em;
-  font-size: 1.2em; }
-  .featured h3.liveDemo, .featured > h4.liveDemo {
-    padding: 5px 0 3px 60px;
-    background: url(../images/icn_feature_summary_live_demo.png) no-repeat left top; }
-  .featured h3.rails, .featured > h4.rails {
-    padding: 0px 0 3px 60px;
-    background: url(../images/icn_feature_summary_rails3_webinar.png) no-repeat left top; }
-  .featured h3.newsletter, .featured > h4.newsletter {
-    padding: 5px 0 3px 60px;
-    background: url(../images/icn_feature_summary_newsletter.png) no-repeat left top; }
-  .featured h3.pdf, .featured > h4.pdf {
-    padding: 5px 0 4px 60px;
-    background: url(../images/icn_feature_summary_pdf.png) no-repeat left top; }
-  .featured h3.cli, .featured > h4.cli {
-    padding: 0px 0 3px 70px;
-    background: url(../images/icn_cli.png) no-repeat left top; }
-  .featured h3.ornament, .featured > h4.ornament {
-    padding: 0px 0 3px 70px;
-    background: url(../images/icn_ornament.png) no-repeat left top; }
-  .featured h3.debug_ruby, .featured > h4.debug_ruby {
-    padding: 0px 0 10px 70px;
-    background: url(../images/icn_debug_ruby.jpg) no-repeat left top; }
-  .featured h3.textmate, .featured > h4.textmate {
-    padding: 0px 0 7px 60px;
-    background: url(../images/icn_feature_textmate.png) no-repeat left top; }
 
 .promos {
   border-top: 1px solid #dddddd; }
@@ -1718,19 +1662,25 @@ header {
   padding: 0 30px;
   margin: 0;
   float: left; }
-  .halfColumn:first-child {
+  .halfColumn:nth-child(odd) {
     padding-left: 0; }
-  .halfColumn:last-child {
+  .halfColumn:nth-child(even) {
     padding-right: 0; }
 
 .thirdBlock, .thirdColumn {
   width: 285px;
   margin-right: 50px;
   float: left; }
-  .thirdBlock.last, .thirdColumn.last {
+  .thirdBlock:nth-child(3n+3), .thirdColumn:nth-child(3n+3) {
     margin-right: 0; }
   .thirdBlock .p a p, .thirdColumn .p a p {
     margin-top: 0; }
+  .thirdBlock.profile, .thirdColumn.profile {
+    width: 257px;
+    margin-top: 0;
+    margin-right: 20px;
+    border: none;
+    clear: none; }
 
 .product {
   margin-top: 30px;
@@ -2053,8 +2003,7 @@ footer {
   line-height: 1.4em;
   list-style: none;
   padding: 0 0 10px;
-  margin: 0;
-  border-bottom: 1px dashed #dddddd; }
+  margin: 0; }
   .profiles h4, .profiles .h4 {
     margin: 0; }
   .profiles ul {
@@ -2104,7 +2053,6 @@ footer {
       .profiles .projectList dd:last-child:after, .profiles .projectList li:last-child:after {
         content: ""; }
   .profiles.wide {
-    border: none;
     margin: 1.5em 0 1.5em; }
     .profiles.wide > li {
       border: none;
@@ -2187,22 +2135,6 @@ footer {
 .tooltip:hover {
   cursor: help; }
 
-#tooltip {
-  position: absolute;
-  max-width: 300px;
-  padding: 10px;
-  margin: -10px;
-  background: #fdfdfd;
-  border: 1px solid #cccccc;
-  opacity: 0.9;
-  -moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
-  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
-  -moz-border-radius: 0 10px 10px 10px;
-  -webkit-border-radius: 0 10px 10px 10px; }
-  #tooltip h3 {
-    margin: 0;
-    font-size: 1em; }
-
 #cse table td {
   border: none; }
 
@@ -2229,60 +2161,8 @@ footer {
       .logoMatrix.partners span:last-child {
         margin-right: 0; }
 
-.appcloudSignup form {
-  display: block;
-  background: white;
-  background: -webkit-gradient(linear, left top, left bottom, from(white), to(#ffffee));
-  background: -moz-linear-gradient(top, white, #ffffee);
-  padding: 20px;
-  border: 1px solid #eeeeee;
-  margin: 20px 100px; }
-  .appcloudSignup form p {
-    margin-top: 0;
-    margin-bottom: 0.5em; }
-  .appcloudSignup form div {
-    display: inline-block; }
-.appcloudSignup label {
-  width: 380px;
-  margin: 0 auto;
-  text-align: left; }
-.appcloudSignup input[type="text"], .appcloudSignup input[type="password"] {
-  font-size: 1.45em;
-  width: 380px; }
-.appcloudSignup input[type="password"] {
-  display: block;
-  margin: 0 auto 1em; }
-.appcloudSignup .quotes {
-  margin: 2em 0; }
-.appcloudSignup .errors {
-  margin-top: -30px; }
-  .appcloudSignup .errors li {
-    margin-bottom: 0; }
-.appcloudSignup .email {
-  background: url(../images/icon-email.png) no-repeat left center;
-  padding: 22px;
-  margin: 0 150px; }
-
 #homepage .content {
   border-top: 1px solid #dddddd; }
-#homepage #countdown {
-  margin: 0;
-  padding: 0;
-  text-align: left;
-  line-height: 0.8em;
-  font-size: 0.8em; }
-  #homepage #countdown .button {
-    margin-right: 5px; }
-  #homepage #countdown em {
-    font-style: normal;
-    font-size: 1em;
-    line-height: 1em;
-    color: #666666;
-    display: block;
-    clear: both; }
-  #homepage #countdown small {
-    display: inline;
-    margin: 0; }
 
 #colorbox, #cboxOverlay, #cboxWrapper {
   position: absolute;
@@ -2494,8 +2374,8 @@ iframe.partner_form {
       line-height: 28px;
       height: 28px;
       margin-bottom: 10px; }
-    #xcloud-contact span.mktField input[type=text] {
-      border: 1px solid #e6e6e6;
+    #xcloud-contact span.mktField input[type=text], #xcloud-contact span.mktField textarea {
+      border: 1px solid #cccccc;
       width: 160px; }
     #xcloud-contact span.mktField .mktFormMsg {
       display: block;
@@ -2503,10 +2383,3 @@ iframe.partner_form {
     #xcloud-contact span.mktField textarea {
       width: 265px;
       height: 84px; }
-
-.callout {
-  border: solid #e6e6e6;
-  border-width: 2px 0;
-  color: #b3b3b3;
-  text-align: center;
-  padding: 20px 50px; }
