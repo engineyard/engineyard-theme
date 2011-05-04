@@ -796,14 +796,20 @@ $highlight-color-alt2: #CC0000
 // Featured Icons //
 ////////////////////
 .featured
-  &.block.pdf
-    margin-top: 65px
-    border: 1px solid $color-border
-    border-width: 1px 0
+  &.block
     padding: 20px 0 20px 60px
-    background: url(../images/icn_feature_summary_pdf.png) no-repeat left center
+    border: 1px solid $color-border
+    border-width: 1px 0 0 0
     h3
       margin: 0 0 10px 0
+    &:first-child
+      margin-top: 65px
+    &.pdf
+      background: url(../images/icn_feature_summary_pdf.png) no-repeat left center
+    &.cli
+      background: url(../images/icn_cli.png) no-repeat left center
+    &.newsletter
+      background: url(../images/icn_feature_summary_newsletter.png) no-repeat left center
   h3, & > h4
     margin-top: 1.25em
     font-size: 1.2em
