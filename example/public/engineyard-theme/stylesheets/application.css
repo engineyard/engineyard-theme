@@ -2487,13 +2487,19 @@ iframe.partner_form {
     vertical-align: center;
     margin-bottom: 2px;
     clear: both; }
+    #xcloud-contact span.mktField label {
+      float: left;
+      width: 90px; }
     #xcloud-contact span.mktField label, #xcloud-contact span.mktField input[type=text] {
-      line-height: 26px;
-      height: 26px; }
+      line-height: 28px;
+      height: 28px;
+      margin-bottom: 10px; }
     #xcloud-contact span.mktField input[type=text] {
-      border: 1px solid #e6e6e6; }
+      border: 1px solid #e6e6e6;
+      width: 160px; }
     #xcloud-contact span.mktField .mktFormMsg {
-      display: block; }
+      display: block;
+      margin-left: 90px; }
     #xcloud-contact span.mktField textarea {
       width: 265px;
       height: 84px; }
