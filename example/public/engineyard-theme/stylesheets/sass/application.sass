@@ -475,11 +475,8 @@ form
       margin-left: 5px
       display: inline
 label
-  font-size: 0.9em
-  color: #666
   display: block
   clear: both
-  margin-top: 8px
 input[type="text"], input[type="password"]
   font-size: 1em
   font-family: "proxima-nova-1","proxima-nova-2", Arial, "Liberation Sans", FreeSans, sans-serif
@@ -799,6 +796,14 @@ $highlight-color-alt2: #CC0000
 // Featured Icons //
 ////////////////////
 .featured
+  &.block.pdf
+    margin-top: 65px
+    border: 1px solid $color-border
+    border-width: 1px 0
+    padding: 20px 0 20px 60px
+    background: url(../images/icn_feature_summary_pdf.png) no-repeat left center
+    h3
+      margin: 0 0 10px 0
   h3, & > h4
     margin-top: 1.25em
     font-size: 1.2em
@@ -948,11 +953,9 @@ $highlight-color-alt2: #CC0000
 .sidebar
   clear: none
   float: right
-  width: 240px
+  width: 320px
   border-top: 0
   padding-top: 0
-  .block
-    width: 240px
   .section
     margin-bottom: 0
     padding: 0
@@ -973,7 +976,14 @@ $highlight-color-alt2: #CC0000
 
 .main
   float: left
-  width: 680px
+  width: 560px
+  .halfColumn
+    width: 255px
+  .halfColumn:nth-of-type(odd)
+    padding-left: 0
+    padding-right: 50px
+  .halfColumn:nth-of-type(even)
+    padding: 0
 .heading
   margin-bottom: 20px
   text-align: center
@@ -1145,11 +1155,7 @@ $highlight-color-alt2: #CC0000
   &:first-child
     padding-left: 0
   &:last-child
-    float: right
     padding-right: 0
-.main
-  .halfColumn
-    width: 240px
 .thirdBlock, .thirdColumn
   width: 285px
   margin-right: 50px
@@ -1740,3 +1746,33 @@ img.careers.hero:nth-of-type(3)
   
 iframe.partner_form 
   margin-top: 10px
+  
+#xcloud-contact
+  h4:first-child
+    margin-top: 0
+  border: 1px solid $color-border
+  background: lighten($color-border, 10%)
+  padding: 20px 25px
+
+  span.mktField
+    display: block
+    vertical-align: center
+    margin-bottom: 2px
+    clear: both
+    label, input[type=text]
+      line-height: 26px
+      height: 26px
+    input[type=text]
+      border: 1px solid lighten($color-border, 10%)
+    .mktFormMsg
+      display: block
+    textarea
+      width: 265px
+      height: 84px 
+
+.callout      
+  border: solid lighten($color-border, 10%)
+  border-width: 2px 0
+  color: darken($color-border, 10%)
+  text-align: center
+  padding: 20px 50px
