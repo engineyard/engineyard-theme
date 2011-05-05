@@ -1334,7 +1334,7 @@ header {
   .featured.block h3 {
     margin: 0 0 10px 0; }
   .featured.block:first-child {
-    margin-top: 65px; }
+    margin-top: 75px; }
   .featured.block.pdf {
     background: url(../images/icn_feature_summary_pdf.png) no-repeat left center; }
   .featured.block.cli {
