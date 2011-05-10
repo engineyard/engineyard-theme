@@ -1,18 +1,72 @@
 // Pricing Calculator // scott leonard  // 06.2009 // zero@botfarm.com
 var pricing = {
-
+    
     plan: {
-        unitPrice: [0.110, 0.200, 0.420, 0.780, 0.780, 1.320, 2.550], // [Small, High CPU Med, Large, XL, Hgh CPU XL]
-        computeHoursMultiple: 720,
-        ebsStorageIo: 0.10,
-        ebsStorage: 0.10,
-        s3Space: 0.15,
-        s3XferIn: 0.10,
-        s3XferOut: 0.17, 
-        s3Puts: 0.01,
-        s3Gets: 0.01,
-        bandwidthIn: 0.10,
-        bandwidthOut: 0.15
+        usEast: {
+          unitPrice: [0.120, 0.470, 0.930, 0.230, 0.930, 0.690, 1.370, 2.740], 
+          computeHoursMultiple: 720,
+          ebsStorageIo: 0.10,
+          ebsStorage: 0.10,
+          s3Space: 0.14,
+          s3XferIn: 0.10,
+          s3XferOut: 0.15, 
+          s3Puts: 0.01,
+          s3Gets: 0.01,
+          bandwidthIn: 0.10,
+          bandwidthOut: 0.15  
+        },
+        usWest: {
+          unitPrice: [0.20, 0.470, 0.930, 0.230, 0.930, 0.690, 1.370, 2.740], 
+          computeHoursMultiple: 720,
+          ebsStorageIo: 0.11,
+          ebsStorage: 0.11,
+          s3Space: 0.154,
+          s3XferIn: 0.10,
+          s3XferOut: 0.15, 
+          s3Puts: 0.011,
+          s3Gets: 0.011,
+          bandwidthIn: 0.10,
+          bandwidthOut: 0.15  
+        },
+        europe: {
+          unitPrice: [0.20, 0.470, 0.930, 0.230, 0.930, 0.690, 1.370, 2.740], 
+          computeHoursMultiple: 720,
+          ebsStorageIo: 0.11,
+          ebsStorage: 0.11,
+          s3Space: 0.14,
+          s3XferIn: 0.10,
+          s3XferOut: 0.15, 
+          s3Puts: 0.01,
+          s3Gets: 0.01,
+          bandwidthIn: 0.10,
+          bandwidthOut: 0.15  
+        },
+        apac: {
+          unitPrice: [0.20, 0.470, 0.930, 0.230, 0.930, 0.690, 1.370, 2.740], 
+          computeHoursMultiple: 720,
+          ebsStorageIo: 0.11,
+          ebsStorage: 0.11,
+          s3Space: 0.14,
+          s3XferIn: 0.10,
+          s3XferOut: 0.19, 
+          s3Puts: 0.01,
+          s3Gets: 0.01,
+          bandwidthIn: 0.10,
+          bandwidthOut: 0.15  
+        },
+        japan: {
+          unitPrice: [0.20, 0.470, 0.930, 0.230, 0.930, 0.690, 1.370, 2.740], 
+          computeHoursMultiple: 720,
+          ebsStorageIo: 0.12,
+          ebsStorage: 0.12,
+          s3Space: 0.15,
+          s3XferIn: 0.10,
+          s3XferOut: 0.15, 
+          s3Puts: 0.01,
+          s3Gets: 0.01,
+          bandwidthIn: 0.10,
+          bandwidthOut: 0.15  
+        }
     },
 
     // support pricing
@@ -25,12 +79,18 @@ var pricing = {
     maxPageviews: 1000000,
     maxPagesize: 2000,
 
-
+    
+    
     init: function() {
-      
+                            
+        pricing.region = 'usEast';
         pricing.planMin = 0;
         pricing.totalServers = 0;
         pricing.maxServers = 20;  
+        
+        $('#region').change(function(){
+          pricing.updateRegion(this.value);
+        })
 
         $('#servers .minus').click(function() { 
             var input = $(this).parent().children('input');
@@ -111,7 +171,6 @@ var pricing = {
     },
     
     update: function() {
-        
         $('#console').html('');
         
         var count = 0;        
@@ -146,8 +205,9 @@ var pricing = {
         else { $('#servers .plus').attr('disabled', false) }
         
         // caclulate total
+        var prices = pricing.plan[pricing.region];
         
-        var prices = pricing.plan;
+
         
         var total = 0;
         var totalComputeHours = pricing.totalServers * prices.computeHoursMultiple;
@@ -245,6 +305,11 @@ var pricing = {
 
     },
     
+    updateRegion: function(value) {
+      pricing.region = value;
+      pricing.update();
+    },
+    
     formatTotal: function(strValue) {
         
     	strValue = strValue.toString().replace(/\$|\,/g,'');
@@ -282,7 +347,7 @@ var pricing = {
 
 var estimator = {
   serverName: ["Small", "Medium", "Large"],
-  serverPrice: [0.11, 0.200, 0.420],
+  serverPrice: [0.12, 0.230, 0.470],
   computeHours: 720,
   maxServers: 20,
   priceAdj: 1.075,
@@ -322,7 +387,7 @@ var estimator = {
         }
       }
     }),
-
+    
     $('#shared').click(function(){
       units = 1;
       database = 0;
@@ -352,26 +417,42 @@ var estimator = {
     $('.preset').click(function(){
       $(this).addClass('selected');
       $('.custom').removeClass('selected');
-      $('.examples').removeClass('selected');
+      $('.price_sheet').removeClass('selected');
+      $('.faqs').removeClass('selected');
       $('#configuration').removeClass('hidden');
-      $('#examples').addClass('hidden');
+      $('#price_sheet').addClass('hidden');
+      $('#faqs').addClass('hidden');
       $('#customize').addClass('hidden');
     }),
     $('.custom').click(function(){
       $(this).addClass('selected');
       $('.preset').removeClass('selected');
-      $('.examples').removeClass('selected');
+      $('.price_sheet').removeClass('selected');
+      $('.faqs').removeClass('selected');
       $('#configuration').addClass('hidden');
-      $('#examples').addClass('hidden');
+      $('#price_sheet').addClass('hidden');
+      $('#faqs').addClass('hidden');
       $('#customize').removeClass('hidden');
     }),
-    $('.examples').click(function(){
+    $('.price_sheet').click(function(){
       $(this).addClass('selected');
       $('.preset').removeClass('selected');
       $('.custom').removeClass('selected');
+      $('.faqs').removeClass('selected');
       $('#configuration').addClass('hidden');
       $('#customize').addClass('hidden');
-      $('#examples').removeClass('hidden');
+      $('#faqs').addClass('hidden');
+      $('#price_sheet').removeClass('hidden');
+    })
+    $('.faqs').click(function(){
+      $(this).addClass('selected');
+      $('.preset').removeClass('selected');
+      $('.custom').removeClass('selected');
+      $('.price_sheet').removeClass('selected');
+      $('#configuration').addClass('hidden');
+      $('#customize').addClass('hidden');
+      $('#price_sheet').addClass('hidden');
+      $('#faqs').removeClass('hidden');
     })
   },
   update_ui: function() {

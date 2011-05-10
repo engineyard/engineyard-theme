@@ -120,14 +120,18 @@
       opacity: 0.5
   table
     h4
-      margin: -20px -20px 20px
+      margin: 20px -20px 20px
       padding: 5px 20px
       background: -webkit-gradient(linear, left top, left bottom, from(#FDFDFD), to(#EEE))
       background: -moz-linear-gradient(top, #FDFDFD, #EEE)
-      border-bottom: 1px solid #DDD
-    td
-      padding: 20px
       border: 1px solid #DDD
+      border-width: 1px 0
+    td
+      padding: 0 20px 20px 20px
+      border: 1px solid #DDD
+      h4:first-of-type
+        margin: 0 -20px 20px
+        border-width: 0 0 1px 0
       
   .serverCount
     margin: 10px 0

@@ -115,14 +115,18 @@
     #pricingEstimator button[disabled] {
       opacity: 0.5; }
   #pricingEstimator table h4 {
-    margin: -20px -20px 20px;
+    margin: 20px -20px 20px;
     padding: 5px 20px;
     background: -webkit-gradient(linear, left top, left bottom, from(#fdfdfd), to(#eeeeee));
     background: -moz-linear-gradient(top, #fdfdfd, #eeeeee);
-    border-bottom: 1px solid #dddddd; }
+    border: 1px solid #dddddd;
+    border-width: 1px 0; }
   #pricingEstimator table td {
-    padding: 20px;
+    padding: 0 20px 20px 20px;
     border: 1px solid #dddddd; }
+    #pricingEstimator table td h4:first-of-type {
+      margin: 0 -20px 20px;
+      border-width: 0 0 1px 0; }
   #pricingEstimator .serverCount {
     margin: 10px 0; }
   #pricingEstimator #servers div {
