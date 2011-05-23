@@ -52,7 +52,7 @@ var pricing = {
           s3Puts: 0.01,
           s3Gets: 0.01,
           bandwidthIn: 0.10,
-          bandwidthOut: 0.15  
+          bandwidthOut: 0.19  
         },
         japan: {
           unitPrice: [0.20, 0.470, 0.930, 0.230, 0.930, 0.690, 1.370, 2.740], 
@@ -61,11 +61,11 @@ var pricing = {
           ebsStorage: 0.12,
           s3Space: 0.15,
           s3XferIn: 0.10,
-          s3XferOut: 0.15, 
+          s3XferOut: 0.201, 
           s3Puts: 0.01,
           s3Gets: 0.01,
           bandwidthIn: 0.10,
-          bandwidthOut: 0.15  
+          bandwidthOut: 0.201  
         }
     },
 

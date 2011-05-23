@@ -68,39 +68,53 @@ $font-size-small  = 11px
 
 #footer
   clear: both
-  border-top: 1px solid lighten($color-border, 10%)
-  min-height: 1px
-
-#footer-content
-  padding: 12px 0
-  border-top: 1px solid #fff
+  min-height: 1px  
   font-size: $font-size-small
   line-height: 1.25
   color: $color-text-alt
-
-  p#footer-logo
-    margin-top: 6px
-    height: 96px
-    background: url(../images/layout/logo_appcloud.png) no-repeat
-    text-indent: -9999em
-  h2
-    padding: 12px 0 6px
-    font-size: $font-size-main
-    font-weight: bold
-  ul
-    list-style: none
-    margin: 0
-    padding: 0
-  li
-    margin: 0 0 6px 0
-  a
-    padding: 0
-    color: darken($color-text-alt, 25%)
-    background: none
-    &:hover
-      color: darken($color-text-alt, 50%)
-  p#copyright
+  
+  #footer-content
+    padding: 12px 0
+    border: 1px solid lighten($color-border, 10%)
+    border-width: 1px 0
+    div.newsletter
+      background: url(/engineyard-theme/images/icn_newsletter.png) no-repeat top left
+      padding-left: 65px
+      p
+        margin-bottom: 5px
+      fieldset
+        margin-top: 0
+      input[type="text"]
+        width: 150px
+        margin-bottom: 5px
+        color: $color-text-alt
+    p#footer-logo
+      margin-top: 6px
+      height: 96px
+      background: url(/engineyard-theme/images/layout/logo_appcloud.png) no-repeat
+      text-indent: -9999em
+    h2
+      padding: 0 0 6px
+      margin-top: 0
+      font-size: $font-size-main
+      font-weight: bold
+    ul
+      list-style: none
+      margin: 0
+      padding: 0
+    li
+      margin: 0 0 6px 0
+    a
+      color: darken($color-text-alt, 25%)
+      &:hover
+        color: darken($color-text-alt, 50%)
+  .copyright
+    text-align: right
     padding-top: 12px
+    p
+      margin-left: 650px
+      text-align: left
+      width: 300px
 
 $plan-box-shadow-value  = 0 1px 3px darken($color-background, 15%) inset   
 
@@ -206,7 +220,7 @@ body
   text-rendering: optimizeLegibility
   -webkit-font-smoothing: antialiased
   margin: 0
-  background: #f8f8f8 url('../images/layout/bg-noise.gif')
+  background: #f8f8f8 url('/engineyard-theme/images/layout/bg-noise.gif')
 header, footer, article, section, aside, nav
   display: block
 .container
@@ -411,9 +425,9 @@ thead
   .active
     color: #000
   .asc
-    background: url(../images/icn-asc.png) no-repeat right 6px
+    background: url(/engineyard-theme/images/icn-asc.png) no-repeat right 6px
   .desc
-    background: url(../images/icn-dsc.png) no-repeat right 6px
+    background: url(/engineyard-theme/images/icn-dsc.png) no-repeat right 6px
 tbody
   font-size: 95%
 #eystack
@@ -465,9 +479,12 @@ label
   display: block
   clear: both
 input[type="text"], input[type="password"]
-  font-size: 1em
+  font-size: 12px
+  font-weight: 300
   font-family: "proxima-nova-1","proxima-nova-2", Arial, "Liberation Sans", FreeSans, sans-serif
   width: 200px
+  border: 2px solid $color-border
+  padding: 3px
 fieldset
   border: none
   padding: 0
@@ -509,13 +526,13 @@ header, #content
   padding: 0 30px
 header
   display: block
-  background: url(../images/bg_header.png) repeat-x left top
+  background: url(/engineyard-theme/images/bg_header.png) repeat-x left top
   min-height: 77px
   color: #FFF
   h1
     margin: 0
     overflow: hidden
-    background: url(../images/logo.png) no-repeat left top
+    background: url(/engineyard-theme/images/logo.png) no-repeat left top
     height: 81px
     width: 50px
     position: absolute
@@ -559,7 +576,7 @@ header
       -webkit-border-radius: 1px
       -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5) inset
       -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5) inset
-      background: #FFF url(../images/icon_search.png) no-repeat 2px
+      background: #FFF url(/engineyard-theme/images/icon_search.png) no-repeat 2px
       opacity: 0.75
       font-size: 1em
       padding: 2px 3px 2px 18px
@@ -662,7 +679,7 @@ header
         ul
           display: block
 #content
-  background: url("../images/bg_clouds.png") repeat-x -8% top
+  background: url("/engineyard-theme/images/bg_clouds.png") repeat-x -8% top
   padding-top: 60px 
   
 $highlight-color-alt: #FF9F29   
@@ -757,11 +774,11 @@ $highlight-color-alt2: #CC0000
 .rails, .jruby, .rubinius
   padding: 8px 0 5px 30px
 .rails
-  background: url(../images/icn_rails_sm.png) no-repeat left top
+  background: url(/engineyard-theme/images/icn_rails_sm.png) no-repeat left top
 .jruby
-  background: url(../images/icn_jruby.png) no-repeat left top
+  background: url(/engineyard-theme/images/icn_jruby.png) no-repeat left top
 .rubinius
-  background: url(../images/icn_rubinius.png) no-repeat left top
+  background: url(/engineyard-theme/images/icn_rubinius.png) no-repeat left top
 
 ////////////////////
 // Featured Icons //
@@ -776,11 +793,9 @@ $highlight-color-alt2: #CC0000
     &:first-child
       margin-top: 75px
     &.pdf
-      background: url(../images/icn_feature_summary_pdf.png) no-repeat left center
+      background: url(/engineyard-theme/images/icn_feature_summary_pdf.png) no-repeat left center
     &.cli
-      background: url(../images/icn_cli.png) no-repeat left center
-    &.newsletter
-      background: url(../images/icn_feature_summary_newsletter.png) no-repeat left center
+      background: url(/engineyard-theme/images/icn_cli.png) no-repeat left center
 .promos
   border-top: 1px solid #DDD
   .block:nth-child(1)
@@ -1350,25 +1365,25 @@ footer
 .facebook, .twitter, .rss, .itunes, .linkedin
   padding: 2px 0 2px 20px
 .facebook
-  background: url(../images/icn_facebook.png) no-repeat left center
+  background: url(/engineyard-theme/images/icn_facebook.png) no-repeat left center
   &:hover
-    background: url(../images/icn_facebook_color.png) no-repeat left center
+    background: url(/engineyard-theme/images/icn_facebook_color.png) no-repeat left center
 .linkedin
-  background: url(../images/icn_linkedin.png) no-repeat left center
+  background: url(/engineyard-theme/images/icn_linkedin.png) no-repeat left center
   &:hover
-    background: url(../images/icn_linkedin_color.png) no-repeat left center
+    background: url(/engineyard-theme/images/icn_linkedin_color.png) no-repeat left center
 .twitter
-  background: url(../images/icn_twitter.png) no-repeat left center
+  background: url(/engineyard-theme/images/icn_twitter.png) no-repeat left center
   &:hover
-    background: url(../images/icn_twitter_color.png) no-repeat left center
+    background: url(/engineyard-theme/images/icn_twitter_color.png) no-repeat left center
 .rss
-  background: url(../images/icn_rss.png) no-repeat left center
+  background: url(/engineyard-theme/images/icn_rss.png) no-repeat left center
   &:hover
-    background: url(../images/icn_rss_color.png) no-repeat left center
+    background: url(/engineyard-theme/images/icn_rss_color.png) no-repeat left center
 .itunes
-  background: url(../images/icn_itunes.png) no-repeat left center
+  background: url(/engineyard-theme/images/icn_itunes.png) no-repeat left center
   &:hover
-    background: url(../images/icn_itunes_color.png) no-repeat left center
+    background: url(/engineyard-theme/images/icn_itunes_color.png) no-repeat left center
 
 ///////////////////////////
 // Marketo Form Hackery //

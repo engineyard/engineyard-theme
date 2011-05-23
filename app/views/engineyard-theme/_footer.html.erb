@@ -7,13 +7,56 @@
         <div id="footer-content">
           <div class="page">     
             <% if add_navigation == 'true' %> 
-              <div class="grid_4">
-                <p id="copyright">
-                  <p>   
-                  Running on Engine Yard: <%= link_to 'The Ruby Cloud', '/products/appcloud' %> and <%= link_to 'Rails 3', 'http://www.rubyonrails.org' %><br />
-                  Ruby is the Language of the Cloud.<br />
-                  Copyright &copy; Engine Yard, Inc. All rights reserved.
+              <div class="grid_3 newsletter">
+                <h2 class='newsletter'>
+                The Engine Yard Newsletter
+                </h3>
+                <p>
+                Get Ruby on Rails tips, and news.
                 </p>
+                <script type="text/javascript"> 
+                var profiling = {
+                  isEnabled: false,
+                  numberOfProfilingFields: 3,
+                  alwaysShowFields: [ 'mktDummyEntry']
+                };
+                </script>
+                <script type="text/javascript">function mktoGetForm() {return document.getElementById('mktForm_1002'); }</script>
+                <form class="lpeRegForm formNotEmpty newsletter" method="post" enctype="application/x-www-form-urlencoded" action="http://na-f.marketo.com/index.php/leadCapture/save" id="mktForm_1002" name="mktForm_1002">
+                  <fieldset>
+
+                    <div class="mktFormReq mktField">
+                      <input class='mktFormText mktFormEmail mktFReq' name="Email" id="Email" type='text' value="" maxlength='255' tabIndex='2' placeholder="Email Address" />
+                      <div class='mktFormMsg'></div>
+                    </div>
+                    <div id="mktFrmButtons">
+                      <input id='mktFrmSubmit' type='submit' class="cta button" value='Subscribe' name='submitButton' onclick='formSubmit(document.getElementById("mktForm_1002")); return false;' />
+                    </div>
+                    <input type="text" name="_marketo_comments" value="" class="hidden" />
+                    <input type="hidden" name="lpId" value="1009" />
+
+                    <input type="hidden" name="subId" value="121" />
+                    <input type="hidden" name="kw" value="" />
+                    <input type="hidden" name="cr" value="" />
+                    <input type="hidden" name="searchstr" value="" />
+                    <input type="hidden" name="lpurl" value="http://pages.engineyard.com/Blank-Newsletter.html?cr={creative}&kw={keyword}" />
+                    <input type="hidden" name="formid" value="1002" />
+                    <input type="hidden" name="returnURL" value="http://pages.engineyard.com/SubscribeThanks.html" />
+                    <input type="hidden" name="retURL" value="http://pages.engineyard.com/SubscribeThanks.html" />
+                    <input type="hidden" name="_mkt_disp" value="return" />
+
+                    <input type="hidden" name="_mkt_trk" value="%MC0%" />
+                  </fieldset>
+                </form>
+                <script type="text/javascript" src="http://na-f.marketo.com/js/mktFormSupport.js"></script>
+                <script type="text/javascript">
+                function formSubmit(elt) {
+                  return Mkto.formSubmit(elt);
+                }
+                function formReset(elt) {
+                  return Mkto.formReset(elt);
+                }
+                </script>
               </div>
               <div class="grid_2">
                 <h2>Ruby Products</h2>
@@ -64,6 +107,13 @@
             <% end %>
           </div>
         </div>
+        <div class="copyright wrapper">
+          <p>   
+            Running on Engine Yard: <%= link_to 'The Ruby Cloud', '/products/appcloud' %> and <%= link_to 'Rails 3', 'http://www.rubyonrails.org' %><br />
+            Ruby is the Language of the Cloud.<br />
+            Copyright &copy; Engine Yard, Inc. All rights reserved.
+          </p>              
+        </div>           
       </div>           
     </div>
     
