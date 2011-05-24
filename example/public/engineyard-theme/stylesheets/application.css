@@ -1688,6 +1688,8 @@ header {
   float: left; }
   .thirdBlock:nth-child(3n+3), .thirdColumn:nth-child(3n+3) {
     margin-right: 0; }
+  .thirdBlock:nth-child(3n+1), .thirdColumn:nth-child(3n+1) {
+    clear: both; }
   .thirdBlock .p a p, .thirdColumn .p a p {
     margin-top: 0; }
   .thirdBlock.profile, .thirdColumn.profile {
