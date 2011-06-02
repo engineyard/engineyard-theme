@@ -1,7 +1,7 @@
 PATH
   remote: ../
   specs:
-    engineyard-theme (1.0.5)
+    engineyard-theme (1.4.3)
       rails (~> 3)
       rails (~> 3)
 
