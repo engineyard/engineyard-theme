@@ -74,4 +74,4 @@ PLATFORMS
 
 DEPENDENCIES
   jeweler (~> 1.5.2)
-  rails (~> 3)
+  rails
