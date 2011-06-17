@@ -718,7 +718,7 @@ $(document).ready(function(){
   
   videoPlayer.init();  
   $('#video_container').hover(function(){$(".links").animate({"right": "-240px"}, "fast");},function(){$(".links").animate({"right": "0px"}, "fast");});
-  $('.lightbox').colorbox({iframe:true, innerWidth:600, innerHeight:380});
+  $('.lightbox').colorbox({iframe:true, innerWidth:620, innerHeight:400});
   $('.lightboxpv').colorbox({iframe:true, innerWidth:600, innerHeight:510, scrolling:false});
   slidePanels();
   placeholder();   
