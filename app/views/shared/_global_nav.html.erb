@@ -1,85 +1,75 @@
 <nav>
   <ul class="navigation">
     <li <%= selected?(/^products/) %>>
-      <a href="http://engineyard.com/products/appcloud"><span>Cloud Products</span></a>
-      <ul>
-        <li>
-          <a href="http://engineyard.com/products/appcloud">Engine Yard AppCloud</a>
-          <ul>
-            <li><a href="http://engineyard.com/products/appcloud/features">Features</a></li>
-            <li><a href="http://engineyard.com/products/appcloud/pricing">Pricing</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="http://engineyard.com/products/xcloud">Engine Yard xCloud</a>
-          <ul>
-            <li><a href="http://engineyard.com/products/xcloud/features">Features</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="http://engineyard.com/products/technology">Engine Yard Platform</a>
-          <ul>
-            <li><a href="http://engineyard.com/products/technology/stack">Technology Stack</a></li>
-          </ul>
-        </li>
-      </ul>
+      <a href="http://engineyard.com/products/appcloud"><span>Products</span></a>
+      <div>
+        <ul>          
+          <li>
+            <a href="http://engineyard.com/products/appcloud">Engine Yard AppCloud</a>
+            <ul>
+              <li><a href="http://engineyard.com/products/appcloud/features">Features</a></li>
+              <li><a href="http://engineyard.com/products/appcloud/pricing">Pricing</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="http://engineyard.com/products/xcloud">Engine Yard xCloud</a>
+            <ul>
+              <li><a href="http://engineyard.com/products/xcloud/features">Features</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="http://engineyard.com/products/technology">Engine Yard Platform</a>
+            <ul>
+              <li><a href="http://engineyard.com/products/technology/stack">Technology Stack</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </li>
     
     <li<%= selected?(/^(support-plans|services)/) %>>
       <a href="http://engineyard.com/support-plans"><span>Support</span></a>
-      <ul>
-        <li><a href="http://engineyard.com/support-plans">Support Plans</a></li>
-        <li><a href="http://engineyard.com/services">Professional Services</a></li>
-      </ul>
+      <div>
+        <ul>
+          <li><a href="http://engineyard.com/support-plans">Support Plans</a></li>
+          <li><a href="http://engineyard.com/services">Professional Services</a></li>
+        </ul>
+      </div>
     </li>
   
     <li<%= selected?(/^partners/) %>>
       <a href="http://engineyard.com/partners"><span>Partners</span></a>
-      <ul>
-        <li><a href="http://engineyard.com/partners/platform-services">Engine Yard Platform Services</a></li>
-        <li><a href="http://engineyard.com/partners/developers">Developers & Digital Agencies</a></li>
-        <li><a href="http://engineyard.com/partners/training">Training Partners</a></li>
-        <li><a href="http://engineyard.com/partners/alliances">Strategic Alliances</a></li>
-        
-      </ul>
+      <div>
+        <ul>
+          <li><a href="http://engineyard.com/partners/platform-services">Engine Yard Platform Services</a></li>
+          <li><a href="http://engineyard.com/partners/developers">Developers & Digital Agencies</a></li>
+          <li><a href="http://engineyard.com/partners/training">Training Partners</a></li>
+          <li><a href="http://engineyard.com/partners/alliances">Strategic Alliances</a></li>
+        </ul>
+      </div>
     </li>
   
     <li<%= selected?(/^ruby_on_rails_training/) %>>
-      <%= link_to '<span>EY University</span>'.html_safe, 'http://engineyard.com/ruby_on_rails_training' %>
+      <%= link_to '<span>Developer</span>'.html_safe, 'http://engineyard.com/ruby_on_rails_training' %>
     </li>
-    
-    <li<%= selected?(/^developer/) %>>
-      <a href="http://engineyard.com/videos"><span>Resources</span></a>
-      <ul>
-        <li><a href="http://docs.engineyard.com">Documentation</a></li>
-        <li><a href="http://jobs.engineyard.com">Jobs Board</a></li>
-        <li><a href="http://engineyard.com/videos">Videos</a></li>
-        <li><a href="http://engineyard.com/podcasts">Podcasts</a></li>
-        <li><a href="http://engineyard.com/developer/events">Events</a></li>
-        <li><a href="http://engineyard.com/developer/groups">User Groups</a></li> 
-      </ul>
-    </li>
-    
 
     <li<%= selected?(/^company/) %>>
       <a href="http://engineyard.com/company/"><span>About</span></a>
-      <ul>
-        <li><a href="http://engineyard.com/company/">Overview</a></li>
-        <li><a href="http://engineyard.com/company/customers">Customers</a></li>
-        <li><a href="http://engineyard.com/company/team">Leadership Team</a></li>
-        <li><a href="http://engineyard.com/open-source">Open Source</a></li>
-        <li><a href="http://engineyard.com/company/careers">Careers</a></li>
-        <li><a href="http://engineyard.com/company/news">News &amp; Press</a></li>
-        <li><a href="http://engineyard.com/company/contact">Contact Us</a></li>
-      </ul>
+      <div>
+        <ul>
+          <li><a href="http://engineyard.com/company/">Overview</a></li>
+          <li><a href="http://engineyard.com/company/customers">Customers</a></li>
+          <li><a href="http://engineyard.com/company/team">Leadership Team</a></li>
+          <li><a href="http://engineyard.com/open-source">Open Source</a></li>
+          <li><a href="http://engineyard.com/company/careers">Careers</a></li>
+          <li><a href="http://engineyard.com/company/news">News &amp; Press</a></li>
+          <li><a href="http://engineyard.com/company/contact">Contact Us</a></li>
+        </ul>
+      </div>
     </li>
 
     <li<%= selected?(/^blog/) %>>
       <%= link_to '<span>Blog</span>'.html_safe, 'http://engineyard.com/blog' %>
     </li>
   </ul>
-  <form action="/search" method="get" class="search">
-    <input type="text" name="q" id="searchbox" placeholder="search" />
-    <input type="submit" value="Search" class="gsc-search-button" />
-  </form>                                            
 </nav>

@@ -46,6 +46,16 @@ $big-chunky-radius  = 24px
   -moz-border-radius: 0
   border-radius: 0  
   
+@mixin shadow
+  -moz-box-shadow: 0 1px 3px #888
+  -webkit-box-shadow: 0 1px 3px #888
+  box-shadow: 0 1px 3px #888
+  
+@mixin shadow-clear
+  -moz-box-shadow: 0 0 0
+  -webkit-box-shadow: 0 0 0
+  box-shadow: 0 0 0
+  
 //@import _type.sass
 $line-height      = 1.5
 $font-size-h1     = 24px
@@ -518,7 +528,7 @@ textarea
 // Base Layout //
 /////////////////
 header, #content
-  padding: 0 30px
+  padding: 0 20px
 header
   display: block
   position: relative
@@ -528,13 +538,11 @@ header
   -moz-border-radius-bottomright: 6px
   -webkit-border-bottom-left-radius: 6px
   -webkit-border-bottom-right-radius: 6px
-  -moz-box-shadow: 0 0 5px #888
-  -webkit-box-shadow: 0 0 5px#888
-  box-shadow: 0 0 5px #888
+  @include shadow
   border: solid #a6a39f
   border-width: 0 0 1px 0
   min-height: 72px
-  color: #FFF
+  color: #000
   h1
     margin: 0
     overflow: hidden
@@ -557,11 +565,11 @@ header
     text-decoration: none
   ul
     margin: 0
-    float: right      
     li
       display: inline-block
       margin-left: 10px
   .utility
+    float: right
     margin-top: 4px
     color: #7d8190
     a 
@@ -578,102 +586,113 @@ header
         border-radius: 10px
         padding: 2px 12px
         border: 1px solid #b1aca9
-
-  nav ul
-    clear: right
-    float: right
-    margin: 8px 0 0 7em
-    padding: 0
-    li
-      float: left
-      display: block
-      margin: 0 0 0 6px
+  form
+    position: absolute
+    right: 20px
+    top: 50px
+    input[type=text]
+      width: 165px
+      height: 25px
       padding: 0
-      list-style-type: none
-      span
-        padding: 6px 10px 6px
-        text-shadow: 1px 1px 2px rgba(0,0,0,0.25)
-        font-size: 14px
-        font-weight: normal
-        margin: 1px
-      &.selected span, &:hover span, &:hover span.single
-        -webkit-border-radius: 4px
-        -moz-border-radius: 4px
-        border-radius: 4px
+      margin: 0
+      border: 0
+    input[type=submit]
+      border: 0
+      background: url('/images/header_sprite.png') transparent
+      background-position: 0 25px
+      width: 28px
+      height: 25px
+      margin: 0
+      padding: 0
+  nav
+    position: absolute
+    left: 85px
+    top: 35px
+    color: #000
+    font-size: 16px
+    ul  
+      padding: 0  
+      li
+        float: left
+        display: block
         margin: 0
-        text-decoration: none
-      &.selected span, &:hover span.single
-        color: #FFF
-        background: #83020A
-        border: 1px solid #73090b
-      &:hover span
-        background: #FFF
-        border: 1px solid #CCC
-        border-bottom: none
-        color: #83020A
-        -moz-box-shadow: 2px 2px 2px rgba(0,0,0,0.1)
-        -webkit-box-shadow: 2px 2px 2px rgba(0,0,0,0.1)
-      &:hover span.single
-        -moz-box-shadow: none
-        -webkit-box-shadow: none
-      ul
-        float: none
-        display: none
-        font-size: 13px
-        z-index: 100
-        position: absolute
-        background: #FFF
-        background: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#F6F6F6))
-        background: -moz-linear-gradient(top,  #FFF,  #F6F6F6)
-        border: 1px solid #CCC
-        border-top: none
-        -moz-border-radius-topright: 4px
-        -moz-border-radius-bottomright: 4px
-        -moz-border-radius-bottomleft: 4px
-        -webkit-border-top-right-radius: 4px
-        -webkit-border-bottom-left-radius: 4px
-        -webkit-border-bottom-right-radius: 4px
-        min-width: 90px
-        padding: 0px 15px 10px
-        margin: 1px 0 0
-        -moz-box-shadow: 2px 2px 2px rgba(0,0,0,0.1)
-        -webkit-box-shadow: 2px 2px 2px rgba(0,0,0,0.1)
-        li
+        padding: 0
+        list-style-type: none
+        font-size: 16px
+        span
+          padding: 6px 8px 6px 0
+          text-shadow: 0 1px 0 #fff
+          color: #000
+          font-weight: normal
+          margin: 1px
+        span:after
+          content: ""
+          float: right
+          height: 8px
+          width: 10px
+          margin: 8px 29px 0 0
+          background: url('/images/header_sprite.png') #000
+          background-position: 0 0
+        span:hover:after
+          background-position: 0 -8px                    
+        div
           float: none
-          margin: 10px 0 0
-          clear: both
-          a
-            clear: both
+          display: none
+          font-size: 13px
+          z-index: 100
+          position: absolute
+          background: transparent
+          min-width: 90px
+          ul
+            @include shadow
+            background: #eee
+            li
+              float: none
+              clear: both
+              margin: 10px 18px
+              padding-top: 15px
+              @include shadow-clear
+              border: solid #c9c8c8
+              border-width: 1px 0 0 0
+              a
+                clear: both
+                display: block
+            li:first-child 
+              margin-top: 18px
+              border: none
+            li:last-child 
+              padding-bottom: 18px
+            ul
+              display: block
+              position: static
+              border: None
+              background: none
+              padding: 0
+              margin: 0
+              -moz-box-shadow: none
+              -webkit-box-shadow: none
+              li:first-child
+                margin-top: 4px
+              li:last-child 
+                padding-bottom: 0
+              li
+                margin: 0
+                padding: 0 13px
+                @include shadow-clear  
+                border: none
+                &:hover
+                  -webkit-border-radius: 8px
+                  -moz-border-radius: 8px
+                  border-radius: 8px
+                  background: #c9c8c8
+                a:link, a:visited
+                  font-size: 14px
+                  color: #7d8191
+            a:link, a:visited, a:hover
+              color: #000
+        &:hover
+          div
             display: block
-        ul
-          display: block
-          position: static
-          border: None
-          background: none
-          padding: 0
-          margin: 0
-          -moz-box-shadow: none
-          -webkit-box-shadow: none
-          li
-            margin-top: 0
-            a:link, a:visited
-              font-size: 12px
-              color: #999
-        a:link, a:visited, a:hover
-          font-size: 1em
-          color: #666
-          background: none
-          -moz-box-shadow: none
-          -webkit-box-shadow: none
-          text-shadow: none
-          border: none
-          padding: 0
-          margin: 0
-          &:hover
-            color: #000
-      &:hover
-        ul
-          display: block
 #content
   padding-top: 60px 
   

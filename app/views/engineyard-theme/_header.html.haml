@@ -38,6 +38,11 @@
               %li 
                 = link_to 'Login', 'https://cloud.engineyard.com', :class=>'login'
             =render('shared/global_nav')
+            :plain
+              <form action="/search" method="get" class="search">
+                <input type="text" name="q" id="searchbox" placeholder="search" />
+                <input type="submit" value="" class="gsc-search-button" />
+              </form>                                            
       #content
         .wrapper        
           =additional_header if additional_header.present?
