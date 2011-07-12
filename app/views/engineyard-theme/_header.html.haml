@@ -7,10 +7,8 @@
     %meta{:name => "keywords", :content => "#{content_for?(:keywords) ? yield(:keywords) : 'Ruby on Rails Fully-Managed Hosting, Scaling, Scaled, Cluster Slices, Cloud Computing, On-Demand Deployment, Merb, Rubinius, Open-Source Software'}"}
     %meta{'http-equiv' => "expires", :content =>"0"}
 
-    = stylesheet_link_tag 'screen.css', :media => 'screen, projection'
-    = stylesheet_link_tag 'print.css', :media => 'print'
-    /[if IE]
-      = stylesheet_link_tag 'ie.css', :media => 'screen, projection'
+    = stylesheet_link_tag 'application'
+
     :plain
       <script src="http://use.typekit.com/cra4agv.js"></script>
       <script>try{Typekit.load();}catch(e){}</script>                                         
@@ -25,23 +23,20 @@
         <script src="//cdn.optimizely.com/js/4180050.js"></script>
   %body
     #container
-      #header
-        .wrapper
+      .wrapper
+        %header
           - if add_navigation == 'true'
             %h1.branding
               =link_to(content_for?(:branding) ? yield(:branding) : 'Engine Yard, Inc.', '/') 
             %ul.utility
-              %li 866-518-YARD
-              %li
-                :plain
-                  <form action="/search" method="get" class="search">
-                    <input type="text" name="q" id="searchbox" placeholder="search" />
-                    <input type="submit" value="Search" class="gsc-search-button" />
-                  </form>                                            
               %li 
-                = link_to 'Create Account', 'https://login.engineyard.com/signup', :class=>'login'
+                866-518-YARD 
+                %small
+                  (5642)
               %li 
-                = link_to 'Sign In', 'https://cloud.engineyard.com', :class=>'login'
+                = link_to 'Sign Up', 'https://login.engineyard.com/signup'
+              %li 
+                = link_to 'Login', 'https://cloud.engineyard.com', :class=>'login'
             =render('shared/global_nav')
       #content
         .wrapper        

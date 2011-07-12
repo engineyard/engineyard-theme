@@ -78,4 +78,8 @@
       <%= link_to '<span>Blog</span>'.html_safe, 'http://engineyard.com/blog' %>
     </li>
   </ul>
+  <form action="/search" method="get" class="search">
+    <input type="text" name="q" id="searchbox" placeholder="search" />
+    <input type="submit" value="Search" class="gsc-search-button" />
+  </form>                                            
 </nav>
