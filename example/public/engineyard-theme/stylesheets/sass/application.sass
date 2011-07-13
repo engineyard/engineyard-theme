@@ -61,6 +61,10 @@ $big-chunky-radius  = 24px
 $font-color-light: #7d8191
 $font-color-dark: #444656
 $font-color-med: #9a9a9d
+$font-nav-color-dark: #17181f
+$font-nav-color-med: #444656
+$font-nav-color-light: #7d8191
+$font-nav-color-highlight: #0870ab
 
 $line-height      = 1.5
 $font-size-h1     = 24px
@@ -532,7 +536,7 @@ textarea
 /////////////////
 // Base Layout //
 /////////////////
-header, #content
+header
   padding: 0 20px
 header
   display: block
@@ -591,30 +595,41 @@ header
         border-radius: 10px
         padding: 2px 12px
         border: 1px solid #b1aca9
-  form
+  .search_form
     position: absolute
-    right: 20px
-    top: 50px
+    left: 768px
+    top: 37px
+    form 
+      position: relative
     input[type=text]
-      width: 165px
-      height: 25px
-      padding: 0
-      margin: 0
-      border: 0
+      position: absolute
+      top: 0
+      left: 0
+      width: 143px
+      height: 17px
+      line-height: 12px
+      font-size: 12px
+      -webkit-border-radius: 6px
+      -moz-border-radius: 6px
+      border: 1px solid #b5aea8
+      margin-bottom: 30px
     input[type=submit]
+      position: absolute
+      left: 143px 
       border: 0
       background: url('/images/header_sprite.png') transparent
       background-position: 0 25px
       width: 28px
       height: 25px
-      margin: 0
-      padding: 0
+      
   nav
     position: absolute
-    left: 85px
+    left: 120px
     top: 35px
     color: #000
     font-size: 16px
+    a:hover
+      text-decoration: none
     ul  
       padding: 0  
       li
@@ -627,7 +642,7 @@ header
         span
           padding: 6px 8px 6px 0
           text-shadow: 0 1px 0 #fff
-          color: #000
+          color: $font-nav-color-dark
           font-weight: normal
           margin: 1px
         span:after
@@ -640,7 +655,10 @@ header
           background-position: 0 0
         span:hover:after
           background-position: 0 -8px                    
+        &.selected span
+          color: $font-nav-color-highlight  
         div
+          margin-left: -20px
           float: none
           display: none
           font-size: 13px
@@ -660,8 +678,14 @@ header
               border: solid #c9c8c8
               border-width: 1px 0 0 0
               a
+                padding: 0 5px
                 clear: both
                 display: block
+                &:hover
+                  -webkit-border-radius: 8px
+                  -moz-border-radius: 8px
+                  border-radius: 8px
+                  background: #c9c8c8
             li:first-child 
               margin-top: 18px
               border: none
@@ -690,11 +714,13 @@ header
                   -moz-border-radius: 8px
                   border-radius: 8px
                   background: #c9c8c8
-                a
+                a, a:visited
                   font-size: 14px
-                  color: #7d8191
-            a
-              color: #000
+                  color: $font-nav-color-light
+                a:hover
+                  color: $font-nav-color-dark
+            a, a:visited
+              color: $font-nav-color-dark
         &:hover
           div
             display: block
