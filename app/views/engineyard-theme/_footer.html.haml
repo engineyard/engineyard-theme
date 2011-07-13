@@ -75,22 +75,14 @@
             %li= link_to('Ruby Jobs','http://jobs.engineyard.com')
             %li= link_to('Rails Developers','http://www.railsdevelopment.com')
         .grid_2
-          %h2 Socialize With Us
+          %h2 Lets be friends
           %ul
-            %li= link_to('Blog', 'http://engineyard.com/blog', :class => 'blog')
-            %li= link_to('Twitter', 'http://twitter.com/engineyard', :class => 'twitter trackLink')                                                                            
-            %li= link_to('Facebook', 'http://facebook.com/engineyard', :class => 'facebook trackLink')
-            %li= link_to('LinkedIn', 'http://www.linkedin.com/groups?gid=111752', :class => 'linkedin trackLink')
-  .copyright.wrapper
-    %p   
-      Running on Engine Yard: 
-      = link_to 'The Ruby Cloud', 'http://engineyard.com/products/appcloud'
-      and
-      = link_to 'Rails 3', 'http://www.rubyonrails.org'
-      %br
-      Ruby is the Language of the Cloud.
-      %br
-      Copyright &copy; Engine Yard, Inc. All rights reserved.
+            %li= link_to('Blog', 'http://engineyard.com/blog')
+            %li= link_to('Twitter', 'http://twitter.com/engineyard')
+            %li= link_to('Facebook', 'http://facebook.com/engineyard')
+            %li= link_to('LinkedIn', 'http://www.linkedin.com/groups?gid=111752')
+.copyright.wrapper
+  %p Copyright &copy; Engine Yard, Inc. All rights reserved.
 .hidden
 = javascript_include_tag '/engineyard-theme/javascripts/application.min.js'
 = yield :additional_scripts

@@ -2029,53 +2029,55 @@ td button, td input[type="submit"] {
   left: -880px; }
 
 #footer {
+  -moz-border-radius-bottomleft: 6px;
+  -moz-border-radius-bottomright: 6px;
+  -webkit-border-bottom-left-radius: 6px;
+  -webkit-border-bottom-right-radius: 6px;
+  -moz-box-shadow: 0 1px 3px #888888;
+  -webkit-box-shadow: 0 1px 3px #888888;
+  box-shadow: 0 1px 3px #888888;
+  background: #cbcaca;
   clear: both;
-  min-height: 1px;
   font-size: 11px;
   line-height: 1.25;
-  color: #999999; }
-  #footer #footer-content {
-    padding: 12px 0;
-    border: 1px solid #e6e6e6;
-    border-width: 1px 0; }
-    #footer #footer-content div.newsletter {
-      background: url(/engineyard-theme/images/icn_newsletter.png) no-repeat top left;
-      padding-left: 65px; }
-      #footer #footer-content div.newsletter p {
-        margin-bottom: 5px; }
-      #footer #footer-content div.newsletter fieldset {
-        margin-top: 0; }
-      #footer #footer-content div.newsletter input[type="text"] {
-        width: 150px;
-        margin-bottom: 5px;
-        color: #999999; }
-    #footer #footer-content p#footer-logo {
-      margin-top: 6px;
-      height: 96px;
-      background: url(/engineyard-theme/images/layout/logo_appcloud.png) no-repeat;
-      text-indent: -9999em; }
-    #footer #footer-content h2 {
-      padding: 0 0 6px;
-      margin-top: 0;
-      font-size: 12px;
-      font-weight: bold; }
-    #footer #footer-content ul {
-      list-style: none;
-      margin: 0;
-      padding: 0; }
-    #footer #footer-content li {
-      margin: 0 0 6px 0; }
-    #footer #footer-content a {
-      color: #595959; }
-      #footer #footer-content a:hover {
-        color: #1a1a1a; }
-  #footer .copyright {
-    text-align: right;
-    padding-top: 12px; }
-    #footer .copyright p {
-      margin-left: 650px;
-      text-align: left;
-      width: 300px; }
+  padding: 20px;
+  color: #444656; }
+  #footer div.newsletter {
+    background: url(/engineyard-theme/images/icn_newsletter.png) no-repeat top left;
+    padding-left: 65px; }
+    #footer div.newsletter p {
+      margin-bottom: 5px; }
+    #footer div.newsletter fieldset {
+      margin-top: 0; }
+    #footer div.newsletter input[type="text"] {
+      width: 150px;
+      margin-bottom: 5px;
+      color: #999999; }
+  #footer h2 {
+    color: #9a9a9d;
+    text-shadow: 0 1px 0 white;
+    padding: 0 0 6px;
+    margin-top: 0;
+    font-size: 14px;
+    font-weight: bold; }
+  #footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+  #footer li {
+    margin: 0 0 6px 0; }
+  #footer a {
+    color: #444656; }
+
+.copyright {
+  text-align: right;
+  padding-top: 12px;
+  color: #7d8191;
+  font-size: 12px; }
+  .copyright p {
+    margin-left: 650px;
+    text-align: left;
+    width: 300px; }
 
 ol.plans {
   overflow: hidden;
@@ -2536,7 +2538,7 @@ header {
       text-indent: -10000px;
       height: 81px;
       width: 50px; }
-  header a, header a:visited, header a:hover, header a:active {
+  header a {
     color: white;
     text-decoration: none; }
   header ul {
@@ -2566,6 +2568,20 @@ header {
     position: absolute;
     right: 20px;
     top: 50px; }
+    header form input[type=text] {
+      width: 165px;
+      height: 25px;
+      padding: 0;
+      margin: 0;
+      border: 0; }
+    header form input[type=submit] {
+      border: 0;
+      background: url("/images/header_sprite.png") transparent;
+      background-position: 0 25px;
+      width: 28px;
+      height: 25px;
+      margin: 0;
+      padding: 0; }
   header nav {
     position: absolute;
     left: 85px;
@@ -2653,10 +2669,10 @@ header {
                   -moz-border-radius: 8px;
                   border-radius: 8px;
                   background: #c9c8c8; }
-                header nav ul li div ul ul li a:link, header nav ul li div ul ul li a:visited {
+                header nav ul li div ul ul li a {
                   font-size: 14px;
                   color: #7d8191; }
-            header nav ul li div ul a:link, header nav ul li div ul a:visited, header nav ul li div ul a:hover {
+            header nav ul li div ul a {
               color: black; }
         header nav ul li:hover div {
           display: block; }
@@ -3000,9 +3016,9 @@ header {
   .subpages li {
     display: inline-block;
     margin: 0 1em; }
-    .subpages li a:link, .subpages li a:visited {
+    .subpages li a {
       color: #336699; }
-      .subpages li a:link.button, .subpages li a:visited.button {
+      .subpages li a.button {
         color: white;
         font-size: 1em;
         padding: 3px 10px;
@@ -3273,66 +3289,6 @@ img.framed, .wide img.framed {
   list-style-type: none;
   font-size: 16px;
   line-height: 18px; }
-
-footer {
-  background: #eeeeee;
-  background: -webkit-gradient(linear, left top, left bottom, from(#dddddd), to(white));
-  background: -moz-linear-gradient(top, #dddddd, white);
-  clear: both;
-  font-size: 0.95em;
-  line-height: 1.4em;
-  text-align: center;
-  margin-top: 30px;
-  overflow: hidden; }
-  footer ul {
-    padding: 0; }
-  footer li {
-    display: inline-block;
-    margin: 0 1em; }
-  footer nav li {
-    line-height: 1em;
-    margin: 0 0 0 1em;
-    padding-left: 1em;
-    border-left: 1px solid #dddddd; }
-    footer nav li:first-child {
-      padding-left: 0;
-      margin-left: 0;
-      border-left: none; }
-  footer p {
-    color: #999999;
-    font-size: 0.9em; }
-  footer a, footer a:visited {
-    color: #666666; }
-    footer a:hover, footer a:visited:hover {
-      color: #333333;
-      text-decoration: none; }
-  footer .footer-signup {
-    width: 100%;
-    background: #b2c5d8;
-    background: -webkit-gradient(linear, left top, left bottom, from(#b2c5d8), to(white));
-    background: -moz-linear-gradient(top, #b2c5d8, white);
-    border: solid #c5c5c5;
-    border-width: 1px 0; }
-    footer .footer-signup h3 {
-      margin: 0 0 5px 0; }
-    footer .footer-signup .video-text {
-      width: 770px;
-      text-align: center;
-      margin: 0 auto; }
-      footer .footer-signup .video-text ul {
-        padding: 0;
-        margin: 0; }
-        footer .footer-signup .video-text ul li {
-          line-height: 18px;
-          padding: 0;
-          margin: 0; }
-      footer .footer-signup .video-text div:nth-child(1) {
-        display: inline-block;
-        width: 480px;
-        text-align: left;
-        padding: 20px 0; }
-      footer .footer-signup .video-text div:nth-child(2) {
-        display: inline-block; }
 
 .connect {
   font-size: 0.95em;
