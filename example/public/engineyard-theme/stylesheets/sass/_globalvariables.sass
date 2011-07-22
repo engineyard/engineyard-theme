@@ -1,22 +1,78 @@
-// Use // instead of /* */ to hide from production
+$color-background       = #f8f8f8   // lightest grey
+$color-background-alt   = #cfdbe8   // light blue
+$color-background-alt2  = #e3e5cf   // light beige
+$color-text             = #555      // dark grey
+$color-text-alt         = #999      // medium grey
 
-// --------------------------------------------------
+$color-text-alert       = #910f0f   // bold red
+$color-text-callout     = #236DA6   // bold blue
 
-// GLOBAL VARIABLES
-// - Rounded Corners
-// - Convenience
+$color-border           = #ccc      // light grey
 
-// --------------------------------------------------
-
-
-
-// --------------------------------------------------
-// Rounded Corners
-// --------------------------------------------------
-
+$highlight-color-alt: #FF9F29   
+$highlight-color-alt2: #CC0000
 $radius             = 6px
 $pill-radius        = 12px
-$big-chunky-radius  = 24px
+$big-chunky-radius  = 24px 
+$font-color-light: #7d8191
+$font-color-dark: #444656
+$font-color-med: #9a9a9d
+$font-nav-color-dark: #17181f
+$font-nav-color-med: #444656
+$font-nav-color-light: #7d8191
+$font-nav-color-highlight: #0870ab
+
+$line-height      = 1.5
+$font-size-h1     = 24px
+$font-size-h2     = 18px
+$font-size-h3     = 18px
+$font-size-h4     = 14px
+$font-size-h5     = 14px
+$font-size-h6     = 12px
+$font-size-main   = 12px
+$font-size-small  = 11px
+                         
+@mixin reset
+  margin: 0
+  padding: 0
+  vertical-align: baseline
+  
+@mixin rounded-box
+  -webkit-border-radius: $radius
+  -moz-border-radius: $radius
+  border-radius: $radius
+
+@mixin shadow
+  -moz-box-shadow: 0 1px 3px #888
+  -webkit-box-shadow: 0 1px 3px #888
+  box-shadow: 0 1px 3px #888
+
+@mixin shadow-clear
+  -moz-box-shadow: 0 0 0
+  -webkit-box-shadow: 0 0 0
+  box-shadow: 0 0 0
+
+@mixin fade-in-out
+  background: #fff
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f8f8f8), color-stop(0.05, #ffffff), color-stop(0.95, #ffffff), color-stop(1, #f8f8f8))
+  background: -moz-linear-gradient(center top, #f8f8f8 0, #ffffff 5%, #ffffff 95%, #f8f8f8 100%)
+
+@mixin box
+  -moz-border-radius: 6px
+  -webkit-border-radius: 6px
+  @include shadow
+  
+@mixin box_grey
+  @include box
+  background: #cbcaca
+  
+@mixin box_dark_grey
+  @include box
+  background: #cbcaca
+
+@mixin box_dark_white
+  @include box
+  background: #fff
 
 @mixin rounded-box
   -webkit-border-radius: $radius
@@ -40,17 +96,6 @@ $big-chunky-radius  = 24px
   -webkit-border-radius: 0
   -moz-border-radius: 0
   border-radius: 0
-
-
-
-// --------------------------------------------------
-// Convenience
-// --------------------------------------------------
-
-@mixin reset
-  margin: 0
-  padding: 0
-  vertical-align: baseline
 
 @mixin hidden
   // hide from both screen and screen readers

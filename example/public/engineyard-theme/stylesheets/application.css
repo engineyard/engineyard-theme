@@ -1415,113 +1415,6 @@ button.ui-button::-moz-focus-inner {
     margin: -1px;
     height: 100%; }
 
-/* ICONS */
-.icon-add a {
-  margin: 0;
-  padding: 0;
-  vertical-align: baseline;
-  float: left;
-  display: inline;
-  border: 0;
-  width: 16px;
-  height: 16px;
-  background: none;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  text-indent: -9999em;
-  text-align: left;
-  background: transparent url(../images/layout/icons/add.png) no-repeat; }
-
-.icon-edit a, .icon-edit a:link, .icon-edit a:visited, .icon-edit a:hover, .icon-edit a:focus, .icon-edit a:active, .icon-edit button, .icon-edit button:link, .icon-edit button:visited, .icon-edit button:hover, .icon-edit button:focus, .icon-edit button:active, .icon-edit a.button, .icon-edit a.button:link, .icon-edit a.button:visited, .icon-edit a.button:hover, .icon-edit a.button:focus, .icon-edit a.button:active {
-  margin: 0;
-  padding: 0;
-  vertical-align: baseline;
-  float: left;
-  display: inline;
-  border: 0;
-  width: 16px;
-  height: 16px;
-  background: none;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  text-indent: -9999em;
-  text-align: left;
-  background: transparent url(../images/layout/icons/edit.png) no-repeat; }
-
-.icon-detach a, .icon-detach a:link, .icon-detach a:visited, .icon-detach a:hover, .icon-detach a:focus, .icon-detach a:active, .icon-detach button, .icon-detach button:link, .icon-detach button:visited, .icon-detach button:hover, .icon-detach button:focus, .icon-detach button:active, .icon-detach a.button, .icon-detach a.button:link, .icon-detach a.button:visited, .icon-detach a.button:hover, .icon-detach a.button:focus, .icon-detach a.button:active, .icon-delete a, .icon-delete a:link, .icon-delete a:visited, .icon-delete a:hover, .icon-delete a:focus, .icon-delete a:active, .icon-delete button, .icon-delete button:link, .icon-delete button:visited, .icon-delete button:hover, .icon-delete button:focus, .icon-delete button:active, .icon-delete a.button, .icon-delete a.button:link, .icon-delete a.button:visited, .icon-delete a.button:hover, .icon-delete a.button:focus, .icon-delete a.button:active {
-  margin: 0;
-  padding: 0;
-  vertical-align: baseline;
-  float: left;
-  display: inline;
-  border: 0;
-  width: 16px;
-  height: 16px;
-  background: none;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  text-indent: -9999em;
-  text-align: left;
-  background: transparent url(../images/layout/icons/delete.png) no-repeat; }
-
-.icon-gem-add a {
-  margin: 0;
-  padding: 0;
-  vertical-align: baseline;
-  float: left;
-  display: inline;
-  border: 0;
-  width: 16px;
-  height: 16px;
-  background: none;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  text-indent: -9999em;
-  text-align: left;
-  background: transparent url(../images/layout/icons/gem-add.png) no-repeat; }
-
-.icon-unix-add a {
-  margin: 0;
-  padding: 0;
-  vertical-align: baseline;
-  float: left;
-  display: inline;
-  border: 0;
-  width: 16px;
-  height: 16px;
-  background: none;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  text-indent: -9999em;
-  text-align: left;
-  background: transparent url(../images/layout/icons/unix-add.png) no-repeat; }
-
-small.icon-edit {
-  position: relative; }
-  small.icon-edit a {
-    position: absolute;
-    top: -6px;
-    left: 0; }
-
-a.email, span.email {
-  padding-left: 18px;
-  background: url(../images/layout/icons/email.png) no-repeat 0 0; }
-
-#footer-content a.blog, #footer-content a.twitter, #footer-content a.facebook, #footer-content a.linkedin {
-  padding: 2px 0 2px 20px;
-  background: url(../images/layout/icons/social/rss.png) 0 50% no-repeat; }
-#footer-content a.twitter {
-  background-image: url(../images/layout/icons/social/twitter.png); }
-#footer-content a.facebook {
-  background-image: url(../images/layout/icons/social/facebook.png); }
-#footer-content a.linkedin {
-  background-image: url(../images/layout/icons/social/linkedin.png); }
-
 /* BUTTONS */
 button {
   width: auto;
@@ -2409,7 +2302,7 @@ header {
           height: 8px;
           width: 10px;
           margin: 8px 29px 0 0;
-          background: url("/engineyard-theme/images/header_sprite.png") black;
+          background: url("/engineyard-theme/images/header_sprite.png") transparent;
           background-position: 0 0; }
         header nav ul li span:hover:after {
           background-position: 0 -8px; }
@@ -2535,3 +2428,114 @@ header {
     margin-left: 650px;
     text-align: left;
     width: 300px; }
+
+.content {
+  clear: both; }
+  .content + .content {
+    border: none; }
+
+.sidebar {
+  clear: none;
+  float: right;
+  width: 320px;
+  border-top: 0;
+  padding-top: 0; }
+  .sidebar .section {
+    margin-bottom: 0;
+    padding: 0;
+    list-style: none;
+    border-bottom: 1px solid #dddddd; }
+  .sidebar ul.section {
+    text-align: center; }
+  .sidebar h4 {
+    margin-top: 1.5em;
+    margin-bottom: 1.55em; }
+  .sidebar .links ul {
+    margin-top: -1em; }
+  .sidebar .links li {
+    margin-top: -0.5em; }
+  .sidebar .logo {
+    margin-top: 1.3em; }
+
+.note {
+  font-size: 1.2em;
+  line-height: 1.4em;
+  color: #999999;
+  border-top: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
+  padding: 1em 0;
+  margin: 2em 0; }
+
+.warning, .message {
+  background: #fff2bf;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff2bf), to(#fff8de));
+  background: -moz-linear-gradient(top, #fff2bf, #fff8de);
+  border: 1px solid #eeeeee;
+  border-left: none;
+  border-right: none;
+  font-size: 1.1em;
+  padding: 10px; }
+
+.message {
+  border: none;
+  margin: 1.5em 0; }
+
+section.features.nullborder.message {
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  background: #d9d9d9;
+  background: -moz-linear-gradient(top, #e6e6e6, #d9d9d9);
+  background: -webkit-gradient(linear, left top, left bottom, from(#e6e6e6), to(#d9d9d9));
+  -moz-box-shadow: 0 1px 2px #999999;
+  -webkit-box-shadow: 0 1px 2px #999999;
+  box-shadow: 0 1px 2px #999999;
+  padding: 5px; }
+  section.features.nullborder.message h4 {
+    margin-top: 10px; }
+
+.errors {
+  text-align: left;
+  color: #990000; }
+
+.footnote {
+  display: block;
+  line-height: 1.4em;
+  font-size: 0.8em;
+  color: #666666; }
+
+.clearfix, .clear {
+  clear: both;
+  height: 1px;
+  margin-top: -1px; }
+
+.hidden {
+  display: none !important; }
+
+.center {
+  text-align: center; }
+
+.right {
+  float: right; }
+
+.left {
+  float: left; }
+
+img.right, .wide img.right {
+  float: right;
+  margin-left: 15px; }
+img.left, .wide img.left {
+  float: left;
+  margin-top: 10px;
+  margin-right: 15px;
+  margin-bottom: 20px; }
+img.gravatar, .wide img.gravatar {
+  width: 40px;
+  height: 40px; }
+img.framed, .wide img.framed {
+  background: white;
+  background: -webkit-gradient(linear, left top, left bottom, from(white), to(#f9f9f9));
+  background: -moz-linear-gradient(top, white, #f9f9f9);
+  padding: 6px;
+  -moz-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15); }
