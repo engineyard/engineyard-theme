@@ -21,7 +21,9 @@
           var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-764576-22']);_gaq.push(['_trackPageview']);_gaq.push(['_setAccount', 'UA-764576-1'],['_setDomainName',".engineyard.com"],['_setAllowHash',false],['_setAllowAnchor',true],['_trackPageview']);(function() {var ga = document.createElement('script');ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';ga.setAttribute('async', 'true');document.documentElement.firstChild.appendChild(ga);})();    
         </script>
         <script src="//cdn.optimizely.com/js/4180050.js"></script>
-  %body
+  
+  
+  %body{:id => content_for?(:body_id) ? yield(:body_id) : ''}
     #container
       .wrapper
         %header
@@ -38,12 +40,6 @@
               %li 
                 = link_to 'Login', 'https://cloud.engineyard.com', :class=>'login'
             =render('shared/global_nav')
-            .search_form
-              :plain
-                <form action="/search" method="get" class="search">
-                  <input type="text" name="q" id="searchbox" placeholder="search" />
-                  <input type="submit" value="" class="gsc-search-button" />
-                </form>                                            
       .wrapper        
         #content
           =additional_header if additional_header.present?

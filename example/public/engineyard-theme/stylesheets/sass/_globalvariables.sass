@@ -56,19 +56,20 @@ $button-colored-box-shadow-value  = 0 1px 2px darken($color-background-alt, 22%)
   -webkit-box-shadow: 0 0 0
   box-shadow: 0 0 0
 
-@mixin fade-in-out
-  background: #fff
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f8f8f8), color-stop(0.05, #ffffff), color-stop(0.95, #ffffff), color-stop(1, #f8f8f8))
-  background: -moz-linear-gradient(center top, #f8f8f8 0, #ffffff 5%, #ffffff 95%, #f8f8f8 100%)
-
 @mixin box
   -moz-border-radius: 6px
   -webkit-border-radius: 6px
+  margin-bottom: 6px
   @include shadow
   
 @mixin box_grey
   @include box
   background: #cbcaca
+  
+@mixin box_med_grey
+  @include box
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ababab), color-stop(1, #979797))
+  background: -moz-linear-gradient(center top, #ababab 0, #979797 100%)
   
 @mixin box_dark_grey
   @include box

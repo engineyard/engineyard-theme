@@ -1928,7 +1928,8 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   margin: 0;
-  background: #eaeaea url("/engineyard-theme/images/bg_clouds.png") top left repeat-x; }
+  background: #efefef url("/engineyard-theme/images/bg_clouds.png") repeat-x;
+  background-position: 0 0; }
 
 header, footer, article, section, aside, nav {
   display: block; }
@@ -2174,7 +2175,10 @@ input[type="text"], input[type="password"] {
   font-family: "proxima-nova-1", "proxima-nova-2", Arial, "Liberation Sans", FreeSans, sans-serif;
   width: 200px;
   border: 2px solid #cccccc;
-  padding: 3px; }
+  padding: 3px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px; }
 
 fieldset {
   border: none;
@@ -2247,32 +2251,6 @@ header {
         border-radius: 10px;
         padding: 2px 12px;
         border: 1px solid #b1aca9; }
-  header .search_form {
-    position: absolute;
-    left: 788px;
-    top: 37px; }
-    header .search_form form {
-      position: relative; }
-    header .search_form input[type=text] {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 143px;
-      height: 17px;
-      line-height: 12px;
-      font-size: 12px;
-      -webkit-border-radius: 6px;
-      -moz-border-radius: 6px;
-      border: 1px solid #b5aea8;
-      margin-bottom: 30px; }
-    header .search_form input[type=submit] {
-      position: absolute;
-      left: 143px;
-      border: 0;
-      background: url("/engineyard-theme/images/header_sprite.png") transparent;
-      background-position: 0 25px;
-      width: 28px;
-      height: 25px; }
   header nav {
     position: absolute;
     left: 120px;
@@ -2301,10 +2279,11 @@ header {
           float: right;
           height: 8px;
           width: 10px;
-          margin: 8px 29px 0 0;
+          margin: 8px 29px 0 0; }
+        header nav ul li span.drop:after {
           background: url("/engineyard-theme/images/header_sprite.png") transparent;
           background-position: 0 0; }
-        header nav ul li span:hover:after {
+        header nav ul li span.drop:hover:after {
           background-position: 0 -8px; }
         header nav ul li.selected span {
           color: #0870ab; }
@@ -2381,9 +2360,30 @@ header {
         header nav ul li:hover div {
           display: block; }
 
+#search {
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  margin-bottom: 6px;
+  -moz-box-shadow: 0 1px 3px #888888;
+  -webkit-box-shadow: 0 1px 3px #888888;
+  box-shadow: 0 1px 3px #888888;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ababab), color-stop(1, #979797));
+  background: -moz-linear-gradient(center top, #ababab 0, #979797 100%);
+  padding: 10px 20px; }
+  #search .search_form form {
+    position: relative; }
+  #search .search_form input[type=text] {
+    line-height: 12px;
+    font-size: 12px;
+    border: 1px solid #b5aea8;
+    background: url("/engineyard-theme/images/header_sprite.png") white no-repeat;
+    background-position: -3px -18px;
+    padding-left: 20px; }
+
 #footer {
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
+  margin-bottom: 6px;
   -moz-box-shadow: 0 1px 3px #888888;
   -webkit-box-shadow: 0 1px 3px #888888;
   box-shadow: 0 1px 3px #888888;
