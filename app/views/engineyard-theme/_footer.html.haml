@@ -69,10 +69,11 @@
             %li= link_to('Rails 3 Training','http://engineyard.com/university/scheduled_classes')
             %li= link_to('Professional Services','http://engineyard.com/services')
         .grid_2
-          %h2 Customer Service
+          %h2 Support
           %ul                       
             %li= link_to('Request Support','http://support.cloud.engineyard.com')
             %li= link_to('Documentation','http://docs.engineyard.com')
+            %li= link_to('Support Policies','http://engineyard.com/products/support-policies')
             %li= link_to('Privacy Policy','http://engineyard.com/legal/privacy')
         .grid_2
           %h2 Ruby Community
@@ -83,12 +84,16 @@
             %li= link_to('Ruby Jobs','http://jobs.engineyard.com')
             %li= link_to('Rails Developers','http://www.railsdevelopment.com')
         .grid_2
-          %h2 Lets be friends
+          %h2 About
           %ul
-            %li= link_to('Blog', 'http://engineyard.com/blog')
-            %li= link_to('Twitter', 'http://twitter.com/engineyard')
-            %li= link_to('Facebook', 'http://facebook.com/engineyard')
-            %li= link_to('LinkedIn', 'http://www.linkedin.com/groups?gid=111752')
+            %li= link_to('Company', '/company')
+            %li= link_to('Careers', '/company/careers')
+            %li= link_to('Leadership Team', '/company/team')
+            %li= link_to('Press Center', '/company/news')
+            %li
+              = link_to('Twitter', 'http://twitter.com/engineyard', :class => 'icon twitter')
+              = link_to('Facebook', 'http://facebook.com/engineyard', :class => 'icon facebook')
+              = link_to('LinkedIn', 'http://www.linkedin.com/groups?gid=111752', :class => 'icon linkedin')
 .copyright.wrapper
   %p Copyright &copy; Engine Yard, Inc. All rights reserved.
 .hidden

@@ -2207,7 +2207,7 @@ header {
   border: solid #a6a39f;
   border-width: 0 0 1px 0;
   min-height: 72px;
-  color: black; }
+  color: #444656; }
   header h1 {
     margin: 0;
     overflow: hidden;
@@ -2235,11 +2235,17 @@ header {
       margin-left: 10px; }
   header .utility {
     float: right;
-    margin-top: 4px;
+    margin-top: 10px;
+    text-align: right;
     color: #7d8190; }
+    header .utility li:first-child {
+      display: block;
+      margin-bottom: 14px; }
     header .utility a {
+      display: inline-block;
+      margin-left: 15px;
       font-weight: bold;
-      color: #7d8190;
+      color: #444656;
       text-shadow: 0 1px 0 white; }
       header .utility a.login {
         display: inline-block;
@@ -2418,6 +2424,21 @@ header {
     margin: 0 0 6px 0; }
   #footer a {
     color: #444656; }
+  #footer .icon {
+    display: block;
+    line-height: 20px;
+    vertical-align: top;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("/images/header_sprite.png") transparent;
+    text-indent: -10000px; }
+    #footer .icon.facebook {
+      background-position: 0 -42px; }
+    #footer .icon.twitter {
+      background-position: 0 -58px; }
+    #footer .icon.linkedin {
+      background-position: 0 -74px; }
 
 .copyright {
   text-align: right;

@@ -1,45 +1,39 @@
 <nav>
   <ul class="navigation">
     <li <%= selected?(/^products/) %>>
-      <a href="http://engineyard.com/products/appcloud"><span class="drop">Products</span></a>
+      <a href="http://engineyard.com/products/appcloud"><span class="drop">Our Cloud Platform</span></a>
       <div>
         <ul>          
-          <li>
-            <a href="http://engineyard.com/products/appcloud">Engine Yard AppCloud</a>
-          </li>
-          <li>
-            <a href="http://engineyard.com/products/xcloud">Engine Yard xCloud</a>
-          </li>
-          <li>
-            <a href="http://engineyard.com/support-plans">Support</a>
-          </li>
+          <li><a href="http://engineyard.com/products/appcloud">How It Works</a></li>
+          <li><a href="http://engineyard.com/support-plans">Support</a></li>
+          <li><a href="http://engineyard.com/partners/platform-services">Plugins</a></li>
+          <li><a href="http://engineyard.com/products/appcloud/pricing">Pricing</a></li>
         </ul>
       </div>
     </li>
     
-    <li<%= selected?(/^partners/) %>>
-      <a href="http://engineyard.com/partners"><span>Extensions</span></a>
-    </li>
-  
     <li<%= selected?(/^ruby_on_rails_training/) %>>
       <a href="http://engineyard.com/ruby_on_rails_training"><span class="drop">Developer Center</span></a>
       <div>
-        <ul>
-          <li><a href="http://docs.engineyard.com">Documentation</a></li> 
-          <li><a href="http://jobs.engineyard.com">Jobs Board</a></li> 
-          <li><a href="http://engineyard.com/videos">Videos</a></li> 
-          <li><a href="http://engineyard.com/podcasts">Podcasts</a></li> 
-          <li><a href="http://engineyard.com/developer/events">Events</a></li> 
+        <ul>          
+          <li><a href="http://engineyard.com/products/appcloud">Documentation</a></li>
+          <li><a href="http://engineyard.com/ruby_on_rails_training">Training</a></li>
+          <li><a href="http://engineyard.com/videos">Videos</a></li>
+          <li><a href="http://engineyard.com/podcasts">Podcasts</a></li>
+          <li><a href="http://engineyard.com/developer/events">Events</a></li>
           <li><a href="http://engineyard.com/developer/groups">User Groups</a></li>
-        </ul>  
-    </li>
-
-    <li<%= selected?(/^company/) %>>
-      <a href="http://engineyard.com/company/contact"><span>Contact</span></a>
+          <li><a href="http://jobs.engineyard.com">Jobs Board</a></li>
+        </ul>
+      </div>
     </li>
 
     <li<%= selected?(/^blog/) %>>
       <%= link_to '<span>Blog</span>'.html_safe, 'http://engineyard.com/blog' %>
     </li>
+    
+    <li<%= selected?(/^company/) %>>
+      <a href="http://engineyard.com/company/contact"><span>Contact</span></a>
+    </li>
+    
   </ul>
 </nav>
