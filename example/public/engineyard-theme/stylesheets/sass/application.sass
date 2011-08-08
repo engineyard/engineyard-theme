@@ -156,15 +156,16 @@ a
   &:visited
     color: #596772
   &:hover, &:active
-    text-decoration: underline
+    text-decoration: none
+    color: darken(#369, 20%)
     img
-      text-deocration: none
+      text-decoration: none
   &:focus
     outline: none
   h3, h4, h5, h6
     color: #369
     &:hover
-      text-decoration: underline
+      text-decoration: none
 
 ////////////
 // Tables //
@@ -259,7 +260,6 @@ textarea
 /////////////////
 header
   padding: 0 20px
-header
   display: block
   position: relative
   background: -webkit-gradient(linear, left top, left bottom, from(#e5e5e5), to(#c7c7c7))
@@ -309,7 +309,7 @@ header
     a 
       display: inline-block
       margin-left: 15px
-      font-weight: bold
+      font-weight: normal
       color: #444656
       text-shadow: 0 1px 0 #fff
       &.login
@@ -329,23 +329,24 @@ header
     top: 35px
     color: #000
     font-size: 16px
-    a:hover
-      text-decoration: none
     ul  
       padding: 0  
       li
         float: left
         display: block
+        position: relative
         margin: 0
         padding: 0
         list-style-type: none
         font-size: 16px
         span
+          color: $font-nav-color-dark
           padding: 6px 8px 6px 0
           text-shadow: 0 1px 0 #fff
-          color: $font-nav-color-dark
           font-weight: normal
           margin: 1px
+          &:hover
+            color: darken($font-nav-color-dark, 20%)
         span:after
           content: ""
           float: right
@@ -357,71 +358,41 @@ header
           background-position: 0 0
         span.drop:hover:after
           background-position: 0 -8px
-
         &.selected span
           color: $font-nav-color-highlight  
         div
-          margin-left: -20px
+          margin: 0
           float: none
           display: none
           font-size: 13px
           z-index: 100
           position: absolute
           background: transparent
-          min-width: 90px
+          min-width: 180px
+          top: 28px
+          left: 0
           ul
             @include shadow
             background: #eee
+            margin: 10px 0 0
             li
               float: none
               clear: both
-              margin: 10px 18px
-              padding-top: 15px
+              margin: 4px 18px
+              padding-top: 0px
               @include shadow-clear
-              border: solid #c9c8c8
-              border-width: 1px 0 0 0
-              a
+              a:link, a:visited
                 padding: 0 5px
                 clear: both
                 display: block
-                &:hover
-                  -webkit-border-radius: 8px
-                  -moz-border-radius: 8px
-                  border-radius: 8px
-                  background: #c9c8c8
+                color: $font-nav-color-light
+              a:hover
+                color: darken($font-nav-color-light, 20%) !important
             li:first-child 
-              margin-top: 18px
+              padding-top: 18px
               border: none
             li:last-child 
               padding-bottom: 18px
-            ul
-              display: block
-              position: static
-              border: None
-              background: none
-              padding: 0
-              margin: 0
-              -moz-box-shadow: none
-              -webkit-box-shadow: none
-              li:first-child
-                margin-top: 4px
-              li:last-child 
-                padding-bottom: 0
-              li
-                margin: 0
-                padding: 0 13px
-                @include shadow-clear  
-                border: none
-                &:hover
-                  -webkit-border-radius: 8px
-                  -moz-border-radius: 8px
-                  border-radius: 8px
-                  background: #c9c8c8
-                a, a:visited
-                  font-size: 14px
-                  color: $font-nav-color-light
-                a:hover
-                  color: $font-nav-color-dark
             a, a:visited
               color: $font-nav-color-dark
         &:hover
@@ -462,7 +433,7 @@ header
       margin-bottom: 5px
       color: $color-text-alt
   h2 
-    color: $font-color-med
+    color: $font-color-dark
     text-shadow: 0 1px 0 #fff
     margin-top: 0
     font-size: $font-size-h4
