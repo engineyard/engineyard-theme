@@ -12,11 +12,13 @@ $color-border           = #ccc      // light grey
 $highlight-color-alt: #FF9F29   
 $highlight-color-alt2: #CC0000
 $radius             = 6px
+$tight-radius       = 3px
 $pill-radius        = 12px
 $big-chunky-radius  = 24px 
 $font-color-light: #7d8191
-$font-color-dark: #444656
 $font-color-med: #9a9a9d
+$font-color-med-dark: #858587
+$font-color-dark: #444656
 $font-nav-color-dark: #17181f
 $font-nav-color-med: #444656
 $font-nav-color-light: #7d8191
@@ -49,27 +51,45 @@ $button-colored-box-shadow-value  = 0 1px 2px darken($color-background-alt, 22%)
 @mixin shadow
   -moz-box-shadow: 0 1px 3px #888
   -webkit-box-shadow: 0 1px 3px #888
-  box-shadow: 0 1px 3px #888
+  box-shadow: 0 1px 4px #888
 
+@mixin med-shadow
+  -moz-box-shadow: 0 1px 0px #9e9ea0
+  -webkit-box-shadow: 0 1px 0px #9e9ea0
+  box-shadow: 0 1px 0px #9e9ea0
+  
+@mixin light-shadow
+  -moz-box-shadow: 0 1px 0px #d8d7d7
+  -webkit-box-shadow: 0 1px 0px #d8d7d7
+  box-shadow: 0 1px 0px #d8d7d7
+  
+  
 @mixin shadow-clear
   -moz-box-shadow: 0 0 0
   -webkit-box-shadow: 0 0 0
   box-shadow: 0 0 0
 
+@mixin diagonal_gradient_light_grey
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0, #d6d6d6), color-stop(1, #eaeaea))
+  background: -moz-linear-gradient(center top, #d6d6d6 0, #eaeaea 100%)
+
+
 @mixin box
   -moz-border-radius: 6px
   -webkit-border-radius: 6px
-  margin-bottom: 6px
+  margin-bottom: 14px
   @include shadow
   
 @mixin box_grey
   @include box
+  border: 1px solid #b3b3b6
   background: #cbcaca
   
 @mixin box_med_grey
   @include box
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ababab), color-stop(1, #979797))
-  background: -moz-linear-gradient(center top, #ababab 0, #979797 100%)
+  border: 1px solid #858587
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ababab), color-stop(1, #858587))
+  background: -moz-linear-gradient(center top, #ababab 0, #858587 100%)
   
 @mixin box_dark_grey
   @include box
@@ -84,6 +104,11 @@ $button-colored-box-shadow-value  = 0 1px 2px darken($color-background-alt, 22%)
   -moz-border-radius: $radius
   border-radius: $radius
 
+@mixin tight-rounded-box
+  -webkit-border-radius: $tight-radius
+  -moz-border-radius: $tight-radius
+  border-radius: $tight-radius
+    
 @mixin rounded-box-top
   -webkit-border-top-left-radius: $radius
   -webkit-border-top-right-radius: $radius
