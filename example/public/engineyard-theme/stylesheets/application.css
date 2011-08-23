@@ -2163,6 +2163,7 @@ form ul {
   padding: 0;
   margin: 10px 0; }
   form ul label {
+    margin-bottom: 10px;
     margin-left: 5px;
     display: inline; }
 
