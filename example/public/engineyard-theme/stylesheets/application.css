@@ -3185,7 +3185,7 @@ section.features.nullborder.message {
   font-size: 0.8em;
   color: #666666; }
 
-.clearfix, .clear {
+.clear {
   clear: both;
   height: 1px;
   margin-top: -1px; }
