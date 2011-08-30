@@ -26,10 +26,6 @@
       </div>
     </li>
 
-    <li<%= selected?(/^blog/) %>>
-      <%= link_to '<span>Blog</span>'.html_safe, 'http://www.engineyarddos.com.php5-20.dfw1-2.websitetestlink.com/blog' %>
-    </li>
-    
     <li<%= selected?(/^company(?!\/contact)|developer\/events|open-source|partners\/alliances/) %>>
       <a href="/company"><span class="drop">About Us</span></a>
       <div>
@@ -42,6 +38,10 @@
           <li><a href="/company/careers">Careers</a></li>
         </ul>
       </div>
+    </li>
+    
+    <li<%= selected?(/^blog/) %>>
+      <%= link_to '<span>Blog</span>'.html_safe, 'http://www.engineyarddos.com.php5-20.dfw1-2.websitetestlink.com/blog' %>
     </li>
     
     <li<%= selected?(/^company\/contact/) %>>
