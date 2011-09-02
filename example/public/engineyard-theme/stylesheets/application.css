@@ -1550,6 +1550,12 @@ button.action, a.action {
   .controls button, .controls button span, .controls a.button, .controls a.button span {
     color: #1a517c; }
   .controls button:hover, .controls button:focus, .controls a.button:hover, .controls a.button:focus {
+    padding: 6px 24px;
+    -webkit-border-radius: 24px;
+    -moz-border-radius: 24px;
+    border-radius: 24px;
+    font-size: 14px;
+    line-height: 1.25;
     border: 1px solid #8aa7c7;
       border-bottom-color: #688db6;
     background: #becee0;
@@ -1639,6 +1645,12 @@ button.action, a.action {
   #cancel .controls button.cancel, #cancel .controls button.cancel span {
     color: #1a517c; }
   #cancel .controls button.cancel:focus, #cancel .controls button.cancel:hover {
+    padding: 6px 24px;
+    -webkit-border-radius: 24px;
+    -moz-border-radius: 24px;
+    border-radius: 24px;
+    font-size: 14px;
+    line-height: 1.25;
     border: 1px solid #8aa7c7;
       border-bottom-color: #688db6;
     background: #becee0;
@@ -2424,6 +2436,7 @@ header {
 .copyright {
   text-align: right;
   padding-top: 0;
+  padding-bottom: 20px;
   color: #7d8191;
   font-size: 12px; }
   .copyright p {
