@@ -1954,7 +1954,7 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   margin: 0;
-  background: #efefef url("/engineyard-theme/images/bg_sky.png") repeat-x;
+  background: #efefef url("/engineyard-theme/images/bg_clouds.png") repeat-x;
   background-position: 0 0; }
 
 header, footer, article, section, aside, nav {
@@ -1962,8 +1962,7 @@ header, footer, article, section, aside, nav {
 
 .container {
   font-size: 1em;
-  line-height: 1.5em;
-  background: transparent url("/engineyard-theme/images/bg_cloudline.png") repeat-x 190px center; }
+  line-height: 1.5em; }
 
 hr {
   border: 0 #dddddd solid;

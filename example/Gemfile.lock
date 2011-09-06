@@ -128,6 +128,7 @@ GEM
     ruby-debug-base (0.10.4)
       linecache (>= 0.3)
     rubyzip (0.9.4)
+    sass (3.1.4)
     selenium-webdriver (2.5.0)
       childprocess (>= 0.2.1)
       ffi (>= 1.0.7)
@@ -164,6 +165,7 @@ DEPENDENCIES
   rspec
   rspec-rails
   ruby-debug
+  sass
   sqlite3-ruby
   timecop
   vcr
