@@ -2204,6 +2204,7 @@ input[type="text"], input[type="password"] {
   width: 200px;
   border: 2px solid #cccccc;
   padding: 3px;
+  color: #999999;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px; }
@@ -2417,7 +2418,6 @@ header {
       box-shadow: 0 1px 0px #d8d7d7;
       width: 150px;
       margin-bottom: 5px;
-      color: #999999;
       border: 1px solid #b5aea8; }
   #footer h2 {
     color: #858587;
