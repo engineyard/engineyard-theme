@@ -2,7 +2,6 @@
 @import _globalvariables.sass
 @import _jquery.tooltip.sass
 @import _jquery_ui.sass
-@import _buttons.sass
 @import _960gs.sass
 ////////////
 // Resets //
@@ -583,3 +582,21 @@ img, .wide img
     padding: 6px
     -moz-box-shadow: 2px 2px 6px rgba(0,0,0,0.15)
     -webkit-box-shadow: 2px 2px 6px rgba(0,0,0,0.15)
+
+button, .button, a.button
+  display: inline-block
+  font-size: 12px
+  color: #fff
+  font-weight: bold
+  text-shadow: 0 1px 0 #1e6586
+  background: -webkit-gradient(linear, left top, left bottom, from(#45add2), to(#2886bb))
+  background: -moz-linear-gradient(top,  #45add2,  #2886bb)
+  -webkit-border-radius: 4px
+  -moz-border-radius: 4px
+  border-radius: 4px
+  padding: 3px 12px
+  border: 1px solid #2886bb
+
+button:hover, .button:hover, a.button:hover  
+  background: -webkit-gradient(linear, left top, left bottom, from(darken(#45add2,5%)), to(darken(#2886bb,5%)))
+  background: -moz-linear-gradient(top, darken(#45add2,5%), darken(#2886bb,5%))
