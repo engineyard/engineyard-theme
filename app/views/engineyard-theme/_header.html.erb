@@ -28,7 +28,24 @@
     
     <%- unless Rails.env == 'development' || add_js != 'true' %>
       <script type='text/javascript'>
-        var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-764576-22']);_gaq.push(['_trackPageview']);_gaq.push(['_setAccount', 'UA-764576-1'],['_setDomainName',".engineyard.com"],['_setAllowHash',false],['_setAllowAnchor',true],['_trackPageview']);(function() {var ga = document.createElement('script');ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';ga.setAttribute('async', 'true');document.documentElement.firstChild.appendChild(ga);})();    
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-764576-22'],['_trackPageview']);
+        _gaq.push(['_setAccount', 'UA-764576-1'],['_setDomainName',".engineyard.com"],['_setAllowHash',false],['_setAllowAnchor',true],['_trackPageview']);
+        _gaq.push(['_setAccount', 'UA-764576-25'],['_setDomainName', 'none'],['_setAllowLinker', true],['_trackPageview']);
+        
+        (function() {var ga = document.createElement('script');ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';ga.setAttribute('async', 'true');document.documentElement.firstChild.appendChild(ga);})();    
+      </script>                          
+      <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        
+
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
       </script>
       <script src="//cdn.optimizely.com/js/4180050.js"></script>
     <%- end -%>
