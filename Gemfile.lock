@@ -31,7 +31,7 @@ GEM
     activesupport (3.1.0)
       multi_json (~> 1.0)
     arel (2.2.1)
-    bcrypt-ruby (3.0.0)
+    bcrypt-ruby (3.0.1)
     builder (3.0.0)
     erubis (2.7.0)
     git (1.2.5)
