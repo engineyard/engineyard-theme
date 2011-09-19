@@ -1,0 +1,45 @@
+!!! 5
+%html
+  %head
+
+    %title= content_for?(:title) ? yield(:title) : 'Ruby Cloud | Ruby Support | Engine Yard'
+    %meta{:name => "description",:content => "#{content_for?(:description) ? yield(:description) : 'Learn why Engine Yard\'s managed Rails hosting, Rails deployment &amp; 24/7/365 live service is the best'}"}
+    %meta{:name => "keywords", :content => "#{content_for?(:keywords) ? yield(:keywords) : 'Ruby on Rails Fully-Managed Hosting, Scaling, Scaled, Cluster Slices, Cloud Computing, On-Demand Deployment, Merb, Rubinius, Open-Source Software'}"}
+    %meta{'http-equiv' => "expires", :content =>"0"}
+
+    =stylesheet_link_tag '/engineyard-theme/stylesheets/application'
+
+    :plain
+      <script src="http://use.typekit.com/cra4agv.js"></script>
+      <script>try{Typekit.load();}catch(e){}</script>                                         
+  
+    =yield :head
+  
+    - unless Rails.env == 'development' || add_js != 'true'
+      :plain
+        <script type='text/javascript'>
+          var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-764576-22']);_gaq.push(['_trackPageview']);_gaq.push(['_setAccount', 'UA-764576-1'],['_setDomainName',".engineyard.com"],['_setAllowHash',false],['_setAllowAnchor',true],['_trackPageview']);(function() {var ga = document.createElement('script');ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';ga.setAttribute('async', 'true');document.documentElement.firstChild.appendChild(ga);})();    
+        </script>
+        <script src="//cdn.optimizely.com/js/4180050.js"></script>
+  
+  
+  %body{:id => content_for?(:body_id) ? yield(:body_id) : ''}
+    #container
+      .wrapper
+        %header
+          - if add_navigation == 'true'
+            %h1.branding
+              =link_to(content_for?(:branding) ? yield(:branding) : 'Engine Yard, Inc.', '/') 
+            %ul.utility
+              %li 
+                866-518-YARD 
+                %small
+                  (5642)
+              %li 
+                = link_to 'Get Started', 'https://login.engineyard.com/signup'
+              %li 
+                = link_to 'Sign In', 'https://cloud.engineyard.com'
+            =render('shared/global_nav')
+      .wrapper        
+        #content
+          =additional_header if additional_header.present?
