@@ -9,6 +9,10 @@ $color-text-callout    : #236DA6   // bold blue
 
 $color-border          : #ccc      // light grey
 
+$color-button             : #2886bb   //dark-blue
+$color-button-highlight   : #45add2   //dark-blue-highlight
+$color-button-text        : #ffffff
+
 $highlight-color-alt: #FF9F29   
 $highlight-color-alt2: #CC0000
 $radius            : 6px
@@ -34,7 +38,7 @@ $font-size-h6    : 12px
 $font-size-main  : 12px
 $font-size-small : 11px
 
-$button-radius                   : 3px
+$button-radius                   : 4px
 $button-box-shadow-value         : 0 1px 2px darken($color-border, 20%)
 $button-colored-box-shadow-value : 0 1px 2px darken($color-background-alt, 22%)
                          
@@ -156,25 +160,25 @@ $button-colored-box-shadow-value : 0 1px 2px darken($color-background-alt, 22%)
   position: relative
   display: inline-block
   padding: 2px 12px
-  border: 1px solid $color-border
-    bottom-color: darken($color-border, 5%)
+  border: 1px solid $color-button
+  bottom-color: darken($color-button, 5%)
   -moz-border-radius: $button-radius
   -webkit-border-radius: $button-radius
   border-radius: $button-radius
   background: $color-border
-  background: -moz-linear-gradient(top, lighten($color-border, 20%), $color-border)
-  background: -webkit-gradient(linear, left top, left bottom, from(lighten($color-border, 20%)), to($color-border))
+  background: -moz-linear-gradient(top, lighten($color-button, 20%), $color-button)
+  background: -webkit-gradient(linear, left top, left bottom, from(lighten($color-button, 20%)), to($color-button))
   -moz-box-shadow: $button-box-shadow-value
   -webkit-box-shadow: $button-box-shadow-value
   box-shadow: $button-box-shadow-value
   font-size: $font-size-main
+  font-weight: bold
   line-height: $line-height
   text-decoration: none
-  text-shadow: 0 1px 2px lighten($color-border, 20%)
-  cursor: pointer
+  text-shadow: 0 1px 2px lighten($color-button, 20%)
   z-index: 2
   &, span
-    color: $color-text
+    color: $color-button-text
 
 @mixin button-active
   border-color: darken($color-border, 2.5%)
@@ -186,12 +190,12 @@ $button-colored-box-shadow-value : 0 1px 2px darken($color-background-alt, 22%)
 
 @mixin button-hover
   cursor: pointer
-  border-color: darken($color-border, 5%)
-  background: darken($color-border, 5%)
-  background: -moz-linear-gradient(top, lighten($color-border, 15%), darken($color-border, 5%))
-  background: -webkit-gradient(linear, left top, left bottom, from(lighten($color-border, 15%)), to(darken($color-border, 5%)))
+  border-color: darken($color-button, 5%)
+  background: darken($color-button, 5%)
+  background: -moz-linear-gradient(top, lighten($color-button, 15%), darken($color-button, 5%))
+  background: -webkit-gradient(linear, left top, left bottom, from(lighten($color-button, 15%)), to(darken($color-button, 5%)))
   &, span
-    color: darken($color-text, 5%)
+    color: darken($color-button-text, 5%)
 
 @mixin button-disabled
   cursor: not-allowed
