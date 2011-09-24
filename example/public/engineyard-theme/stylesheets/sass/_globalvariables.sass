@@ -185,6 +185,7 @@ $button-colored-box-shadow-value : 0 1px 2px darken($color-background-alt, 22%)
     color: darken($color-text, 2.5%)
 
 @mixin button-hover
+  cursor: pointer
   border-color: darken($color-border, 5%)
   background: darken($color-border, 5%)
   background: -moz-linear-gradient(top, lighten($color-border, 15%), darken($color-border, 5%))
@@ -202,7 +203,7 @@ $button-colored-box-shadow-value : 0 1px 2px darken($color-background-alt, 22%)
 
 @mixin button-colored
   border: 1px solid darken($color-background-alt, 14%)
-    bottom-color: darken($color-background-alt, 20%)
+  bottom-color: darken($color-background-alt, 20%)
   background: lighten($color-background-alt, 5%)
   background: -moz-linear-gradient(top, lighten($color-background-alt, 12%), darken($color-background-alt, 15%))
   background: -webkit-gradient(linear, left top, left bottom, from(lighten($color-background-alt, 12%)), to(darken($color-background-alt, 15%)))
@@ -224,8 +225,9 @@ $button-colored-box-shadow-value : 0 1px 2px darken($color-background-alt, 22%)
     color: darken($color-text-callout, 12.5%)
 
 @mixin button-colored-hover
+  cursor: pointer
   border: 1px solid darken($color-background-alt, 20%)
-    bottom-color: darken($color-background-alt, 30%)
+  bottom-color: darken($color-background-alt, 30%)
   background: darken($color-background-alt, 5%)
   background: -moz-linear-gradient(top, lighten($color-background-alt, 5%), darken($color-background-alt, 25%))
   background: -webkit-gradient(linear, left top, left bottom, from(lighten($color-background-alt, 5%)), to(darken($color-background-alt, 25%)))
