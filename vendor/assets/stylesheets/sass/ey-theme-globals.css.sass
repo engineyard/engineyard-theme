@@ -1,0 +1,269 @@
+$color-background: #f8f8f8   // lightest grey
+$color-background-alt: #cfdbe8   // light blue
+$color-background-alt2: #e3e5cf   // light beige
+$color-text            : #555      // dark grey
+$color-text-alt        : #999      // medium grey
+
+$color-text-alert      : #910f0f   // bold red
+$color-text-callout    : #236DA6   // bold blue
+
+$color-border          : #ccc      // light grey
+
+$highlight-color-alt: #FF9F29   
+$highlight-color-alt2: #CC0000
+$radius            : 6px
+$tight-radius      : 3px
+$pill-radius       : 12px
+$big-chunky-radius : 24px 
+$font-color-light: #7d8191
+$font-color-med: #9a9a9d
+$font-color-med-dark: #858587
+$font-color-dark: #444656
+$font-nav-color-dark: #17181f
+$font-nav-color-med: #444656
+$font-nav-color-light: #7d8191
+$font-nav-color-highlight: #0870ab
+
+$line-height     : 1.5
+$font-size-h1    : 24px
+$font-size-h2    : 18px
+$font-size-h3    : 18px
+$font-size-h4    : 14px
+$font-size-h5    : 14px
+$font-size-h6    : 12px
+$font-size-main  : 12px
+$font-size-small : 11px
+
+$button-radius                   : 3px
+$button-box-shadow-value         : 0 1px 2px darken($color-border, 20%)
+$button-colored-box-shadow-value : 0 1px 2px darken($color-background-alt, 22%)
+
+@mixin reset
+margin: 0
+padding: 0
+vertical-align: baseline
+
+@mixin rounded-box
+-webkit-border-radius: $radius
+-moz-border-radius: $radius
+border-radius: $radius
+
+@mixin shadow
+-moz-box-shadow: 0 1px 3px #888
+-webkit-box-shadow: 0 1px 3px #888
+box-shadow: 0 1px 4px #888
+
+@mixin med-shadow
+-moz-box-shadow: 0 1px 0px #9e9ea0
+-webkit-box-shadow: 0 1px 0px #9e9ea0
+box-shadow: 0 1px 0px #9e9ea0
+
+@mixin light-shadow
+-moz-box-shadow: 0 1px 0px #d8d7d7
+-webkit-box-shadow: 0 1px 0px #d8d7d7
+box-shadow: 0 1px 0px #d8d7d7
+
+
+@mixin shadow-clear
+-moz-box-shadow: 0 0 0
+-webkit-box-shadow: 0 0 0
+box-shadow: 0 0 0
+
+@mixin diagonal_gradient_light_grey
+background: -webkit-gradient(linear, left top, right bottom, color-stop(0, #d6d6d6), color-stop(1, #eaeaea))
+background: -moz-linear-gradient(center top, #d6d6d6 0, #eaeaea 100%)
+
+
+@mixin box
+-moz-border-radius: 6px
+-webkit-border-radius: 6px
+margin-bottom: 14px
+@include shadow
+
+@mixin box_grey
+@include box
+border: 1px solid #b3b3b6
+background: #cbcaca
+
+@mixin box_med_grey
+@include box
+border: 1px solid #858587
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ababab), color-stop(1, #858587))
+background: -moz-linear-gradient(center top, #ababab 0, #858587 100%)
+
+@mixin box_dark_grey
+@include box
+background: #cbcaca
+
+@mixin box_dark_white
+@include box
+background: #fff
+
+@mixin rounded-box
+-webkit-border-radius: $radius
+-moz-border-radius: $radius
+border-radius: $radius
+
+@mixin tight-rounded-box
+-webkit-border-radius: $tight-radius
+-moz-border-radius: $tight-radius
+border-radius: $tight-radius
+
+@mixin rounded-box-top
+-webkit-border-top-left-radius: $radius
+-webkit-border-top-right-radius: $radius
+-moz-border-radius-topleft: $radius
+-moz-border-radius-topright: $radius
+border-top-left-radius: $radius
+border-top-right-radius: $radius
+
+@mixin big-chunky-rounded-box
+-webkit-border-radius: $big-chunky-radius
+-moz-border-radius: $big-chunky-radius
+border-radius: $big-chunky-radius
+
+@mixin remove-rounded-box
+-webkit-border-radius: 0
+-moz-border-radius: 0
+border-radius: 0
+
+@mixin hidden
+// hide from both screen and screen readers
+display: none
+visibility: hidden
+
+@mixin visuallyhidden
+// Hide from screen but keep visible to screenreaders
+position: absolute !important
+top: 0
+left: -9999em
+overflow: hidden
+clip: rect(1px 1px 1px 1px)
+clip: rect(1px, 1px, 1px, 1px)
+
+@mixin invisible
+// Keep the element's space on the page, but just hide it visibly from screen
+visibility: hidden
+
+@mixin clearfix
+// clearing child floating elements
+content: "\0020"
+display: block
+height: 0
+visibility: hidden
+
+@mixin button
+position: relative
+display: inline-block
+padding: 2px 12px
+border: 1px solid $color-border
+bottom-color: darken($color-border, 5%)
+-moz-border-radius: $button-radius
+-webkit-border-radius: $button-radius
+border-radius: $button-radius
+background: $color-border
+background: -moz-linear-gradient(top, lighten($color-border, 20%), $color-border)
+background: -webkit-gradient(linear, left top, left bottom, from(lighten($color-border, 20%)), to($color-border))
+-moz-box-shadow: $button-box-shadow-value
+-webkit-box-shadow: $button-box-shadow-value
+box-shadow: $button-box-shadow-value
+font-size: $font-size-main
+line-height: $line-height
+text-decoration: none
+text-shadow: 0 1px 2px lighten($color-border, 20%)
+cursor: pointer
+z-index: 2
+&, span
+color: $color-text
+
+@mixin button-active
+border-color: darken($color-border, 2.5%)
+background: darken($color-border, 2.5%)
+background: -moz-linear-gradient(top, lighten($color-border, 17.5%), darken($color-border, 2.5%))
+background: -webkit-gradient(linear, left top, left bottom, from(lighten($color-border, 17.5%)), to(darken($color-border, 2.5%)))
+&, span
+color: darken($color-text, 2.5%)
+
+@mixin button-hover
+border-color: darken($color-border, 5%)
+background: darken($color-border, 5%)
+background: -moz-linear-gradient(top, lighten($color-border, 15%), darken($color-border, 5%))
+background: -webkit-gradient(linear, left top, left bottom, from(lighten($color-border, 15%)), to(darken($color-border, 5%)))
+&, span
+color: darken($color-text, 5%)
+
+@mixin button-disabled
+cursor: not-allowed
+border-color: lighten($color-border, 5%)
+background: lighten($color-border, 8%)
+background: -moz-linear-gradient(top, lighten($color-border, 30%), lighten($color-border, 12%))
+background: -webkit-gradient(linear, left top, left bottom, from(lighten($color-border, 30%)), to(lighten($color-border, 12%)))
+
+
+@mixin button-colored
+border: 1px solid darken($color-background-alt, 14%)
+bottom-color: darken($color-background-alt, 20%)
+background: lighten($color-background-alt, 5%)
+background: -moz-linear-gradient(top, lighten($color-background-alt, 12%), darken($color-background-alt, 15%))
+background: -webkit-gradient(linear, left top, left bottom, from(lighten($color-background-alt, 12%)), to(darken($color-background-alt, 15%)))
+// blue buttons don't necessarily cast blue shadows! blue shadows only on blue backgrounds. :)
+-moz-box-shadow: $button-box-shadow-value
+-webkit-box-shadow: $button-box-shadow-value
+box-shadow: $button-box-shadow-value
+text-shadow: 0 1px 2px $color-background-alt
+&, span
+color: darken($color-text-callout, 10%)
+
+@mixin button-colored-active
+border: 1px solid darken($color-background-alt, 17.5%)
+bottom-color: darken($color-background-alt, 27.5%)
+background: darken($color-background-alt, 2.5%)
+background: -moz-linear-gradient(top, lighten($color-background-alt, 2.5%), darken($color-background-alt, 22.5%))
+background: -webkit-gradient(linear, left top, left bottom, from(lighten($color-background-alt, 2.5%)), to(darken($color-background-alt, 22.5%)))
+&, span
+color: darken($color-text-callout, 12.5%)
+
+@mixin button-colored-hover
+border: 1px solid darken($color-background-alt, 20%)
+bottom-color: darken($color-background-alt, 30%)
+background: darken($color-background-alt, 5%)
+background: -moz-linear-gradient(top, lighten($color-background-alt, 5%), darken($color-background-alt, 25%))
+background: -webkit-gradient(linear, left top, left bottom, from(lighten($color-background-alt, 5%)), to(darken($color-background-alt, 25%)))
+&, span
+color: darken($color-text-callout, 15%)
+
+// reset button from colored back to grey, without taking all the extra styles with it.
+@mixin button-revert
+border-color: $color-border
+background: $color-border
+background: -moz-linear-gradient(top, lighten($color-border, 20%), $color-border)
+background: -webkit-gradient(linear, left top, left bottom, from(lighten($color-border, 20%)), to($color-border))
+-moz-box-shadow: $button-box-shadow-value
+-webkit-box-shadow: $button-box-shadow-value
+box-shadow: $button-box-shadow-value
+&, span
+color: $color-text
+
+@mixin button-big-submit
+padding: 6px 24px
+@include big-chunky-rounded-box
+font-size: $font-size-h4
+line-height: 1.25
+
+@mixin button-big-colored-submit
+@include button-colored
+@include button-big-submit
+
+@mixin button-big-colored-submit-active
+@include button-colored-active
+
+@mixin button-big-colored-submit-hover
+@include button-big-submit
+@include button-colored-hover
+
+// reset button from big to small, without taking all the extra styles with it.
+@mixin button-size-revert
+padding: 2px 12px
+@include rounded-box
+font-size: $font-size-main
+line-height: $line-height  
