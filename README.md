@@ -1,6 +1,6 @@
 # Engine Yard Theme #
 
-A Rails gem / engine to make any Rails 3 app look like engineyard.com. Provides a generator for static assets and `header` and `footer` helper methods to dress your site in the shirt and pants of the Engine Yard theme.
+A Rails gem / engine to make any Rails 3.1 app look like engineyard.com. Provides a generator for static assets and `header` and `footer` helper methods to dress your site in the shirt and pants of the Engine Yard theme.
 
 ## Installation ##
 
@@ -9,10 +9,6 @@ Add `engineyard-theme` to your Gemfile
     gem 'engineyard-theme'
 
 ## Usage ##
-
-Get the latest assets so that you can test locally (you can add `public/engineyard-theme/*` to your .gitignore if you like):
-
-    bundle exec rails generate engineyard_theme:assets
 
 Wrap your application.html `yield` with the header and footer helpers:
 
@@ -35,9 +31,14 @@ Default navigation links and default web service javascript (Google Analytics, O
 
     header(add_navigation,add_js)
 
+The layout supports content overwritting by supplying defining `content_for` the following:
+
+    title, description, keywords, body_id, branding
+
+
 ## Modifying / Testing ##
 
-Inside this repo is a `example` folder, containing a Rails 3 app configured to load the gem. You can use this to add any changes in styles. You can also run:
+Inside this repo is a `example` folder, containing a Rails 3.1 app configured to load the gem. You can use this to add any changes in styles. You can also run:
 
     bundle exec cucumber features
   
