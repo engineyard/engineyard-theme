@@ -2077,7 +2077,7 @@ header {
         header nav ul li:hover div {
           display: block; }
 
-#search {
+.search {
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
   margin-bottom: 14px;
@@ -2088,9 +2088,9 @@ header {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ababab), color-stop(1, #858587));
   background: -moz-linear-gradient(center top, #ababab 0, #858587 100%);
   padding: 8px 10px; }
-  #search .search_form form {
+  .search .search_form form {
     position: relative; }
-  #search .search_form input[type=text] {
+  .search .search_form input[type=text] {
     -moz-box-shadow: 0 1px 0px #9e9ea0;
     -webkit-box-shadow: 0 1px 0px #9e9ea0;
     box-shadow: 0 1px 0px #9e9ea0;
