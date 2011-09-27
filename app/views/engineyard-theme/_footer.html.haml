@@ -98,7 +98,7 @@
 .copyright.wrapper
   %p Copyright &copy; Engine Yard, Inc. All rights reserved.
 .hidden
-= javascript_include_tag '/engineyard-theme/javascripts/application.min.js'
+= javascript_include_tag 'application.js'
 = yield :additional_scripts
 - unless Rails.env == 'development' || add_js != 'true'
   = render 'shared/tracking'
