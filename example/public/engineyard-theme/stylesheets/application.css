@@ -1930,12 +1930,13 @@ textarea {
   width: 380px;
   height: 100px; }
 
-header {
+header, div.header {
   padding: 0 20px;
   display: block;
   position: relative;
   background: -webkit-gradient(linear, left top, left bottom, from(#e5e5e5), to(#c7c7c7));
   background: -moz-linear-gradient(top, #e5e5e5, #c7c7c7);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#e5e5e5, endColorstr=#c7c7c7)";
   -moz-border-radius-bottomleft: 6px;
   -moz-border-radius-bottomright: 6px;
   -webkit-border-bottom-left-radius: 6px;
@@ -1947,7 +1948,7 @@ header {
   border-width: 0 0 1px 0;
   min-height: 72px;
   color: #444656; }
-  header h1 {
+  header h1, div.header h1 {
     margin: 0;
     overflow: hidden;
     background: url(/engineyard-theme/images/logo.png) no-repeat left top;
@@ -1957,54 +1958,55 @@ header {
     top: 8px;
     left: 20px;
     text-indent: -10000px; }
-    header h1 a {
+    header h1 a, div.header h1 a {
       display: block;
       float: right;
       overflow: hidden;
       text-indent: -10000px;
       height: 81px;
       width: 50px; }
-  header a {
+  header a, div.header a {
     color: white;
     text-decoration: none; }
-  header ul {
+  header ul, div.header ul {
     margin: 0; }
-    header ul li {
+    header ul li, div.header ul li {
       display: inline-block;
       margin-left: 10px; }
-  header .utility {
+  header .utility, div.header .utility {
     float: right;
     margin-top: 10px;
     text-align: right;
     color: #7d8190; }
-    header .utility li:first-child {
+    header .utility li:first-child, div.header .utility li:first-child {
       display: block;
       margin-bottom: 14px; }
-    header .utility a {
+    header .utility a, div.header .utility a {
       display: inline-block;
       margin-left: 15px;
       font-weight: normal;
       color: #444656;
       text-shadow: 0 1px 0 white; }
-      header .utility a.login {
+      header .utility a.login, div.header .utility a.login {
         display: inline-block;
         color: #2987b6;
         background: -webkit-gradient(linear, left top, left bottom, from(#e5e5e5), to(#c7c7c7));
         background: -moz-linear-gradient(top, #e5e5e5, #c7c7c7);
+        -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#e5e5e5, endColorstr=#c7c7c7)";
         -webkit-border-radius: 10px;
         -moz-border-radius: 10px;
         border-radius: 10px;
         padding: 2px 12px;
         border: 1px solid #b1aca9; }
-  header nav, header div.nav {
+  header nav, header div.nav, div.header nav, div.header div.nav {
     position: absolute;
     left: 120px;
     top: 35px;
     color: black;
     font-size: 16px; }
-    header nav ul, header div.nav ul {
+    header nav ul, header div.nav ul, div.header nav ul, div.header div.nav ul {
       padding: 0; }
-      header nav ul li, header div.nav ul li {
+      header nav ul li, header div.nav ul li, div.header nav ul li, div.header div.nav ul li {
         float: left;
         display: block;
         position: relative;
@@ -2012,28 +2014,28 @@ header {
         padding: 0;
         list-style-type: none;
         font-size: 16px; }
-        header nav ul li span, header div.nav ul li span {
+        header nav ul li span, header div.nav ul li span, div.header nav ul li span, div.header div.nav ul li span {
           color: #17181f;
           padding: 6px 8px 6px 0;
           text-shadow: 0 1px 0 white;
           font-weight: normal;
           margin: 1px; }
-          header nav ul li span:hover, header div.nav ul li span:hover {
+          header nav ul li span:hover, header div.nav ul li span:hover, div.header nav ul li span:hover, div.header div.nav ul li span:hover {
             color: black; }
-        header nav ul li span:after, header div.nav ul li span:after {
+        header nav ul li span:after, header div.nav ul li span:after, div.header nav ul li span:after, div.header div.nav ul li span:after {
           content: "";
           float: right;
           height: 8px;
           width: 10px;
           margin: 8px 29px 0 0; }
-        header nav ul li span.drop:after, header div.nav ul li span.drop:after {
+        header nav ul li span.drop:after, header div.nav ul li span.drop:after, div.header nav ul li span.drop:after, div.header div.nav ul li span.drop:after {
           background: url("/engineyard-theme/images/header_sprite.png") transparent;
           background-position: 0 0; }
-        header nav ul li span.drop:hover:after, header div.nav ul li span.drop:hover:after {
+        header nav ul li span.drop:hover:after, header div.nav ul li span.drop:hover:after, div.header nav ul li span.drop:hover:after, div.header div.nav ul li span.drop:hover:after {
           background-position: 0 -8px; }
-        header nav ul li.selected span, header div.nav ul li.selected span {
+        header nav ul li.selected span, header div.nav ul li.selected span, div.header nav ul li.selected span, div.header div.nav ul li.selected span {
           color: #0870ab; }
-        header nav ul li div, header div.nav ul li div {
+        header nav ul li div, header div.nav ul li div, div.header nav ul li div, div.header div.nav ul li div {
           margin: 0;
           float: none;
           display: none;
@@ -2043,16 +2045,17 @@ header {
           background: transparent;
           min-width: 180px;
           left: 0; }
-          header nav ul li div ul, header div.nav ul li div ul {
+          header nav ul li div ul, header div.nav ul li div ul, div.header nav ul li div ul, div.header div.nav ul li div ul {
             -moz-box-shadow: 0 1px 3px #888888;
             -webkit-box-shadow: 0 1px 3px #888888;
             box-shadow: 0 1px 4px #888888;
             background: #eeeeee;
             background: -webkit-gradient(linear, left top, right bottom, color-stop(0, #d6d6d6), color-stop(1, #eaeaea));
             background: -moz-linear-gradient(center top, #d6d6d6 0, #eaeaea 100%);
+            -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#d6d6d6, endColorstr=#eaeaea)";
             margin: 18px 0 0;
             border-top: 1px solid #dbdbdb; }
-            header nav ul li div ul li, header div.nav ul li div ul li {
+            header nav ul li div ul li, header div.nav ul li div ul li, div.header nav ul li div ul li, div.header div.nav ul li div ul li {
               float: none;
               clear: both;
               margin: 4px 12px;
@@ -2060,21 +2063,21 @@ header {
               -moz-box-shadow: 0 0 0;
               -webkit-box-shadow: 0 0 0;
               box-shadow: 0 0 0; }
-              header nav ul li div ul li a:link, header nav ul li div ul li a:visited, header div.nav ul li div ul li a:link, header div.nav ul li div ul li a:visited {
+              header nav ul li div ul li a:link, header nav ul li div ul li a:visited, header div.nav ul li div ul li a:link, header div.nav ul li div ul li a:visited, div.header nav ul li div ul li a:link, div.header nav ul li div ul li a:visited, div.header div.nav ul li div ul li a:link, div.header div.nav ul li div ul li a:visited {
                 padding: 0 5px;
                 clear: both;
                 display: block;
                 color: #7d8191; }
-              header nav ul li div ul li a:hover, header div.nav ul li div ul li a:hover {
+              header nav ul li div ul li a:hover, header div.nav ul li div ul li a:hover, div.header nav ul li div ul li a:hover, div.header div.nav ul li div ul li a:hover {
                 color: #4d505b !important; }
-            header nav ul li div ul li:first-child, header div.nav ul li div ul li:first-child {
+            header nav ul li div ul li:first-child, header div.nav ul li div ul li:first-child, div.header nav ul li div ul li:first-child, div.header div.nav ul li div ul li:first-child {
               padding-top: 8px;
               border: none; }
-            header nav ul li div ul li:last-child, header div.nav ul li div ul li:last-child {
+            header nav ul li div ul li:last-child, header div.nav ul li div ul li:last-child, div.header nav ul li div ul li:last-child, div.header div.nav ul li div ul li:last-child {
               padding-bottom: 12px; }
-            header nav ul li div ul a, header nav ul li div ul a:visited, header div.nav ul li div ul a, header div.nav ul li div ul a:visited {
+            header nav ul li div ul a, header nav ul li div ul a:visited, header div.nav ul li div ul a, header div.nav ul li div ul a:visited, div.header nav ul li div ul a, div.header nav ul li div ul a:visited, div.header div.nav ul li div ul a, div.header div.nav ul li div ul a:visited {
               color: #17181f; }
-        header nav ul li:hover div, header div.nav ul li:hover div {
+        header nav ul li:hover div, header div.nav ul li:hover div, div.header nav ul li:hover div, div.header div.nav ul li:hover div {
           display: block; }
 
 .search {
@@ -2087,6 +2090,7 @@ header {
   border: 1px solid #858587;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ababab), color-stop(1, #858587));
   background: -moz-linear-gradient(center top, #ababab 0, #858587 100%);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#ababab, endColorstr=#858587)";
   padding: 8px 10px; }
   .search .search_form form {
     position: relative; }
@@ -2216,6 +2220,7 @@ header {
 .warning, .message {
   background: #fff2bf;
   background: -webkit-gradient(linear, left top, left bottom, from(#fff2bf), to(#fff8de));
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#fff2bf, endColorstr=#fff8de)";
   background: -moz-linear-gradient(top, #fff2bf, #fff8de);
   border: 1px solid #eeeeee;
   border-left: none;
@@ -2234,6 +2239,7 @@ section.features.nullborder.message, div.section.features.nullborder.message {
   background: #d9d9d9;
   background: -moz-linear-gradient(top, #e6e6e6, #d9d9d9);
   background: -webkit-gradient(linear, left top, left bottom, from(#e6e6e6), to(#d9d9d9));
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#e6e6e6, endColorstr=#d9d9d9)";
   -moz-box-shadow: 0 1px 2px #999999;
   -webkit-box-shadow: 0 1px 2px #999999;
   box-shadow: 0 1px 2px #999999;
@@ -2283,6 +2289,7 @@ img.framed, .wide img.framed {
   background: white;
   background: -webkit-gradient(linear, left top, left bottom, from(white), to(#f9f9f9));
   background: -moz-linear-gradient(top, white, #f9f9f9);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#ffffff, endColorstr=#f9f9f9)";
   padding: 6px;
   -moz-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15);
   -webkit-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15); }
@@ -2295,6 +2302,7 @@ button, .button, a.button {
   text-shadow: 0 1px 0 #1e6586;
   background: -webkit-gradient(linear, left top, left bottom, from(#45add2), to(#2886bb));
   background: -moz-linear-gradient(top, #45add2, #2886bb);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#45add2, endColorstr=#2886bb)";
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -2303,4 +2311,5 @@ button, .button, a.button {
 
 button:hover, .button:hover, a.button:hover {
   background: -webkit-gradient(linear, left top, left bottom, from(#31a4cc), to(#2477a6));
-  background: -moz-linear-gradient(top, #31a4cc, #2477a6); }
+  background: -moz-linear-gradient(top, #31a4cc, #2477a6);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#45add2, endColorstr=#2886bb)"; }

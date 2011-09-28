@@ -72,6 +72,7 @@ $button-colored-box-shadow-value : 0 1px 2px darken($color-background-alt, 22%)
 @mixin diagonal_gradient_light_grey
   background: -webkit-gradient(linear, left top, right bottom, color-stop(0, #d6d6d6), color-stop(1, #eaeaea))
   background: -moz-linear-gradient(center top, #d6d6d6 0, #eaeaea 100%)
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#d6d6d6, endColorstr=#eaeaea)"
 
 
 @mixin box
@@ -90,6 +91,7 @@ $button-colored-box-shadow-value : 0 1px 2px darken($color-background-alt, 22%)
   border: 1px solid #858587
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ababab), color-stop(1, #858587))
   background: -moz-linear-gradient(center top, #ababab 0, #858587 100%)
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#ababab, endColorstr=#858587)"
   
 @mixin box_dark_grey
   @include box

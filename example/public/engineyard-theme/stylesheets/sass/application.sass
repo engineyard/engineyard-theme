@@ -265,12 +265,13 @@ textarea
 /////////////////
 // Base Layout //
 /////////////////
-header
+header, div.header
   padding: 0 20px
   display: block
   position: relative
   background: -webkit-gradient(linear, left top, left bottom, from(#e5e5e5), to(#c7c7c7))
   background: -moz-linear-gradient(top,  #e5e5e5,  #c7c7c7)
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#e5e5e5, endColorstr=#c7c7c7)"
   -moz-border-radius-bottomleft: 6px
   -moz-border-radius-bottomright: 6px
   -webkit-border-bottom-left-radius: 6px
@@ -324,6 +325,7 @@ header
         color: #2987b6
         background: -webkit-gradient(linear, left top, left bottom, from(#e5e5e5), to(#c7c7c7))
         background: -moz-linear-gradient(top,  #e5e5e5,  #c7c7c7)
+        -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#e5e5e5, endColorstr=#c7c7c7)"
         -webkit-border-radius: 10px
         -moz-border-radius: 10px
         border-radius: 10px
@@ -535,6 +537,7 @@ header
 .warning, .message
   background: #FFF2BF
   background: -webkit-gradient(linear, left top, left bottom, from(#FFF2BF), to(#FFF8DE))
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#fff2bf, endColorstr=#fff8de)"
   background: -moz-linear-gradient(top,  #FFF2BF,  #FFF8DE)
   border: 1px solid #EEE
   border-left: none
@@ -549,6 +552,7 @@ section.features.nullborder.message, div.section.features.nullborder.message
   background: #d9d9d9
   background: -moz-linear-gradient(top, #e6e6e6, #d9d9d9)
   background: -webkit-gradient(linear, left top, left bottom, from(#e6e6e6), to(#d9d9d9))
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#e6e6e6, endColorstr=#d9d9d9)"
   -moz-box-shadow: $button-box-shadow-value
   -webkit-box-shadow: $button-box-shadow-value
   box-shadow: $button-box-shadow-value
@@ -591,6 +595,7 @@ img, .wide img
     background: #FFF
     background: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#F9F9F9))
     background: -moz-linear-gradient(top,  #FFF,  #F9F9F9)
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#ffffff, endColorstr=#f9f9f9)"
     padding: 6px
     -moz-box-shadow: 2px 2px 6px rgba(0,0,0,0.15)
     -webkit-box-shadow: 2px 2px 6px rgba(0,0,0,0.15)
@@ -603,6 +608,7 @@ button, .button, a.button
   text-shadow: 0 1px 0 #1e6586
   background: -webkit-gradient(linear, left top, left bottom, from(#45add2), to(#2886bb))
   background: -moz-linear-gradient(top,  #45add2,  #2886bb)
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#45add2, endColorstr=#2886bb)"
   -webkit-border-radius: 4px
   -moz-border-radius: 4px
   border-radius: 4px
@@ -612,3 +618,4 @@ button, .button, a.button
 button:hover, .button:hover, a.button:hover  
   background: -webkit-gradient(linear, left top, left bottom, from(darken(#45add2,5%)), to(darken(#2886bb,5%)))
   background: -moz-linear-gradient(top, darken(#45add2,5%), darken(#2886bb,5%))
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#45add2, endColorstr=#2886bb)"
