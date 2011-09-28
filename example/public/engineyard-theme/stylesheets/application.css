@@ -1663,7 +1663,7 @@ body {
   background: #efefef url("/engineyard-theme/images/bg_sky.png") repeat-x;
   background-position: 0 0; }
 
-header, footer, article, section, aside, nav {
+header, footer, article, section, aside, nav, div.section, div.nav {
   display: block; }
 
 #container {
@@ -1785,7 +1785,7 @@ strong {
   font-weight: 300;
   color: #999999; }
 
-section {
+section, div.section {
   clear: both; }
 
 code {
@@ -1996,15 +1996,15 @@ header {
         border-radius: 10px;
         padding: 2px 12px;
         border: 1px solid #b1aca9; }
-  header nav {
+  header nav, header div.nav {
     position: absolute;
     left: 120px;
     top: 35px;
     color: black;
     font-size: 16px; }
-    header nav ul {
+    header nav ul, header div.nav ul {
       padding: 0; }
-      header nav ul li {
+      header nav ul li, header div.nav ul li {
         float: left;
         display: block;
         position: relative;
@@ -2012,28 +2012,28 @@ header {
         padding: 0;
         list-style-type: none;
         font-size: 16px; }
-        header nav ul li span {
+        header nav ul li span, header div.nav ul li span {
           color: #17181f;
           padding: 6px 8px 6px 0;
           text-shadow: 0 1px 0 white;
           font-weight: normal;
           margin: 1px; }
-          header nav ul li span:hover {
+          header nav ul li span:hover, header div.nav ul li span:hover {
             color: black; }
-        header nav ul li span:after {
+        header nav ul li span:after, header div.nav ul li span:after {
           content: "";
           float: right;
           height: 8px;
           width: 10px;
           margin: 8px 29px 0 0; }
-        header nav ul li span.drop:after {
+        header nav ul li span.drop:after, header div.nav ul li span.drop:after {
           background: url("/engineyard-theme/images/header_sprite.png") transparent;
           background-position: 0 0; }
-        header nav ul li span.drop:hover:after {
+        header nav ul li span.drop:hover:after, header div.nav ul li span.drop:hover:after {
           background-position: 0 -8px; }
-        header nav ul li.selected span {
+        header nav ul li.selected span, header div.nav ul li.selected span {
           color: #0870ab; }
-        header nav ul li div {
+        header nav ul li div, header div.nav ul li div {
           margin: 0;
           float: none;
           display: none;
@@ -2043,7 +2043,7 @@ header {
           background: transparent;
           min-width: 180px;
           left: 0; }
-          header nav ul li div ul {
+          header nav ul li div ul, header div.nav ul li div ul {
             -moz-box-shadow: 0 1px 3px #888888;
             -webkit-box-shadow: 0 1px 3px #888888;
             box-shadow: 0 1px 4px #888888;
@@ -2052,7 +2052,7 @@ header {
             background: -moz-linear-gradient(center top, #d6d6d6 0, #eaeaea 100%);
             margin: 18px 0 0;
             border-top: 1px solid #dbdbdb; }
-            header nav ul li div ul li {
+            header nav ul li div ul li, header div.nav ul li div ul li {
               float: none;
               clear: both;
               margin: 4px 12px;
@@ -2060,21 +2060,21 @@ header {
               -moz-box-shadow: 0 0 0;
               -webkit-box-shadow: 0 0 0;
               box-shadow: 0 0 0; }
-              header nav ul li div ul li a:link, header nav ul li div ul li a:visited {
+              header nav ul li div ul li a:link, header nav ul li div ul li a:visited, header div.nav ul li div ul li a:link, header div.nav ul li div ul li a:visited {
                 padding: 0 5px;
                 clear: both;
                 display: block;
                 color: #7d8191; }
-              header nav ul li div ul li a:hover {
+              header nav ul li div ul li a:hover, header div.nav ul li div ul li a:hover {
                 color: #4d505b !important; }
-            header nav ul li div ul li:first-child {
+            header nav ul li div ul li:first-child, header div.nav ul li div ul li:first-child {
               padding-top: 8px;
               border: none; }
-            header nav ul li div ul li:last-child {
+            header nav ul li div ul li:last-child, header div.nav ul li div ul li:last-child {
               padding-bottom: 12px; }
-            header nav ul li div ul a, header nav ul li div ul a:visited {
+            header nav ul li div ul a, header nav ul li div ul a:visited, header div.nav ul li div ul a, header div.nav ul li div ul a:visited {
               color: #17181f; }
-        header nav ul li:hover div {
+        header nav ul li:hover div, header div.nav ul li:hover div {
           display: block; }
 
 .search {
@@ -2227,7 +2227,7 @@ header {
   border: none;
   margin: 1.5em 0; }
 
-section.features.nullborder.message {
+section.features.nullborder.message, div.section.features.nullborder.message {
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
@@ -2238,7 +2238,7 @@ section.features.nullborder.message {
   -webkit-box-shadow: 0 1px 2px #999999;
   box-shadow: 0 1px 2px #999999;
   padding: 5px; }
-  section.features.nullborder.message h4 {
+  section.features.nullborder.message h4, div.section.features.nullborder.message h4 {
     margin-top: 10px; }
 
 .errors {

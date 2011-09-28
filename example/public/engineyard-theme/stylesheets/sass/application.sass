@@ -15,7 +15,7 @@ body
   margin: 0
   background: #efefef url('/engineyard-theme/images/bg_sky.png') repeat-x
   background-position: 0 0
-header, footer, article, section, aside, nav
+header, footer, article, section, aside, nav, div.section, div.nav
   display: block
 #container
   font-size: 1em
@@ -119,7 +119,7 @@ strong
 .light
   font-weight: 300
   color: #999
-section
+section, div.section
   clear: both
 code
   font: 12px Monaco, Courier New, mono
@@ -330,7 +330,7 @@ header
         padding: 2px 12px
         border: 1px solid #b1aca9
       
-  nav
+  nav, div.nav
     position: absolute
     left: 120px
     top: 35px
@@ -544,7 +544,7 @@ header
 .message
   border: none
   margin: 1.5em 0 
-section.features.nullborder.message
+section.features.nullborder.message, div.section.features.nullborder.message
   @include rounded-box  
   background: #d9d9d9
   background: -moz-linear-gradient(top, #e6e6e6, #d9d9d9)
