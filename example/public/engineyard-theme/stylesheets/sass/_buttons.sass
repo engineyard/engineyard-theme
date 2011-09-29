@@ -1,0 +1,34 @@
+// Use // instead of /* */ to hide from production
+
+// --------------------------------------------------
+
+/* BUTTONS
+// - Button Mixins / Variables
+// - Styles
+
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Styles
+// --------------------------------------------------
+
+
+button
+  width: auto
+  overflow: visible
+
+button, a.button, form .button
+  @include reset
+  @include button
+  &:focus, &:hover
+    @include button-hover
+  &:active
+    @include button-active
+    outline: 0
+      
+button.action, a.action
+  @include button-colored
+  &:focus, &:hover
+    @include button-colored-hover
+  &:active
+    @include button-colored-active
