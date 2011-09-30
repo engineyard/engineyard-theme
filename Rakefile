@@ -12,7 +12,7 @@ require 'rake'
 PKG_FILES = FileList[
   '[a-zA-Z]*',
   'app/**/*',
-  'example/public/engineyard-theme/**/*',
+  'vendor/**/*',
   'lib/**/*'
 ]
 
