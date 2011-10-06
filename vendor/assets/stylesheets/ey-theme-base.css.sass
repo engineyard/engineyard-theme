@@ -15,14 +15,14 @@ body
   text-rendering: optimizeLegibility
   -webkit-font-smoothing: antialiased
   margin: 0
-  background: #efefef url('/assets/bg_sky.png') repeat-x
+  background: #efefef image-url("bg_sky.png") repeat-x
   background-position: 0 0
 header, footer, article, section, aside, nav, div.section, div.nav
   display: block
 #container
   font-size: 1em
   line-height: 1.5em
-  background: transparent url('/assets/bg_cloudline.png') repeat-x
+  background: transparent image-url("bg_cloudline.png") repeat-x
   background-position: 0 200px
 hr
   border: 0 #DDD solid
@@ -216,9 +216,9 @@ thead
   .active
     color: #000
   .asc
-    background: url(/assets/icn-asc.png) no-repeat right 6px
+    background: image-url("icn-asc.png") no-repeat right 6px
   .desc
-    background: url(/assets/icn-dsc.png) no-repeat right 6px
+    background: image-url("icn-dsc.png") no-repeat right 6px
 tbody
   font-size: 95%
 table.layout
@@ -284,7 +284,7 @@ header, div.header
   h1
     margin: 0
     overflow: hidden
-    background: url(/assets/logo.png) no-repeat left top
+    background: image-url("logo.png") no-repeat left top
     height: 81px
     width: 50px
     position: absolute
@@ -366,7 +366,7 @@ header, div.header
           width: 10px
           margin: 8px 29px 0 0
         span.drop:after
-          background: url('/assets/header_sprite.png') transparent
+          background: image-url("header_sprite.png") transparent
           background-position: 0 0
         span.drop:hover:after
           background-position: 0 -8px
@@ -423,7 +423,7 @@ header, div.header
       line-height: 12px
       font-size: 12px
       border: 1px solid #7e7e7f
-      background: url('/assets/header_sprite.png') white no-repeat
+      background: image-url("header_sprite.png") white no-repeat
       background-position: -3px -18px
       padding-left: 20px
       
@@ -444,7 +444,7 @@ header, div.header
   padding: 20px
   color: $font-color-dark
   div.newsletter
-    background: url(/assets/icn_newsletter.png) no-repeat top left
+    background: image-url("icn_newsletter.png") no-repeat top left
     padding-left: 65px
     p
       margin-bottom: 5px
@@ -476,7 +476,7 @@ header, div.header
     display: inline-block
     width: 16px
     height: 16px
-    background: url('/assets/header_sprite.png') transparent
+    background: image-url("header_sprite.png") transparent
     text-indent: -10000px
     &.facebook
       background-position: 0 -42px

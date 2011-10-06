@@ -42,3 +42,4 @@ pkg
 #*.swp
 
 example/.*
+example/public/assets/*
