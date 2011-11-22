@@ -32,13 +32,8 @@
               =link_to(content_for?(:branding) ? yield(:branding) : 'Engine Yard, Inc.', '/') 
             %ul.utility
               %li 
-                866-518-YARD 
-                %small
-                  (9273)
-              %li 
                 = link_to 'Get Started', 'https://login.engineyard.com/signup'
-              %li 
-                = link_to 'Sign In', 'https://cloud.engineyard.com'
+                = link_to 'Sign In', 'https://cloud.engineyard.com', :class => 'signin'
             =render('shared/global_nav')
       .wrapper        
         #content
