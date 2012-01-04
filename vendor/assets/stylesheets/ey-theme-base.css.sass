@@ -15,7 +15,7 @@ body
   text-rendering: optimizeLegibility
   -webkit-font-smoothing: antialiased
   margin: 0
-  background: #efefef image-url("bg_sky.png") repeat-x
+  background: #fff image-url("bg_sky.png") repeat-x
   background-position: 0 0
 header, footer, article, section, aside, nav, div.section, div.nav
   display: block
@@ -23,7 +23,7 @@ header, footer, article, section, aside, nav, div.section, div.nav
   font-size: 1em
   line-height: 1.5em
   background: transparent image-url("bg_cloudline.png") repeat-x
-  background-position: 0 200px
+  background-position: 0 250px
 hr
   border: 0 #DDD solid
   border-top-width: 1px
@@ -269,9 +269,9 @@ header, div.header
   padding: 0 20px
   display: block
   position: relative
-  background: -webkit-gradient(linear, left top, left bottom, from(#e5e5e5), to(#c7c7c7))
-  background: -moz-linear-gradient(top,  #e5e5e5,  #c7c7c7)
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#e5e5e5, endColorstr=#c7c7c7)"
+  background: -webkit-gradient(linear, left top, left bottom, from(#ebe9e9), to(#d2d0d0))
+  background: -moz-linear-gradient(top,  #ebe9e9,  #d2d0d0)
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#ebe9e9, endColorstr=#d2d0d0)"
   -moz-border-radius-bottomleft: 6px
   -moz-border-radius-bottomright: 6px
   -webkit-border-bottom-left-radius: 6px
@@ -306,40 +306,76 @@ header, div.header
     li
       display: inline-block
       margin-left: 10px
-  .utility
-    float: right
-    margin: 10px 45px 0 0
-    text-align: right    
-    color: #7d8190
-    li:first-child
-      display: block 
-      margin-bottom: 12px
-      font-size: 14px
-    a 
+  #utility
+    position: absolute
+    right: 45px
+    color: #fff 
+    text-shadow: 0 1px 0 #000
+    padding: 2px 20px
+    background: -moz-linear-gradient(center top , #68A9C5 0pt, #518AB0 100%) repeat scroll 0 0 transparent
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0, #68A9C5), color-stop(1, #518AB0))
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#68A9C5, endColorstr=#518AB0)"
+    border: solid #3b5a75
+    -moz-border-radius: 0pt 0pt 2px 2px
+    -webkit-border-radius: 0pt 0pt 2px 2px
+    border-radius: 0pt 0pt 2px 2px
+    border-width: 0pt 1px 1px
+    -moz-box-shadow: $button-box-shadow-value
+    -webkit-box-shadow: $button-box-shadow-value
+    box-shadow: $button-box-shadow-value
+    div
+      margin: 0
+      float: none
+      display: none
+      font-size: 13px
+      z-index: 100
+      position: absolute
+      background: transparent
+      right: 0
+      ul
+        @include shadow
+        background: #eee
+        @include diagonal_gradient_light_grey
+        margin: 4px 0 0
+        border-top: 1px solid #dbdbdb
+        padding: 0
+        hr
+          border-color: #cec9c4
+          margin: 10px 20px
+        li
+          float: none
+          clear: both
+          margin: 0px 12px
+          white-space: nowrap
+          @include shadow-clear
+          a:link, a:visited
+            padding: 0 5px
+            clear: both
+            display: block
+            color: $font-nav-color-light
+            text-shadow: none
+          a:hover
+            color: darken($font-nav-color-light, 20%) !important
+        li:first-child 
+          padding-top: 8px
+          border: none
+        li:last-child 
+          padding-bottom: 12px
+        a, a:visited
+          color: $font-nav-color-dark
+    &:hover
+      div
+        display: block
+    &:before
+      content: ''
       display: inline-block
-      margin-left: 15px
-      font-weight: normal
-      color: #444656
-      text-shadow: 0 1px 0 #fff
-    a.signin
-      color: #2886bb
-    a:hover
-      color: darken(#444656, 20%)
-      &.login
-        display: inline-block
-        color: #2987b6
-        background: -webkit-gradient(linear, left top, left bottom, from(#e5e5e5), to(#c7c7c7))
-        background: -moz-linear-gradient(top,  #e5e5e5,  #c7c7c7)
-        -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#e5e5e5, endColorstr=#c7c7c7)"
-        -webkit-border-radius: 10px
-        -moz-border-radius: 10px
-        border-radius: 10px
-        padding: 2px 12px
-        border: 1px solid #b1aca9
-      
+      background: image-url("header_sprite.png") transparent
+      background-position: 19px -98px
+      height: 11px
+      width: 11px
   nav, div.nav
     position: absolute
-    left: 120px
+    left: 100px
     top: 40px
     color: #000
     font-size: 16px
@@ -439,7 +475,7 @@ header, div.header
         width: 170px
 
 #footer
-  @include box_grey
+  @include box_greydient
   clear: both  
   font-size: $font-size-small
   line-height: 1.25

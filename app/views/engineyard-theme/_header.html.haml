@@ -57,10 +57,13 @@
           - if add_navigation == 'true'
             %h1.branding
               =link_to(content_for?(:branding) ? yield(:branding) : 'Engine Yard, Inc.', '/') 
-            %ul.utility
-              %li 
-                = link_to 'Get Started', 'https://login.engineyard.com/signup'
-                = link_to 'Sign In', 'https://cloud.engineyard.com', :class => 'signin'
+            #utility
+              Log in
+              %div
+                %ul          
+                  %li= link_to('Login to Engine Yard Cloud','https://cloud.engineyard.com')
+                  %hr
+                  %li= link_to('Login to Orchestra Cloud','http://my.orchestra.io')
             =render('shared/global_nav')
       .wrapper        
         #content

@@ -90,6 +90,12 @@ $button-colored-box-shadow-value : 0 1px 2px darken($color-background-alt, 22%)
   border: 1px solid #b3b3b6
   background: #cbcaca
 
+@mixin box_greydient
+  @include box
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ededed), color-stop(1, #c9c9c9))
+  background: -moz-linear-gradient(center top, #ededed 0, #c9c9c9 100%)
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#ededed, endColorstr=#c9c9c9)"
+
 @mixin box_med_grey
   @include box
   border: 1px solid #858587
