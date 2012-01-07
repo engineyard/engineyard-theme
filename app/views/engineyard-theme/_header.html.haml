@@ -57,6 +57,12 @@
           - if add_navigation == 'true'
             %h1.branding
               =link_to(content_for?(:branding) ? yield(:branding) : 'Engine Yard, Inc.', '/') 
+            #search_form
+              :plain
+                <form action="/search" method="get">
+                  <input type="text" name="q" id="searchbox" placeholder="Search" />
+                  <input type="submit" value="" id="searchsubmit" class="gsc-search-button" />
+                </form> 
             #utility
               Log in
               %div
