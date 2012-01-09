@@ -328,6 +328,7 @@ header, div.header
       cursor: pointer
   #utility
     @include blue_gradient
+    @include shadow
     position: absolute
     cursor: default
     right: 45px
@@ -339,9 +340,6 @@ header, div.header
     -webkit-border-radius: 0pt 0pt 2px 2px
     border-radius: 0pt 0pt 2px 2px
     border-width: 0pt 1px 1px
-    -moz-box-shadow: $button-box-shadow-value
-    -webkit-box-shadow: $button-box-shadow-value
-    box-shadow: $button-box-shadow-value
     div
       margin: 0
       float: none
@@ -609,13 +607,11 @@ header, div.header
   margin: 1.5em 0 
 section.features.nullborder.message, div.section.features.nullborder.message
   @include rounded-box  
+  @include shadow
   background: #d9d9d9
   background: -moz-linear-gradient(top, #e6e6e6, #d9d9d9)
   background: -webkit-gradient(linear, left top, left bottom, from(#e6e6e6), to(#d9d9d9))
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#e6e6e6, endColorstr=#d9d9d9)"
-  -moz-box-shadow: $button-box-shadow-value
-  -webkit-box-shadow: $button-box-shadow-value
-  box-shadow: $button-box-shadow-value
   padding: 5px
   h4
     margin-top: 10px  
