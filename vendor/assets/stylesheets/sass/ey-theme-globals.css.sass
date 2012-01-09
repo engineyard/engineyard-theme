@@ -67,7 +67,6 @@ $button-colored-box-shadow-value : 0 1px 2px darken($color-background-alt, 22%)
   -webkit-box-shadow: 0 1px 0px #d8d7d7
   box-shadow: 0 1px 0px #d8d7d7
 
-
 @mixin shadow-clear
   -moz-box-shadow: 0 0 0
   -webkit-box-shadow: 0 0 0
@@ -84,9 +83,24 @@ $button-colored-box-shadow-value : 0 1px 2px darken($color-background-alt, 22%)
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#ebe9e9, endColorstr=#d2d0d0)"
 
 @mixin blue_gradient
+  background: #85a623
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #68A9C5), color-stop(1, #518AB0))
   background: -moz-linear-gradient(center top , #68A9C5 0pt, #518AB0 100%) repeat scroll 0 0 transparent
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#68A9C5, endColorstr=#518AB0)"
+  &.hover:hover
+    background: darken(#518AB0, 5%)
+    background: -moz-linear-gradient(top, darken(#68A9C5, 5%), darken(#518AB0, 5%))
+    background: -webkit-gradient(linear, left top, left bottom, from(darken(#68A9C5, 5%)), to(darken(#518AB0, 5%)))
+
+@mixin green_gradient
+  background: #85a623
+  background: -moz-linear-gradient(top, #bbd65f, #85a623)
+  background: -webkit-gradient(linear, left top, left bottom, from(#bbd65f), to(#85a623))
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#bbd65f, endColorstr=#85a623)"
+  &.hover:hover
+    background: darken(#85a623, 5%)
+    background: -moz-linear-gradient(top, darken(#bbd65f, 5%), darken(#85a623, 5%))
+    background: -webkit-gradient(linear, left top, left bottom, from(darken(#bbd65f, 5%)), to(darken(#85a623, 5%)))
 
 @mixin box
   -moz-border-radius: 6px
@@ -290,3 +304,7 @@ $button-colored-box-shadow-value : 0 1px 2px darken($color-background-alt, 22%)
   @include rounded-box
   font-size: $font-size-main
   line-height: $line-height  
+
+@mixin vertical_divide
+  border: solid #b4b4b4
+  border-width: 0 1px 0 0
