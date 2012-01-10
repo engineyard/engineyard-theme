@@ -492,11 +492,14 @@ header, div.header
         width: 170px
 
 #footer
-  @include box_greydient
+  @include grey_gradient
+  @include shadow
+  @include box
   clear: both  
   font-size: $font-size-small
   line-height: 1.25
   padding: 20px
+  margin-bottom: 14px
   color: $font-color-dark
   div.newsletter
     background: image-url("icn_newsletter.png") no-repeat top left
