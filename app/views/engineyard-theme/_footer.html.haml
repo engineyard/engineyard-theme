@@ -1,94 +1,92 @@
-.clear
-    
-#footer
-  #footer-content
-    .page
-      - if add_navigation == 'true'
-        .grid_3.newsletter
-          %h2.newsletter
-            The Engine Yard Newsletter
-          %p
-            Get Ruby on Rails & PHP news, tips and more
-          :plain
-            <script type="text/javascript"> 
-            var profiling = {
-              isEnabled: false,
-              numberOfProfilingFields: 3,
-              alwaysShowFields: [ 'mktDummyEntry']
-            };
-            </script>
-            <script type="text/javascript">function mktoGetForm() {return document.getElementById('mktForm_1002'); }</script>
-            <form class="lpeRegForm formNotEmpty newsletter" method="post" enctype="application/x-www-form-urlencoded" action="http://na-f.marketo.com/index.php/leadCapture/save" id="mktForm_1002" name="mktForm_1002">
-              <fieldset>
+#footer.page
+  - if add_navigation == 'true'
+    .grid_4
+      .newsletter
+        %h2.newsletter
+          The Engine Yard Newsletter
+        %p
+          Get Ruby on Rails & PHP news, tips and more
+        :plain
+          <script type="text/javascript"> 
+          var profiling = {
+            isEnabled: false,
+            numberOfProfilingFields: 3,
+            alwaysShowFields: [ 'mktDummyEntry']
+          };
+          </script>
+          <script type="text/javascript">function mktoGetForm() {return document.getElementById('mktForm_1002'); }</script>
+          <form class="lpeRegForm formNotEmpty newsletter" method="post" enctype="application/x-www-form-urlencoded" action="http://na-f.marketo.com/index.php/leadCapture/save" id="mktForm_1002" name="mktForm_1002">
+            <fieldset>
 
-                <div class="mktFormReq mktField">
-                  <input class='mktFormText mktFormEmail mktFReq' name="Email" id="Email" type='text' value="" maxlength='255' tabIndex='2' placeholder="Email Address" />
-                  <div class='mktFormMsg'></div>
-                </div>
-                <div id="mktFrmButtons">
-                  <input id='mktFrmSubmit' type='submit' class="cta button" value='Subscribe' name='submitButton' onclick='formSubmit(document.getElementById("mktForm_1002")); return false;' />
-                </div>
-                <input type="text" name="_marketo_comments" value="" class="hidden" />
-                <input type="hidden" name="lpId" value="1009" />
+              <div class="mktFormReq mktField">
+                <input class='mktFormText mktFormEmail mktFReq' name="Email" id="Email" type='text' value="" maxlength='255' tabIndex='2' placeholder="Email Address" />
+                <div class='mktFormMsg'></div>
+              </div>
+              <div id="mktFrmButtons">
+                <input id='mktFrmSubmit' type='submit' class="cta button" value='Subscribe' name='submitButton' onclick='formSubmit(document.getElementById("mktForm_1002")); return false;' />
+              </div>
+              <input type="text" name="_marketo_comments" value="" class="hidden" />
+              <input type="hidden" name="lpId" value="1009" />
 
-                <input type="hidden" name="subId" value="121" />
-                <input type="hidden" name="kw" value="" />
-                <input type="hidden" name="cr" value="" />
-                <input type="hidden" name="searchstr" value="" />
-                <input type="hidden" name="lpurl" value="http://pages.engineyard.com/Blank-Newsletter.html?cr={creative}&kw={keyword}" />
-                <input type="hidden" name="formid" value="1002" />
-                <input type="hidden" name="returnURL" value="http://pages.engineyard.com/SubscribeThanks.html" />
-                <input type="hidden" name="retURL" value="http://pages.engineyard.com/SubscribeThanks.html" />
-                <input type="hidden" name="_mkt_disp" value="return" />
+              <input type="hidden" name="subId" value="121" />
+              <input type="hidden" name="kw" value="" />
+              <input type="hidden" name="cr" value="" />
+              <input type="hidden" name="searchstr" value="" />
+              <input type="hidden" name="lpurl" value="http://pages.engineyard.com/Blank-Newsletter.html?cr={creative}&kw={keyword}" />
+              <input type="hidden" name="formid" value="1002" />
+              <input type="hidden" name="returnURL" value="http://pages.engineyard.com/SubscribeThanks.html" />
+              <input type="hidden" name="retURL" value="http://pages.engineyard.com/SubscribeThanks.html" />
+              <input type="hidden" name="_mkt_disp" value="return" />
 
-                <input type="hidden" name="_mkt_trk" value="%MC0%" />
-              </fieldset>
-            </form>
-            <script type="text/javascript" src="http://na-f.marketo.com/js/mktFormSupport.js"></script>
-            <script type="text/javascript">
-            function formSubmit(elt) {
-              return Mkto.formSubmit(elt);
-            }
-            function formReset(elt) {
-              return Mkto.formReset(elt);
-            }
-            </script>
-        .grid_2
-          %h2 Cloud Products
-          %ul
-            %li= link_to('Engine Yard Cloud','http://engineyard.com/products/cloud')
-            %li= link_to('Engine Yard Managed','http://engineyard.com/products/managed')
-            %li= link_to('Orchestra PHP Cloud','http://engineyard.com/products/orchestra')
-            %li= link_to('Training','http://engineyard.com/university/scheduled_classes')
-            %li= link_to('Professional Services','http://engineyard.com/services')
-        .grid_2
-          %h2 Support
-          %ul                       
-            %li= link_to('Request Support','http://support.cloud.engineyard.com')
-            %li= link_to('Documentation','http://docs.engineyard.com')
-            %li= link_to('Support Policies','http://engineyard.com/products/support-policies')
-            %li= link_to('Privacy Policy','http://engineyard.com/legal/privacy')
-        .grid_2
-          %h2 Community
-          %ul
-            %li= link_to('JRuby','http://www.jruby.org')
-            %li= link_to('Rubinius','http://rubini.us')
-            %li= link_to('Rails Installer','http://www.railsinstaller.com')
-            %li= link_to('Ruby Jobs','http://jobs.engineyard.com')
-            %li= link_to('Rails Developers','http://www.railsdevelopment.com')
-        .grid_2
-          %h2 About
-          %ul
-            %li= link_to('Company', 'http://engineyard.com/company')
-            %li= link_to('Careers', 'http://engineyard.com/company/careers')
-            %li= link_to('Leadership Team', 'http://engineyard.com/company/team')
-            %li= link_to('Press Center', 'http://engineyard.com/company/news')
-            %li
-              = link_to('Twitter', 'http://twitter.com/engineyard', :class => 'icon twitter')
-              = link_to('Facebook', 'http://facebook.com/engineyard', :class => 'icon facebook')
-              = link_to('LinkedIn', 'http://www.linkedin.com/groups?gid=111752', :class => 'icon linkedin')
-.copyright.wrapper
-  %p Copyright &copy; Engine Yard, Inc. All rights reserved.
+              <input type="hidden" name="_mkt_trk" value="%MC0%" />
+            </fieldset>
+          </form>
+          <script type="text/javascript" src="http://na-f.marketo.com/js/mktFormSupport.js"></script>
+          <script type="text/javascript">
+          function formSubmit(elt) {
+            return Mkto.formSubmit(elt);
+          }
+          function formReset(elt) {
+            return Mkto.formReset(elt);
+          }
+          </script>
+    .grid_2
+      %h2 Cloud Products
+      %ul
+        %li= link_to('Engine Yard Cloud','http://engineyard.com/products/cloud')
+        %li= link_to('Engine Yard Managed','http://engineyard.com/products/managed')
+        %li= link_to('Orchestra PHP Cloud','http://engineyard.com/products/orchestra')
+        %li= link_to('Training','http://engineyard.com/university/scheduled_classes')
+        %li= link_to('Professional Services','http://engineyard.com/services')
+    .grid_2
+      %h2 Support
+      %ul                       
+        %li= link_to('Request Support','http://support.cloud.engineyard.com')
+        %li= link_to('Documentation','http://docs.engineyard.com')
+        %li= link_to('Support Policies','http://engineyard.com/products/support-policies')
+        %li= link_to('Privacy Policy','http://engineyard.com/legal/privacy')
+    .grid_2
+      %h2 Community
+      %ul
+        %li= link_to('JRuby','http://www.jruby.org')
+        %li= link_to('Rubinius','http://rubini.us')
+        %li= link_to('Rails Installer','http://www.railsinstaller.com')
+        %li= link_to('Ruby Jobs','http://jobs.engineyard.com')
+        %li= link_to('Rails Developers','http://www.railsdevelopment.com')
+    .grid_2
+      %h2 About
+      %ul
+        %li= link_to('Company', 'http://engineyard.com/company')
+        %li= link_to('Careers', 'http://engineyard.com/company/careers')
+        %li= link_to('Leadership Team', 'http://engineyard.com/company/team')
+        %li= link_to('Press Center', 'http://engineyard.com/company/news')
+        %li
+          = link_to('Twitter', 'http://twitter.com/engineyard', :class => 'icon twitter')
+          = link_to('Facebook', 'http://facebook.com/engineyard', :class => 'icon facebook')
+          = link_to('LinkedIn', 'http://www.linkedin.com/groups?gid=111752', :class => 'icon linkedin')
+.copyright.page
+  .grid_12
+    %p Copyright &copy; Engine Yard, Inc. All rights reserved.
 .hidden
 = yield :additional_scripts
 - unless Rails.env == 'development' || add_js != 'true'

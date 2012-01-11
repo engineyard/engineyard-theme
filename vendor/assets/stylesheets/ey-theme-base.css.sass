@@ -51,10 +51,6 @@ ul
         margin-left: 0
 li
   margin-left: 30px
-  
-.wrapper
-  width: 980px
-  margin: 0 auto
 
 ///////////////////
 // HTML Elements //
@@ -268,7 +264,6 @@ textarea
 header, div.header
   @include grey_gradient
   @include shadow
-  padding: 0 20px
   display: block
   position: relative
   -moz-border-radius-bottomleft: 6px
@@ -419,7 +414,7 @@ header, div.header
           float: right
           height: 8px
           width: 10px
-          margin: 8px 35px 0 0
+          margin: 8px 32px 0 0
         span.drop:after
           background: image-url("header_sprite.png") transparent
           background-position: 0 0
@@ -495,12 +490,11 @@ header, div.header
   @include grey_gradient
   @include shadow
   @include box
-  clear: both  
   font-size: $font-size-small
   line-height: 1.25
-  padding: 20px
   margin-bottom: 14px
   color: $font-color-dark
+  padding: 10px 0
   div.newsletter
     background: image-url("icn_newsletter.png") no-repeat top left
     padding-left: 65px
@@ -551,9 +545,7 @@ header, div.header
   color: $font-color-light
   font-size: $font-size-main
   p
-    margin-left: 656px
-    text-align: left
-    width: 300px
+    text-align: right
 
 ////////////////////
 // Featured Icons //

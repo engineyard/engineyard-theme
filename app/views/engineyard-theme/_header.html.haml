@@ -52,25 +52,25 @@
 
   %body{:id => content_for?(:body_id) ? yield(:body_id) : ''}
     #container
-      .wrapper
+      .page
         .header
-          - if add_navigation == 'true'
-            %h1.branding
-              =link_to(content_for?(:branding) ? yield(:branding) : 'Engine Yard, Inc.', '/') 
-            #search_form
-              :plain
-                <form action="/search" method="get">
-                  <input type="text" name="q" id="searchbox" placeholder="Search" />
-                  <input type="submit" value="" id="searchsubmit" class="gsc-search-button" />
-                </form> 
-            #utility
-              Log in
-              %div
-                %ul          
-                  %li= link_to('Login to Engine Yard Cloud','https://cloud.engineyard.com')
-                  %hr
-                  %li= link_to('Login to Orchestra PHP Cloud','http://my.orchestra.io')
-            =render('shared/global_nav')
-      .wrapper        
+          .grid_12
+            - if add_navigation == 'true'
+              %h1.branding
+                =link_to(content_for?(:branding) ? yield(:branding) : 'Engine Yard, Inc.', '/') 
+              #search_form
+                :plain
+                  <form action="/search" method="get">
+                    <input type="text" name="q" id="searchbox" placeholder="Search" />
+                    <input type="submit" value="" id="searchsubmit" class="gsc-search-button" />
+                  </form> 
+              #utility
+                Log in
+                %div
+                  %ul          
+                    %li= link_to('Login to Engine Yard Cloud','https://cloud.engineyard.com')
+                    %hr
+                    %li= link_to('Login to Orchestra PHP Cloud','http://my.orchestra.io')
+              =render('shared/global_nav')
         #content
           =additional_header if additional_header.present?
