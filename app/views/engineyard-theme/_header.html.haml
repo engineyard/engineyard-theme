@@ -54,23 +54,23 @@
     #container
       .page
         .header
-          .grid_12
-            - if add_navigation == 'true'
-              %h1.branding
-                =link_to(content_for?(:branding) ? yield(:branding) : 'Engine Yard, Inc.', '/') 
-              #search_form
-                :plain
-                  <form action="/search" method="get">
-                    <input type="text" name="q" id="searchbox" placeholder="Search" />
-                    <input type="submit" value="" id="searchsubmit" class="gsc-search-button" />
-                  </form> 
-              #utility
+          - if add_navigation == 'true'
+            %h1.branding
+              =link_to(content_for?(:branding) ? yield(:branding) : 'Engine Yard, Inc.', '/') 
+            #search_form.grid_3.prefix_7
+              :plain
+                <form action="/search" method="get">
+                  <input type="text" name="q" id="searchbox" placeholder="Search" />
+                  <input type="submit" value="" id="searchsubmit" class="gsc-search-button" />
+                </form> 
+            .grid_2
+              %button#utility
                 Log in
                 %div
                   %ul          
                     %li= link_to('Login to Engine Yard Cloud','https://cloud.engineyard.com')
                     %hr
                     %li= link_to('Login to Orchestra PHP Cloud','http://my.orchestra.io')
-              =render('shared/global_nav')
+            =render('shared/global_nav')
         #content
           =additional_header if additional_header.present?

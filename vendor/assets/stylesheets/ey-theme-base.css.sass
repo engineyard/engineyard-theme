@@ -300,9 +300,8 @@ header, div.header
       display: inline-block
       margin-left: 10px
   #search_form
-    position: absolute
     cursor: default
-    right: 175px
+    text-align: right
 
     #searchbox
       width: 140px
@@ -324,10 +323,9 @@ header, div.header
   #utility
     @include blue_gradient
     @include shadow
-    position: absolute
     cursor: default
-    right: 45px
     color: #fff 
+    font-weight: normal
     text-shadow: 0 1px 0 #000
     padding: 2px 20px
     border: solid #3b5a75
@@ -386,9 +384,8 @@ header, div.header
       height: 11px
       width: 11px
   nav, div.nav
-    position: absolute
-    left: 100px
-    top: 40px
+    clear: both
+    margin-top: 15px
     color: #000
     font-size: 16px
     ul  
@@ -401,6 +398,9 @@ header, div.header
         padding: 0
         list-style-type: none
         font-size: 16px
+        &:last-child
+          span
+            padding: 6px 0
         span
           color: $font-nav-color-dark
           padding: 6px 8px 6px 0
