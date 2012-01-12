@@ -64,8 +64,9 @@
                   <input type="submit" value="" id="searchsubmit" class="gsc-search-button" />
                 </form> 
             .grid_2
-              %button#utility
-                Log in
+              %span#utility
+                %a{:href => '#'} 
+                  Log in
                 %div
                   %ul          
                     %li= link_to('Login to Engine Yard Cloud','https://cloud.engineyard.com')
