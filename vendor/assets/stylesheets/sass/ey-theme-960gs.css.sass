@@ -18,7 +18,7 @@
 // Containers
 // --------------------------------------------------
 
-.page
+.container_12, .container_16
   margin-left: auto
   margin-right: auto
   width: 960px
@@ -40,42 +40,94 @@
   margin-left: 10px
   margin-right: 10px
 
-.grid_1
+.container_12 .grid_1
   @include column
   width: 60px
-.grid_2
+.container_12 .grid_2
   @include column
   width: 140px
-.grid_3
+.container_12 .grid_3,
+.container_16 .grid_4
   @include column
   width: 220px
-.grid_4
+.container_12 .grid_4
   @include column
   width: 300px
-.grid_5
+.container_12 .grid_5
   @include column
   width: 380px
-.grid_6
+.container_12 .grid_6,
+.container_16 .grid_8
   @include column
   width: 460px
-.grid_7
+.container_12 .grid_7
   @include column
   width: 540px
-.grid_8
+.container_12 .grid_8
   @include column
   width: 620px
-.grid_9
+.container_12 .grid_9,
+.container_16 .grid_12
   @include column
   width: 700px
-.grid_10
+.container_12 .grid_10
   @include column
   width: 780px
-.grid_11
+.container_12 .grid_11
   @include column
   width: 860px
-.grid_12
+.container_12 .grid_12,
+.container_16 .grid_16
   @include column
   width: 940px
+
+.container_16 .grid_1
+  @include column
+  width: 40px
+  
+.container_16 .grid_2
+  @include column
+  width: 100px
+  
+.container_16 .grid_3
+  @include column
+  width: 160px
+  
+.container_16 .grid_5
+  @include column
+  width: 280px
+  
+.container_16 .grid_6
+  @include column
+  width: 340px
+  
+.container_16 .grid_7
+  @include column
+  width: 400px
+  
+.container_16 .grid_9
+  @include column
+  width: 520px
+  
+.container_16 .grid_10
+  @include column
+  width: 580px
+  
+.container_16 .grid_11
+  @include column
+  width: 640px
+  
+.container_16 .grid_13
+  @include column
+  width: 760px
+  
+.container_16 .grid_14
+  @include column
+  width: 820px
+  
+.container_16 .grid_15
+  @include column
+  width: 880px
 
 // --------------------------------------------------
 // Grid >> Children (Alpha ~ First, Omega ~ Last)
@@ -91,28 +143,52 @@
 // --------------------------------------------------
 // Sizing for column spacing
 // --------------------------------------------------
-$gs-size-1           :  80px
-$gs-size-1-negative  : -80px
-$gs-size-2           :  160px
-$gs-size-2-negative  : -160px
-$gs-size-3           :  240px
-$gs-size-3-negative  : -240px
-$gs-size-4           :  320px
-$gs-size-4-negative  : -320px
-$gs-size-5           :  400px
-$gs-size-5-negative  : -400px
-$gs-size-6           :  480px
-$gs-size-6-negative  : -480px
-$gs-size-7           :  560px
-$gs-size-7-negative  : -560px
-$gs-size-8           :  640px
-$gs-size-8-negative  : -640px
-$gs-size-9           :  720px
-$gs-size-9-negative  : -720px
-$gs-size-10          :  800px
-$gs-size-10-negative : -800px
-$gs-size-11          :  880px
-$gs-size-11-negative : -880px
+$gs-size-12-1           :  80px
+$gs-size-12-1-negative  : -80px
+$gs-size-12-2           :  160px
+$gs-size-12-2-negative  : -160px
+$gs-size-12-3           :  240px
+$gs-size-12-3-negative  : -240px
+$gs-size-12-4           :  320px
+$gs-size-12-4-negative  : -320px
+$gs-size-12-5           :  400px
+$gs-size-12-5-negative  : -400px
+$gs-size-12-6           :  480px
+$gs-size-12-6-negative  : -480px
+$gs-size-12-7           :  560px
+$gs-size-12-7-negative  : -560px
+$gs-size-12-8           :  640px
+$gs-size-12-8-negative  : -640px
+$gs-size-12-9           :  720px
+$gs-size-12-9-negative  : -720px
+$gs-size-12-10          :  800px
+$gs-size-12-10-negative : -800px
+$gs-size-12-11          :  880px
+$gs-size-12-11-negative : -880px
+$gs-size-16-1           :  60px
+$gs-size-16-1-negative  : -60px
+$gs-size-16-2           :  120px
+$gs-size-16-2-negative  : -120px
+$gs-size-16-3           :  180px
+$gs-size-16-3-negative  : -180px
+$gs-size-16-5           :  300px
+$gs-size-16-5-negative  : -300px
+$gs-size-16-6           :  360px
+$gs-size-16-6-negative  : -360px
+$gs-size-16-7           :  420px
+$gs-size-16-7-negative  : -420px
+$gs-size-16-9           :  540px
+$gs-size-16-9-negative  : -540px
+$gs-size-16-10           :  600px
+$gs-size-16-10-negative  : -600px
+$gs-size-16-11           :  660px
+$gs-size-16-11-negative  : -660px
+$gs-size-16-13           :  780px
+$gs-size-16-13-negative  : -780px
+$gs-size-16-14           :  840px
+$gs-size-16-14-negative  : -840px
+$gs-size-16-15           :  900px
+$gs-size-16-15-negative  : -900px
 
 .push_1, .pull_1, .push_2, .pull_2, .push_3, .pull_3, .push_4, .pull_4, .push_5, .pull_5, .push_6, .pull_6, .push_7, .pull_7, .push_8, .pull_8, .push_9, .pull_9, .push_10, .pull_10, .push_11, .pull_11, .push_12, .pull_12, .push_13, .pull_13, .push_14, .pull_14, .push_15, .pull_15
   position: relative
@@ -123,112 +199,218 @@ $gs-size-11-negative : -880px
 // Prefix Extra Space
 // --------------------------------------------------
 
-.prefix_1
-  padding-left: $gs-size-1
-.prefix_2
-  padding-left: $gs-size-2
-.prefix_3
-  padding-left: $gs-size-3
-.prefix_4
-  padding-left: $gs-size-4
-.prefix_5
-  padding-left: $gs-size-5
-.prefix_6
-  padding-left: $gs-size-6
-.prefix_7
-  padding-left: $gs-size-7
-.prefix_8
-  padding-left: $gs-size-8
-.prefix_9
-  padding-left: $gs-size-9
-.prefix_10
-  padding-left: $gs-size-10
-.prefix_11
-  padding-left: $gs-size-11
+.container_12 .prefix_1
+  padding-left: $gs-size-12-1
+.container_12 .prefix_2
+  padding-left: $gs-size-12-2
+.container_12 .prefix_3,
+.container_16 .prefix_4
+  padding-left: $gs-size-12-3
+.container_12 .prefix_4
+  padding-left: $gs-size-12-4
+.container_12 .prefix_5
+  padding-left: $gs-size-12-5
+.container_12 .prefix_6,
+.container_16 .prefix_8
+  padding-left: $gs-size-12-6
+.container_12 .prefix_7
+  padding-left: $gs-size-12-7
+.container_12 .prefix_8
+  padding-left: $gs-size-12-8
+.container_12 .prefix_9
+  padding-left: $gs-size-12-9
+.container_16 .prefix_12,
+.container_12 .prefix_10
+  padding-left: $gs-size-12-10
+.container_12 .prefix_11
+  padding-left: $gs-size-12-11
 
-
+.container_16 .prefix_1
+  padding-left: $gs-size-16-1
+.container_16 .prefix_2
+  padding-left: $gs-size-16-2
+.container_16 .prefix_3
+  padding-left: $gs-size-16-3
+.container_16 .prefix_5
+  padding-left: $gs-size-16-5
+.container_16 .prefix_6
+  padding-left: $gs-size-16-6
+.container_16 .prefix_7
+  padding-left: $gs-size-16-7
+.container_16 .prefix_9
+  padding-left: $gs-size-16-9
+.container_16 .prefix_10
+  padding-left: $gs-size-16-10
+.container_16 .prefix_11
+  padding-left: $gs-size-16-11
+.container_16 .prefix_13
+  padding-left: $gs-size-16-13
+.container_16 .prefix_14
+  padding-left: $gs-size-16-14
+.container_16 .prefix_15
+  padding-left: $gs-size-16-15
 
 // --------------------------------------------------
 // Suffix Extra Space
 // --------------------------------------------------
 
-.suffix_1
-  padding-right: $gs-size-1
-.suffix_2
-  padding-right: $gs-size-2
-.suffix_3
-  padding-right: $gs-size-3
-.suffix_4
-  padding-right: $gs-size-4
-.suffix_5
-  padding-right: $gs-size-5
-.suffix_6
-  padding-right: $gs-size-6
-.suffix_7
-  padding-right: $gs-size-7
-.suffix_8
-  padding-right: $gs-size-8
-.suffix_9
-  padding-right: $gs-size-9
-.suffix_10
-  padding-right: $gs-size-10
-.suffix_11
-  padding-right: $gs-size-11
+.container_12 .suffix_1
+  padding-right: $gs-size-12-1
+.container_12 .suffix_2
+  padding-right: $gs-size-12-2
+.container_12 .suffix_3,
+.container_16 .suffix_4
+  padding-right: $gs-size-12-3
+.container_12 .suffix_4
+  padding-right: $gs-size-12-4
+.container_12 .suffix_5
+  padding-right: $gs-size-12-5
+.container_12 .suffix_6,
+.container_16 .suffix_8
+  padding-right: $gs-size-12-6
+.container_12 .suffix_7
+  padding-right: $gs-size-12-7
+.container_12 .suffix_8
+  padding-right: $gs-size-12-8
+.container_12 .suffix_9,
+.container_16 .suffix_12
+  padding-right: $gs-size-12-9
+.container_12 .suffix_10
+  padding-right: $gs-size-12-10
+.container_12 .suffix_11
+  padding-right: $gs-size-12-11
 
-
+.container_16 .suffix_1
+  padding-right: $gs-size-16-1
+.container_16 .suffix_2
+  padding-right: $gs-size-16-2
+.container_16 .suffix_3
+  padding-right: $gs-size-16-3
+.container_16 .suffix_5
+  padding-right: $gs-size-16-5
+.container_16 .suffix_6
+  padding-right: $gs-size-16-6
+.container_16 .suffix_7
+  padding-right: $gs-size-16-7
+.container_16 .suffix_9
+  padding-right: $gs-size-16-9
+.container_16 .suffix_10
+  padding-right: $gs-size-16-10
+.container_16 .suffix_11
+  padding-right: $gs-size-16-11
+.container_16 .suffix_13
+  padding-right: $gs-size-16-13
+.container_16 .suffix_14
+  padding-right: $gs-size-16-14
+.container_16 .suffix_15
+  padding-right: $gs-size-16-15
 
 // --------------------------------------------------
 // Push Space
 // --------------------------------------------------
 
-.push_1
-  left: $gs-size-1
-.push_2
-  left: $gs-size-2
-.push_3
-  left: $gs-size-3
-.push_4
-  left: $gs-size-4
-.push_5
-  left: $gs-size-5
-.push_6
-  left: $gs-size-6
-.push_7
-  left: $gs-size-7
-.push_8
-  left: $gs-size-8
-.push_9
-  left: $gs-size-9
-.push_10
-  left: $gs-size-10
-.push_11
-  left: $gs-size-11
+.container_12 .push_1
+  left: $gs-size-12-1
+.container_12 .push_2
+  left: $gs-size-12-2
+.container_12 .push_3,
+.container_16 .push_4
+  left: $gs-size-12-3
+.container_12 .push_4
+  left: $gs-size-12-4
+.container_12 .push_5
+  left: $gs-size-12-5
+.container_12 .push_6,
+.container_16 .push_8
+  left: $gs-size-12-6
+.container_12 .push_7
+  left: $gs-size-12-7
+.container_12 .push_8
+  left: $gs-size-12-8
+.container_12 .push_9,
+.container_16 .push_12
+  left: $gs-size-12-9
+.container_12 .push_10
+  left: $gs-size-12-10
+.container_12 .push_11
+  left: $gs-size-12-11
 
-
+.container_16 .push_1
+  left: $gs-size-16-1
+.container_16 .push_2
+  left: $gs-size-16-2
+.container_16 .push_3
+  left: $gs-size-16-3
+.container_16 .push_5
+  left: $gs-size-16-5
+.container_16 .push_6
+  left: $gs-size-16-6
+.container_16 .push_7
+  left: $gs-size-16-7
+.container_16 .push_9
+  left: $gs-size-16-9
+.container_16 .push_10
+  left: $gs-size-16-10
+.container_16 .push_11
+  left: $gs-size-16-11
+.container_16 .push_13
+  left: $gs-size-16-13
+.container_16 .push_14
+  left: $gs-size-16-14
+.container_16 .push_15
+  left: $gs-size-16-15
 
 // --------------------------------------------------
 // Pull Space
 // --------------------------------------------------
 
-.pull_1
-  left: $gs-size-1-negative
-.pull_2
-  left: $gs-size-2-negative
-.pull_3
-  left: $gs-size-3-negative
-.pull_4
-  left: $gs-size-4-negative
-.pull_5
-  left: $gs-size-5-negative
-.pull_6
-  left: $gs-size-6-negative
-.pull_7
-  left: $gs-size-7-negative
-.pull_8
-  left: $gs-size-8-negative
-.pull_9
-  left: $gs-size-9-negative
-.pull_10
-  left: $gs-size-10-negative
-.pull_11
-  left: $gs-size-11-negative
+.container_12 .pull_1
+  left: $gs-size-12-1-negative
+.container_12 .pull_2
+  left: $gs-size-12-2-negative
+.container_12 .pull_3,
+.container_16 .pull_4
+  left: $gs-size-12-3-negative
+.container_12 .pull_4
+  left: $gs-size-12-4-negative
+.container_12 .pull_5
+  left: $gs-size-12-5-negative
+.container_12 .pull_6,
+.container_16 .pull_8
+  left: $gs-size-12-6-negative
+.container_12 .pull_7
+  left: $gs-size-12-7-negative
+.container_12 .pull_8
+  left: $gs-size-12-8-negative
+.container_12 .pull_9,
+.container_16 .pull_12
+  left: $gs-size-12-9-negative
+.container_12 .pull_10
+  left: $gs-size-12-10-negative
+.container_12 .pull_11
+  left: $gs-size-12-11-negative
+
+.container_16 .pull_1
+  left: $gs-size-16-1-negative
+.container_16 .pull_2
+  left: $gs-size-16-2-negative
+.container_16 .pull_3
+  left: $gs-size-16-3-negative
+.container_16 .pull_5
+  left: $gs-size-16-5-negative
+.container_16 .pull_6
+  left: $gs-size-16-6-negative
+.container_16 .pull_7
+  left: $gs-size-16-7-negative
+.container_16 .pull_9
+  left: $gs-size-16-9-negative
+.container_16 .pull_10
+  left: $gs-size-16-10-negative
+.container_16 .pull_11
+  left: $gs-size-16-11-negative
+.container_16 .pull_13
+  left: $gs-size-16-13-negative
+.container_16 .pull_14
+  left: $gs-size-16-14-negative
+.container_16 .pull_15
+  left: $gs-size-16-15-negative

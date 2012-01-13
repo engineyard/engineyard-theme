@@ -1,6 +1,6 @@
-#footer.page
+#footer.container_16
   - if add_navigation == 'true'
-    .grid_4
+    .grid_5
       .newsletter
         %h2.newsletter
           The Engine Yard Newsletter
@@ -50,7 +50,7 @@
             return Mkto.formReset(elt);
           }
           </script>
-    .grid_2
+    .grid_3
       %h2 Cloud Products
       %ul
         %li= link_to('Engine Yard Cloud','http://engineyard.com/products/cloud')
@@ -73,7 +73,7 @@
         %li= link_to('Rails Installer','http://www.railsinstaller.com')
         %li= link_to('Ruby Jobs','http://jobs.engineyard.com')
         %li= link_to('Rails Developers','http://www.railsdevelopment.com')
-    .grid_2
+    .grid_2.suffix_2
       %h2 About
       %ul
         %li= link_to('Company', 'http://engineyard.com/company')
@@ -84,8 +84,8 @@
           = link_to('Twitter', 'http://twitter.com/engineyard', :class => 'icon twitter')
           = link_to('Facebook', 'http://facebook.com/engineyard', :class => 'icon facebook')
           = link_to('LinkedIn', 'http://www.linkedin.com/groups?gid=111752', :class => 'icon linkedin')
-.copyright.page
-  .grid_12
+.copyright.container_16
+  .grid_16
     %p Copyright &copy; Engine Yard, Inc. All rights reserved.
 .hidden
 = yield :additional_scripts

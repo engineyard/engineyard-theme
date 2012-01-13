@@ -52,12 +52,12 @@
 
   %body{:id => content_for?(:body_id) ? yield(:body_id) : ''}
     #container
-      .page
+      .container_16
         .header
           - if add_navigation == 'true'
             %h1.branding
               =link_to(content_for?(:branding) ? yield(:branding) : 'Engine Yard, Inc.', '/') 
-            #search_form.grid_3.prefix_7
+            #search_form.grid_4.prefix_10
               :plain
                 <form action="/search" method="get">
                   <input type="text" name="q" id="searchbox" placeholder="Search" />
