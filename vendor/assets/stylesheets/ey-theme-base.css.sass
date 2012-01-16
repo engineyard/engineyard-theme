@@ -337,7 +337,7 @@ header, div.header
       margin: 0
       float: none
       display: none
-      font-size: 13px
+      font-size: 14px
       z-index: 100
       position: absolute
       background: transparent
@@ -437,21 +437,22 @@ header, div.header
             @include shadow
             background: #eee
             @include diagonal_gradient_light_grey
-            margin: 14px 0 0
+            margin: 13px 0 0
             border-top: 1px solid #dbdbdb
             li
               float: none
               clear: both
               margin: 4px 12px
+              font-size: 14px
               white-space: nowrap
               @include shadow-clear
               a:link, a:visited
                 padding: 0 5px
                 clear: both
                 display: block
-                color: $font-nav-color-light
+                color: lighten($font-nav-color-dark, 30%)
               a:hover
-                color: darken($font-nav-color-light, 20%) !important
+                color: $font-nav-color-dark !important
             li:first-child 
               padding-top: 8px
               border: none
