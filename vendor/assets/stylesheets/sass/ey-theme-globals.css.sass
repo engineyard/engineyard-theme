@@ -78,9 +78,14 @@ $button-colored-box-shadow-value : 0 1px 2px darken($color-background-alt, 22%)
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#d6d6d6, endColorstr=#eaeaea)"
 
 @mixin grey_gradient 
+  font-color: #848d96
   background: -webkit-gradient(linear, left top, left bottom, from(#ebe9e9), to(#d2d0d0))
   background: -moz-linear-gradient(top,  #ebe9e9,  #d2d0d0)
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#ebe9e9, endColorstr=#d2d0d0)"
+  &.hover:hover
+    background: darken(#ebe9e9, 5%)
+    background: -moz-linear-gradient(top, darken(#ebe9e9, 5%), darken(#d2d0d0, 5%))
+    background: -webkit-gradient(linear, left top, left bottom, from(darken(#ebe9e9, 5%)), to(darken(#d2d0d0, 5%)))
 
 @mixin blue_gradient
   background: #85a623
